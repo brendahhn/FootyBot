@@ -50,8 +50,11 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
   real (or a deliberate scope decision to proceed without it).
 - **Phase 3 (live draft assistant):** not started.
 - **Draft date:** August 28, 2026.
-- **Delivery/cadence:** NOT YET CONFIRMED with Brendan (see operating prompt STEP 6). Don't set
-  up an actual digest/email step until he answers; keep surfacing this gap in run output.
+- **Delivery/cadence:** confirmed 2026-06-30. Weekly (Mondays) until ~2 weeks before the draft,
+  then daily. Gmail draft to brendanhamor@gmail.com (see operating prompt STEP 6 for format).
+  Trigger `FootyBot Weekly` created 2026-06-30, cron `0 13 * * 1`. A reminder is scheduled for
+  ~2026-08-14 to switch the cron to daily (`5 11 * * *` or similar) — if that reminder didn't
+  fire for some reason, switch it manually once the draft is inside 2 weeks out.
 
 ## AUDIT_QUEUE
 

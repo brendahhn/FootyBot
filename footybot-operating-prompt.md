@@ -128,10 +128,22 @@ this run. Update `footybot-idea-queue.md` item statuses if you worked a queued i
 ═══════════════════════════════════════════════════════════════════════════
 STEP 6 — DELIVERY
 ═══════════════════════════════════════════════════════════════════════════
-Cadence and delivery channel: NOT YET CONFIRMED with Brendan beyond "probably similar to the
-other two bots" — until he confirms, do NOT set up an actual Gmail draft step; just leave
-findings committed in the repo. (This is a [BEHAVIOR] gap, not something to silently decide —
-surface it in run output each time until resolved.)
+Confirmed 2026-06-30: cadence is **weekly until ~2 weeks before the Aug 28, 2026 draft, then
+daily** (the trigger's cron is updated manually closer to the draft — see
+`footybot-notebook.md` STATUS for the actual cron expression and reminder date). Delivery is a
+**Gmail draft** (never auto-sent), same pattern as the other two bots.
+
+Every run, after STEP 5: draft a Gmail email to brendanhamor@gmail.com via the Gmail connector
+(DRAFT only — never send; addressed only to him, never cc). Clean, phone-first HTML. Structure:
+  🏈 HEADLINE STATE — one or two sentences: where Phase 1/2/3 stands right now.
+  🎯 TOP FINDINGS THIS RUN — each finding, its confidence tier (STEP 4), one line.
+  ⚠️ CUT THIS RUN — what the critic pass killed and why (builds trust that the bar is real).
+  🧭 DRAFT-RELEVANT TAKEAWAYS — anything that should actually shift a Brendan draft-day lean,
+    clearly tiered, never phrased as a guarantee.
+  ❓ DECISIONS NEEDED FROM YOU — [BEHAVIOR] items from the idea queue, AUDIT_QUEUE items that
+    need a human call, anything blocked.
+SUBJECT: "FootyBot — [real date]: [N] findings this run, [K] need you"
+Confirm the draft ID in run output (STEP 7).
 
 ═══════════════════════════════════════════════════════════════════════════
 STEP 7 — SHOW YOUR WORK
