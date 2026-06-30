@@ -107,3 +107,25 @@ league, going well beyond generic rankings. Specifically:
 - Format of the Twitter likes dump (TBD when the user provides it)
 - Whether to pull live league/roster state via the Yahoo Fantasy API, or treat this as
   purely external research support
+- **Blocked (2026-06-30): the quantitative data pipeline.** This dev environment's network
+  egress allowlist only permits GitHub's canonical git/API paths and Anthropic domains —
+  `pypi.org`, `files.pythonhosted.org`, npm, apt mirrors, and even GitHub's own release-asset
+  CDN (where nflverse hosts its data) all return `host_not_allowed`; WebFetch is blocked too
+  (even `example.com` 403s). `docs/adr/0001-tech-stack.md`'s Python/pandas/nflverse pipeline
+  (CONTEXT.md Goal items a/b — predictive-stats analysis) cannot be built or run here as a
+  result. WebSearch still works (different backend) and was used for items c/d/e below.
+  Unblocks: add the missing hosts to this environment's network egress settings, or run the
+  pipeline in a different environment/locally. See chat history 2026-06-30 for full detail.
+
+## Research produced so far (Phase 1, qualitative — see `research/`)
+
+- `research/coach-tendencies.md` — first-pass coverage of 2026's highest-impact coaching
+  changes (Raiders, Cardinals, Browns, Bills, Ravens, Steelers, Dolphins; Jaguars/Chiefs
+  flagged as non-changes). Not all 32 teams yet.
+- `research/breakout-comps.md` — methodology + 3 worked examples (Luther Burden III ↔ Tee
+  Higgins, Emeka Egbuka ↔ A.J. Brown, Christian Watson archetype).
+- `research/idp-evaluation.md` — positional volume hierarchy and draft-strategy framework for
+  this league's single flex IDP slot.
+
+All three are explicitly marked as needing the data pipeline to move from
+search-snippet-sourced to pipeline-verified.
