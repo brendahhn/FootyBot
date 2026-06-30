@@ -7,7 +7,7 @@ Update this file as understanding changes; record one-way-door decisions as ADRs
 
 - Platform: Yahoo Fantasy Football
 - 10-team league, snake draft, **our pick slot: #4**
-- Draft date: not yet scheduled by the commissioner; planning around **late August 2026** as a placeholder
+- Draft date: **August 28, 2026**
 - League visibility: private (not publicly viewable), commissioner-only invites
 - Roster: QB, WR, WR, RB, RB, TE, W/R/T, W/R/T, D, BN x7, IR (16 total slots)
 - Fractional points: on
@@ -85,7 +85,7 @@ league, going well beyond generic rankings. Specifically:
 - **Phase 1 (now):** research repo + data pipeline. Build out CONTEXT.md/ADRs, ingest free
   public data sources, ingest user-provided research dumps (see Inputs below), produce
   written findings/notes per topic above.
-- **Phase 2 (pre-draft, closer to late Aug):** CLI tooling that turns the Phase 1 research
+- **Phase 2 (pre-draft, closer to Aug 28):** CLI tooling that turns the Phase 1 research
   into ranked cheat sheets / tiers tailored to this league's scoring and roster.
 - **Phase 3 (draft day):** live draft-day assistant — given picks made so far and our roster
   needs, suggest who to take, pick by pick.
@@ -104,7 +104,6 @@ league, going well beyond generic rankings. Specifically:
 
 ## Open questions / not yet resolved
 
-- Exact draft date (placeholder: late Aug 2026)
 - Format of the Twitter likes dump (TBD when the user provides it)
 - Whether to pull live league/roster state via the Yahoo Fantasy API, or treat this as
   purely external research support

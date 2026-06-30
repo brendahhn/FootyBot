@@ -1,6 +1,6 @@
 # ADR 0001: Tech stack
 
-Status: proposed 2026-06-30 (default choice, not yet confirmed by user)
+Status: confirmed 2026-06-30
 
 ## Decision
 
