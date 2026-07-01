@@ -114,20 +114,29 @@ league, going well beyond generic rankings. Specifically:
   releases on their own machine and uploaded them (zipped, to get under the 30MB chat limit).
   Pipeline now runs end to end against real data — `pipeline/fetch_data.py` and
   `pipeline/predictive_stats.py` both exit 0, producing `research/predictive-stats.md` with
-  real Pearson correlations (1999-2024 nflverse data, filtered to 2016-2024 per
-  `pipeline/fetch_data.py`'s SEASON_MIN/MAX). Not committed to git: `inputs/nflverse/*.csv`
-  (raw source, 67MB, gitignored) and `data/raw/` (generated output, also gitignored) — both
-  are reproducible from the pipeline scripts, so only the scripts and the final
-  `research/predictive-stats.md` are versioned.
+  real Pearson correlations, filtered to 2016-2025 per `pipeline/fetch_data.py`'s
+  SEASON_MIN/MAX (2016-2024 from the legacy combined release, plus the full 2025 season —
+  see below). Not committed to git: `inputs/nflverse/*.csv` (raw source, gitignored) and
+  `data/raw/` (generated output, also gitignored) — both are reproducible from the pipeline
+  scripts, so only the scripts and the final `research/predictive-stats.md` are versioned.
+- **Note (2026-07-01): nflverse changed its file format starting with the 2025 season** —
+  offense and defense stats are now combined in one per-season file
+  (`stats_player_week_<year>.csv`), using `team`/`passing_interceptions` instead of the old
+  `recent_team`/`interceptions`. `pipeline/fetch_data.py` now handles both the legacy
+  multi-year combined files AND this new per-season unified format (auto-detected via
+  filename glob), normalizing columns before merging. Next season's data
+  (`stats_player_week_2026.csv`) should drop in and get picked up with no code change needed.
 
 ## Research produced so far (Phase 1 — see `research/`)
 
-- `research/predictive-stats.md` — **pipeline-verified**, real nflverse data (1999-2024,
-  filtered 2016-2024). Notable results: target share (r=0.339) and WOPR (r=0.271) meaningfully
-  predict next-season PPG; TD rate is ~noise (r=0.010) — matches conventional football-
-  analytics wisdom, a good sanity check. IDP: solo tackle rate is strongly predictive
-  (r=0.504), sack rate is not (r=0.092) — confirms the volume-vs-boom-bust framing in
-  `research/idp-evaluation.md` with real numbers.
+- `research/predictive-stats.md` — **pipeline-verified**, real nflverse data, 2016-2025
+  (includes the full 2025 season, regular + postseason). Notable results: target share
+  (r=0.350) and WOPR (r=0.280) meaningfully predict next-season PPG; TD rate is ~noise
+  (r=0.008) — matches conventional football-analytics wisdom, a good sanity check. IDP: solo
+  tackle rate is strongly predictive (r=0.506), sack rate is not (r=0.091) — confirms the
+  volume-vs-boom-bust framing in `research/idp-evaluation.md` with real numbers. (Results are
+  stable vs. the pre-2025 run — correlations moved by ~0.01, as expected from adding one more
+  season rather than something being broken.)
 - `research/coach-tendencies.md` — first-pass coverage of 2026's highest-impact coaching
   changes (Raiders, Cardinals, Browns, Bills, Ravens, Steelers, Dolphins; Jaguars/Chiefs
   flagged as non-changes). Not all 32 teams yet — still WebSearch-corroborated, not

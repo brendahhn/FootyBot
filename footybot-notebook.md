@@ -41,11 +41,13 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
     pipeline-verified. Needs expansion toward all 32 + re-verification once preseason tape exists.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
-    in `research/predictive-stats.md` (tackle rate r=0.504 vs. sack rate r=0.092).
-  - `research/predictive-stats.md` — **done, pipeline-verified 2026-07-01.** Brendan uploaded
-    `player_stats.csv`/`player_stats_def.csv` (zipped, 1999-2024 nflverse data). Both pipeline
-    scripts exit 0 against real data. Raw CSVs and `data/raw/` output are gitignored
-    (reproducible, not committed) — only the scripts and the final markdown are versioned.
+    in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
+  - `research/predictive-stats.md` — **done, pipeline-verified, includes full 2025 season**
+    (updated 2026-07-01). Brendan uploaded `player_stats.csv`/`player_stats_def.csv`
+    (2016-2024) plus `stats_player_week_2025.csv` (nflverse's new unified per-season format).
+    Both pipeline scripts exit 0 against real data, 2016-2025. Raw CSVs and `data/raw/` output
+    are gitignored (reproducible, not committed) — only the scripts and the final markdown
+    are versioned.
 - **Phase 2 (cheat sheets):** not started, blocked on Phase 1's predictive-stats analysis being
   real (or a deliberate scope decision to proceed without it).
 - **Phase 3 (live draft assistant):** not started.
@@ -74,6 +76,26 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
 
 ## CHANGELOG
+
+### 2026-07-01 — Added 2025 season data (nflverse's format changed)
+Brendan correctly flagged that the first pipeline run only covered through 2024 -- 2025 (the
+most important season for 2026 prep) was missing. Re-downloading the same combined
+`player_stats.csv`/`player_stats_def.csv` didn't help (that release asset is stale, last
+updated ~May 2025, before the season). The actual fix: nflverse now publishes 2025+ data in a
+new per-season unified format (`stats_player_week_2025.csv`, offense+defense combined in one
+row, columns renamed `team`/`passing_interceptions` instead of `recent_team`/`interceptions`).
+Updated `pipeline/fetch_data.py` to auto-detect and normalize this new format (glob for
+`stats_player_week_*.csv`, rename columns, split into offense/defense projections) alongside
+the legacy multi-year files, so next season's file drops in with no code change needed.
+Re-ran both scripts (exit 0, 2016-2025, includes full 2025 season through the Super Bowl).
+Correlations barely moved (~0.01 shift) vs. the pre-2025 run -- good stability check.
+Side notes for future runs: (1) two of Brendan's upload attempts came through as empty
+iOS file-provider bookmark placeholders rather than real content -- if an uploaded file's
+content looks like `bplist00`/`NSKeyedArchiver` XML instead of real data, it didn't actually
+transfer, ask for a re-upload after the user taps the file open in the Files app first; (2)
+nflverse's release assets aren't all kept in sync at the same cadence -- check actual season
+coverage in the data itself (`csv.DictReader`, not file size/name) rather than trusting a
+release's "last updated" claim from search results alone.
 
 ### 2026-07-01 — Real data pipeline run (predictive-stats.md done)
 Brendan uploaded `player_stats.csv` + `player_stats_def.csv` (zipped to get under the 30MB
