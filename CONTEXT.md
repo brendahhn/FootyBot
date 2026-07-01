@@ -87,14 +87,21 @@ league, going well beyond generic rankings. Specifically:
    `research/draft-tendencies.md`. This is a real scope addition beyond pure player research —
    it's about the humans in the draft room, not just the players.
 
-### Phasing (agreed 2026-06-30)
+### Phasing (agreed 2026-06-30; delivery vehicle updated 2026-07-02)
 - **Phase 1 (now):** research repo + data pipeline. Build out CONTEXT.md/ADRs, ingest free
   public data sources, ingest user-provided research dumps (see Inputs below), produce
   written findings/notes per topic above.
+- **Phase 1.5 — the DAILY NEWSLETTER (added 2026-07-02, now the primary delivery vehicle):**
+  a nightly routine (~11:30pm PT, schedule set by Brendan) runs 4 specialist research lanes +
+  a reviewer and writes a full-analysis morning newsletter to `newsletters/YYYY-MM-DD.md`
+  (+ push notification). Spec: `docs/daily-newsletter-spec.md`. The research corpus
+  (`research/*.md`) remains the durable knowledge base; the newsletter draws from and writes
+  back to it daily.
 - **Phase 2 (pre-draft, closer to Aug 28):** CLI tooling that turns the Phase 1 research
   into ranked cheat sheets / tiers tailored to this league's scoring and roster.
 - **Phase 3 (draft day):** live draft-day assistant — given picks made so far and our roster
-  needs, suggest who to take, pick by pick.
+  needs, suggest who to take, pick by pick (the opponent model in
+  `research/draft-tendencies.md` is a direct input).
 
 ## Data sources
 

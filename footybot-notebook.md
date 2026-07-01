@@ -119,11 +119,15 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   extracted `.txt` intermediates in `inputs/league-history/extracted/` are, and fully rebuild
   the CSV. Brendan may send more seasons — drop them in `extracted/` and re-run the build.
 - **Draft date:** August 28, 2026.
-- **Delivery/cadence:** confirmed 2026-06-30. Weekly (Mondays) until ~2 weeks before the draft,
-  then daily. Gmail draft to brendanhamor@gmail.com (see operating prompt STEP 6 for format).
-  Trigger `FootyBot Weekly` created 2026-06-30, cron `0 13 * * 1`. A reminder is scheduled for
-  ~2026-08-14 to switch the cron to daily (`5 11 * * *` or similar) — if that reminder didn't
-  fire for some reason, switch it manually once the draft is inside 2 weeks out.
+- **Delivery/cadence (superseded 2026-07-02 — now the DAILY NEWSLETTER):** Brendan set the
+  routine to nightly ~11:30pm PT himself in the routine settings. Each run writes
+  `newsletters/YYYY-MM-DD.md` (dated for the next morning) + a push notification with the
+  headlines. Full architecture: `docs/daily-newsletter-spec.md` (4 lanes + reviewer, hybrid
+  compete mode, "checking your takes"). Gmail is broken for routines (label-only connector,
+  2-for-2 runs) — diagnosis given to Brendan (reconnect Gmail in claude.ai connector settings
+  with full permissions); each run makes ONE quick ToolSearch check and adds a Gmail draft only
+  if compose ever appears. The old ~2026-08-14 "switch to daily" reminder is moot (already
+  daily); if it fires, just confirm the cadence is still what Brendan wants and dismiss.
 
 ## AUDIT_QUEUE
 
@@ -164,6 +168,24 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-02 (interactive session) — v3: DAILY NEWSLETTER architecture
+Brendan's ask: "the ultimate data driven fantasy football research tool… runs every day…
+output: a morning newsletter… spawn n agents and a reviewer." Interviewed him (2 rounds,
+8 questions) and built it:
+- Decisions: repo file + push notification delivery (Gmail broken for routines — reconnect
+  diagnosis given, one quick check per run thereafter); hybrid agent design (4 specialist
+  lanes: Data / News / Market / Rabbit-hole + reviewer with kill authority); compete mode
+  fires at the bot's judgment on contested high-stakes questions; full-analysis length daily;
+  all four content pillars (camp/beat, ADP, deep dive, draft countdown); **"checking your
+  takes" — challenge Brendan hard, with receipts**; schedule already set by Brendan (~11:30pm
+  PT nightly), newsletter dated for the next morning.
+- Artifacts: `docs/daily-newsletter-spec.md` (the agreed spec), `footybot-operating-prompt.md`
+  fully rewritten to v2026-07-02 (`## END` verified intact), `newsletters/` created.
+- Unchanged rails: verification discipline, tiers, critic pass (now the reviewer), catch-up
+  priority, rabbit holes, branch rule + merge-each-run workaround, safe-bot-edits.
+- First night's open questions: do subagents work in the scheduled environment (fallback:
+  sequential lanes), and the recurring branch pin still needs a merge after each run.
 
 ### 2026-07-01 (interactive session) — Built the opponent-modeling dataset from 7 yrs of drafts
 Brendan sent 7 seasons of the league's actual Yahoo draft boards + Managers pages (2019-2025) as
