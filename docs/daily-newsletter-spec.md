@@ -30,7 +30,7 @@ then a **reviewer pass** with kill authority synthesizes the newsletter:
 |---|---|---|
 | A — Data | One quantitative question per night off the real nflverse data (committed in-repo); keeps `research/predictive-stats.md` current; extends the predictive-stat work | `pipeline/`, `inputs/nflverse/` |
 | B — News | What changed yesterday: camp/beat reports, injuries, depth charts, signings, holdouts | WebSearch, A-tier outlets |
-| C — Market | ADP movement + where the market disagrees with our research; **pick-4 draft-strategy countdown** using the opponent model of the 9 leaguemates | WebSearch + `research/draft-tendencies.md` |
+| C — Market | ADP movement + where the market disagrees with our research; **pick-4 draft-strategy countdown** using the opponent model of the 9 leaguemates — positional tendencies AND archetype/thought-process profiles (who reaches for rookies, who chases last year's breakout, who buys aging vets) | WebSearch + `research/draft-tendencies.md` + `inputs/league-history/draft_history_enriched.csv` (`pipeline/draft_archetypes.py`) |
 | D — Rabbit hole | One deep investigation per night: predictive angles, scheme fits, breakout comps, "this profile rhymes with X's 2021" — chased to a conclusion, not parked | AUDIT_QUEUE, curiosity, all research files |
 
 - **Compete mode (bot decides):** when a genuinely contested, high-stakes question surfaces

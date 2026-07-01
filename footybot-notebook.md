@@ -156,10 +156,13 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   e.g. box safeties vs. deep safeties vs. CBs) that `predictive-stats.md` only partially
   confirms (solo tackles vs. sacks) — `player_stats_def.csv` doesn't have snap counts or
   position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
-- `research/draft-tendencies.md`: rookie/"flashy new guy" tendency per manager — Brendan
-  explicitly wants this ("who reaches for shiny rookies vs. reliable vets"). Needs each drafted
-  player's NFL-experience-at-draft-time (rookie vs. vet), which isn't in the current dataset —
-  a rookie-year/draft-year lookup per player would add it. Not yet built.
+- ~~`research/draft-tendencies.md`: rookie/"flashy new guy" tendency per manager~~ — **DONE
+  2026-07-02** as Finding 4 (`pipeline/draft_archetypes.py`, experience-at-pick reconstructed
+  from committed 1999-2025 nflverse data; enriched CSV committed). Spot-check validated.
+- `research/draft-tendencies.md` NEW: **realized outcomes of archetype bets** — did Brendan's
+  post-injury picks (CMC '21, Kupp '23) return value? Did Dylan's breakout-chases hit? All
+  computable from the same data (compare pick's season-of-draft PPG vs same-round
+  alternatives). Strong newsletter deep-dive candidate for Lane A or D.
 - `research/draft-tendencies.md`: reach-vs-value per manager needs historical ADP per season to
   compare each pick against where the player was going — no ADP source yet.
 - `research/draft-tendencies.md`: 3 skill players (Hollywood Brown, Kenny Gainwell, Joshua
@@ -168,6 +171,27 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-02 (interactive session, follow-up) — Archetype layer: what managers were THINKING
+Brendan: positional tendencies are great, but he wants the thought-process at the time —
+"did this friend take the risky RB? The solid breakout receiver from the year before? The
+rookie?" — and needs the database accessible to the routine. Built:
+- `pipeline/draft_archetypes.py` — reconstructs what every drafted player looked like ON THAT
+  DRAFT DAY from the committed nflverse history (experience-at-pick, prior-season PPG/games,
+  weekly variance under THIS league's scoring), derives archetype flags (ROOKIE, SECOND_YEAR,
+  BREAKOUT_CHASE, POST_INJURY, BOOM_BUST, AGING_VET, STEADY; thresholds documented+tunable).
+- `inputs/league-history/draft_history_enriched.csv` — committed, so every scheduled run has
+  it (the DB-accessibility ask; the whole league-history dir was already committed 2026-07-01).
+- `research/draft-tendencies.md` Finding 4 — per-manager archetype table + personality reads +
+  pick-4 exploits. Spot-check validated (Niko's rookies incl. R1 Bijan; Connor's Julio×3/old
+  Kelce; Brendan's CMC-'21/Kupp-'23 post-injury R1s; Dylan's McLaurin/JT/CeeDee/Claypool
+  breakout-chases). Headline reads: lucas has taken ZERO rookies in rounds 1-8 in 7 years;
+  Nate has ZERO post-injury picks; Connor doubles the league rate on aging vets; Brendan
+  himself is the league's biggest discount-rack shopper (lowest STEADY share, most
+  post-injury) — and his 2025 mock targets (Egbuka/MHJ/Worthy) fit the same pattern, which the
+  newsletter should pressure-test.
+- Operating prompt Lane C + spec updated to use both layers. New AUDIT_QUEUE item: realized
+  outcomes of archetype bets (did the discount-shopping actually pay off?).
 
 ### 2026-07-02 (interactive session) — v3: DAILY NEWSLETTER architecture
 Brendan's ask: "the ultimate data driven fantasy football research tool… runs every day…

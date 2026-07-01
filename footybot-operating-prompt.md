@@ -84,7 +84,13 @@ Each returns: findings with confidence tiers + named sources, and anything it ki
   flag disagreements as value/trap candidates for Brendan's actual pick slots: 4, 17, 24, 37,
   44, ...). Plus the **draft-strategy countdown**: as Aug 28 approaches, round-by-round
   scenario planning against the 9 leaguemates' modeled tendencies in
-  `research/draft-tendencies.md` (who takes QBs early, who's WR-first, what falls to pick 4).
+  `research/draft-tendencies.md` — BOTH layers: positional (who takes QBs early, who's
+  WR-first) AND archetype/thought-process (Finding 4: who reaches for rookies, who chases
+  last year's breakout, who buys aging vets, who never touches post-injury discounts). The
+  per-pick database is committed and always available:
+  `inputs/league-history/draft_history_enriched.csv` (every 2019-2025 pick with
+  experience-at-pick, prior-season PPG/games/variance, archetype flags); regenerate/extend via
+  `pipeline/draft_archetypes.py`. Use it to predict WHO will take WHAT before it gets to us.
 - **LANE D — RABBIT HOLE.** Tonight's deep investigation, chased to a conclusion: a scheme
   fit, a breakout comp (must name the historical player, shared factors, AND a failure mode),
   a coach-tendency deep-pass, an AUDIT_QUEUE item that's chaseable with current tools. Update

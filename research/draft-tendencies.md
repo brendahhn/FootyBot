@@ -96,15 +96,89 @@ but it also means we're often thin at RB, the position this league treats as sca
 where Brendan wanted "Saquon + Chase" is notable precisely *because* it would break his own
 pattern toward securing RB early.
 
+## Finding 4 — Archetype profiles: what each manager was THINKING at the time (added 2026-07-02)
+
+Built by reconstructing what every drafted player **looked like on that draft day** from the
+committed nflverse history (1999-2025) scored with this league's formula: rookie or vet,
+coming off a first breakout, coming off a lost/injury year, boom/bust weekly profile, aging.
+Pipeline: `pipeline/draft_archetypes.py` → `inputs/league-history/draft_history_enriched.csv`
+(every pick now carries experience-at-pick, prior-season games/PPG, weekly variance, and
+archetype flags). **S-tier provenance** (computed from real weekly data, this league's actual
+picks); the flag *definitions* are explicit tunable choices documented in the script — e.g.
+"BREAKOUT_CHASE" = drafting a player right after his first startable season (≥11 PPG over ≥8
+games with <8 PPG the year before).
+
+Shares of each manager's skill-position picks in rounds 1-8 (56 picks each, 7 drafts).
+League-average column for contrast:
+
+| Manager | Rookie | 2nd-yr | Breakout-chase | Post-injury | Boom/bust | Aging vet | Steady |
+|---|---|---|---|---|---|---|---|
+| League avg | 6% | 14% | 13% | 6% | 7% | 14% | 44% |
+| Aaron | 4% | 20% | **21%** | 7% | 11% | 11% | **52%** |
+| Brendan (us) | 5% | **21%** | 18% | **11%** | 11% | 7% | **38% (lowest)** |
+| Connor | 4% | 11% | 14% | 11% | 7% | **29% (2× league)** | 46% |
+| Dylan | **13%** | 13% | **22% (highest)** | 4% | 9% | 11% | 40% |
+| Jack | 4% | **5%** | **4%** | 9% | 11% | 14% | 45% |
+| Mattias | 4% | 20% | 15% | 5% | 4% | 15% | 47% |
+| Nate | 4% | 18% | 7% | **0%** | 5% | 12% | 46% |
+| Niko | **14% (highest)** | 9% | 14% | 4% | 4% | 7% | 43% |
+| lucas | **0%** | 11% | 14% | 5% | 4% | 16% | 46% |
+| riley | 5% | 9% | 5% | 4% | 7% | 18% | 36% |
+
+Spot-check validation (flags catch exactly the right players): Niko's ROOKIE picks = Bijan
+(R1!), Etienne, Swift, Jacobs, Brian Thomas, TreVeyon Henderson, T-Mac, Egbuka. Connor's
+AGING_VET = Julio 3 straight years, old Kelce R1, old Hopkins, Keenan, T.Y. Hilton. Brendan's
+POST_INJURY = 2021 R1 CMC (off the 3-game year), 2023 R1 Kupp (off the 9-game year), Fuller,
+Sutton, Freeman. Dylan's BREAKOUT_CHASE = McLaurin, JT, CeeDee, Claypool, Chark, Kyren — all
+drafted immediately after their first big year.
+
+### Manager personalities (the "thought process" reads)
+
+- **Niko — the rookie reacher.** Highest rookie rate (14%, incl. an R1 rookie), lowest
+  boom/bust — he takes *young*, not *volatile*. If you want a rookie at pick 4, Niko is the
+  primary race.
+- **Dylan — chases last year's breakout.** Highest breakout-chase (22%) + high rookie rate +
+  never takes a QB early. The shiniest recent production owns his board.
+- **lucas — will NEVER take your rookie.** Zero rookies in rounds 1-8 across seven drafts.
+  Rookie values don't get eaten by him, ever.
+- **Jack — buys established only.** Rock-bottom rookie/2nd-year/breakout-chase (4/5/4%) — he
+  pays for multi-year track records (fits his WR-first R1 profile). Youth falls past him.
+- **Connor — the aging-brand-name guy.** 29% aging-vet, double the league rate. He will
+  overpay for the declining big name — let him have it, don't fight that bid.
+- **Nate — allergic to damaged goods and hype.** ZERO post-injury picks in 7 years, and
+  near-lowest breakout-chase (7%). Injury-discounted players fall further than ADP implies
+  partly because of him.
+- **Aaron — proven production, early QB.** Highest steady share (52%) + high breakout-chase:
+  he buys players who scored *last year*, whatever the profile, and takes QBs earliest.
+- **Mattias — quietly risk-averse.** Low boom/bust (4%), no strong tilts, balanced everything.
+- **riley — hardest to model.** Lowest steady share alongside Brendan, elevated aging-vet, low
+  breakout-chase; no dominant pattern (consistent with his mid-pack, low-variance QB timing).
+- **Brendan (us) — the discount-rack shopper.** LOWEST steady share in the league (38%),
+  tied-most post-injury picks (2021 R1 CMC, 2023 R1 Kupp), high 2nd-year rate. We buy
+  suppressed prices on talent coming off bad years — upside-seeking, floor-light. Notably:
+  in the 2025-07-01 mock memo, the players he circled (Egbuka, MHJ, Worthy post-ACL) are…
+  post-injury/2nd-year discounts again. It's a durable personality, so the question the
+  newsletter should pressure-test: **has the injury-discount habit actually paid off?**
+  (→ AUDIT_QUEUE: compute realized outcomes of those picks vs. same-round alternatives.)
+
+### Draft-day exploits at pick 4 (2026)
+
+1. Rookie you love? Beat **Niko** (and secondarily Dylan) to him — nobody else competes early.
+2. Post-injury discount targets last longer than market ADP suggests here — **Nate never bids**
+   and most of the league is near league-average; main competition for those is… ourselves.
+3. Aging brand names will go earlier than value — **Connor's bid** — never reach to beat him.
+4. Last year's breakout WR/RB will be gone sooner than ADP — **Dylan and Aaron** both chase.
+
 ## Next steps / open threads
 
 - **[data]** More draft years if available would tighten the QB-timing averages (7 is enough for
   a lean, not for high confidence on the high-variance managers like Nate).
-- **[analysis]** Rookie/"flashy new guy" tendency — Brendan specifically asked whether certain
-  managers reach for shiny rookies (e.g. "Bucky Irving, Brian Thomas" types) vs. reliable vets.
-  Computing this needs each player's NFL experience-at-draft-time (rookie vs. veteran), which
-  isn't in the current dataset — would need a draft-year/rookie-year lookup per player. Flagged
-  in AUDIT_QUEUE.
+- **[analysis — DONE 2026-07-02]** Rookie/"flashy new guy" tendency — built as Finding 4 above
+  (`pipeline/draft_archetypes.py`, enriched CSV). Remaining refinement: flag thresholds are
+  tunable choices; revisit if any personality read feels off against known history.
+- **[analysis — NEW]** Realized outcomes of archetype bets: did Brendan's post-injury picks
+  (CMC '21, Kupp '23…) actually return value vs. same-round alternatives? Did Dylan's
+  breakout-chases hit? Computable from the same data — strong newsletter deep-dive candidate.
 - **[analysis]** Reach vs. value — join each pick to that year's ADP to see who consistently
   reaches vs. who waits for value. Needs historical ADP data (not yet available).
 - **[caveat]** All of this is descriptive of 2019-2025 behavior; people change. Re-weight toward
