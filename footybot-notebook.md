@@ -144,6 +144,17 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 ## CHANGELOG
 
+### 2026-07-01 (interactive session, follow-up) — Catch-up priority + "rabbit holes" instruction
+Brendan: "catch up first, when I'm not feeding it ideas, I need it going down rabbit holes."
+Revised `footybot-operating-prompt.md` again (version-date → 2026-07-01b, `## END` re-verified):
+STEP 2 is now explicitly ordered — (1) catch-up backlog (the 12 pre-checklist coach-tendencies
+entries) before any new team, (2) idea queue, (3) if both are clean, chase secondary leads to
+an actual conclusion instead of deferring everything to AUDIT_QUEUE ("going down rabbit holes"),
+still bound by the same verification/critic-pass rails. Next run's real test: does it actually
+re-pass Chargers/Cardinals/Browns/Bills/Ravens/Steelers/Dolphins/Titans/Falcons/Buccaneers
+against the new checklist before touching anything new, and does it chase at least one lead
+(e.g. the Kevin Patullo→Dolphins audit item) to a real conclusion rather than re-logging it.
+
 ### 2026-07-01 (interactive session) — Fixed the two things Brendan called out as broken
 Two merges + a real prompt revision, prompted by direct, sharp feedback that the scheduled runs
 were producing too little (one narrow angle per run) and couldn't do real stats analysis at all.
