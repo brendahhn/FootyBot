@@ -40,12 +40,12 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
   - `research/coach-tendencies.md` — first pass, ~10 teams, WebSearch-corroborated, not
     pipeline-verified. Needs expansion toward all 32 + re-verification once preseason tape exists.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
-  - `research/idp-evaluation.md` — conceptual framework, not yet pipeline-verified (needs real
-    `player_stats_def.csv` data to replace the positional hierarchy with measured numbers).
-  - `research/predictive-stats.md` — **does not exist yet.** Blocked on Brendan uploading
-    `player_stats.csv` and `player_stats_def.csv` to `inputs/nflverse/` (links in
-    `pipeline/fetch_data.py`'s docstring). Do not fabricate this file with WebSearch-sourced
-    approximations — see operating prompt STEP 3 item 4.
+  - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
+    in `research/predictive-stats.md` (tackle rate r=0.504 vs. sack rate r=0.092).
+  - `research/predictive-stats.md` — **done, pipeline-verified 2026-07-01.** Brendan uploaded
+    `player_stats.csv`/`player_stats_def.csv` (zipped, 1999-2024 nflverse data). Both pipeline
+    scripts exit 0 against real data. Raw CSVs and `data/raw/` output are gitignored
+    (reproducible, not committed) — only the scripts and the final markdown are versioned.
 - **Phase 2 (cheat sheets):** not started, blocked on Phase 1's predictive-stats analysis being
   real (or a deliberate scope decision to proceed without it).
 - **Phase 3 (live draft assistant):** not started.
@@ -62,12 +62,29 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 - `research/coach-tendencies.md`: re-verify all entries against actual 2026 preseason/regular
   season tape once available — currently search-snippet-sourced only.
-- `research/predictive-stats.md`: create once real nflverse data is available (upload or network
-  policy change) — do not approximate with WebSearch in the meantime.
-- `research/idp-evaluation.md`: replace conceptual positional hierarchy with measured tackle/sack
-  rates once `player_stats_def.csv` data is processed.
+- `research/predictive-stats.md`: re-run once `snap_counts.csv` (offense/IDP snap%), red-zone
+  play-by-play splits, or participation data (yards per route run) become available —
+  explicitly skipped this run per the script's own docstring, not faked.
+- `research/predictive-stats.md`: 40+ yard bonuses and offensive fumble-return TDs aren't
+  computable from weekly aggregate data, so every PPG figure slightly under-counts real league
+  points — re-run against play-by-play data if that ever becomes available to close this gap.
+- `research/idp-evaluation.md`: still has the full conceptual positional hierarchy (6 groups,
+  e.g. box safeties vs. deep safeties vs. CBs) that `predictive-stats.md` only partially
+  confirms (solo tackles vs. sacks) — `player_stats_def.csv` doesn't have snap counts or
+  position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
 
 ## CHANGELOG
+
+### 2026-07-01 — Real data pipeline run (predictive-stats.md done)
+Brendan uploaded `player_stats.csv` + `player_stats_def.csv` (zipped to get under the 30MB
+chat limit; had to move the file off Google Drive to local storage on his Chromebook first
+since ChromeOS won't zip a Drive-backed file directly). Ran `pipeline/fetch_data.py` (exit 0,
+49161 + 86431 rows written, 2016-2024) then `pipeline/predictive_stats.py` (exit 0) →
+`research/predictive-stats.md`. Critic-pass sanity check: results match known football-
+analytics priors (target share/WOPR predictive, TD rate is noise, tackle rate predictive,
+sack rate is not) — no red flags. Updated CONTEXT.md's Open Questions (pipeline blocker →
+resolved) and this file's STATUS/AUDIT_QUEUE. Added `inputs/nflverse/*.csv` to `.gitignore`
+(raw source files, 67MB, reproducible — not committed).
 
 ### 2026-06-30 — Initial setup (ported from prior session)
 Built `CONTEXT.md`, ADRs 0001-0003, `research/coach-tendencies.md`,

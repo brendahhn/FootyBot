@@ -107,25 +107,33 @@ league, going well beyond generic rankings. Specifically:
 - Format of the Twitter likes dump (TBD when the user provides it)
 - Whether to pull live league/roster state via the Yahoo Fantasy API, or treat this as
   purely external research support
-- **Blocked (2026-06-30): the quantitative data pipeline.** This dev environment's network
-  egress allowlist only permits GitHub's canonical git/API paths and Anthropic domains —
-  `pypi.org`, `files.pythonhosted.org`, npm, apt mirrors, and even GitHub's own release-asset
-  CDN (where nflverse hosts its data) all return `host_not_allowed`; WebFetch is blocked too
-  (even `example.com` 403s). `docs/adr/0001-tech-stack.md`'s Python/pandas/nflverse pipeline
-  (CONTEXT.md Goal items a/b — predictive-stats analysis) cannot be built or run here as a
-  result. WebSearch still works (different backend) and was used for items c/d/e below.
-  Unblocks: add the missing hosts to this environment's network egress settings, or run the
-  pipeline in a different environment/locally. See chat history 2026-06-30 for full detail.
+- **Resolved (2026-07-01): the quantitative data pipeline.** This dev environment's network
+  egress allowlist blocks `pypi.org`, npm, apt, GitHub's release-asset CDN, and WebFetch (see
+  `docs/adr/0003-stdlib-pivot.md`), so nflverse data can't be fetched automatically. Fix: the
+  user downloaded `player_stats.csv` and `player_stats_def.csv` directly from nflverse's GitHub
+  releases on their own machine and uploaded them (zipped, to get under the 30MB chat limit).
+  Pipeline now runs end to end against real data — `pipeline/fetch_data.py` and
+  `pipeline/predictive_stats.py` both exit 0, producing `research/predictive-stats.md` with
+  real Pearson correlations (1999-2024 nflverse data, filtered to 2016-2024 per
+  `pipeline/fetch_data.py`'s SEASON_MIN/MAX). Not committed to git: `inputs/nflverse/*.csv`
+  (raw source, 67MB, gitignored) and `data/raw/` (generated output, also gitignored) — both
+  are reproducible from the pipeline scripts, so only the scripts and the final
+  `research/predictive-stats.md` are versioned.
 
-## Research produced so far (Phase 1, qualitative — see `research/`)
+## Research produced so far (Phase 1 — see `research/`)
 
+- `research/predictive-stats.md` — **pipeline-verified**, real nflverse data (1999-2024,
+  filtered 2016-2024). Notable results: target share (r=0.339) and WOPR (r=0.271) meaningfully
+  predict next-season PPG; TD rate is ~noise (r=0.010) — matches conventional football-
+  analytics wisdom, a good sanity check. IDP: solo tackle rate is strongly predictive
+  (r=0.504), sack rate is not (r=0.092) — confirms the volume-vs-boom-bust framing in
+  `research/idp-evaluation.md` with real numbers.
 - `research/coach-tendencies.md` — first-pass coverage of 2026's highest-impact coaching
   changes (Raiders, Cardinals, Browns, Bills, Ravens, Steelers, Dolphins; Jaguars/Chiefs
-  flagged as non-changes). Not all 32 teams yet.
+  flagged as non-changes). Not all 32 teams yet — still WebSearch-corroborated, not
+  pipeline-verified (coaching tendencies aren't in the player-stats data).
 - `research/breakout-comps.md` — methodology + 3 worked examples (Luther Burden III ↔ Tee
-  Higgins, Emeka Egbuka ↔ A.J. Brown, Christian Watson archetype).
-- `research/idp-evaluation.md` — positional volume hierarchy and draft-strategy framework for
-  this league's single flex IDP slot.
-
-All three are explicitly marked as needing the data pipeline to move from
-search-snippet-sourced to pipeline-verified.
+  Higgins, Emeka Egbuka ↔ A.J. Brown, Christian Watson archetype). Still WebSearch-corroborated.
+- `research/idp-evaluation.md` — positional volume hierarchy and draft-strategy framework;
+  its core claim (tackle volume = floor, sacks = boom-bust) is now backed by
+  `research/predictive-stats.md`'s real correlation numbers above.
