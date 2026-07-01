@@ -18,7 +18,17 @@
 
 ## ACTIVE QUEUE
 
-_(empty — nothing filed yet)_
+- **[TOPIC] Media-narrative retrospective on historical league picks** (queued 2026-07-02, per
+  Brendan: "find narratives in the media regarding the players they drafted, not just stat
+  based"). Slow-burn nightly backlog: reconstruct the draft-time media story for picks in
+  `draft_history_enriched.csv`, starting with 2025, then 2024; prioritize Brendan's picks and
+  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. Status: queued.
+- **[PENDING FROM BRENDAN] Final standings per season (2019-2025).** Finding 5's outcome
+  analysis measures draft-value, not actual league finishes. To correlate habits with WINNING
+  Brendan needs to send each season's final standings page saved as MHTML (same way he sent the
+  draft results — Yahoo league → Standings, save page). Once they land: parse, add
+  final-finish per manager per year, correlate archetype/tendency → standings. Status: waiting
+  on files; don't chase, remind gently if he's sending other league pages anyway.
 
 ---
 

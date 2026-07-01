@@ -169,6 +169,69 @@ drafted immediately after their first big year.
 3. Aging brand names will go earlier than value — **Connor's bid** — never reach to beat him.
 4. Last year's breakout WR/RB will be gone sooner than ADP — **Dylan and Aaron** both chase.
 
+## Finding 5 — Which habits actually WIN: realized outcomes (added 2026-07-02)
+
+Metric: each pick's REG-season **total** league-scoring points in its draft year vs the median
+of all picks in that same round that year ("round-relative delta"; total, not PPG, because
+missed games ARE the outcome of a pick). Rounds 1-8, skill positions, 558 picks. Pipeline:
+`pipeline/draft_outcomes.py`. **S-tier provenance; one honest limitation:** this measures
+draft-value, not league standings — we don't have final standings data yet (requested from
+Brendan; see open threads). Draft value ≈ but ≠ winning (waivers/trades/luck matter).
+
+### League-wide: which archetypes return value
+
+| Archetype | Picks | Hit rate | Avg delta | Verdict |
+|---|---|---|---|---|
+| STEADY | 245 | 55% | **+20.9** | **Boring wins. The only strongly positive archetype.** |
+| BOOM_BUST | 40 | 50% | +3.5 | Volatility itself isn't the trap |
+| ROOKIE | 31 | 52% | -1.8 | Roughly fair-priced in this league |
+| SECOND_YEAR | 76 | 42% | -5.5 | The year-2-leap bet slightly loses |
+| AGING_VET | 78 | 46% | -5.9 | Slightly loses (Connor's habit) |
+| BREAKOUT_CHASE | 75 | 43% | -7.1 | Chasing last year's breakout loses |
+| POST_INJURY | 33 | **33%** | -7.4 | **The worst archetype in the league's history** |
+
+### Manager draft-value leaderboard
+
+All-years avg delta: **Niko +26.1** and **lucas +20.4** clearly best (notably: the rookie-reacher
+AND the zero-rookies guy — opposite styles, both disciplined); Jack +10.7, Dylan +10.3 (and
+Dylan is 75% hit rate in 2024-25 — hottest recent drafter), riley +8.8, Connor +5.2, Mattias
++0.9, Nate -6.4 (**-30.1 in 2024-25, coldest recent**), Brendan -7.0, Aaron -10.1.
+
+### The QB question — "is the league catching on?" (Brendan's hunch, tested)
+
+Avg round of each manager's first QB by year: 2019: 7.7 → 2020: 7.5 → 2021: 7.1 → 2022: 8.0 →
+**2023: 6.4 → 2024: 6.3** (7 QBs gone by R6 both years, vs ~4 historically) → **2025: 7.1**
+(back to 5 by R6). Verdict: the league DID speed up in 2023-24, then relaxed in 2025 — the
+edge shrank but did not close. And the payoff is real: **Brendan's three best value picks in
+seven years are all mid-round QBs** — Lamar R6 2022 (+127), Mahomes R5 2024 (+110), Herbert R6
+2023 (+88). In a 6pt-passing league where most of the room still waits, the round 5-6 elite-QB
+window has been his single most profitable move. Keep exploiting it until the room actually
+closes it.
+
+### Brendan: good points vs bad points (he asked for this straight — receipts attached)
+
+**What works (keep doing):**
+- **Mid-round QBs — your superpower.** Top-3 best picks ever, all this move. (See above.)
+- **Aging vets: 4-for-4, +48.0 avg** (Davante ×2, old Hopkins) — your best per-pick archetype.
+  You beat the league's 46% at 100%. Small sample, but your old-guy eye is genuinely good.
+- **STEADY picks: 67% hit, +9.1** — above the league's 55%. When you draft boring, you win.
+- **BOOM_BUST: 67% hit** — you pick volatile players well (Diontae '20 +88).
+
+**What doesn't (the leak, and it's your signature move):**
+- **POST_INJURY: 0-for-6, average -46 points per pick.** CMC '21 (R1, -98), Kupp '23, Fuller,
+  Sutton, Freeman, Hunt — not one beat its round median. The discount rack is a trap league-wide
+  (33% hit) and it is YOUR most distinctive habit (tied-most such picks).
+- **SECOND_YEAR: 33% hit, -32.6 avg** — CEH '21 (-113), Kerryon '19 (-127), Kyle Pitts '22
+  (-86), Brian Thomas '25 (-142, your single worst pick in seven years).
+- Net: 52% hit rate (fine) but -7.0 avg delta — **you hit singles often and strike out
+  catastrophically**; the misses cluster in exactly two archetypes: post-injury + second-year
+  "upside."
+- **Live warning for Aug 28:** your 2025-07-01 mock memo circles Egbuka (injury-shortened),
+  MHJ (injury-shortened), Worthy (post-ACL) — that's the same pattern that's 0-for-6. Doesn't
+  mean those players are wrong; means the *price you'll happily pay* for them is historically
+  ~46 points too high. Demand an extra round of discount on injury-story players.
+- 2024-25 recency view: 62% hit, -2.3 — trending better.
+
 ## Next steps / open threads
 
 - **[data]** More draft years if available would tighten the QB-timing averages (7 is enough for

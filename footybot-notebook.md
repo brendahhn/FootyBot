@@ -172,6 +172,31 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 ## CHANGELOG
 
+### 2026-07-02 (interactive session, follow-up 2) — Outcomes, QB trend, narratives, memory rule
+Brendan's asks, all delivered or wired into the routine:
+1. **Which habits WIN** → `pipeline/draft_outcomes.py` + Finding 5 in draft-tendencies.md.
+   League-wide: STEADY is the only strongly positive archetype (+20.9/pick); POST_INJURY is
+   the worst (33% hit). Leaderboard: Niko +26.1 and lucas +20.4 best; Dylan hottest recent
+   (75% hit 2024-25); Nate coldest recent (-30.1). Brendan: 52% hit but -7.0 avg — frequent
+   singles, catastrophic strikeouts, and the strikeouts cluster in exactly his signature
+   habits: POST_INJURY 0-for-6 (-46/pick) and SECOND_YEAR busts (BTJ '25 -142 = his worst
+   ever). His superpower: mid-round QBs (Lamar '22 +127, Mahomes '24 +110, Herbert '23 +88 =
+   his 3 best picks ever) + aging vets 4-for-4.
+2. **"League catching on to QBs?"** → tested: first-QB avg round 7.7→6.3 across 2019-2024
+   (real acceleration in '23-'24), relaxed back to 7.1 in 2025. Edge shrank, didn't close.
+3. **Media narratives, not just stats** → standing MEDIA-NARRATIVE LAYER in the prompt
+   (current coverage labeled as narrative + slow-burn retrospective on historical picks,
+   2025-weighted) + ACTIVE QUEUE item.
+4. **Recency weighting** → 2025 heaviest for habit claims, in prompt + outcomes script.
+5. **"Get in my brain / call out good vs bad"** → PATTERN ALARM added to checking-your-takes:
+   flag when his live takes fit a losing archetype (Egbuka/MHJ/Worthy = post-injury pattern),
+   reinforce when they fit a winning one.
+6. **"Continuously add to memory"** → STANDING MEMORY RULE in STEP 7: anything sent/learned
+   gets committed same-session; nothing lives only in chat.
+7. **True standings correlation** → blocked on data we don't have; requested final-standings
+   MHTMLs from Brendan (idea queue, PENDING FROM BRENDAN).
+Prompt bumped to v2026-07-02b, `## END` verified.
+
 ### 2026-07-02 (interactive session, follow-up) — Archetype layer: what managers were THINKING
 Brendan: positional tendencies are great, but he wants the thought-process at the time —
 "did this friend take the risky RB? The solid breakout receiver from the year before? The
