@@ -103,6 +103,12 @@ acting on any of it.
   2026. **[TOPIC] — add a full Eagles entry to `research/coach-tendencies.md` next pass** (not
   done yet this session, flagging for the queue since it wasn't in scope of today's 4-team
   expansion).
+  **STATUS: done 2026-07-01** — full Eagles entry written to `research/coach-tendencies.md`
+  (Sirianni retained; Sean Mannion new first-time playcaller; under-center/zone shift, Saquon
+  YPC splits, 2025 yards-before-contact decline, first-time-PC + Hurts-friction failure modes).
+  Re-verified freshly via WebSearch this run (NFL.com, NBC Sports Philadelphia, ESPN, CBS, SI,
+  Inquirer). The "major bounceback" narrative was deliberately downgraded to Speculative, not a
+  lean. Commit on branch `claude/modest-gates-4i3fc0` (see notebook VERIFICATION LOG re: branch).
 - **Packers WR/OL changes re: Josh Jacobs:** confirmed — Green Bay lost BOTH Romeo Doubs (FA,
   Patriots) and Dontavion Wicks (traded, Eagles); Golden/Watson/Reed expected to absorb volume.
   O-line lost 2 starters (Rasheed Walker, Elgton Jenkins) but 2024 1st-rounder Jordan Morgan

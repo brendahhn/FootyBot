@@ -2,9 +2,10 @@
 
 Status: expanded 2026-07-01 (first pass 2026-06-30). Covers the highest fantasy-impact coaching
 changes from the 2026 offseason cycle (confirmed via WebSearch), not all 32 teams yet. 2026-07-01
-run added Chargers, Titans, Falcons, Buccaneers (all A-tier sourcing) and re-verified the Ravens
-and Browns entries against fresh sources after a garbled search summary tried to swap them (see
-notebook CHANGELOG 2026-07-01). WebFetch and direct
+runs added Chargers, Titans, Falcons, Buccaneers, and (later same day) a full **Eagles** entry
+(Sirianni retained, Sean Mannion new first-time playcaller — directly serves Brendan's stated
+Saquon-at-#4 interest), all A-tier sourcing; and re-verified the Ravens and Browns entries against
+fresh sources after a garbled search summary tried to swap them (see notebook CHANGELOG 2026-07-01). WebFetch and direct
 data pulls are blocked in this environment (see `CONTEXT.md` open questions / the pipeline
 blocker), so this is built from search-result snippets plus established scheme knowledge for
 each coach's track record — treat specifics as directional, not exact, and re-verify closer
@@ -152,6 +153,50 @@ data becomes available.
   weakens that specific assumption (new scheme = new usage patterns, and rookie-year efficiency
   in one system doesn't transfer 1:1). See the updated failure-mode note there.
 
+### Philadelphia Eagles — HC Nick Sirianni (retained), OC Sean Mannion (new playcaller)
+- Background (A): This is an **OC-only change, not a regime change** — Sirianni stays HC. The
+  Eagles fired 2025 OC/playcaller Kevin Patullo after one stagnant season (Hurts hit fewer big
+  plays; the passing game went cold for long stretches) and hired **Sean Mannion**, Green Bay's
+  QB coach the past two seasons. Critical caveat: **Mannion has never called plays at any level —
+  a true first-time playcaller learning on the job** on a Super-Bowl-expectation roster (sourced:
+  NFL.com, NBC Sports Philadelphia, Yahoo Sports, ESPN, 2026). He is Sirianni's 5th OC and Hurts'
+  7th play caller.
+- Tendencies (B — reported philosophy, NOT an observed track record): Sirianni has said Mannion
+  will install **more zone-blocking run concepts** and more **under-center** work; reporting
+  places his philosophy closer to the Shanahan/McVay/Kubiak tree than Sirianni's prior
+  shotgun-spread identity. Tagged B, not A, deliberately: with zero playcalling sample, these are
+  stated intentions + lineage inference, not tendencies anyone has watched him call. 2025 RB-run
+  volume was 21.9/gm (2nd-lowest of the Sirianni era, down from 26.7 in 2024) and is widely
+  expected to normalize toward league-middle.
+- Fantasy implication — **Saquon Barkley** (the draft-relevant one; Brendan flagged wanting a
+  Saquon + Chase pairing at pick #4):
+  - The under-center shift is **not** a negative for him. Media-cited 2024 splits: **6.1 YPC
+    under center vs. 5.6 in shotgun**, with ~half of his 2,005 rushing yards coming from under
+    center (A on the split being reported; NOT pipeline-computed).
+  - 2025 was a genuine down year: 1,140 rush yds / 7 TD / 4.1 YPC on 280 carries, vs. 2024's
+    2,005 / 5.8 YPC / 345 carries (A: CBS, SI). Honest correlation-vs-causation read: his
+    **yards before contact collapsed 3.8 → 1.7** — that implicates blocking/scheme decline under
+    Patullo as much as age, which is precisely why new zone concepts *could* help. But he turns
+    29 in 2026, so age-related decline is a live competing explanation, not one to wave away.
+  - **Net (B / Speculative on the upside):** the rebound mechanism is real (new zone scheme +
+    likely volume normalization + under-center fits his profile), but a "major bounceback" rests
+    on a first-time playcaller actually executing. Treat Saquon as a strong RB1 on talent/role —
+    not as a bet on the scheme change delivering a return to the 2024 ceiling. Don't pay a
+    2024-ceiling price.
+- Failure modes (what keeps this entry honest):
+  1. **First-time-playcaller risk** — Mannion has never called an NFL play; the projected scheme
+     shape may not materialize cleanly in year one on a high-pressure roster.
+  2. **Hurts/scheme friction** — Hurts reportedly pushed back on going under center more and has
+     been described as having "rigid preferences." If the QB resists, the under-center/zone shift
+     gets diluted. (Relevant to this league's **6pt passing TDs**: Hurts' value leans on rushing
+     TDs plus whatever passing-volume/efficiency bump this scheme is supposed to unlock — so this
+     friction cuts at his QB ceiling specifically.)
+- Sources (WebSearch, 2026-07-01, all A-tier outlets): NFL.com (Mannion hire), NBC Sports
+  Philadelphia (readiness/first-time-playcaller), ESPN ("evil genius" scheme profile), CBS Sports
+  (Hurts "rigid preferences"; Saquon 2025 decline + bounceback framing), SI/onsi (Saquon
+  yards-before-contact regression), Philadelphia Inquirer (under-center debate, Barkley YPC
+  splits, RB-run-rate trend).
+
 ## Notable non-change (don't over-read into "new regime" narratives)
 
 ### Jacksonville Jaguars — HC Liam Coen, OC Grant Udinski, DC Anthony Campanile all retained
@@ -173,7 +218,11 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 "not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos/Eagles OC changes. Plus full
+plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
+covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
+with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
+Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
+correcting). Plus full
 defensive-coordinator-level
 detail for IDP purposes (see `research/idp-evaluation.md` for the IDP-specific angle on
 defensive scheme/role). Expand this doc as draft season approaches and as preseason tape
