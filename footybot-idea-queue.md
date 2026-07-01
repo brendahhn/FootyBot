@@ -127,11 +127,20 @@ Other loose threads worth the bot picking up later (not yet researched):
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).
 
-### 2026-07-01 — [BEHAVIOR-adjacent, PENDING FROM BRENDAN, not yet received]
-Brendan wants to send over **several years of his friend group's past draft results** so FootyBot
-can build a **friend-by-friend drafting-tendency/archetype breakdown** (e.g. "this friend always
-reaches for flashy rookies," "this friend is an over-reliable-veteran drafter") to use as
-opponent modeling for future mock/live drafts. This is a **new capability, not yet scoped in
-CONTEXT.md** — once the drafts arrive, this needs a CONTEXT.md update (new Goal item) before
-the bot builds anything, since it changes scope (opponent modeling, not just player research).
-Nothing to do until Brendan actually sends the files — don't chase this proactively.
+### 2026-07-01 — [DONE] Friend draft-tendency / opponent modeling — DELIVERED
+Brendan sent **7 years of the league's actual Yahoo draft boards + Managers pages (2019-2025)**
+as saved MHTML. **STATUS: done 2026-07-01.** Built the full pipeline and analysis:
+- `pipeline/extract_yahoo_mhtml.py` — parses saved Yahoo MHTML → clean text.
+- `pipeline/build_draft_history.py` — joins boards to the 10 stable managers (team nicknames
+  change yearly; managers don't), enriches with positions from the committed nflverse data.
+  Validated: 1,120 picks, 0 unmapped managers, 16 picks/manager/year.
+- `inputs/league-history/draft_history_master.csv` — the dataset.
+- `research/draft-tendencies.md` — first-pass findings (QB draft timing — Dylan punts QB to
+  round 7+ always, Aaron/lucas earliest; only Jack is WR-first in round 1; Brendan is the most
+  WR-heavy early drafter — quantitatively confirms his own "RBs get overvalued here" instinct).
+- `CONTEXT.md` — added Goal item 6 (opponent modeling) to scope it properly.
+
+Still open (logged to AUDIT_QUEUE): rookie/"flashy new guy" tendency (needs player
+experience-at-draft-time data), reach-vs-value (needs historical ADP). More draft years welcome
+to tighten the QB-timing averages. Brendan may still send the Twitter/X likes separately (that's
+a different pending item — player research material, not opponent modeling).

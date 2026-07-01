@@ -104,9 +104,20 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     Both pipeline scripts exit 0 against real data, 2016-2025. Raw CSVs and `data/raw/` output
     are gitignored (reproducible, not committed) — only the scripts and the final markdown
     are versioned.
+  - `research/draft-tendencies.md` — **NEW 2026-07-01, opponent modeling (Goal item 6).**
+    Built from 7 years of the league's real draft boards (2019-2025), `inputs/league-history/`
+    → `draft_history_master.csv` (1,120 picks, validated join to 10 stable managers, positions
+    from nflverse). Key findings: Dylan always punts QB (round 7+ every year); Aaron/lucas
+    draft QBs earliest; Jack is the only WR-first R1 drafter; Brendan is the most WR-heavy early
+    drafter (confirms his own "RBs overvalued here" read). S-tier by provenance (league's own
+    history). Pipeline: `pipeline/extract_yahoo_mhtml.py` + `pipeline/build_draft_history.py`.
 - **Phase 2 (cheat sheets):** not started, blocked on Phase 1's predictive-stats analysis being
   real (or a deliberate scope decision to proceed without it).
-- **Phase 3 (live draft assistant):** not started.
+- **Phase 3 (live draft assistant):** not started. NOTE: the draft-tendencies opponent model is
+  a direct input to Phase 3 (live pick suggestions should account for who's likely to take what).
+- **Draft history note:** raw Yahoo MHTML exports (61MB, 14 files) are NOT committed; the small
+  extracted `.txt` intermediates in `inputs/league-history/extracted/` are, and fully rebuild
+  the CSV. Brendan may send more seasons — drop them in `extracted/` and re-run the build.
 - **Draft date:** August 28, 2026.
 - **Delivery/cadence:** confirmed 2026-06-30. Weekly (Mondays) until ~2 weeks before the draft,
   then daily. Gmail draft to brendanhamor@gmail.com (see operating prompt STEP 6 for format).
@@ -141,8 +152,38 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   e.g. box safeties vs. deep safeties vs. CBs) that `predictive-stats.md` only partially
   confirms (solo tackles vs. sacks) — `player_stats_def.csv` doesn't have snap counts or
   position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
+- `research/draft-tendencies.md`: rookie/"flashy new guy" tendency per manager — Brendan
+  explicitly wants this ("who reaches for shiny rookies vs. reliable vets"). Needs each drafted
+  player's NFL-experience-at-draft-time (rookie vs. vet), which isn't in the current dataset —
+  a rookie-year/draft-year lookup per player would add it. Not yet built.
+- `research/draft-tendencies.md`: reach-vs-value per manager needs historical ADP per season to
+  compare each pick against where the player was going — no ADP source yet.
+- `research/draft-tendencies.md`: 3 skill players (Hollywood Brown, Kenny Gainwell, Joshua
+  Palmer) don't auto-match a position via nflverse name-join (suffix/nickname quirks); currently
+  hand-corrected in the writeup but left blank in the CSV. Minor. A small alias map in
+  `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-01 (interactive session) — Built the opponent-modeling dataset from 7 yrs of drafts
+Brendan sent 7 seasons of the league's actual Yahoo draft boards + Managers pages (2019-2025) as
+saved MHTML. Built the whole thing end to end this session:
+- `pipeline/extract_yahoo_mhtml.py` — decode/strip saved Yahoo MHTML to clean text + title attrs
+  (the title attrs hold the full team name per pick, since Yahoo truncates them in the visible
+  board). Reusable for future exports.
+- `pipeline/build_draft_history.py` — join players×teams×managers per year, enrich with position
+  from the committed nflverse data. Validated hard: 1,120 picks, 0 unmapped managers, exactly 16
+  picks/manager/year, and it correctly split three near-identical 2019 team names ("peeks for
+  playoffs" / "Peeks for playoffs" / "Peeks for PlayoffsV2" → Niko/Connor/Nate) by exact case.
+- `inputs/league-history/draft_history_master.csv` + `extracted/` intermediates + README.
+- `research/draft-tendencies.md` — real findings (QB timing, R1 position lean, early RB/WR
+  identity per manager). Confirmed Brendan's own instinct with data: 9/10 managers lean RB in
+  R1, only Jack is WR-first; Brendan himself is the most WR-heavy early drafter + a late-QB guy.
+- `CONTEXT.md` Goal item 6 added (opponent modeling — a real scope expansion beyond player
+  research, now that the data exists to support it).
+Committed the small extracted `.txt` (not the 61MB of raw MHTML) so the CSV is reproducible.
+This is a direct input to Phase 3 (live draft assistant). Rabbit-hole depth here was the point —
+went past "here's a CSV" to actual validated tendencies and self-scouting.
 
 ### 2026-07-01 (interactive session, follow-up) — Catch-up priority + "rabbit holes" instruction
 Brendan: "catch up first, when I'm not feeding it ideas, I need it going down rabbit holes."

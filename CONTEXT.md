@@ -80,6 +80,12 @@ league, going well beyond generic rankings. Specifically:
    waiver-wire targeting.
 5. **IDP evaluation** — since this league starts one flexible IDP slot, evaluate individual
    defenders (volume/role stability, scheme fit, opportunity) alongside offensive players.
+6. **Opponent modeling / friend draft tendencies** (added 2026-07-01) — model how each of the
+   9 leaguemates drafts, from 7 years of the league's own actual draft boards (2019-2025), to
+   anticipate position runs, know who punts/reaches on QB (relevant given 6pt passing TDs), and
+   know who competes for which archetype. Data + analysis: `inputs/league-history/` +
+   `research/draft-tendencies.md`. This is a real scope addition beyond pure player research —
+   it's about the humans in the draft room, not just the players.
 
 ### Phasing (agreed 2026-06-30)
 - **Phase 1 (now):** research repo + data pipeline. Build out CONTEXT.md/ADRs, ingest free
