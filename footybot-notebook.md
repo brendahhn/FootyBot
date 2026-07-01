@@ -52,17 +52,42 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
   If future scheduled runs keep seeing a label-only Gmail connector, the operating prompt's
   "Gmail draft" delivery assumption needs revisiting (different connector scope in scheduled vs.
   interactive sessions?). Surfaced to Brendan this run.
+- **2026-07-01 (2nd run today) — BRANCH RULE TRIGGERED AGAIN (#3), now a confirmed RECURRING
+  pattern.** The scheduled harness for THIS run hard-pinned the working branch to
+  `claude/modest-gates-4i3fc0` and again forbade pushing to `main` without explicit human
+  permission. This is the 2nd consecutive scheduled run to be force-pinned off `main` — it is a
+  structural configuration issue, not a one-off. Per BRANCH RULE #3 I did NOT silently fork or
+  improvise onto a self-chosen branch: I pushed this run's work (Eagles coach-tendencies entry +
+  idea-queue status + this notebook update) to the harness-assigned `claude/modest-gates-4i3fc0`
+  and am surfacing it loudly. GOOD NEWS: the previous side branch (`claude/vigilant-cori-m5ojus`)
+  WAS merged into `main` before this run — local branch was cut cleanly from `main` HEAD
+  (87c5239), so memory was NOT stale this run. The merge-each-run workaround is holding, but it
+  needs Brendan every run. **DURABLE FIX NEEDED (pick one):** (a) configure the scheduled
+  runtime/trigger to allow pushing to `main` directly; or (b) accept the merge-each-run workflow
+  as the standing process; or (c) repin the canonical branch in `footybot-operating-prompt.md`'s
+  BRANCH RULE to whatever the scheduled harness actually allows. Until one of these lands, every
+  scheduled run will keep force-forking and requiring a manual merge.
+- **2026-07-01 (2nd run today) — DELIVERY GAP persists: Gmail draft again NOT created.** Same as
+  earlier today — the connector exposed only `apply_sensitive_message_label` /
+  `apply_sensitive_thread_label` (trash/spam); no compose/draft/send/search tool (re-confirmed via
+  ToolSearch this run). This is now 2-for-2 on scheduled runs seeing a label-only Gmail connector,
+  so STEP 6's "Gmail draft" delivery assumption is effectively broken for scheduled runs. Digest
+  delivered via push-notification + run output instead. Needs a human call: either grant the
+  scheduled connector compose scope, or change STEP 6 to a delivery channel scheduled runs can
+  actually use.
 
 ## STATUS
 
 - **Phase 1 (research repo):** in progress.
-  - `research/coach-tendencies.md` — expanded 2026-07-01. Now covers 11 new-playcaller teams
+  - `research/coach-tendencies.md` — expanded 2026-07-01. Now covers 12 new-playcaller teams
     (added Chargers/McDaniel, Titans/Saleh-Daboll, Falcons/Stefanski-Rees, Buccaneers/Zac
-    Robinson — all A-tier sourcing) + 2 flagged non-changes (Jaguars, Chiefs). Ravens & Browns
-    entries re-verified this run against fresh sources (a broad-search summary tried to swap
-    Monken→Falcons / Minter→Chargers; both wrong — Monken=Browns HC, Minter=Ravens HC). Still
-    WebSearch-corroborated, not pipeline-verified. Continue expansion (Giants, Cardinals-OC,
-    Commanders/Cowboys/Broncos/Eagles) + re-verify once preseason tape exists.
+    Robinson, and **Eagles/Sirianni-retained + Mannion** — all A-tier sourcing) + 2 flagged
+    non-changes (Jaguars, Chiefs). Ravens & Browns entries re-verified earlier today against
+    fresh sources (a broad-search summary tried to swap Monken→Falcons / Minter→Chargers; both
+    wrong — Monken=Browns HC, Minter=Ravens HC). Still WebSearch-corroborated, not
+    pipeline-verified. Continue expansion (Giants, Cardinals-OC, Commanders/Cowboys/Broncos) +
+    re-verify once preseason tape exists. New audit lead: Kevin Patullo (fired Eagles OC)
+    reportedly went to the Dolphins — confirm his role there vs. our Bobby-Slowik Miami entry.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -86,6 +111,10 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
+- `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
+  Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
+  Slowik as OC. Verify Patullo's actual Miami title (could be a lower role, OR the Slowik entry
+  may be wrong) with a targeted search next run before trusting the Miami entry.
 - `research/coach-tendencies.md`: re-verify all entries against actual 2026 preseason/regular
   season tape once available — currently search-snippet-sourced only.
 - `research/coach-tendencies.md`: Cardinals OC — a broad-search summary said Nathaniel Hackett
@@ -107,6 +136,42 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
 
 ## CHANGELOG
+
+### 2026-07-01 (2nd run today) — Eagles coach-tendencies entry (highest-value queued item)
+Focus this run: worked the single highest-value `queued` [TOPIC] from the idea-queue INBOX — a
+full **Eagles** entry for `research/coach-tendencies.md`. Chosen (depth over breadth) because it
+directly serves Brendan's stated pick-#4 plan (he wants a Saquon + Chase pairing) and was the
+last-named open thread in the doc. Freshly re-verified via WebSearch this run (NOT reused from
+last session's same-session answer): NFL.com, NBC Sports Philadelphia, ESPN, CBS Sports, SI/onsi,
+Philadelphia Inquirer.
+
+Key corrected fact: this is an **OC-only change** — Nick Sirianni is RETAINED as HC; Sean Mannion
+replaces fired OC Kevin Patullo. Mannion is a **first-time playcaller who has never called plays
+at any level** — so the whole entry is tiered B on scheme tendencies (stated intentions + lineage
+inference, no observed sample), A only on the hard facts (the hire, Saquon's 2025 stat line, the
+YPC splits, the RB-run-rate trend).
+
+CRITIC-PASS this run:
+- **Downgraded the "major bounceback" narrative to Speculative**, not a lean. The CBS Fantasy
+  framing is real but it's preseason optimism resting on a first-time playcaller executing. Honest
+  correlation-vs-causation read written into the entry: Saquon's 2025 dip (5.8→4.1 YPC) tracks a
+  **yards-before-contact collapse (3.8→1.7)**, which implicates blocking/scheme under Patullo as
+  much as his age-29 decline — the former is what new zone concepts *could* fix, the latter they
+  can't. Mechanism plausible, conclusion Speculative. Told Brendan: strong RB1 on talent/role, do
+  NOT pay a 2024-ceiling price.
+- **Added two explicit failure modes** to the entry (first-time-playcaller risk; Hurts reportedly
+  resisting the under-center shift / "rigid preferences") rather than a clean bull case.
+- **Did NOT write** a Miami change off the "Patullo → Dolphins" tidbit (role unverified; our Miami
+  entry has Slowik as OC) — logged to AUDIT_QUEUE to verify next run instead of guessing.
+
+Idea-queue: marked the Eagles [TOPIC] thread **done**; the mock-draft dump stays `exploring`
+(other [TOPIC] threads — Cowboys/Pickens, Rashee Rice status, Packers/Jacobs player-note — remain
+queued for future runs).
+
+BRANCH: forced onto `claude/modest-gates-4i3fc0` by the harness again (2nd consecutive scheduled
+run off `main`) — see VERIFICATION LOG. Prior side branch was merged to `main` before this run so
+memory was current; but the recurring force-fork needs a durable fix. Gmail still label-only, no
+draft created — digest via push-notification + run output.
 
 ### 2026-07-01 — Coach-tendencies expansion (+4 teams) + critic pass caught a bad-data swap
 Focus item this run: expand `research/coach-tendencies.md` (highest-value queued lane; idea-queue
