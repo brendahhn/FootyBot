@@ -33,12 +33,28 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
+- **2026-07-01 — BRANCH RULE TRIGGERED (#3): this run did NOT write to `main`.** The runtime
+  harness for this scheduled run hard-pinned the working branch to `claude/vigilant-cori-m5ojus`
+  and explicitly forbade pushing to any other branch without explicit human permission. Per the
+  operating prompt's BRANCH RULE #3, I did NOT silently fork or improvise — I pushed this run's
+  work (coach-tendencies expansion + breakout-comps Egbuka cross-update + this notebook update)
+  to `claude/vigilant-cori-m5ojus` and am surfacing it loudly instead. **Consequence: the memory
+  loop is broken for the next scheduled run**, which reads `main` and will NOT see this work.
+  ACTION NEEDED FROM BRENDAN: either merge `claude/vigilant-cori-m5ojus` into `main`, or repin
+  the canonical branch in `footybot-operating-prompt.md`. The branch was cut from current `main`
+  (notebook content identical), so a merge/fast-forward should be clean. Do this before the next
+  Monday run or that run starts from stale memory.
 
 ## STATUS
 
 - **Phase 1 (research repo):** in progress.
-  - `research/coach-tendencies.md` — first pass, ~10 teams, WebSearch-corroborated, not
-    pipeline-verified. Needs expansion toward all 32 + re-verification once preseason tape exists.
+  - `research/coach-tendencies.md` — expanded 2026-07-01. Now covers 11 new-playcaller teams
+    (added Chargers/McDaniel, Titans/Saleh-Daboll, Falcons/Stefanski-Rees, Buccaneers/Zac
+    Robinson — all A-tier sourcing) + 2 flagged non-changes (Jaguars, Chiefs). Ravens & Browns
+    entries re-verified this run against fresh sources (a broad-search summary tried to swap
+    Monken→Falcons / Minter→Chargers; both wrong — Monken=Browns HC, Minter=Ravens HC). Still
+    WebSearch-corroborated, not pipeline-verified. Continue expansion (Giants, Cardinals-OC,
+    Commanders/Cowboys/Broncos/Eagles) + re-verify once preseason tape exists.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -64,6 +80,13 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 - `research/coach-tendencies.md`: re-verify all entries against actual 2026 preseason/regular
   season tape once available — currently search-snippet-sourced only.
+- `research/coach-tendencies.md`: Cardinals OC — a broad-search summary said Nathaniel Hackett
+  was hired as Arizona OC, but it's unconfirmed whether Hackett or HC Mike LaFleur calls plays.
+  NOT written into the doc this run (single low-quality source). Verify with a targeted search
+  next run before adding.
+- `research/coach-tendencies.md`: Giants thread — HC John Harbaugh (left Baltimore, which is why
+  the Ravens hired Minter) + OC reported as Frank Reich. Corroborated enough to note as a lead,
+  not yet worked into a full entry. Do next run.
 - `research/predictive-stats.md`: re-run once `snap_counts.csv` (offense/IDP snap%), red-zone
   play-by-play splits, or participation data (yards per route run) become available —
   explicitly skipped this run per the script's own docstring, not faked.
@@ -76,6 +99,38 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
 
 ## CHANGELOG
+
+### 2026-07-01 — Coach-tendencies expansion (+4 teams) + critic pass caught a bad-data swap
+Focus item this run: expand `research/coach-tendencies.md` (highest-value queued lane; idea-queue
+INBOX empty, no new nflverse data in `inputs/nflverse/`, so predictive-stats.md left untouched
+per STEP 3 lane-4 discipline). Added 4 high-fantasy-impact 2026 new-playcaller teams, all A-tier
+(named team-site + national sourcing): **Chargers** (OC Mike McDaniel calling plays under
+Harbaugh; efficiency-up-not-necessarily-volume-up framing to avoid overselling a pass funnel vs.
+Harbaugh's run lean), **Titans** (HC Saleh / OC Daboll; Cam Ward Y2-leap tagged Speculative, not
+a lean), **Falcons** (HC Stefanski / OC Tommy Rees *calls plays* — flagged the common
+Stefanski-calls-plays error; Bijan wide-zone fit as the headline, with honest "already
+high-usage / could cap pass volume" caveat), **Buccaneers** (new OC Zac Robinson, McVay tree).
+Cross-updated `research/breakout-comps.md`: the Bucs OC change is a real scheme change that
+weakens the Egbuka↔A.J. Brown comp's "no scheme change needed" leg — downgraded that comp's
+continuity assumption.
+
+CRITIC-PASS KILLS this run (the point of STEP 3C):
+- **Killed a data swap that would have corrupted two correct entries.** Two broad opening
+  searches returned an internally contradictory summary placing Todd Monken as *both* Browns and
+  Falcons HC, and Jesse Minter as *both* Ravens and Chargers HC — contradicting the (correct)
+  existing doc. Targeted single-fact verification (team sites, ESPN, Wikipedia) confirmed:
+  Monken = **Browns** HC (Kevin Stefanski, the fired Browns HC, went to the **Falcons** — that's
+  the conflation); Minter = **Ravens** HC (came *from* Chargers DC; John Harbaugh left Baltimore
+  for the Giants, opening the job). Existing entries held; nothing was overwritten. Worst failure
+  mode seen: a fast search-summarizer merging multiple coaching-carousel states into one garbled
+  paragraph — exactly the bad-data risk this project guards against.
+- **Cut Cardinals OC Nathaniel Hackett** from being written — single low-quality source, and
+  playcaller role (Hackett vs. HC LaFleur) unclear. Deferred to AUDIT_QUEUE for targeted verify.
+- **Downgraded** the Cam Ward "Year-2 breakout" from a lean to Speculative (2nd-year-QB
+  projection + worst-in-league 2025 offense = high variance, not something to bank a pick on).
+
+BRANCH: this run was forced onto `claude/vigilant-cori-m5ojus` by the harness, NOT `main` — see
+VERIFICATION LOG 2026-07-01. Memory loop needs a human merge/repin before next run.
 
 ### 2026-07-01 — Added 2025 season data (nflverse's format changed)
 Brendan correctly flagged that the first pipeline run only covered through 2024 -- 2025 (the

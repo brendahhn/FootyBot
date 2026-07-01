@@ -74,6 +74,16 @@ which is exactly what this project is trying to avoid.
   risk; if Egbuka's 2025 absence reflects an injury-prone profile rather than a one-off, the
   comp's "just needs more snaps" thesis is weaker — health, not target competition, is the
   swing factor here, and that's inherently less predictable.
+- **Update 2026-07-01 (weakens the comp's "no scheme change" leg):** Tampa Bay hired a new
+  play-caller for 2026 — Zac Robinson (McVay tree, ex-Falcons OC), replacing fired 2025 OC Josh
+  Grizzard (A-tier: buccaneers.com/ESPN/NFL.com — see `research/coach-tendencies.md`). The A.J.
+  Brown comp explicitly rested on "no scheme change required, just more snaps in the *existing*
+  offense." That leg no longer holds: Egbuka's flashes came in the 2025 system, and a new
+  scheme means new alignment/usage patterns, so rookie-year per-route efficiency doesn't
+  transfer 1:1. Net: the comp's *talent/efficiency* leg still stands, but its *continuity* leg
+  is now a question mark — downgrade confidence until 2026 usage under Robinson is visible.
+  (Mild offsetting positive: a McVay-tree motion offense can be slot/YAC-friendly, and Egbuka
+  profiles as that type — but that's a new, unproven bet, not the original thesis.)
 
 ## Worked example 3: Christian Watson (GB) — field-stretcher gaining volume from offensive necessity
 
