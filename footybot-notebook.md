@@ -44,6 +44,14 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
   the canonical branch in `footybot-operating-prompt.md`. The branch was cut from current `main`
   (notebook content identical), so a merge/fast-forward should be clean. Do this before the next
   Monday run or that run starts from stale memory.
+- **2026-07-01 — DELIVERY GAP: Gmail draft NOT created this run.** The Gmail connector in this
+  scheduled run exposed only sensitive-label tools (`apply_sensitive_message_label`,
+  `apply_sensitive_thread_label` = trash/spam) — no create-draft / compose / send / search tool
+  was available (confirmed via repeated ToolSearch). So STEP 6's digest email could not be
+  drafted. This run's digest was delivered via the run's push-notification + run output instead.
+  If future scheduled runs keep seeing a label-only Gmail connector, the operating prompt's
+  "Gmail draft" delivery assumption needs revisiting (different connector scope in scheduled vs.
+  interactive sessions?). Surfaced to Brendan this run.
 
 ## STATUS
 
