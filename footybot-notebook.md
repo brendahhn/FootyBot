@@ -24,9 +24,11 @@ Tested exhaustively 2026-06-30 (~15 distinct hosts probed). Do not re-test every
 | WebSearch | WORKS | primary research channel |
 | git push/pull/clone on `brendahhn/footybot` | WORKS | verified repeatedly |
 
-**Operating consequence:** FootyBot runs in WebSearch-corroborated mode by default. Real
-pipeline-computed numbers only happen when Brendan manually uploads nflverse CSVs to
-`inputs/nflverse/` (see `pipeline/fetch_data.py` docstring for the exact verified URLs).
+**Operating consequence (updated 2026-07-01):** the raw nflverse CSVs are now committed directly
+in `inputs/nflverse/` (no longer gitignored) so every clone — scheduled or interactive — has
+real stats memory without needing a fresh upload. Run `pipeline/fetch_data.py` then
+`pipeline/predictive_stats.py` every run unconditionally (operating prompt STEP 0). WebSearch
+remains the channel for anything the pipeline can't compute (coaching, trades, depth charts).
 
 ## VERIFICATION LOG
 
@@ -79,15 +81,20 @@ pipeline-computed numbers only happen when Brendan manually uploads nflverse CSV
 ## STATUS
 
 - **Phase 1 (research repo):** in progress.
-  - `research/coach-tendencies.md` — expanded 2026-07-01. Now covers 12 new-playcaller teams
-    (added Chargers/McDaniel, Titans/Saleh-Daboll, Falcons/Stefanski-Rees, Buccaneers/Zac
-    Robinson, and **Eagles/Sirianni-retained + Mannion** — all A-tier sourcing) + 2 flagged
-    non-changes (Jaguars, Chiefs). Ravens & Browns entries re-verified earlier today against
-    fresh sources (a broad-search summary tried to swap Monken→Falcons / Minter→Chargers; both
-    wrong — Monken=Browns HC, Minter=Ravens HC). Still WebSearch-corroborated, not
-    pipeline-verified. Continue expansion (Giants, Cardinals-OC, Commanders/Cowboys/Broncos) +
-    re-verify once preseason tape exists. New audit lead: Kevin Patullo (fired Eagles OC)
-    reportedly went to the Dolphins — confirm his role there vs. our Bobby-Slowik Miami entry.
+  - `research/coach-tendencies.md` — 13 new-playcaller teams covered (Raiders, Cardinals,
+    Browns, Bills, Ravens, Steelers, Dolphins, Chargers, Titans, Falcons, Buccaneers, Eagles)
+    + 2 flagged non-changes (Jaguars, Chiefs). **Eagles entry substantially deepened 2026-07-01
+    (interactive session, after Brendan flagged the scheduled run's first pass as too thin):**
+    added the A.J. Brown trade to New England (the single biggest fact the first pass missed —
+    a personnel trade, not a coaching change), the Wicks trade + Makai Lemon 1st-round pick, and
+    the Jeff Stoutland (longtime O-line coach) departure. **Going forward every team entry must
+    cover coaching/scheme + roster moves + O-line + RB depth + QB room, not just coaching/scheme
+    — see operating prompt STEP 3 checklist (v2026-07-01).** Remaining entries (Chargers through
+    Buccaneers) were written before this checklist existed and may be missing the same
+    dimensions — re-pass them before assuming they're complete. Continue expansion (Giants,
+    Cardinals-OC, Commanders/Cowboys/Broncos) + re-verify once preseason tape exists. Audit lead:
+    Kevin Patullo (fired Eagles OC) reportedly went to the Dolphins — confirm his role there vs.
+    our Bobby-Slowik Miami entry.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -136,6 +143,36 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   position-group granularity to test the rest of the hierarchy; would need `snap_counts.csv`.
 
 ## CHANGELOG
+
+### 2026-07-01 (interactive session) — Fixed the two things Brendan called out as broken
+Two merges + a real prompt revision, prompted by direct, sharp feedback that the scheduled runs
+were producing too little (one narrow angle per run) and couldn't do real stats analysis at all.
+
+1. **Merged both stranded scheduled-run branches into `main`.** `claude/vigilant-cori-m5ojus`
+   (already merged earlier) and **`claude/modest-gates-4i3fc0`** (the Eagles-entry run) had
+   diverged from `main` by then (my CSV commit landed in between), so this one needed a real
+   merge, not a fast-forward — came through clean, no conflicts (disjoint files). Both scheduled
+   runs' work is now on `main`.
+2. **Committed the raw nflverse CSVs.** They were gitignored as "reproducible, not committed" —
+   reasonable for a normal software repo, wrong call for a bot whose scheduled runs clone fresh
+   every time and therefore never had the data. Removed from `.gitignore`, committed ~72MB
+   directly. Re-ran `pipeline/fetch_data.py` + `pipeline/predictive_stats.py` from the committed
+   files to confirm it still works end to end (exit 0, same row counts as before).
+3. **Rewrote the Eagles entry with real depth**, filling in what the scheduled run's narrow
+   "coaching change + one Saquon stat" pass missed: the **A.J. Brown trade to New England**
+   (a bigger fantasy fact than the OC hire — completely missing from the first pass), the Wicks
+   trade + Makai Lemon 1st-round pick, and the Jeff Stoutland O-line-coach departure.
+4. **Revised `footybot-operating-prompt.md`** (version-date bumped 2026-06-30 → 2026-07-01,
+   `## END` re-verified intact): STEP 2 now requires 3-5 substantial items per run instead of
+   one ("depth over breadth" was my scoping mistake, not a bug); STEP 3 adds a mandatory
+   checklist for every coach-tendencies entry (coaching/scheme + roster moves/trades + O-line +
+   RB depth + QB room); STEP 0 now runs the pipeline unconditionally every run since the data is
+   always present, instead of conditionally checking for an upload.
+
+Brendan also said he may run this every other day going forward instead of weekly — noted, no
+prompt change needed for that (it's a schedule/cadence setting, not a behavior change), but
+worth watching whether coach-tendencies coverage (finite, ~32 teams) runs out of genuinely new
+ground at that cadence faster than expected.
 
 ### 2026-07-01 (2nd run today) — Eagles coach-tendencies entry (highest-value queued item)
 Focus this run: worked the single highest-value `queued` [TOPIC] from the idea-queue INBOX — a

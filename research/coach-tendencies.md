@@ -191,11 +191,46 @@ data becomes available.
      gets diluted. (Relevant to this league's **6pt passing TDs**: Hurts' value leans on rushing
      TDs plus whatever passing-volume/efficiency bump this scheme is supposed to unlock — so this
      friction cuts at his QB ceiling specifically.)
+- **Wide receivers — a real overhaul, not just role tweaks (A):** the Eagles **traded A.J. Brown
+  to the New England Patriots** (for a 2028 1st + 2027 5th) this offseason. This is the single
+  biggest fantasy-relevant fact missing from the first pass of this entry — it changes the whole
+  passing-game picture, not just a depth-chart footnote. Consequence: **DeVonta Smith is now the
+  unambiguous WR1** in Philadelphia (previously a clear 1B to Brown's 1A). Replacing Brown's
+  targets: **Marquise "Hollywood" Brown** (veteran, already on roster), **Dontayvion Wicks**
+  (trade acquisition — from Green Bay, see `research/coach-tendencies.md`'s Packers-adjacent
+  notes on Jacobs), and rookie **Makai Lemon** (Eagles traded two 4th-round picks to move up
+  three spots with the Cowboys to draft him 20th overall — real draft-capital investment, not a
+  throwaway pick). Net: Smith's target share should rise meaningfully; the WR2/3 mix behind him
+  is now a committee of a vet, a change-of-scenery trade piece, and a rookie — genuinely unsettled,
+  watch camp reps closely rather than assuming a pecking order.
+  - **Cross-reference to Brendan's own mock-draft notes (2026-07-01, idea queue):** he flagged
+    "AJ Brown enticing" while mocking a draft — that take needs updating now that Brown is a
+    Patriot, not an Eagle, playing in a completely different offense (see New England note below
+    if/when that team gets a full entry).
+- **Offensive line — a real continuity risk, not addressed in the first pass (A):** Lane Johnson
+  confirmed he's returning for a 14th season, and Landon Dickerson is expected back — the
+  starting five is mostly intact by personnel. **But 2026 is the Eagles' first season since 2012
+  without O-line coach/run-game coordinator Jeff Stoutland**, who departed in February. Stoutland
+  was central to Philadelphia's power-gap/"tush push" O-line identity for over a decade — losing
+  the architect, even with the same players, is a real scheme-continuity question, and it lands
+  at the exact moment the offense is also installing new zone-blocking concepts under Mannion.
+  Two structural changes (new playcaller's run scheme + no Stoutland) compounding at once raises
+  the uncertainty band on Saquon's floor, not just his ceiling — worth weighing against the
+  "bounceback" framing above.
+- **Quarterback room (B — RB2/3 QB depth isn't fantasy-relevant, noted for completeness):** Hurts
+  starts, Tanner McKee is the backup; QB3 is reported as either Sam Howell or Andy Dalton
+  depending on the source (unresolved, low-priority — no real fantasy relevance unless Hurts is
+  hurt, at which point re-verify before treating either as a stream option).
+- **Running back depth behind Saquon:** no material offseason competition surfaced in this pass
+  — treat as Saquon-or-bust at the position; flag for AUDIT_QUEUE to re-check once depth charts
+  firm up in camp rather than assert an empty backfield with false confidence.
 - Sources (WebSearch, 2026-07-01, all A-tier outlets): NFL.com (Mannion hire), NBC Sports
   Philadelphia (readiness/first-time-playcaller), ESPN ("evil genius" scheme profile), CBS Sports
   (Hurts "rigid preferences"; Saquon 2025 decline + bounceback framing), SI/onsi (Saquon
   yards-before-contact regression), Philadelphia Inquirer (under-center debate, Barkley YPC
-  splits, RB-run-rate trend).
+  splits, RB-run-rate trend), philadelphiaeagles.com signing tracker + Wikipedia + ESPN
+  transactions + CBS Sports transactions (A.J. Brown trade, Wicks trade, Lemon draft-day trade-up,
+  Stoutland departure, Johnson/Dickerson return), Yahoo Sports + Inside The Birds (QB depth chart).
 
 ## Notable non-change (don't over-read into "new regime" narratives)
 
