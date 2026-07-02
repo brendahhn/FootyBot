@@ -246,6 +246,89 @@ Bieniemy replaces Matt Nagy (who left to become Bears OC) and previously ran Kan
 offense for 5 seasons (2018-2022) under Andy Reid. This is a return to a previously-successful
 system, not a new scheme — lower projection uncertainty than the other changes on this list.
 
+## Roster/trade-driven entries (no NEW 2026 playcaller change, but high fantasy relevance)
+
+### Dallas Cowboys — HC Brian Schottenheimer (calls plays, 2nd year), OC Klayton Adams (does NOT call plays)
+Added 2026-07-02 (Lane D deep dive). NOT a 2026 coaching change — Schottenheimer's arrival was the
+2025 cycle. Included because (a) it was a real gap (Dallas was on the "not yet covered" list) and
+(b) the **George Pickens trade** reshaped the WR room and directly answers two of Brendan's live
+mock-draft questions.
+
+- **THE PICKENS TRADE (A — real, finalized, and already a full season old):** On **May 7, 2025** the
+  Steelers traded WR **George Pickens + a 2027 6th** to Dallas for a **2026 3rd (No. 76, which the
+  Steelers used on QB Drew Allar) + a 2027 5th**. This is NOT a 2026 rumor — Pickens already played
+  the entire 2025 season in Dallas. He then got the **franchise tag** before the 2026 tampering
+  window (1-yr, ~$27.3M); COO Stephen Jones said "zero intention of moving him." So for 2026, Pickens
+  is a Cowboy. Sourced: ESPN (trade grades), NFL.com, dallascowboys.com, Wikipedia, Blogging The Boys.
+- **Coaching / scheme (A on identity; B on year-2 specifics):** Schottenheimer became HC in Jan 2025
+  (was Cowboys OC 2023-24 under McCarthy, who called plays then; before that Seahawks OC 2018-20).
+  **He is the primary playcaller.** OC **Klayton Adams** (first-time coordinator in 2025) explicitly
+  does NOT call plays — he builds the weekly gameplan with Schottenheimer. Scheme identity is
+  "old-school balance": run to control tempo, heavy play-action, avoid turnovers, West Coast
+  protections. Career playcalling split ~**46% run / 54% pass**. The 2025 Dallas offense was among
+  the NFL's best (Dak in the MVP conversation), using play-action to open downfield shots to Lamb and
+  Pickens. Sourced: dallascowboys.com, Blogging The Boys, Yahoo Sports, Footballguys, SI, NFL.com.
+- **QB room (A on Dak; B on backup):** **Dak Prescott** enters 2026 fully healthy after a
+  **season-ending right-hamstring surgery (partial avulsion) that ended his 2024**. He returned to
+  start all 17 games in 2025 — ~4,175 yds / 28 TD / 10 INT through 15 games, Comeback POY finalist.
+  Turns 33 in 2026; durability is the swing (multiple lost stretches in recent seasons). Backup is a
+  camp battle: **Joe Milton III** (traded from NE in 2025) vs. newly-signed **Sam Howell** — low
+  fantasy relevance unless Dak is hurt, at which point both WRs crater. Sourced: NFL.com, ESPN,
+  dallascowboys.com, SI/onsi, ProFootballNetwork.
+- **THE LAMB + PICKENS FIT — the fantasy crux (A on the raw stats; B/C on interpretation):**
+  - They are a **genuine, complementary 1-2, not two players fighting for the same targets.** Roles
+    are structurally different: **Lamb = slot / movement-Z, works the middle** (leads the NFL in slot
+    catches + slot yards since 2023); **Pickens = natural X, outside/deep field-stretcher** (though
+    Dallas also moved him inside on in-breaking intermediate routes/slants, more varied than his
+    Pittsburgh vertical-only usage). Dallas specifically wanted a deep threat opposite Lamb to break
+    the double-teams he'd been drawing. CBS ranks them among the NFL's **elite WR duos**. Sourced:
+    CBS Sports, Yahoo Sports, Blogging The Boys, dallascowboys.com.
+  - **Proof they coexist:** in 2025 **both cleared their production simultaneously** — Pickens
+    **93 / ~1,423 / 9** (career highs, Pro Bowl, 2nd-team All-Pro) and Lamb **75 / 1,077 / 3 in 14
+    games** (missed 3 w/ ankle). Two 1,000-yard-pace WRs in the same offense = empirical evidence of
+    complementarity, not cannibalization.
+  - **The honest fantasy nuance (this is the part a bull case skips):** "complementary + both
+    productive" ≠ "both keep their lone-alpha ceiling." Lamb's raw volume **fell** — **8.4 tgt/gm in
+    2025 vs. 10+/gm in 2024**, his **lowest receiving line since his rookie year**. His *efficiency*
+    rose (career-high **19.7% deep-route rate**, YPR and YPT up) because Pickens draws coverage off
+    him — but half-PPR fantasy is volume-driven, and the pairing structurally **caps Lamb's target
+    hog ceiling.** His true "without Pickens" baseline is **2023: 135 / 1,749 / 12** as the sole
+    alpha — that season is off the table with Pickens present.
+- **O-line (A):** projected 2026 L→R: **Tyler Guyton (LT), Tyler Smith (LG, 3x Pro Bowl), Cooper
+  Beebe (C), Tyler Booker (RG, 2025 1st-rd, PFWA All-Rookie), Terence Steele (RT).** Interior is a
+  strength; the risk is **Guyton's durability** (missed 7 games in 2025 — knee, concussion, high
+  ankle). Smith stays at LG unless forced to LT. Sourced: dallascowboys.com, NFL.com, Inside The Star.
+- **RB depth (A on RB1; B on the committee):** **Javonte Williams is the clear RB1** (re-signed,
+  ~$8M/yr avg, age 26). Behind him is an unsettled committee: **Miles Sanders, Jaydon Blue (change-of-
+  pace/passing-down upside), Phil Mafah, Israel Abanikanda, Malik Davis.** No true bell-cow lock; a
+  balanced Schottenheimer run game plus a committee caps any single back's ceiling — Williams is a
+  volume-dependent RB2/flex, not an every-down workhorse to bank on. Sourced: ESPN depth chart,
+  Blogging The Boys, Yahoo Sports, SI/onsi.
+- **Fantasy so-what (verdict for Brendan):**
+  - **"CeeDee Lamb without Pickens?"** — He hasn't played without Pickens recently; 2025 was a full
+    shared season. "Without Pickens" is his 2023 sole-alpha ceiling (top-3-WR volume); "with Pickens"
+    is a lower-volume, higher-efficiency WR1 (75/1,077/3 pace). Draft him as the latter.
+  - **"Real 1-2 or competing for the same targets?"** — **REAL 1-2.** Different alignments/route
+    trees, both produced, Dak feeds both. **But** don't pay a lone-alpha price for Lamb: the pairing
+    is why his volume dropped, and it won't come back while Pickens is opposite him. Practical edge:
+    **Pickens (contract-year, ascending, likely cheaper ADP) may be the better value than Lamb at a
+    WR1 tag** — Lamb's price still bakes in a ceiling this offense structurally caps. In this league's
+    scoring, both benefit from the **6pt-pass-TD / 40+-yd-bonus** environment (Dak volume + Pickens'
+    deep role especially fits the 40+ bonus), but the -2/turnover rule and Dak's INT/durability risk
+    are the tail. No new breakout-comp warranted (Pickens already broke out in 2025; Lamb established).
+- **Failure modes (where this read could be wrong):**
+  1. **Volume vs. efficiency trap** — the "complementary" verdict is real on tape but could lull a
+     drafter into paying full WR1 freight for Lamb; if 2026 target share stays ~8/gm, he underreturns
+     a top-5-WR ADP in half-PPR. Conversely, if Dallas trades/loses Pickens (franchise tag = only a
+     1-yr lock) mid-cycle, Lamb's 2023 ceiling re-opens and Pickens' value evaporates — a real swing.
+  2. **Dak durability/age** — the entire two-WR thesis rests on Dak's health; his recent injury
+     history + age 33 is the single biggest downside for BOTH players.
+  3. **Regression** — OC Adams himself flagged defenses now have a year of film; the 2025 offense was
+     elite but Dallas still missed the playoffs ("wasted one of Dak's best seasons," ESPN), so team
+     context isn't a guaranteed ceiling.
+- Sources (WebSearch, 2026-07-02, all A-tier): ESPN, NFL.com, dallascowboys.com, CBS Sports, Yahoo
+  Sports, Blogging The Boys, Wikipedia, Footballguys, SI/onsi, ProFootballNetwork, Inside The Star.
+
 ## Not yet covered
 
 Remaining teams without a playcaller change (or lower fantasy-impact changes) — note the 2026
@@ -253,8 +336,8 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 "not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
+plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered 2026-07-01;
+**Cowboys now covered above, 2026-07-02** — full entry incl. the Pickens trade). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
 with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
 Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
 correcting). Plus full

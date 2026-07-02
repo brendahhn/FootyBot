@@ -92,9 +92,15 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     — see operating prompt STEP 3 checklist (v2026-07-01).** Remaining entries (Chargers through
     Buccaneers) were written before this checklist existed and may be missing the same
     dimensions — re-pass them before assuming they're complete. Continue expansion (Giants,
-    Cardinals-OC, Commanders/Cowboys/Broncos) + re-verify once preseason tape exists. Audit lead:
+    Cardinals-OC, Commanders/Broncos) + re-verify once preseason tape exists. Audit lead:
     Kevin Patullo (fired Eagles OC) reportedly went to the Dolphins — confirm his role there vs.
-    our Bobby-Slowik Miami entry.
+    our Bobby-Slowik Miami entry. **+ Cowboys added 2026-07-02** (scheduled run, Lane D) under a
+    new "Roster/trade-driven entries" section — full 5-dim checklist; the Pickens trade (May 2025)
+    + the real Lamb+Pickens shared-2025 data + Schottenheimer/Adams playcalling verified.
+  - `research/positional-value.md` — **NEW 2026-07-02 (scheduled run, Lane A), S-tier.** 2025
+    positional value under this league's exact scoring: QB/RB/WR/TE PPG tier tables + the
+    elite-vs-streamer QB gap (~3.0 PPG/~51 pts → wait-on-QB is right) + RB-scarcer-than-WR-at-top.
+    Script `pipeline/positional_value.py` (stdlib, reuses predictive_stats load/score pattern).
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -124,7 +130,7 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   `newsletters/YYYY-MM-DD.md` (dated for the next morning) + a push notification with the
   headlines. Full architecture: `docs/daily-newsletter-spec.md` (4 lanes + reviewer, hybrid
   compete mode, "checking your takes"). Gmail is broken for routines (label-only connector,
-  2-for-2 runs) — diagnosis given to Brendan (reconnect Gmail in claude.ai connector settings
+  3-for-3 scheduled runs incl. 2026-07-02) — diagnosis given to Brendan (reconnect Gmail in claude.ai connector settings
   with full permissions); each run makes ONE quick ToolSearch check and adds a Gmail draft only
   if compose ever appears. The old ~2026-08-14 "switch to daily" reminder is moot (already
   daily); if it fires, just confirm the cadence is still what Brendan wants and dismiss.
@@ -133,6 +139,14 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
+- **NEWS MONITOR — Josh Jacobs (GB) legal (added 2026-07-02):** felony strangulation + DV charges
+  from a late-May arrest; DA has NOT filed formal charges yet. Live NFL-suspension exposure on a
+  1st/2nd-round RB. Re-check the charging decision in a News lane through August before finalizing
+  any Jacobs draft valuation.
+- **STANDING BACKLOG — media-narrative retrospective (deferred 2026-07-02):** the slow-burn
+  reconstruction of draft-time media narratives for historical picks (idea-queue ACTIVE item) was
+  NOT chipped tonight — the CMC correction + Cowboys deep dive filled the run. Pick up a few 2025
+  picks next quiet night (start with Brendan's picks + biggest hits/busts).
 - `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
   Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
   Slowik as OC. Verify Patullo's actual Miami title (could be a lower role, OR the Slowik entry
@@ -171,6 +185,50 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-02 (SCHEDULED RUN) — FIRST DAILY NEWSLETTER shipped (v3 architecture, live)
+The nightly newsletter architecture ran end-to-end for the first time. **Two open questions from
+the spec are now answered:** (1) **subagents WORK in the scheduled environment** — all 4 specialist
+lanes ran in parallel via the Task/Agent tool and returned; no fallback to sequential needed.
+(2) **WebSearch works in subagents**; WebFetch still blocked (Lane C couldn't pull a clean numeric
+ADP feed, used a tagged composite instead).
+
+- **Lanes run:** A (Data), B (News), C (Market), D (Rabbit-hole) — all 4, parallel. Compete mode:
+  **off** (no contested new question). Reviewer pass done.
+- **Headline / biggest finding (winning lane = C):** our own `research/mock-draft-2026.md`
+  mislabeled **Christian McCaffrey as "post-injury"** at pick 4 (Brendan's 0-for-6 leak archetype).
+  The pipeline shows CMC finished **RB1 at 21.5 PPG in 2025, healthy, 17 games** — so for 2026 he's
+  an **AGING_VET** (Brendan's *best* archetype, 4-for-4), not post-injury. **Corrected the mock file**
+  (cross-file consistency — it even self-contradicted, calling him a "falling aging star" at pick 5).
+  Real caveat is age-30/400-touch regression, not injury; and he likely won't reach pick 4 anyway
+  (his healthy season makes him a Nate/Dylan target at 2-3).
+- **Lane A (S-tier, new file `research/positional-value.md` + `pipeline/positional_value.py`):**
+  2025 positional value under league scoring. Elite-vs-streamer QB gap only **~3.0 PPG (~51
+  pts/season)** → validates Brendan's wait-then-strike-QB habit; RB scarcer than WR at the top
+  (RB1→RB6 drops 4.7 PPG; 97 qualified RB vs 162 WR) → at pick 4 the hardest-to-replace asset is a
+  top-5 RB, WR depth can wait. Honest caveat: Purdy (QB4, 9 g) mildly inflates the elite QB mean.
+- **Lane B (News):** quiet pre-camp window (honest). Movers: **Rashee Rice resolved** (out of jail
+  6/16, NO 2026 suspension, camp-ready — Brendan's "in jail" take is stale, fully draftable);
+  **Josh Jacobs** felony DV charges still pending (live suspension risk); Mahomes ACL trending Week
+  1 (+ Fields as a 6pt-league contingency stash); Etienne extension; JT contract watch.
+- **Lane D (Rabbit-hole):** corrected my prompt's premise — the **Pickens→Dallas trade closed
+  May 7, 2025**, Pickens already played all of 2025 there. Wrote a full **Cowboys** entry to
+  `research/coach-tendencies.md` (5-dim checklist; Schottenheimer calls plays, Adams does not; Dak
+  healthy at 33). Verdict: **Lamb + Pickens are a real complementary 1-2** (not target-competitors),
+  but Lamb's volume fell to ~8.4 tgt/gm — draft as efficiency WR1, Pickens may be the better value.
+  Answered both of Brendan's mock questions ("CeeDee without Pickens?" is moot; "real 1-2?" = yes).
+- **Checking your takes:** "James Cook overvalued" (partial agree — RB6/16.8 PPG but 29% from 14
+  TDs, a regression candidate, priced fairly not richly); "Tee Higgins isn't good" (disagree —
+  WR12/12.1 PPG, the knock is availability); **PATTERN ALARM** fired on his Egbuka/MHJ/Worthy
+  post-injury circling (0-for-6, demand extra discount) + reinforced the mid-round-QB superpower.
+- **Reviewer kills:** several unsourced Lane B snippets cut; Charbonnet name-merge flagged; "A.J.
+  Brown soars" downgraded; no-clean-ADP-feed noted; CMC mock correction.
+- **Newsletter:** `newsletters/2026-07-02.md` (57 days to draft).
+- **Not touched tonight:** media-narrative retrospective backlog (slow-burn) — deferred, plate full.
+- **Delivery:** repo file + push notification. Gmail still label-only (3-for-3 scheduled runs) —
+  one ToolSearch check done, no compose tool, skipped per spec.
+- **BRANCH:** force-pinned to `claude/modest-gates-jb8xhk` again (recurring #4). Pushed + verified
+  there; needs a merge to `main` before the next run. See VERIFICATION LOG.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

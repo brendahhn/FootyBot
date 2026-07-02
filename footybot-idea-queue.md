@@ -133,13 +133,27 @@ acting on any of it.
   this pattern recurs).
 
 Other loose threads worth the bot picking up later (not yet researched):
-- **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+- **[TOPIC] — DONE 2026-07-02 (Lane D):** George Pickens trade context. Verified: the trade was
+  **May 7, 2025** (not a 2026 rumor) — Pickens played all of 2025 in Dallas (93/1,423/9,
+  franchise-tagged for 2026). Full **Cowboys** entry now in `research/coach-tendencies.md`
+  (all 5 checklist dims). Verdict: Lamb + Pickens are a **real complementary 1-2** (Lamb
+  slot/middle, Pickens outside/deep), but Lamb's volume fell to ~8.4 tgt/gm — draft him as a
+  lower-volume/higher-efficiency WR1; Pickens may be the better value. Answered both of Brendan's
+  mock questions. Newsletter `newsletters/2026-07-02.md` Deep Dive.
+- **[TOPIC] — DONE 2026-07-02 (Lane B):** Rashee Rice legal situation. RESOLVED: released from jail
+  **June 16, 2026** (30-day probation-violation sentence), **NO 2026 NFL suspension**, expected at
+  camp on time (minor knee cleanup). Brendan's "in jail" take is now stale — he's fully draftable
+  on talent. Sources: NFL.com/ESPN/CBS/US News. Newsletter "What changed yesterday."
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
-  directly requested).
+  directly requested). Still open.
+- **[TOPIC] NEW — Josh Jacobs (GB) legal watch (2026-07-02, Lane B):** felony strangulation + DV
+  charges from late-May arrest; DA has NOT yet filed formal charges. Live suspension-exposure risk
+  on a 1st/2nd-round RB. Monitor into August for the charging decision. Status: exploring/monitor.
+- **[TAKE CHECKED 2026-07-02]** "James Cook overvalued" — pressure-tested in newsletter (RB6/16.8
+  PPG in 2025 but 29% of points from 14 TDs; TD rate is our least-stable stat → real regression
+  candidate, but priced fairly to last-yr finish, not a clear overvalue). "Tee Higgins — he's not
+  [good]" also checked (WR12/12.1 PPG — the knock is availability, not talent).
 
 ### 2026-07-01 — [DONE] Friend draft-tendency / opponent modeling — DELIVERED
 Brendan sent **7 years of the league's actual Yahoo draft boards + Managers pages (2019-2025)**

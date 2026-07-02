@@ -17,7 +17,7 @@ manager leans are the signal, not the exact players. Re-run against fresh ADP as
 | 1 | Lucas | Bijan Robinson | RB-first, disciplined, 1.01 | B |
 | 2 | Nate | Jahmyr Gibbs | clean RB2; fades CMC (0 post-injury picks in 7 yrs) | B |
 | 3 | Dylan | Ja'Marr Chase | elite WR value (Puka coin-flip alt) | C |
-| **4** | **Brendan** | **Puka Nacua / Chase** | elite WR falls; his lane; PASS on CMC | B |
+| **4** | **Brendan** | **Puka Nacua / Chase** | elite WR falls; his lane. CMC (if here) = aging-vet value, NOT a post-injury pass — corrected 2026-07-02, see read #1 | B |
 | 5 | Connor | Christian McCaffrey | falling aging star — textbook Connor (2× league aging-vet) | B |
 | 6 | Niko | Jaxon Smith-Njigba | best drafter takes WR3 value | C |
 | 7 | Riley | Jonathan Taylor | BPA RB | C |
@@ -41,9 +41,17 @@ Walker.
 ## Brendan's projected team through 3: Chase + Saquon + DeVonta Smith (WR/RB/WR)
 
 ### Strategic reads (the actual point)
-1. **Pick 4: take the elite WR, PASS on CMC.** He'll sit there as RB3 and tempt the
-   RB-scarce instinct — but he's the exact 0-for-6 post-injury archetype (Finding 5). Model
-   predicts Connor takes him at 5 anyway; let him.
+1. **Pick 4: take the elite WR — but NOT because CMC is a "post-injury" trap (corrected 2026-07-02).**
+   An earlier version of this file called CMC "the exact 0-for-6 post-injury archetype (Finding 5)."
+   **That label is wrong for the 2026 draft:** CMC played 17 games and finished **RB1 at 21.5 PPG in
+   2025** (S-tier, `research/positional-value.md`). For this draft he is an **AGING_VET** (age 30,
+   400-touch regression risk) — which is Brendan's *best* archetype (aging vets 4-for-4, +48/pick,
+   Finding 5), not his leak. So if CMC is on the board at 4, he is a legitimate value, eyes open on
+   age/workload regression — do NOT auto-pass on stale post-injury logic. The realistic catch (Lane C,
+   2026-07-02): his healthy RB1 season now makes him a **Nate (pick 2) or Dylan (pick 3)** target, and
+   the RB-first room (9/10 lean RB in R1) is unlikely to let him slide to 4 — so the elite WR (Chase/
+   Puka) the room lets fall remains the realistic pick. Either way Brendan lands an elite asset; the
+   point of the correction is to stop mislabeling CMC's archetype, not to chase him.
 2. **Pick 17: Saquon is the RB value Brendan wanted** ("Saquon + Chase feels good"). RB12-ish,
    played all 2025 (not a post-injury discount). Flag: Eagles new-OC + age-29 regression
    questions (coach-tendencies.md) — fine pick, not a lock.
