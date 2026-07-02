@@ -232,6 +232,66 @@ closes it.
   ~46 points too high. Demand an extra round of discount on injury-story players.
 - 2024-25 recency view: 62% hit, -2.3 — trending better.
 
+## Finding 6 — Draft vs. in-season vs. luck: what actually decides finishes (added 2026-07-02)
+
+Brendan sent final standings for 6 seasons (2019-2023, 2025; the 2024 upload was a draft page
+by mistake — re-send pending). `pipeline/build_league_finishes.py` →
+`inputs/league-history/league_finishes.csv` (rank, W-L, PF/PA, waiver, in-season move count
+per manager-season; ranks are FINAL, playoffs included). 60 manager-seasons.
+
+**Brendan's explicit methodological caveat, honored:** "if a guy drafts an RB 1 overall and
+wins, that doesn't mean RB is the best pick — lots of guys make moves throughout the season."
+So we don't claim causation; we DECOMPOSE. Spearman correlations across the 60 manager-seasons:
+
+| Relationship | r | Read |
+|---|---|---|
+| Draft value → points-for | **+0.50** | Drafting well genuinely drives scoring (~25% of variance) |
+| Points-for → final rank | +0.59 | Scoring drives finishing — but far from fully (schedule luck is real) |
+| Draft value → final rank | +0.31 | By the time playoffs/luck filter it, draft explains only ~10% of finish |
+| In-season MOVE COUNT → final rank | **+0.03** | Waiver churn volume is pure noise for finishing |
+| Move count → points-for | -0.16 | If anything, high churn associates with LOWER scoring (likely reverse causation: bad teams churn) |
+
+**The honest decomposition:** the draft matters (it's the biggest single controllable input to
+points-for) but is nowhere near destiny — 2 of the 6 champions (Mattias '19, Jack '20) won with
+*below-median* draft value, while 4 of 6 (Dylan ×2, Connor '22, Niko '23) drafted strongly
+positive. And the thing everyone thinks matters — "making moves" — has ZERO correlation with
+finishing in this league by count. Caveat on the caveat: move *count* ≠ move *quality*; a
+manager making 3 great pickups beats one making 40 sideways ones, and count can't see that.
+Measuring move quality needs transaction-level data (who was added/dropped when) — flagged as
+an open thread if Brendan can export transaction logs.
+
+### Finishes by manager (6 seasons)
+
+| Manager | Avg finish | Titles | Top-3s | Trajectory |
+|---|---|---|---|---|
+| Jack | **3.5** | 1 | 2 | Best sustained — never worse than 6th |
+| Dylan | 4.2 | **2** | 3 | Two titles including 2025 — reigning champ + hottest drafter |
+| lucas | 4.8 | 0 | 3 | Always competitive, no ring |
+| Niko | 4.8 | 1 | 2 | Boom-bust standings profile |
+| Connor | 4.8 | 1 | 3 | Improved sharply 2022-2025 |
+| riley | 6.0 | 0 | 2 | Declining: 2→3→5→7→9→10, five straight years worse |
+| Mattias | 6.2 | 1 | 2 | Feast or famine: a title + three last-places |
+| **Brendan** | **6.7** | **0** | **1** | 8th of 10. Finishes: 9,5,3,8,7,8 |
+| Nate | 6.8 | 0 | 0 | Never top-3 in six seasons |
+| Aaron | 7.2 | 0 | 0 | Never top-3; worst avg |
+
+**Brendan reality check (he asked for straight talk):** no titles, one top-3, 8th-best average
+finish — AND below-median draft value (Finding 5). The two aren't independent: his
+draft-value leak (post-injury/second-year busts) directly costs points-for, and points-for is
+the strongest rank driver we measured. One nuance in his favor: his best finish (3rd, 2021)
+came in the year his R1 pick (post-injury CMC) was a -98 bust — meaning his in-season
+management carried a broken draft to a podium. The skill is there; the draft keeps burying it.
+Fixing the two leak archetypes is, by this data, the single highest-leverage change available.
+
+### Cross-check vs. archetype habits (correlation ≠ causation, stated plainly)
+
+The two best sustained finishers (Jack, Dylan) map to opposite draft styles — Jack buys
+established/WR-first, Dylan chases breakouts and rookies — so no single archetype "wins the
+league." What they share: both are top-4 in realized draft VALUE (Finding 5). The common
+thread is drafting well *by their own method*, not a magic archetype. The losing common
+thread is real though: the league's worst finishers (Aaron, Nate, Brendan) are all bottom-3
+in draft value too. Draft value ≈ floor; in-season play + luck decide the ceiling.
+
 ## Next steps / open threads
 
 - **[data]** More draft years if available would tighten the QB-timing averages (7 is enough for

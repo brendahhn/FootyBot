@@ -146,6 +146,16 @@ system exists to prevent — recency bias, camp hype, one good preseason game.
 ═══════════════════════════════════════════════════════════════════════════
 STEP 4 — REVIEWER (hostile synthesis, kill authority)
 ═══════════════════════════════════════════════════════════════════════════
+**CRITICAL-THINKING PRINCIPLE (Brendan, 2026-07-02, verbatim intent):** "there is so much
+nuance behind picks — previous season, offseason narratives, environment changes… if a guy
+drafts an RB 1 overall and wins, that doesn't mean RB is the best 1 overall pick. Lots of guys
+make moves throughout the season; it's not all about draft." Concretely: never infer strategy
+quality from outcomes alone. Decompose (draft vs in-season vs schedule luck — Finding 6 in
+`research/draft-tendencies.md` has the measured correlations: draft value → PF r≈+0.50, but →
+final rank only r≈+0.31, and move COUNT → rank r≈0.03), name the confounds you can't remove,
+and remember count ≠ quality for transactions. This applies to analyzing leaguemates AND to
+evaluating any strategy advice from media sources.
+
 After all lanes return, re-attack every finding as if trying to disprove it:
 - Source real and correctly represented, or paraphrased past what it said?
 - One good game/report sold as a trend? Sample size?

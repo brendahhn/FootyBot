@@ -23,12 +23,16 @@
   based"). Slow-burn nightly backlog: reconstruct the draft-time media story for picks in
   `draft_history_enriched.csv`, starting with 2025, then 2024; prioritize Brendan's picks and
   the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. Status: queued.
-- **[PENDING FROM BRENDAN] Final standings per season (2019-2025).** Finding 5's outcome
-  analysis measures draft-value, not actual league finishes. To correlate habits with WINNING
-  Brendan needs to send each season's final standings page saved as MHTML (same way he sent the
-  draft results — Yahoo league → Standings, save page). Once they land: parse, add
-  final-finish per manager per year, correlate archetype/tendency → standings. Status: waiting
-  on files; don't chase, remind gently if he's sending other league pages anyway.
+- **[MOSTLY DONE 2026-07-02] Final standings per season.** Brendan sent 7 files; 6 parsed
+  (2019-2023, 2025) → `inputs/league-history/league_finishes.csv` + Finding 6 in
+  draft-tendencies.md (draft value → PF r≈+0.50 but → rank only +0.31; move count → rank
+  ≈0.00; Jack best sustained finisher, Dylan 2 titles; Brendan 8th of 10 avg, no titles).
+  **Still pending from Brendan: the real 2024 standings page** — the 2024 upload was a
+  draft-results page by mistake. Remind gently.
+- **[PENDING FROM BRENDAN, nice-to-have] Transaction logs per season.** Move COUNT is noise
+  (r≈0.03 vs rank) but move QUALITY is unmeasured — needs Yahoo's Transactions page per season
+  (same MHTML export move) to see who added/dropped whom and when. Would let the bot score
+  in-season management skill, the biggest unexplained factor in Finding 6's decomposition.
 
 ---
 

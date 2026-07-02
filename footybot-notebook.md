@@ -172,6 +172,20 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 ## CHANGELOG
 
+### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
+Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send
+requested). Built `pipeline/build_league_finishes.py` → `league_finishes.csv` (60
+manager-seasons, 0 unmapped) and Finding 6 in draft-tendencies.md, honoring his explicit
+caveat ("it's not all about draft… so much nuance behind picks"): we DECOMPOSED instead of
+claiming causation. Measured: draft value → points-for r≈+0.50; PF → rank +0.59; draft value →
+rank only +0.31; in-season move COUNT → rank +0.03 (noise; count ≠ quality — transaction logs
+requested to measure quality). 2 of 6 champions won with below-median draft value. Finishes:
+Jack best sustained (3.5 avg), Dylan 2 titles incl. 2025, Brendan 8th of 10 (6.7 avg, 0
+titles, 1 top-3) — his draft-value leak and his standings are consistent, though his 3rd-place
+2021 with a busted draft shows real in-season skill. CRITICAL-THINKING PRINCIPLE added to the
+operating prompt's reviewer step (outcome ≠ strategy quality; decompose; name confounds).
+Prompt remains v2026-07-02b lineage; `## END` verified.
+
 ### 2026-07-02 (interactive session, follow-up 2) — Outcomes, QB trend, narratives, memory rule
 Brendan's asks, all delivered or wired into the routine:
 1. **Which habits WIN** → `pipeline/draft_outcomes.py` + Finding 5 in draft-tendencies.md.
