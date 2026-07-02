@@ -32,6 +32,17 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-02 (SCHEDULED RUN) — BRANCH RULE TRIGGERED AGAIN (#4), still recurring.** The harness
+  hard-pinned this run to `claude/modest-gates-jb8xhk`. Per BRANCH RULE I did NOT self-fork: pushed
+  the run's work there and verified. `git ls-remote origin claude/modest-gates-jb8xhk` returned
+  `78b94820bf57a776cf3fff9d5739bb7f2e8e210b`, matching local `HEAD` exactly (content commit; this
+  VERIFICATION LOG addendum is a follow-up commit on the same branch). The branch was cut from
+  current `origin/main` (`32b83e6…`) so memory was NOT stale this run. **ACTION NEEDED: merge
+  `claude/modest-gates-jb8xhk` into `main` before the next scheduled run**, or the next run reads
+  stale memory and won't see this newsletter/corpus. This is the 4th consecutive scheduled run
+  force-pinned off `main` — the durable fix (allow `main` pushes in routine settings, or repin the
+  canonical branch) is still outstanding. GOOD NEWS this run: subagents worked, so the newsletter
+  pipeline is proven live.
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
