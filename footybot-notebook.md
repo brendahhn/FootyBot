@@ -77,13 +77,30 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   delivered via push-notification + run output instead. Needs a human call: either grant the
   scheduled connector compose scope, or change STEP 6 to a delivery channel scheduled runs can
   actually use.
+- **2026-07-03 — BRANCH RULE TRIGGERED (#4), still recurring.** Scheduled harness hard-pinned this
+  run to **`claude/modest-gates-5qapnm`** and the task instructions forbade pushing elsewhere
+  without explicit permission. Per BRANCH RULE I did NOT self-fork: pushed all of tonight's work
+  (first newsletter, Cowboys entry, positional-stability script + predictive-stats section, CMC
+  archetype nuance, idea-queue + notebook updates) to the assigned branch and am surfacing it
+  loudly. **GOOD NEWS: memory was NOT stale — pre-run `git ls-remote origin main` returned
+  `32b83e6…` which exactly matched local HEAD (branch cut cleanly from current `main`).** So the
+  4i3fc0 branch and all interactive work were merged to `main` before this run. Consequence
+  unchanged: **merge `claude/modest-gates-5qapnm` into `main` before the next scheduled run** or
+  it reads stale memory. The durable fix (allow `main` pushes / accept merge-each-run / repin) is
+  still pending from the 2026-07-01 entries. Post-push ls-remote confirmation appended below.
+- **2026-07-03 — Gmail STILL label-only (3-for-3 scheduled runs).** One ToolSearch this run again
+  returned only `apply_sensitive_message_label` / `apply_sensitive_thread_label` — no compose/draft.
+  Skipped the Gmail draft silently per operating prompt STEP 8.3; newsletter delivered via repo file
+  + push notification. No re-investigation (diagnosis already logged). Fix is on Brendan: reconnect
+  Gmail in claude.ai → Settings → Connectors with full permissions.
 
 ## STATUS
 
 - **Phase 1 (research repo):** in progress.
   - `research/coach-tendencies.md` — 13 new-playcaller teams covered (Raiders, Cardinals,
     Browns, Bills, Ravens, Steelers, Dolphins, Chargers, Titans, Falcons, Buccaneers, Eagles)
-    + 2 flagged non-changes (Jaguars, Chiefs). **Eagles entry substantially deepened 2026-07-01
+    + 3 flagged non-changes / continuity entries (Jaguars, Chiefs, **Dallas Cowboys — added
+    2026-07-03**, Schottenheimer Yr-2, full checklist, resolves Brendan's Lamb/Pickens question). **Eagles entry substantially deepened 2026-07-01
     (interactive session, after Brendan flagged the scheduled run's first pass as too thin):**
     added the A.J. Brown trade to New England (the single biggest fact the first pass missed —
     a personnel trade, not a coaching change), the Wicks trade + Makai Lemon 1st-round pick, and
@@ -133,10 +150,10 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
-- `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
-  Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
-  Slowik as OC. Verify Patullo's actual Miami title (could be a lower role, OR the Slowik entry
-  may be wrong) with a targeted search next run before trusting the Miami entry.
+- ~~`research/coach-tendencies.md`: **Miami OC cross-check.**~~ **RESOLVED 2026-07-03.** Kevin
+  Patullo was hired by the Dolphins (Feb 13 2026) as **passing-game coordinator UNDER OC Bobby
+  Slowik** — a lower title, NOT the OC job. This CONFIRMS the existing Miami entry; no correction
+  needed. (A: CBS Sports, NBC Sports Philadelphia, Philadelphia Inquirer.)
 - `research/coach-tendencies.md`: re-verify all entries against actual 2026 preseason/regular
   season tape once available — currently search-snippet-sourced only.
 - `research/coach-tendencies.md`: Cardinals OC — a broad-search summary said Nathaniel Hackett
@@ -171,6 +188,46 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-03 (SCHEDULED RUN) — First daily newsletter shipped; subagents confirmed working
+The v3 daily-newsletter architecture ran end-to-end for the first time on a scheduled run.
+**Key infra confirmation: subagents WORK in the scheduled environment** — spawned all 4 lanes +
+2 compete-mode agents as parallel `Task`/Agent calls, all returned; the sequential fallback was
+NOT needed (this was the biggest first-night open question from `docs/daily-newsletter-spec.md`).
+- **Lanes run (all 4, parallel agents):**
+  - **A/Data:** built `pipeline/positional_stability.py` (stdlib, league-scored, ran exit 0) and
+    added a "Positional stability" section to `research/predictive-stats.md`. S-tier finding:
+    **elite RB tier retention (47.2% top-12) > WR (39.8%)**, YoY PPG correlations equal within
+    noise (RB 0.682 / WR 0.702 / TE 0.712) — so "RBs are volatile, WRs stable" is FALSE; the real
+    asymmetry is **supply** (WR pool ~50% deeper). Half-confirms, half-challenges Brendan's premise.
+  - **B/News:** resolved 2 queued legal items — **Rashee Rice: no 2026 suspension** (served 2025),
+    buy-the-dip; **Josh Jacobs: no charges filed**, practicing. Surfaced injury risk: Kittle
+    (Achilles, Wk1 doubt), Nabers (2nd surgery, likely PUP — downgrade), Mahomes on track.
+  - **C/Market:** July ADP sweep + pick-4 countdown. CMC fallen to RB3 (~6–8 overall). Biggest
+    edge flagged: elite-QB window at picks 37/44 (Lamar ~36 / Daniels ~46) = Brendan's best habit.
+  - **D/Rabbit hole:** wrote a full **Dallas Cowboys** entry to `research/coach-tendencies.md`
+    (Schottenheimer Yr-2 continuity, full checklist). **Resolved Brendan's CeeDee-vs-Pickens
+    question: both on 2026 DAL, a real 1-2** (Pickens' 1,429/9 breakout happened WITH Lamb).
+    Also cleared the AUDIT_QUEUE **Patullo/Miami** item — Patullo is Dolphins pass-game coordinator
+    UNDER OC Slowik, confirming (not contradicting) the Miami entry.
+- **Compete mode: FIRED** on "CMC at pick 4 — value or trap?" **Verdict: FADE won the decision**
+  (pass for the elite WR; age-30 + ~450-touch cliff + opportunity cost + Connor takes him at 5
+  anyway), but the VALUE agent won the sharper *correction*, which the reviewer promoted: **2026
+  CMC is NOT a clean POST_INJURY archetype match** — his injury year was 2024, 2025 was a healthy
+  17-game RB1. Corrected Lane C's "exact post-injury archetype" framing and wrote the
+  archetype-flag nuance into `research/draft-tendencies.md` Finding 5 so future runs don't misfire
+  it. The two agents' agreement (healthy-2025 fact; WR-aging ≠ RB-aging) is itself signal.
+- **Takes checked (STEP 5):** (1) "scrounge a WR not an RB" → half-right (supply yes, stability
+  no, receipts); (2) "CeeDee without Pickens?" → wrong worry (Pickens is there, Lamb keeps volume);
+  (3) PATTERN ALARM on the CMC pull → the decision-psychology matches his 0-for-6 leak even though
+  the literal archetype doesn't. Reinforced his winning habit (mid-round QB at 37/44).
+- **Reviewer kills:** stale 2025 suspension items (J. Williams, Addison), a garbled "Kenneth
+  Walker to Chiefs" aggregation (→ new verify-next-run queue item, since Brendan's memo assumes
+  KC), garbled best-ball bench ADP names, an unverified Kamara-displacement signing.
+- **Newsletter:** `newsletters/2026-07-03.md`. **Gmail:** still label-only (3-for-3), skipped.
+- **Deferred:** media-narrative retrospective backlog (queued) — full edition load this run, will
+  chip in as the draft nears. Coach-tendencies checklist re-pass of the pre-checklist entries
+  (Chargers/Bills/etc.) also still pending — not touched tonight.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

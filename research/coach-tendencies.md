@@ -246,6 +246,74 @@ Bieniemy replaces Matt Nagy (who left to become Bears OC) and previously ran Kan
 offense for 5 seasons (2018-2022) under Andy Reid. This is a return to a previously-successful
 system, not a new scheme — lower projection uncertainty than the other changes on this list.
 
+### Dallas Cowboys — HC Brian Schottenheimer (calls plays, retained/Year 2), OC Klayton Adams (retained)
+- **This is a continuity entry, NOT a 2026 change** — placed here deliberately. Schottenheimer was
+  hired as HC in January 2025 (replacing Mike McCarthy) and 2026 is his **Year 2**; he calls the
+  plays himself ("I'm the playcaller here... I'm pretty good at it"). OC **Klayton Adams** is also
+  retained from the 2025 staff. So project off 2025 Dallas tape directly, not off a scheme install.
+  (A: nfl.com HC hire, dallascowboys.com, ESPN "first year as head coach" / "Year 2 boost").
+- **Coaching/scheme (A on staff identity; B on 2026 shape):** Schottenheimer's 2025 offense
+  supported **two 1,000-yard WRs** (Lamb and Pickens) — the system demonstrably feeds a top-2 WR
+  duo. OC Klayton Adams is a run-game/O-line specialist (ex-Cardinals OL coach 2023-24, credited
+  with "resurrecting" James Conner's career and building an effective run game); he wants an
+  identity that "creates violence in the game." So the design intent is a physical, run-game-anchored
+  offense that still throws to two alphas. DC note (low fantasy-offense relevance): Matt Eberflus was
+  DC in 2025; there is *thin/conflicting* reporting of Christian Parker as DC for 2026 (B/unresolved —
+  do not treat as settled; matters for game script only, see below). If Dallas's defense is again
+  poor, negative game scripts inflate pass volume — a mild positive for Lamb/Pickens ceiling.
+- **Roster moves — the headline (A):** the Cowboys acquired WR **George Pickens via trade from the
+  Steelers on May 7, 2025** (Dallas sent a 2026 3rd-rounder + a 2027 5th; got Pickens + a 2027 6th).
+  **Pickens is still a Cowboy for 2026** — Dallas **franchise-tagged him** before the 2026 tampering
+  window (1 yr, ~$27.3M); Stephen Jones: "We have zero intention of moving him." So **Lamb + Pickens
+  are BOTH on the 2026 roster as a genuine 1-2 WR punch.** RB Javonte Williams was **re-signed**
+  (3 yr, up to $24M). (A: nfl.com, ESPN trade grade, dallascowboys.com, Blogging The Boys.)
+- **Are they a real 1-2 or competing for the same targets? — resolved: REAL 1-2 (A/B).** Pickens'
+  2025 breakout (**93/1,429/9**, first Pro Bowl + 2nd-team All-Pro, all career highs) happened **with
+  Lamb on the field the entire time** — that is the direct answer to Brendan's memo. In their 12 full
+  games together, **Lamb still led the team**: targets 116 vs 99, PPR 16.6 vs 16.1 per relevant
+  splits — i.e., they occupy different roles (Lamb = high-volume underneath/motion alpha; Pickens =
+  vertical/boundary explosive), not cannibalistic overlap. Lamb's raw volume did dip (from ~10 tgt/gm
+  in 2024 to **8.4 tgt/gm** in 2025, partly *because* of Pickens) but his **efficiency (YPR, YPT)
+  rose** sharing the field with a vertical threat. Both cleared 1,000 yards. (B on the exact splits —
+  media-reported, not pipeline-computed; A on the "both 1,000-yd, both startable" fact.)
+- **O-line (B — real swing factor, injury-driven):** projected starting five is **Tyler Guyton (LT),
+  Tyler Smith (LG, 3x Pro Bowl All-Pro), Cooper Beebe (C), Tyler Booker (RG, 2025 1st-rd rookie),
+  Terence Steele (RT)** — talented on paper. **But 2025 was wrecked by injuries: the presumptive
+  starting five played together on only 275 of a possible 1,186 snaps** (lowest since ≥2021); Steele
+  was the only lineman to play the full year. Guyton's LT play is still unproven. This is the single
+  biggest risk to the whole Dallas offense — protection breakdowns are what could derail Dak/Lamb/
+  Pickens value; health here is the difference between a top-5 and a middling passing offense.
+- **RB (A/B):** **Javonte Williams is the clear RB1** after a bounce-back 2025 (287 touches → 1,338
+  yds, 13 TD) that earned the re-signing; usable but touchdown-dependent, and note the 13 TD is a
+  likely-to-regress spike. Behind him: **Jaydon Blue** (2025 5th-rd) disappointed as a rookie
+  (injuries + reported motivation issues, healthy inactive Weeks 9-17, flashed in the finale:
+  16-64-1) — a lottery-ticket handcuff, not a projectable share yet; **Malik Davis** is depth.
+  Backfield is Williams-led with murky competition beneath.
+- **QB room (A):** **Dak Prescott** starts, turns **33** in 2026, healthy entering camp after his
+  2024 season was cut short by a hamstring injury; he anchored the two-1,000-yd-WR passing game in
+  2025. Backup depth (Joe Milton / Will Grier tier per depth charts) is not fantasy-relevant.
+  Scoring note: this league's **6pt passing TDs** raise Dak's QB value if the offense stays pass-heavy
+  and healthy — but his ceiling is tied to the O-line staying upright (see above).
+- **Fantasy so-whats (pick #4, 10-team half-PPR):**
+  - **CeeDee Lamb — high-floor WR1, still the alpha.** He led the team in targets even alongside
+    Pickens; the "what's he without Pickens" worry actually cuts *for* Lamb (he's the one who keeps
+    volume). Draftable in the early first as a WR1; only real ding is that peak-target-hog upside
+    (his 2023 line) is capped now that targets are shared. He missed 3 games (ankle) in 2025 — finished
+    75/1,077/3 — so the down TD total is a mild buy-low angle, not a red flag.
+  - **George Pickens — Brendan's condition is MET.** He was very good *with* Lamb on the field (that's
+    when the 1,429/9 happened), so this is a real 1-2, not a target-share war — drafting Lamb early
+    AND Pickens in the mid rounds is defensible. His vertical/boundary role + 9 TDs fit this league's
+    **+2 per 40-yd play** bonus especially well (explosive-play profile). Caveats to price in: he's on
+    a **1-year franchise tag** (contract-year motivation = bull case; but a temperament/consistency
+    history worth respecting), and both WRs share the O-line-health risk. Net: strong WR2 with WR1
+    ceiling if healthy — a legitimate second piece of a Cowboys stack.
+- Sources (WebSearch, 2026-07-03, A-tier): nfl.com (Pickens trade + franchise-tag retention;
+  Schottenheimer HC hire; Adams "violence" identity), ESPN (Pickens trade grade; Schottenheimer
+  Year-1/Year-2 playcaller; Adams OC hire; O-line injury/Tyler Smith), dallascowboys.com (Pickens tag
+  / "zero intention of moving"; Schottenheimer playcaller; Adams profile), NBC Sports (two-No.1-WR
+  fantasy preview), Blogging The Boys / Inside The Star / PFN (Lamb-Pickens splits, RB depth chart,
+  O-line 275-snap figure, Javonte Williams re-signing).
+
 ## Not yet covered
 
 Remaining teams without a playcaller change (or lower fantasy-impact changes) — note the 2026
@@ -253,11 +321,13 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 "not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
-Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
-correcting). Plus full
+plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered 2026-07-01;
+**Cowboys now covered above 2026-07-03** as a Schottenheimer-retained/Year-2 continuity entry).
+**RESOLVED 2026-07-03 — Patullo/Miami audit:** Kevin Patullo (fired Eagles OC, Jan 13 2026) was
+hired by the Dolphins on Feb 13 2026 as **passing game coordinator UNDER OC Bobby Slowik** — a lower
+title, NOT the OC job. This **confirms, not contradicts,** the Miami entry (Slowik remains OC);
+no correction to that entry needed. (A: CBS Sports, NBC Sports Philadelphia, Philadelphia Inquirer.)
+Plus full
 defensive-coordinator-level
 detail for IDP purposes (see `research/idp-evaluation.md` for the IDP-specific angle on
 defensive scheme/role). Expand this doc as draft season approaches and as preseason tape

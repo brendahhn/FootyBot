@@ -232,6 +232,20 @@ closes it.
   ~46 points too high. Demand an extra round of discount on injury-story players.
 - 2024-25 recency view: 62% hit, -2.3 — trending better.
 
+**IMPORTANT ARCHETYPE-FLAG NUANCE (added 2026-07-03, from the compete-mode CMC analysis):** the
+POST_INJURY flag fires on *drafting a player COMING OFF a lost/injury season* (the bounce-back
+unproven — e.g. CMC 2021, drafted off the 2020 3-game year). It must NOT be lazily applied to a
+player who already banked a healthy season. **Worked example — 2026 Christian McCaffrey:** his
+injury year was 2024 (4 games); **2025 was a full, healthy, overall-RB1 campaign** (17 games, ~413
+touches, 102 rec). So 2026 CMC is NOT a clean POST_INJURY archetype match — the bounce-back already
+happened. The legitimate bear case on him is *age-30 + ~450-touch workload + efficiency erosion +
+opportunity cost*, which is different from the injury-discount leak. The behavioral tell still
+applies, though: Brendan's stated pull toward CMC ("don't know why he's fallen… injury concerns")
+is the same *decision-pattern* (drawn to a falling-ADP, injury-narrative name) that triggers the
+0-for-6 leak — so the PATTERN ALARM is about the psychology of the pick, not a literal archetype
+match. And note his 4-for-4 aging-vet successes were ALL WRs (Davante ×2, Hopkins); WR-aging ≠
+RB-aging, so that strength does not transfer to a 30-year-old RB.
+
 ## Finding 6 — Draft vs. in-season vs. luck: what actually decides finishes (added 2026-07-02)
 
 Brendan sent final standings for 6 seasons (2019-2023, 2025; the 2024 upload was a draft page

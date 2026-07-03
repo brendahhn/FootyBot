@@ -133,10 +133,22 @@ acting on any of it.
   this pattern recurs).
 
 Other loose threads worth the bot picking up later (not yet researched):
-- **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+- **[TOPIC — DONE 2026-07-03]** George Pickens trade context — RESOLVED and written up. Pickens
+  traded PIT→DAL May 2025, franchise-tagged for 2026; **Lamb + Pickens are a real 1-2** (Pickens'
+  93/1,429/9 breakout happened WITH Lamb on the field — Brendan's condition MET). Full **Dallas
+  Cowboys** entry added to `research/coach-tendencies.md` (Schottenheimer Yr-2 continuity).
+  Newsletter 2026-07-03 deep-dive 4b.
+- **[TOPIC — DONE 2026-07-03]** Rashee Rice legal situation — RESOLVED. The 6-game ban was SERVED
+  in 2025; NFL ruled (Apr 2026) NO second suspension for 2026; jail stint ended ~June 16; minor
+  knee cleanup, expected ready for camp. Treat as a normal WR2 / buy-the-dip, NOT an avoid.
+  Newsletter 2026-07-03 "What changed." (A: NFL.com, ESPN/Fowler, ProFootballRumors.)
+- **[TOPIC — updated 2026-07-03]** Josh Jacobs — no charges filed (DA wants more investigation),
+  took first-team OTA reps; draft at fair value with a legal asterisk (tail risk = charge/
+  suspension landing after the draft). (A: NFL.com, ESPN.)
+- **[TOPIC — NEW 2026-07-03, verify next run]** Kenneth Walker's 2026 team — Brendan's mock memo
+  assumes he's on the **Chiefs** ("Chiefs had zero run game last year"); Lane B could not
+  corroborate this run and would not assert it. Confirm Walker's actual 2026 team before treating
+  that take as settled.
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).
