@@ -87,7 +87,9 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   4i3fc0 branch and all interactive work were merged to `main` before this run. Consequence
   unchanged: **merge `claude/modest-gates-5qapnm` into `main` before the next scheduled run** or
   it reads stale memory. The durable fix (allow `main` pushes / accept merge-each-run / repin) is
-  still pending from the 2026-07-01 entries. Post-push ls-remote confirmation appended below.
+  still pending from the 2026-07-01 entries. **CONFIRMED: content commit `0f079f0` pushed to
+  `claude/modest-gates-5qapnm`; `git ls-remote origin claude/modest-gates-5qapnm` returned
+  `0f079f0…` == local HEAD at push time. Push landed.** (This confirmation is a follow-up commit.)
 - **2026-07-03 — Gmail STILL label-only (3-for-3 scheduled runs).** One ToolSearch this run again
   returned only `apply_sensitive_message_label` / `apply_sensitive_thread_label` — no compose/draft.
   Skipped the Gmail draft silently per operating prompt STEP 8.3; newsletter delivered via repo file
