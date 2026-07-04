@@ -69,6 +69,18 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   as the standing process; or (c) repin the canonical branch in `footybot-operating-prompt.md`'s
   BRANCH RULE to whatever the scheduled harness actually allows. Until one of these lands, every
   scheduled run will keep force-forking and requiring a manual merge.
+- **2026-07-04 — BRANCH RULE TRIGGERED AGAIN (recurring, ~4th scheduled run).** Harness hard-pinned
+  this run to `claude/modest-gates-mia61a` and forbade pushing `main`. Per BRANCH RULE I pushed the
+  night's newsletter + corpus updates there and verified with `git ls-remote`; branch + hash below.
+  GOOD NEWS: local branch was cut cleanly from current `main` HEAD (`32b83e6`, verified via
+  `git ls-remote origin main` == local HEAD at start), so **memory was NOT stale** — the prior
+  interactive session had merged everything to `main`. **STILL NEEDS A HUMAN MERGE of
+  `claude/modest-gates-mia61a` → `main` before the next run**, or that run reads stale memory. The
+  durable fix (allow `main` pushes / repin / accept merge-each-run) remains outstanding.
+- **2026-07-04 — DELIVERY GAP persists (3-for-3): Gmail still label-only.** One quick ToolSearch
+  this run surfaced only `apply_sensitive_message_label`/`apply_sensitive_thread_label` — no
+  compose/draft tool. No email draft created; delivery via newsletter file + push notification, per
+  spec. Diagnosis unchanged (Brendan: reconnect Gmail with full permissions).
 - **2026-07-01 (2nd run today) — DELIVERY GAP persists: Gmail draft again NOT created.** Same as
   earlier today — the connector exposed only `apply_sensitive_message_label` /
   `apply_sensitive_thread_label` (trash/spam); no compose/draft/send/search tool (re-confirmed via
@@ -92,9 +104,17 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     — see operating prompt STEP 3 checklist (v2026-07-01).** Remaining entries (Chargers through
     Buccaneers) were written before this checklist existed and may be missing the same
     dimensions — re-pass them before assuming they're complete. Continue expansion (Giants,
-    Cardinals-OC, Commanders/Cowboys/Broncos) + re-verify once preseason tape exists. Audit lead:
-    Kevin Patullo (fired Eagles OC) reportedly went to the Dolphins — confirm his role there vs.
-    our Bobby-Slowik Miami entry.
+    Cardinals-OC, Commanders/Cowboys/Broncos) + re-verify once preseason tape exists. **Miami entry
+    rewritten + audit RESOLVED 2026-07-04** (Slowik confirmed OC/playcaller; Patullo = pass-game
+    coordinator; full roster teardown captured — Tua released→ATL, Hill released→FA, Waddle
+    traded→DEN, Malik Willis QB, Achane lone survivor). New lead: Tua→Atlanta (unconfirmed vs. primary
+    source; Falcons entry not yet updated).
+  - `research/player-profiles-2025.md` — **NEW 2026-07-04 (Lane A), S-tier.** Weekly 2025 fantasy
+    profiles (this league's scoring) for 14 draft-relevant players via
+    `pipeline/player_season_profile.py`: games, PPG, PP17, median, SD, boom/startable/dud weeks.
+    Powers "checking your takes" + the PATTERN ALARM with real distributions (Egbuka/MHJ/Worthy were
+    2025 duds; Tee Higgins inconsistent = confirmed; James Cook was a durable RB1 = "overvalued" take
+    contradicted on production).
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -133,10 +153,20 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
-- `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
-  Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
-  Slowik as OC. Verify Patullo's actual Miami title (could be a lower role, OR the Slowik entry
-  may be wrong) with a targeted search next run before trusting the Miami entry.
+- ~~`research/coach-tendencies.md`: **Miami OC cross-check.**~~ **RESOLVED 2026-07-04** (Lane D,
+  A-tier): Slowik IS the OC/playcaller; Kevin Patullo joined Miami as **pass-game coordinator**
+  (subordinate). Our entry was correct; Patullo added beneath Slowik. In the same audit, caught the
+  full Miami roster teardown (Tua released → ATL, Hill released → FA, Waddle traded → Denver, Malik
+  Willis QB, Achane the lone survivor) — Miami entry rewritten.
+- **NEW 2026-07-04 — [TOPIC] Falcons QB / Tua landing spot.** "Tua signed with Atlanta" is
+  corroborated by two lanes but NOT yet confirmed against a primary transaction. Our Falcons entry
+  assumes a Penix/Cousins QB situation. Verify Tua's actual Atlanta status/role next pass before
+  updating the Falcons entry + Drake London outlook.
+- **NEW 2026-07-04 — Waddle (DEN) / Tyreek Hill (FA) re-homing.** Both left Miami; future evals must
+  use their 2026 teams (Waddle = Broncos WR1 upgrade; Hill = FA, injured).
+- **NEW 2026-07-04 — `research/player-profiles-2025.md` extension.** Add multi-year consistency and a
+  league-wide floor/ceiling scan per position for Phase-2 tiering. `pipeline/player_season_profile.py`
+  already takes any name list / any season 2016-2025.
 - `research/coach-tendencies.md`: re-verify all entries against actual 2026 preseason/regular
   season tape once available — currently search-snippet-sourced only.
 - `research/coach-tendencies.md`: Cardinals OC — a broad-search summary said Nathaniel Hackett
@@ -171,6 +201,37 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-04 (scheduled run) — First real newsletter night: 4 lanes ran as parallel agents
+The daily-newsletter architecture (v3) executed end to end on a scheduled run for the first time.
+**Subagents WORK in the scheduled environment** — spawned 3 research agents (Lanes B/News, C/Market,
+D/Rabbit-hole) in parallel via the Agent tool; they RETURNED findings and the main run (reviewer)
+computed Lane A locally + wrote all files + committed once (no file/git conflicts — agents don't
+write). This resolves open risk #2 in the spec (subagent availability). Compete mode: OFF (no
+contested high-stakes question). Newsletter: `newsletters/2026-07-04.md`.
+
+Lanes:
+- **A (Data) — WON the night.** Built `pipeline/player_season_profile.py` + `research/player-profiles-2025.md`
+  (S-tier weekly 2025 profiles, this league's scoring). Headline finding: Brendan's circled buy-low
+  WRs (Egbuka/MHJ/Worthy) were 2025 duds — Worthy had 1 startable week in 14 — quantifying the
+  PATTERN ALARM (his 0-for-6 post-injury / 33% second-year archetypes). Not a "don't draft," a
+  "don't pay the upside tax."
+- **B (News):** dead July-4 window (honest). Settled the Rashee Rice question (no 2026 suspension,
+  A/NFL.com) → idea-queue item done. Camp re-checks flagged: Bucky Irving (shoulder), Nabers (knee).
+- **C (Market):** ADP tiers (exact slots B — live tables behind blocked WebFetch). CMC = bust trap
+  at 4; Bowers = value at 24; Nabers falling to 24/37 range. Answered the Pickens/Lamb question +
+  corrected it (trade was 2025; they're 2026 teammates, real 1-2, Lamb slid a tier) → idea-queue done.
+- **D (Rabbit hole) — runner-up.** RESOLVED the Miami OC audit (Slowik = OC/playcaller correct;
+  Patullo = pass-game coordinator subordinate) AND caught the full Miami roster teardown. Reviewer
+  independently re-verified the extreme claims (A): Tua released→ATL(?), Hill released→FA, **Waddle
+  traded to Denver**, Malik Willis QB, Achane lone survivor. Rewrote the Miami entry.
+
+Reviewer catches: upgraded Waddle/teardown B+→A via own WebSearch; caught "OC Sullivan" (he's the
+GM); held ADP slot numbers at B; parked "Tua→Atlanta" as an unverified lead (AUDIT_QUEUE). Takes
+checked: Tee Higgins (RIGHT, inconsistent — S), James Cook ("overvalued" contradicted on 2025
+production, regression case still valid — S). Branch: harness-pinned to `claude/modest-gates-mia61a`
+again (memory NOT stale — cut from current `main`); needs human merge. Prompt unchanged (`## END`
+validated at run start).
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

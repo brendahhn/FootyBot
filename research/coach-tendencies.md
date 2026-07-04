@@ -80,12 +80,35 @@ data becomes available.
   evenly among possession-type WRs/TEs and depress big-play (40+) bonus production relative
   to spread/shotgun teams — relevant given this league's 40+ yard bonus scoring.
 
-### Miami Dolphins — HC Jeff Hafley (defensive background, ex-Packers DC), OC Bobby Slowik
-- Background: Slowik was Miami's senior pass-game coordinator in 2025, promoted to OC; he's
-  originally from the McVay/Shanahan tree (former Texans OC).
-- Tendencies: expect continuity with Shanahan-tree zone-run/motion principles given Slowik's
-  background, but he's now the lead voice rather than executing someone else's system —
-  worth re-confirming once 2026 play-calling patterns are visible.
+### Miami Dolphins — HC Jeff Hafley (defensive background, ex-Packers DC), OC + playcaller Bobby Slowik
+- **Org chart RESOLVED 2026-07-04 (A-tier audit, was AUDIT_QUEUE):** HC **Jeff Hafley** (ex-Packers
+  DC, first-time HC), OC **and playcaller Bobby Slowik**, with **Kevin Patullo (fired Eagles OC) as
+  pass-game coordinator — a SUBORDINATE role under Slowik, NOT the OC.** The old "Patullo → Dolphins"
+  lead was true, but he did not take the OC job; our Slowik entry was correct and just needed Patullo
+  added beneath him. Sources: dolphins.com "2026 coaching staff," NBC Miami/AP (Slowik promoted),
+  The Phinsider + CBS (Patullo pass-game coordinator), ESPN (Hafley hire). Data hazard caught: a
+  search summary called the OC "Sullivan" — that is Jon-Eric **Sullivan, the new GM**, not the OC.
+- Background: Slowik was Miami's senior pass-game coordinator in 2025, promoted to OC; **pure
+  Shanahan tree** — his 2011-13 Washington staff also included Kyle Shanahan, McVay, Matt LaFleur,
+  and Mike McDaniel; he last called plays as Texans OC 2023-24 (wide-zone, ~59% pass rate). Hafley
+  and Slowik previously overlapped on Shanahan's 49ers staff, so the HC/OC pairing is scheme-aligned.
+- Tendencies (A on lineage): wide-zone run base, heavy pre-snap motion, play-action bootleg, YAC
+  West Coast passing. Noted as flexible (will add gap-scheme runs to fit personnel), not a clone.
+- **⚠️ ROSTER TEARDOWN 2026 — the skill group turned over almost entirely (all A-tier, independently
+  re-verified 2026-07-04 because the claims were extreme):**
+  - **Tua Tagovailoa RELEASED** (NFL-record ~$99M dead cap; WaPo/Fox/US News/Axios). Reportedly
+    signed with **Atlanta** — see "Not yet covered" (a Falcons-QB thread, not yet a full entry).
+  - **Tyreek Hill RELEASED** ($22.8M cleared), now a FA rehabbing a major 2025 leg injury (NFL.com,
+    ESPN). Not a Dolphin — evaluate only if/when he signs; hard injury red flag.
+  - **Jaylen Waddle TRADED to Denver** for Denver's 1st (No. 30) + 3rd + 4th (NFL.com, Broncos.com,
+    ESPN, CBS). Now a Broncos WR1 on a 14-win offense — an UPGRADE to his outlook.
+  - **QB is now Malik Willis** (3yr/$67M from Green Bay, reunited with Hafley/GM Sullivan) — a
+    dual-threat/scrambler; watch for goal-line rush TDs siphoned from the RB.
+  - **De'Von Achane is the lone skill survivor and the offense's focal point** — wide-zone fits him,
+    volume should stay heavy (analyst consensus ~RB6, borderline RB1). Cautions (C): league-worst WR
+    room lets defenses key on him (efficiency/TD dent); Willis' rushing could cap his goal-line TDs.
+    Net: high-floor volume, capped ceiling in a rebuild. Bradley Chubb released, Minkah Fitzpatrick
+    traded too — a full house-cleaning, not a tweak.
 
 ### Los Angeles Chargers — OC Mike McDaniel (calls plays), HC Jim Harbaugh
 - Background (A): McDaniel is the fired Dolphins HC (2022-2025), hired as Chargers OC/playcaller
@@ -254,10 +277,15 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
 plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
-Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
-correcting). Plus full
+covered above, 2026-07-01). **Cowboys note (2026-07-04):** George Pickens stays in Dallas for 2026
+on the franchise tag (the trade from Pittsburgh was the 2025 offseason, not new); he and CeeDee Lamb
+are a real 1-2 (near-even targets in 2025), though Lamb slid out of the top-WR tier — worth a full
+Cowboys entry next pass. **New lead to verify (2026-07-04): Tua Tagovailoa reportedly signed with
+the Falcons** after his Miami release — if true it reshapes Atlanta's QB picture (our Falcons entry
+assumes a Penix/Cousins situation) and Drake London's outlook. Corroborated by two lanes (a Miami
+teardown search + an ATL "Tua praise" ADP-riser note) but NOT yet confirmed against a primary
+transaction — do that before writing it into the Falcons entry. The Patullo→Dolphins lead is
+RESOLVED (see Miami entry: Slowik is OC, Patullo is pass-game coordinator). Plus full
 defensive-coordinator-level
 detail for IDP purposes (see `research/idp-evaluation.md` for the IDP-specific angle on
 defensive scheme/role). Expand this doc as draft season approaches and as preseason tape

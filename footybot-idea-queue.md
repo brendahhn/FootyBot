@@ -132,11 +132,14 @@ acting on any of it.
   pass** (no per-player notes file exists yet — consider creating `research/player-notes.md` if
   this pattern recurs).
 
-Other loose threads worth the bot picking up later (not yet researched):
-- **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+Other loose threads worth the bot picking up later:
+- **[TOPIC] — DONE 2026-07-04 (newsletter 2026-07-04, Lane C).** George Pickens trade context:
+  the trade to Dallas was the **2025** offseason; for **2026 Pickens stays on the franchise tag** —
+  he and CeeDee Lamb are teammates and a real 1-2 (near-even 2025 targets), but Lamb slid out of
+  the top-WR tier. Noted in `coach-tendencies.md` "Not yet covered" as a Cowboys-entry lead.
+- **[TOPIC] — DONE 2026-07-04 (newsletter 2026-07-04, Lane B).** Rashee Rice status: NFL closed its
+  investigation, **no 2026 suspension** (A, NFL.com Apr 2026) — fully draftable; served a 6-game ban
+  in 2025, so a lingering market discount = value.
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).
