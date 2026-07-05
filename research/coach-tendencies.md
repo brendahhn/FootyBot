@@ -5,7 +5,10 @@ changes from the 2026 offseason cycle (confirmed via WebSearch), not all 32 team
 runs added Chargers, Titans, Falcons, Buccaneers, and (later same day) a full **Eagles** entry
 (Sirianni retained, Sean Mannion new first-time playcaller — directly serves Brendan's stated
 Saquon-at-#4 interest), all A-tier sourcing; and re-verified the Ravens and Browns entries against
-fresh sources after a garbled search summary tried to swap them (see notebook CHANGELOG 2026-07-01). WebFetch and direct
+fresh sources after a garbled search summary tried to swap them (see notebook CHANGELOG 2026-07-01).
+2026-07-05 run resolved three AUDIT items to firm A-tier conclusions (Giants OC = Matt Nagy not Frank
+Reich; Cardinals = Hackett OC but LaFleur calls plays; Miami = Slowik confirmed OC/play-caller,
+Patullo a subordinate — plus Miami's Hill/Waddle/Tua roster teardown). WebFetch and direct
 data pulls are blocked in this environment (see `CONTEXT.md` open questions / the pipeline
 blocker), so this is built from search-result snippets plus established scheme knowledge for
 each coach's track record — treat specifics as directional, not exact, and re-verify closer
@@ -31,7 +34,16 @@ data becomes available.
   means snaps for an FB and slightly fewer 11-personnel passing-down looks than a pure
   spread team.
 
-### Arizona Cardinals — HC Mike LaFleur (calls plays)
+### Arizona Cardinals — HC Mike LaFleur (calls plays), OC Nathaniel Hackett
+- **AUDIT RESOLVED 2026-07-05 (A):** Hackett IS the Cardinals' OC (hired 2/13/26), but **LaFleur
+  calls the plays** — this is the key division of labor. Sources: azcardinals.com (Hackett hire),
+  NFL.com, CBS Sports, theScore ("LaFleur wanted Hackett 'and nobody else'"), Revenge of the Birds
+  ("Despite the Hackett hire, LaFleur will call plays"), Wikipedia. Hackett's role is described as
+  "setting the table/menu," energy, and coordinating with the defensive side while LaFleur runs the
+  offense — NOT a scheme-driving OC. Familiar with the family (3 yrs alongside Matt LaFleur in
+  Green Bay 2019-21). Net: the entry below (LaFleur scheme drives the offense) **held up**; Hackett
+  is a support hire, not the play-caller, so the fantasy read for Kyler Murray / Marvin Harrison Jr.
+  / Trey McBride is unchanged — it's still a Shanahan-tree, motion-heavy, play-action offense.
 - Background: McVay/Kyle Shanahan coaching tree — 3 years with McVay (Rams), 7 years with
   Shanahan (49ers) before this.
 - Tendencies: heavy pre-snap shifts/motion, timing-and-route-running-dependent passing game,
@@ -80,12 +92,29 @@ data becomes available.
   evenly among possession-type WRs/TEs and depress big-play (40+) bonus production relative
   to spread/shotgun teams — relevant given this league's 40+ yard bonus scoring.
 
-### Miami Dolphins — HC Jeff Hafley (defensive background, ex-Packers DC), OC Bobby Slowik
-- Background: Slowik was Miami's senior pass-game coordinator in 2025, promoted to OC; he's
-  originally from the McVay/Shanahan tree (former Texans OC).
-- Tendencies: expect continuity with Shanahan-tree zone-run/motion principles given Slowik's
-  background, but he's now the lead voice rather than executing someone else's system —
-  worth re-confirming once 2026 play-calling patterns are visible.
+### Miami Dolphins — HC Jeff Hafley (defensive background, ex-Packers DC), OC Bobby Slowik (calls plays)
+- **AUDIT RESOLVED 2026-07-05 (A):** **Slowik is the OC and the play-caller** — the existing entry
+  HELD UP. He was promoted from senior pass-game coordinator to OC under new HC Hafley (the two
+  worked together on Shanahan's 49ers staff in 2017-18). Kevin Patullo (fired Eagles OC) DID land in
+  Miami but as **passing-game coordinator, a subordinate role UNDER Slowik — NOT the OC.** So the
+  "Patullo landed with the Dolphins" lead was true but the role was lower than feared; it does not
+  displace Slowik. Sources: miamidolphins.com (both coach pages), ESPN, NFL.com, FOX Sports, CBS
+  Sports ("play-caller Bobby Slowik"), CBS Philadelphia + Philadelphia Inquirer (Patullo = pass-game
+  coordinator), Wikipedia. (Minor unresolved: promotion-date snippets vary Jan/Feb/Apr — immaterial.)
+- Background: Slowik is McVay/Shanahan tree (former Texans OC, 2023-24). Scheme is predominantly
+  West Coast; he says the offense will be "very similar" to what Malik Willis ran in Green Bay, with
+  a stated "core tenet" of balance (~50/50 run/pass on early downs). Called pass ~59% of the time in
+  Houston. HC Hafley is defensive-minded, so Slowik owns the offense.
+- **CRITICAL FANTASY UPDATE — the task's skill-player premise is STALE (A):** Miami tore the offense
+  down to a rebuild. **Tua Tagovailoa RELEASED, Tyreek Hill RELEASED (both Feb 2026), Jaylen Waddle
+  TRADED to the Broncos (March 2026).** New QB is **Malik Willis** (3yr/$67.5M) — only 6 career
+  starts. The WR room is widely called the worst in the NFL; **Malik Washington** is tracking as the
+  de facto WR1 (career highs 46/317), with Jalen Tolbert, Tutu Atwell, and mid-round rookies added.
+  Sources: ESPN, Yahoo Sports, NFL.com, Athlon. So Hill/Waddle are NO LONGER Dolphins — do not
+  project them here. **De'Von Achane is the one premium holdover** and becomes the clear offensive
+  focal point; a Shanahan-tree zone-run scheme + a run-leaning, low-passing-ceiling QB situation
+  points to a heavy Achane role (rush + checkdown receiving) as the safest Miami fantasy asset, while
+  the passing game projects thin/low-ceiling. Re-confirm Achane's workload split in camp.
 
 ### Los Angeles Chargers — OC Mike McDaniel (calls plays), HC Jim Harbaugh
 - Background (A): McDaniel is the fired Dolphins HC (2022-2025), hired as Chargers OC/playcaller
@@ -232,6 +261,28 @@ data becomes available.
   transactions + CBS Sports transactions (A.J. Brown trade, Wicks trade, Lemon draft-day trade-up,
   Stoutland departure, Johnson/Dickerson return), Yahoo Sports + Inside The Birds (QB depth chart).
 
+### New York Giants — HC John Harbaugh (from Baltimore), OC Matt Nagy (calls plays)
+- **AUDIT RESOLVED 2026-07-05:** the doc's prior guess "OC Frank Reich" is **WRONG — the OC is Matt
+  Nagy.** Two corrections in one:
+  - **HC John Harbaugh — CONFIRMED (A, multi-source):** Harbaugh DID leave Baltimore for the Giants.
+    He was fired by the Ravens two days after a Week 18 loss to Pittsburgh, then hired by the Giants
+    in mid-Jan 2026 on a reported 5yr/$100M deal. Sources: NFL.com, giants.com, Yahoo Sports, NPR,
+    CNN, NBC Sports. Corroborating domino holds: Baltimore replaced him with Jesse Minter (see Ravens
+    entry above). This is a genuine long-tenured-coach departure, not a search-summarizer artifact.
+  - **OC Matt Nagy — CONFIRMED (A):** giants.com "Harbaugh announces 2026 coaching staff" names
+    coordinators **Matt Nagy (OC), Dennard Wilson (DC), Chris Horton (ST).** **Frank Reich is not on
+    the staff** — scrub that name. Nagy spent 2023-25 as Andy Reid's OC in KC *without* calling plays;
+    his last play-calling was as Bears HC (2018-21). **Nagy is the Giants' play-caller now.**
+- Scheme lineage: Reid/West Coast tree via Nagy, but reporting frames the 2026 Giants as **run-heavy
+  foundation** with a slow/safe progression-read passing game built around QB **Jaxson Dart** (2025
+  rookie). Nagy's Chicago passing offenses finished 21/25/22/30 in yards — a real ceiling caveat.
+- Fantasy implication — **Malik Nabers:** two headwinds. (1) He's coming off a **season-ending knee
+  injury** (2025), a live health/volume flag. (2) A run-heavy scheme + Nagy's modest passing track
+  record caps team pass volume. Darnell Mooney (added; knows Nagy's playbook from his 2021 Bears
+  career year) is a target-competition note. Net: Nabers is talent-dependent WR1 upside but the
+  scheme/health backdrop is a drag, not a boost — treat as upside-with-risk, not a clean bounceback.
+  Sources: Draft Sharks, SI/onsi (Giants), Dynasty Nerds, Heavy, Big Guy Fantasy Sports.
+
 ## Notable non-change (don't over-read into "new regime" narratives)
 
 ### Jacksonville Jaguars — HC Liam Coen, OC Grant Udinski, DC Anthony Campanile all retained
@@ -250,14 +301,12 @@ system, not a new scheme — lower projection uncertainty than the other changes
 
 Remaining teams without a playcaller change (or lower fantasy-impact changes) — note the 2026
 cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per league trackers), so
-"not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
-run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
-Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
-Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
-correcting). Plus full
+"not yet covered" here means *not-yet-written*, not *no change*. **Three AUDIT items RESOLVED
+2026-07-05** and now written up above: Giants (Harbaugh confirmed; OC is **Matt Nagy**, not Frank
+Reich), Cardinals (Hackett is OC but **LaFleur calls plays**), Miami (**Slowik confirmed OC/play-
+caller**; Patullo is a subordinate pass-game coordinator; plus the Hill/Waddle/Tua teardown).
+Specific threads still to pick up next run: Commanders/Cowboys/Broncos OC changes (note the Broncos
+acquired **Jaylen Waddle** via trade — worth a Denver skill-player pass). Plus full
 defensive-coordinator-level
 detail for IDP purposes (see `research/idp-evaluation.md` for the IDP-specific angle on
 defensive scheme/role). Expand this doc as draft season approaches and as preseason tape
