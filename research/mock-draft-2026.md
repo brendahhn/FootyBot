@@ -41,9 +41,21 @@ Walker.
 ## Brendan's projected team through 3: Chase + Saquon + DeVonta Smith (WR/RB/WR)
 
 ### Strategic reads (the actual point)
-1. **Pick 4: take the elite WR, PASS on CMC.** He'll sit there as RB3 and tempt the
-   RB-scarce instinct — but he's the exact 0-for-6 post-injury archetype (Finding 5). Model
-   predicts Connor takes him at 5 anyway; let him.
+1. **Pick 4: elite WR (Chase/Puka) is the high-floor default — but CMC is NOT the "trap" this
+   file originally called him.** CORRECTED 2026-07-05 (compete mode, this run): the prior
+   rationale here ("he's the exact 0-for-6 post-injury archetype") is **stale by our own
+   Finding 4 definition.** POST_INJURY keys on the player coming off a *lost/injury year*; CMC's
+   prior season is **2025 — a healthy 17-game campaign, overall RB1 by this league's scoring
+   (365.6 pts / 21.5 PPG, `pipeline` S-tier, 2026-07-05), NFL Comeback POY**. Applied honestly
+   he now flags **STEADY/AGING_VET, not POST_INJURY** — and aging-vet is *Brendan's single best
+   archetype* (4-for-4, +48.0/pick, Finding 5). So the real CMC question is age-30 + a
+   career-high ~413-touch workload (a genuine decline/re-injury risk the national market is
+   actively fading — SI has him outside the top 30, Footballguys "biggest bust 2026"), NOT an
+   archetype leak. Verdict: the elite WR remains the clean, high-floor pick and Brendan's
+   documented lane; **but if CMC falls to 4, he is a legitimate, defensible take for Brendan
+   specifically** given the RB canyon (Finding 2) and his aging-vet strength — take the WR
+   because you prefer the floor, not because CMC is a trap. Model still predicts Connor (2×
+   league aging-vet rate) grabs CMC at 5 if we pass.
 2. **Pick 17: Saquon is the RB value Brendan wanted** ("Saquon + Chase feels good"). RB12-ish,
    played all 2025 (not a post-injury discount). Flag: Eagles new-OC + age-29 regression
    questions (coach-tendencies.md) — fine pick, not a lock.

@@ -77,6 +77,16 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   delivered via push-notification + run output instead. Needs a human call: either grant the
   scheduled connector compose scope, or change STEP 6 to a delivery channel scheduled runs can
   actually use.
+- **2026-07-05 (SCHEDULED RUN) — BRANCH RULE TRIGGERED AGAIN, harness branch `claude/modest-gates-9gmp1b`.**
+  Local branch was cut cleanly from current `main` (HEAD 32b83e6, identical to the `main` SHA read
+  via GitHub this run) — so **memory was CURRENT, not stale** (the merge-each-run workaround held:
+  the prior `claude/modest-gates-4i3fc0` work is on `main`). Per BRANCH RULE, pushed this run's
+  work to the assigned branch, did NOT self-fork. Two pushes this run, both verified via
+  `git ls-remote origin claude/modest-gates-9gmp1b`: (1) coach-tendencies AUDIT resolutions →
+  `6efdfe0`; (2) newsletter + corpus corrections + memory → see final commit hash in run output.
+  **ACTION NEEDED: merge `claude/modest-gates-9gmp1b` into `main` before the next scheduled run**
+  or that run reads stale memory and won't see this newsletter. Gmail: one ToolSearch check, still
+  label-only (`apply_sensitive_*` only, no compose) — skipped per spec, no re-investigation.
 
 ## STATUS
 
@@ -91,10 +101,11 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     cover coaching/scheme + roster moves + O-line + RB depth + QB room, not just coaching/scheme
     — see operating prompt STEP 3 checklist (v2026-07-01).** Remaining entries (Chargers through
     Buccaneers) were written before this checklist existed and may be missing the same
-    dimensions — re-pass them before assuming they're complete. Continue expansion (Giants,
-    Cardinals-OC, Commanders/Cowboys/Broncos) + re-verify once preseason tape exists. Audit lead:
-    Kevin Patullo (fired Eagles OC) reportedly went to the Dolphins — confirm his role there vs.
-    our Bobby-Slowik Miami entry.
+    dimensions — re-pass them before assuming they're complete. **2026-07-05: Giants (OC = Matt
+    Nagy, Harbaugh confirmed), Cardinals (Hackett OC / LaFleur calls plays), and Miami (Slowik
+    confirmed play-caller; Patullo subordinate; Hill/Waddle/Tua teardown) now RESOLVED & written.**
+    Patullo→Dolphins audit lead CLOSED (he's a subordinate pass-game coordinator, not OC — Slowik
+    entry held). Still to expand: Commanders/Cowboys/Broncos (note Denver acquired Jaylen Waddle).
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -169,8 +180,57 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   Palmer) don't auto-match a position via nflverse name-join (suffix/nickname quirks); currently
   hand-corrected in the writeup but left blank in the CSV. Minor. A small alias map in
   `build_draft_history.py` would fix it if it ever matters.
+- **NEW 2026-07-05 — Kyler Murray status.** Lane B surfaced a single/thin (B) report that Murray
+  is "out/gone" in Arizona (QB room = Brissett holdout / Minshew / Beck). NOT written as fact.
+  Big if true — hits MHJ and Trey McBride hard. Verify with a targeted multi-source search next run.
+- **NEW 2026-07-05 — Atlanta QB (Tua / Penix).** Lane B (B-tier) said Tua signed with the Falcons
+  as a bridge and Michael Penix Jr. is recovering from a serious knee injury. Unverified; affects
+  Bijan Robinson + Drake London outlook. Confirm before writing an ATL QB read.
+- **NEW 2026-07-05 — Denver skill-player pass.** Broncos acquired Jaylen Waddle via trade (A, per
+  Lane D's Miami teardown sourcing). Do a Denver entry: Waddle's role/target share, Bo Nix outlook,
+  RB room. Plus still-open Commanders/Cowboys OC passes.
+- **NEW 2026-07-05 — CMC market-split deep dive (candidate Lane A/D).** The national market is
+  violently split on CMC (Field Yates #3 vs SI outside-top-30 vs Footballguys "biggest bust").
+  Worth a data-driven age-30/high-touch RB comp study (how have RBs coming off ~400+ touch seasons
+  at age 29-30 held up the next year?) to price the risk our compete mode flagged as the live crux.
 
 ## CHANGELOG
+
+### 2026-07-05 (SCHEDULED RUN) — First daily newsletter shipped; compete mode corrected our own CMC take
+**First real edition of the daily newsletter: `newsletters/2026-07-05.md`** (54 days to draft).
+The 4-lane + reviewer architecture ran for real and the **night-1 test PASSED — subagents work
+in the scheduled environment** (6 spawned in parallel: 4 lanes + 2 compete; no sequential
+fallback needed). Compete mode fired on the pick-4 question and produced the headline.
+- **Lane A (Data, winning lane):** computed 2025 season finishes under our exact scoring (S).
+  Headline fact: **CMC = 2025 overall RB1 (365.6 pts / 21.5 PPG, all 17 games)**; Saquon = RB14
+  (down year); Puka = WR1, JSN WR2, Chase WR4-by-total. Script in scratchpad, nothing committed.
+- **Lane B (News):** honest quiet holiday cycle. Real corrections to Brendan's mock beliefs
+  (A-tier): **Rashee Rice NOT in jail** (released June 16, no new suspension, camp-ready);
+  **Xavier Worthy = shoulder labrum, not ACL**; **Mahomes tore ACL Dec 2025, targeting Wk1 but
+  not yet cutting** (caps KC pass game); Egbuka WR1 path cleared (Evans→SF); Puka extension
+  unresolved. Held as UNVERIFIED B-leads (did NOT write as fact): Kyler Murray "gone", Tua→Falcons.
+- **Lane C (Market):** Puka now WR1 ahead of Chase; CMC has the widest ADP split on the board
+  (#3 ↔ outside top-30 ↔ "biggest bust"); Saquon fallen to ~RB12/pick-22; DeVonta Smith rising
+  (pick-24 target). Pick-4 projection: Bijan/Gibbs/Chase likely gone by 4, Puka/JSN falls to us,
+  CMC → Connor at 5 if we pass. (Exact decimal ADP not retrievable — WebFetch blocked.)
+- **Lane D (Rabbit hole):** resolved 3 coach-tendencies AUDIT items to A-tier and wrote them in
+  (committed 6efdfe0): **Giants OC = Matt Nagy NOT Frank Reich** (Harbaugh confirmed from
+  Baltimore); **Cardinals = Hackett OC but LaFleur calls plays** (entry held); **Miami = Slowik
+  confirmed play-caller, Patullo subordinate** + the big one: **Tua released, Tyreek Hill
+  released, Waddle traded to Denver — Achane is the lone premium Miami holdover.**
+- **Reviewer/compete KILL of the night — corrected our OWN corpus:** the mock's "pass CMC, he's
+  the 0-for-6 POST_INJURY archetype" reasoning was **stale by our own Finding 4 definition**
+  (POST_INJURY keys on the *prior* season being lost; CMC's prior season is a healthy 17-game
+  RB1). Reclassifies STEADY/AGING_VET — and aging-vet is Brendan's BEST archetype (4-for-4).
+  Corrected `research/mock-draft-2026.md` strategic read #1 and added a durable "apply the flag
+  to the prior season" note to `draft-tendencies.md` Finding 5. Verdict: elite WR still the
+  high-floor default, but CMC is a live option, NOT a trap — the trap framing is retired.
+- **Takes checked (Checking your takes):** CMC-has-fallen (Brendan RIGHT, sharper than our file),
+  Rashee-Rice-in-jail (outdated), Worthy-ACL (wrong joint), + PATTERN ALARM refinement (Egbuka/
+  MHJ/Worthy still fit the leak; a full recovered season graduates a player OUT, none have yet).
+- **Delivery:** newsletter file + push notification. Gmail check: still label-only (skipped).
+- **BRANCH:** harness-pinned to `claude/modest-gates-9gmp1b` again (recurring — see BRANCH RULE).
+  Pushed + verified via `git ls-remote`. MUST be merged to `main` before next run.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

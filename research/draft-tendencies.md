@@ -226,10 +226,15 @@ closes it.
 - Net: 52% hit rate (fine) but -7.0 avg delta — **you hit singles often and strike out
   catastrophically**; the misses cluster in exactly two archetypes: post-injury + second-year
   "upside."
-- **Live warning for Aug 28:** your 2025-07-01 mock memo circles Egbuka (injury-shortened),
-  MHJ (injury-shortened), Worthy (post-ACL) — that's the same pattern that's 0-for-6. Doesn't
-  mean those players are wrong; means the *price you'll happily pay* for them is historically
-  ~46 points too high. Demand an extra round of discount on injury-story players.
+- **Live warning for Aug 28:** your 2025-07-01 mock memo circles Egbuka, MHJ, Worthy — the
+  injury-story discount pattern that's 0-for-6. Demand an extra round of discount on
+  injury-story players. **But apply the flag correctly (reviewer note, 2026-07-05):**
+  POST_INJURY keys on the player coming off a *lost/injury year on draft day*. A player who
+  MISSED time then came back and played a full, productive season reclassifies to STEADY the
+  next draft — the leak is buying *off the lost year*, not owning the player forever. Worked
+  example: 2021 CMC (off a 3-game 2020) = POST_INJURY = your −98 bust; 2026 CMC (off a healthy
+  17-game RB1 2025) = STEADY/AGING_VET, NOT the same bet. (Also: Worthy's 2025 injury was a
+  **shoulder labrum, not an ACL** — WebSearch, 2026-07-05, Lane B; correct the memo's "post-ACL."
 - 2024-25 recency view: 62% hit, -2.3 — trending better.
 
 ## Finding 6 — Draft vs. in-season vs. luck: what actually decides finishes (added 2026-07-02)

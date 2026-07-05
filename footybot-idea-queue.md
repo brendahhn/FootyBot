@@ -108,8 +108,13 @@ acting on any of it.
 > healthy, bad when hurt. Next pick considering: Javonte Williams, Jaylen Waddle, or Ladd
 > McConkey.
 
-**STATUS: exploring.** Two explicit research asks from this dump were answered same-session
-(2026-07-01) via WebSearch, not left for the bot's next run:
+**STATUS: exploring.** Takes pressure-tested in the 2026-07-05 newsletter's "Checking your
+takes": (1) CMC-has-fallen — Brendan RIGHT (2025 overall RB1, pipeline S), and sharper than our
+own mock file, which we corrected; (2) "Rashee Rice in jail" — outdated (released June 16); (3)
+"Worthy ACL scare" — wrong joint, it's a shoulder labrum. PATTERN ALARM refined: Egbuka/MHJ/
+Worthy still fit his 0-for-6 injury-discount leak (a player only graduates OUT after a full
+recovered season, which none of them has). Earlier, two explicit research asks from this dump
+were answered same-session (2026-07-01) via WebSearch, not left for the bot's next run:
 - **Eagles OC/scheme for Hurts/Saquon:** new OC Sean Mannion (first-time playcaller, ex-Packers
   QB coach), system reportedly McVay/Shanahan-influenced — more under-center work for Hurts than
   Sirianni's system (Hurts reportedly resisted this, real friction). Team rush volume trending
@@ -135,8 +140,11 @@ acting on any of it.
 Other loose threads worth the bot picking up later (not yet researched):
 - **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
   verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+- **[TOPIC — DONE 2026-07-05]** Rashee Rice legal situation — RESOLVED (Lane B, A-tier): served
+  30 days for a probation violation, **released June 16, 2026**; NFL adding NO new suspension (he
+  already served his 6-game ban); Reid expects him camp-ready ("maybe not even PUP"). Residual
+  risk is a May knee cleanup / ramp-up, not availability. Corrected Brendan's "he's in jail" take
+  in the 2026-07-05 newsletter. NOTE Mahomes' Dec-2025 ACL still caps the KC pass-game ceiling.
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).
