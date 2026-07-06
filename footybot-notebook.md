@@ -32,6 +32,20 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-06 — BRANCH RULE TRIGGERED AGAIN (#3), recurring pattern continues.** The scheduled
+  harness force-pinned this run to `claude/modest-gates-pqgwap` and forbade pushing `main`. Per
+  BRANCH RULE #3 I did NOT self-fork: pushed all of tonight's work (first newsletter, Dallas
+  coach-tendencies entry, new `research/player-notes.md`, notebook + idea-queue updates) to the
+  harness-assigned branch, verified with `git ls-remote`, and am surfacing it loudly in the push
+  notification. **Consequence: next Monday's run reads `main` and will NOT see this unless the
+  branch is merged first.** ACTION NEEDED FROM BRENDAN: merge `claude/modest-gates-pqgwap` → `main`
+  before the next run. (Local branch was cut from current `main` HEAD 32b83e6, so a merge should be
+  clean.) Commit hash + ls-remote confirmation in this run's final output.
+- **2026-07-06 — Gmail STILL label-only (3rd scheduled run in a row).** One quick ToolSearch this
+  run surfaced only `apply_sensitive_message_label`/`apply_sensitive_thread_label` (trash/spam) —
+  no compose/draft/send tool. Per STEP 8.3, skipped the Gmail draft silently (diagnosis long since
+  logged). Newsletter delivered via repo file + push notification. Nothing new to investigate; the
+  fix is on Brendan (reconnect Gmail with full permissions in claude.ai connector settings).
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
@@ -95,6 +109,14 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     Cardinals-OC, Commanders/Cowboys/Broncos) + re-verify once preseason tape exists. Audit lead:
     Kevin Patullo (fired Eagles OC) reportedly went to the Dolphins — confirm his role there vs.
     our Bobby-Slowik Miami entry.
+  - `research/coach-tendencies.md` — **Dallas entry added 2026-07-06** (no playcaller change;
+    Pickens/Lamb target-competition question — Pickens WR5 / Lamb WR19 in their already-played 2025
+    shared season, 1a/1b hierarchy). Cowboys crossed off the not-yet-covered list.
+  - `research/player-notes.md` — **NEW 2026-07-06.** Per-player reads that don't fit coach-
+    tendencies or draft-tendencies: pick-4 WR 2025 scoring profiles under our exact rules (Puka WR1
+    19.4 PPG; JJ buy-low), the CMC-at-4 compete verdict, and situational status-of-record (Rice/
+    Jacobs/Nabers/Worthy/MHJ/Mahomes). Created per the idea-queue trigger ("make it if the pattern
+    recurs"). Extend as player-level findings accrue.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
@@ -171,6 +193,33 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-06 (scheduled run) — FIRST NEWSLETTER EDITION shipped
+First real run of the v3 daily-newsletter architecture (built 2026-07-02, never executed until
+now — `newsletters/` had only a README). Weekly-Monday cadence, 53 days to draft.
+- **Subagents WORK in the scheduled environment** (open question from the spec, now answered):
+  ran all 4 lanes as parallel Task agents + compete mode, no fallback needed. Model: sonnet
+  subagents, reviewer synthesis by the main run.
+- **Lanes:** A/Data (self, pipeline) — 2025 WR scoring profiles under our exact rules; B/News
+  (agent) — quiet week, 3 status corrections; C/Market (agent) — ADP + QB clock; D/Rabbit hole
+  (agent) — Pickens+Lamb.
+- **Compete mode FIRED** on "CMC at pick 4 — trap or value?" (3 angles: data-value / situation-
+  skeptic / market). **Verdict: FADE.** Convergent. Reviewer KILLED the data-value agent's core
+  thesis (it inverted ADP — CMC goes 6-9, so pick 4 is a reach, not a value) — worst failure mode
+  caught this run. Also killed an unsourced "Tyreek multi-ligament" rumor; downgraded "Puka>Chase"
+  to 2025-scoring-only.
+- **Findings that survived:** (S) Puka was 2025 WR1 under our scoring (19.4 PPG > Chase 15.7);
+  (S+A) Justin Jefferson is a BUY-LOW — 9.4 PPG on just 2 rec TDs (TD rate r=0.008 = noise) atop a
+  30.7% target share (r=0.350 = predictive); (A) Pickens WR5 / Lamb WR19 in their already-played
+  2025 shared season = 1a/1b hierarchy, Pickens first in our format; (A) Rice released from jail
+  June 16 / Jacobs uncharged & practicing / Nabers 2nd surgery = the real recovery yellow flag.
+- **Takes checked (4):** CMC-at-4 (fade — PATTERN ALARM, his 0-for-6 post-injury leak), JJ (buy-
+  low, not fade), Puka-vs-Chase (either's fine), Pickens+Lamb (draft one).
+- **Corpus writes:** new Dallas entry in `research/coach-tendencies.md`; NEW `research/player-notes.md`
+  (pick-4 WR profiles + CMC verdict + situational status-of-record) — created per the idea-queue's
+  "make player-notes.md if the pattern recurs"; idea-queue: 3 [TOPIC] threads → done.
+- Newsletter: `newsletters/2026-07-06.md`. Branch pin (#3 recurring) + Gmail label-only (3rd run):
+  see VERIFICATION LOG. Prompt unchanged (v2026-07-02b), `## END` validated at run start.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

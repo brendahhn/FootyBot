@@ -132,11 +132,24 @@ acting on any of it.
   pass** (no per-player notes file exists yet — consider creating `research/player-notes.md` if
   this pattern recurs).
 
-Other loose threads worth the bot picking up later (not yet researched):
-- **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+Other loose threads worth the bot picking up later:
+- **[TOPIC] — DONE 2026-07-06.** George Pickens trade context. Verified: traded to Dallas in
+  **May 2025** (not new) — 2026 is Year 2 of a Pickens+Lamb room, a full shared 2025 season
+  exists (Pickens WR5 / Lamb WR19 half-PPR = a 1a/1b hierarchy). Full Dallas entry added to
+  `research/coach-tendencies.md`; verdict + comps in newsletter 2026-07-06 deep dive.
+- **[TOPIC] — DONE 2026-07-06.** Rashee Rice legal situation. Verified: served a 30-day
+  probation-violation sentence, **released June 16, 2026**, no NFL suspension pending, draftable
+  full-season Chiefs WR (ADP fell to early-3rd = buy-dip). Status-of-record in
+  `research/player-notes.md`.
+- **[TOPIC] — DONE 2026-07-06.** Packers/Jacobs risk note (from the mock dump, deferred
+  2026-07-01). Created `research/player-notes.md` and logged Jacobs' status-of-record (arrested
+  May 26; DA has NOT filed charges; practicing full; no NFL suspension; draftable at ADP,
+  re-check if charged).
+- **Mock-draft dump takes checked so far:** CMC-at-4 (fade — compete mode), Justin Jefferson
+  (buy-low, not fade), Puka-vs-Chase (either is fine), Pickens+Lamb (1a/1b, draft one). Still
+  unchecked from the dump for future editions: James Cook "overvalued," Tee Higgins "always bank
+  on him but he's not," Kenneth Walker, Bucky Irving "Liam Coen merchant," Drake London "McDaniel
+  merchant," Trey McBride, Xavier Worthy/MHJ (post-injury — his losing archetype).
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).

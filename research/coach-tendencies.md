@@ -232,6 +232,56 @@ data becomes available.
   transactions + CBS Sports transactions (A.J. Brown trade, Wicks trade, Lemon draft-day trade-up,
   Stoutland departure, Johnson/Dickerson return), Yahoo Sports + Inside The Birds (QB depth chart).
 
+## Roster-change teams (no new playcaller, but draft-relevant target competition)
+
+### Dallas Cowboys — HC/playcaller Brian Schottenheimer (retained, entering Year 2)
+- Background (A): **Not a coaching change for 2026** — Schottenheimer was hired HC Jan 2025
+  (promoted from OC, replacing McCarthy) and **still calls plays himself** in 2026, Year 2, no
+  change. The fantasy-relevant story here is personnel, not scheme: the **George Pickens trade**.
+  Sources: NFL.com, dallascowboys.com, Blogging The Boys, ESPN, 2026.
+- **The Pickens trade already happened — and already played out for a full season (A).** Dallas
+  acquired Pickens from Pittsburgh in **May 2025** (Cowboys sent a 2026 3rd + 2027 5th, got
+  Pickens + a 2027 6th). So **2026 is Year 2 of a Pickens+CeeDee Lamb WR room, not a new,
+  untested pairing** — a full 2025 season of shared-target data exists. Dallas franchise-tagged
+  Pickens (1yr, $27.3M) before the 2026 tampering window; he attended mandatory minicamp, says he
+  won't hold in at camp. Corrects a common misread (incl. Brendan's mock note "CeeDee without
+  George Pickens") — they are teammates, and have been.
+- **2025 shared-season result (A — RotoWire/PFF/SumerSports/CBS converge):** it was a clear 1a/1b
+  hierarchy, not two co-alphas.
+  | Player | Targets (share) | Rec/Yds/TD | G | Fantasy finish |
+  |---|---|---|---|---|
+  | Pickens | 137 (23%) | 93/1,429/9 | 17 | **WR5 PPR** (~34% RZ target share) |
+  | Lamb | 117 | 75/1,077/3 (career-low TD) | 14 (missed 3, high-ankle) | **WR19 half-PPR / WR15 per-game** |
+  Pickens captured the plurality of **red-zone and explosive-play** work (9 TD, 34% RZ target
+  share); Lamb's TD rate collapsed to a career-low 3 even adjusting for missed time. **Confound
+  (flagged, not waved away):** 3 of Lamb's missed games directly fed Pickens' counting stats, so
+  2025 is *suggestive, not a clean both-healthy-all-year test.* Our own pipeline (2025 REG, league
+  scoring) corroborates the ordering: Pickens 14.4 PPG vs. Lamb 12.6 PPG.
+- **Offense context (A):** top-3 pass volume — Dak Prescott led the NFL in attempts (600),
+  completions (404), and yards (4,552), 30 TD/10 INT, healthy all 17 games after his 2024
+  hamstring surgery. Cowboys ran 65.9 plays/gm (3rd), 58.5% pass rate. Big pie. Modest outside
+  target competition: TE Jake Ferguson (82/100/8 but badly front-loaded — TE1 through Wk 7, TE22
+  after) and RB Javonte Williams (a ground-game back, 35 catches; re-signed 3yr/$24M). This is
+  fundamentally a two-man target-share problem.
+- **Fantasy implication for THIS format (6pt pass TD, +2 on 40+ yд plays):** the player who wins
+  red-zone + explosive-play share captures disproportionate points here — and that has been
+  **Pickens**, not Lamb. Both clear the startable bar in a 10-team league; they are **not the
+  equal 1-2 punch** a buyer might hope for. Draft *one*, don't need the other; if ranking, take
+  **Pickens first** (locked RZ role, lower target-share threshold to hit value, tag security),
+  and treat Lamb as a high-floor complementary WR1/2 whose price should already reflect this
+  discount (the market has applied it — PFF's Jahnke: Pickens "will make it difficult for Lamb to
+  reach 2023 heights" but Lamb "a very safe bet for another top-10 finish if healthy").
+- **Failure mode for the bullish "big pie feeds both" read:** raw team volume didn't stop Lamb's
+  TD rate cratering while Pickens banked 9; Schottenheimer entering Y2 may try to rebalance touches
+  back toward Lamb (compressing Pickens instead — direction not locked); and a Dak health/efficiency
+  dip or heavier Javonte usage shrinks the whole passing pie and suppresses both at once. Dallas's
+  own 2020-21 Cooper/Gallup/Lamb room is an in-house precedent for target fragmentation across a
+  crowded WR room.
+- Historical coexistence comps (C — reasoning by comp, sources named in newsletter deep-dive):
+  Chase/Higgins '25 (clear 1a/1b, WR2 TD-dependent on lower volume) is the closest fit; St.
+  Brown/Williams '25 (role/aDOT-separated tandem, both weekly-relevant) is the bullish ceiling but
+  requires cleaner role separation than Dallas has shown.
+
 ## Notable non-change (don't over-read into "new regime" narratives)
 
 ### Jacksonville Jaguars — HC Liam Coen, OC Grant Udinski, DC Anthony Campanile all retained
@@ -253,8 +303,9 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 "not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
+plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles now
+covered above 2026-07-01; Dallas now covered 2026-07-06 — no playcaller change, added for the
+Pickens/Lamb target-competition question). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
 with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
 Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
 correcting). Plus full
