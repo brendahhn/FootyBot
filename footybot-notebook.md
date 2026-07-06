@@ -172,6 +172,50 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 ## CHANGELOG
 
+### 2026-07-06 (interactive session) — Sparred Brendan's ChatGPT "2026 Draft Brain" doc
+Brendan pasted a long ChatGPT-authored draft-strategy summary and asked me to pressure-test it
+("mental spar, pushback encouraged"), NOT to build anything. He explicitly declined the top-75
+table. Value to persist = the critical framings, which sharpen the newsletter reviewer /
+"checking your takes" lane. No prompt edit made (these are memory, not new operating rules — a
+behavior change would go through the prompt with a diff review). The six that survived scrutiny:
+
+1. **IDP is over-invested for what it is: ONE streamable roster slot.** The lineup has a single
+   "D" (IDP-scored) starter. `research/idp-evaluation.md` + Parts 2-3 of the doc spend huge
+   analytical energy reverse-engineering "number-1-overall edge molds" for a slot you draft late
+   and stream all year — and our own `predictive-stats.md` (tackle rate r=0.506 sticky, sack rate
+   r=0.091 not) says the position is streamable by design. Correct prep: draft it late, stream the
+   matchup, reallocate effort to the two FLEX spots + RB depth. Flag any future run (or Brendan
+   take) that treats the one IDP pick as a marquee decision.
+2. **"Mid-round QB is my superpower" is n=3 survivorship — bank the market inefficiency, not the
+   self-narrative.** Finding 5 has Lamar '22 / Mahomes '24 / Herbert '23 as his 3 best picks ever,
+   which is real, but 3 hits over 7 years of mid-round QB stabs ≈ base rate + memory of winners.
+   The REPEATABLE edge is the structural one we already measured: the league under-drafts QB vs.
+   6-pt passing TDs (first-QB round 7.7→6.3 then relaxed to 7.1 — edge shrank, didn't close).
+   Frame it as "the pocket exists," not "I'm the guy who hits it."
+3. **Post-injury 0-for-6: the leak is PRICE discipline, not the archetype.** Buying injury
+   discounts is +EV in aggregate (market overreacts); his misses came from paying near-full price
+   and/or the role not surviving. The PATTERN ALARM should fire on "full price for an injury/2nd-
+   year STORY," not on the mere presence of the archetype — otherwise it wrongly dings genuinely
+   good injury buys. Real test per player: does the role survive if the body does, and is the
+   market pricing the injury twice?
+4. **Don't over-frame the scoring as exotic.** Half-PPR + 6-pt pass TD + big-play bonuses is a
+   common home-league setup, not a fingerprint. Believing it's exotic is how you rationalize
+   reaches off consensus. The real edges are behavioral (room tendencies) + discipline; scoring-fit
+   is a marginal tiebreaker worth ~half a round, not the alpha.
+5. **TD-rate contradiction still live in the doc's archetypes.** `predictive-stats.md` says TD rate
+   is noise, yet the doc's WR/RB checklists still ask "10+ TD path" / "TD hammer." Reframe every
+   "TD path" bullet as "owns the volume/red-zone ROLE that produces TDs" — role projects, rate
+   doesn't. Newsletter should catch this when Brendan's takes lean on last year's TD total.
+6. **"Stress-tested lens vs. generic rankings" is a false binary.** The lens is a filter +
+   discipline layer applied ON TOP of a calibrated consensus baseline, not a replacement. Deviating
+   from consensus without a concrete room-behavior or stable-role reason IS the failure mode. His
+   own sharpened one-liner: start from consensus, deviate only for a concrete reason, never because
+   the story is fun.
+
+Affirmed as his genuine alpha (already in `draft-tendencies.md`): the room model + self-scouting,
+not the scoring or archetypes. Draft date still Aug 28; all specific name/ADP lists in the doc are
+July snapshots and disposable — the method is the asset.
+
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send
 requested). Built `pipeline/build_league_finishes.py` → `league_finishes.csv` (60
