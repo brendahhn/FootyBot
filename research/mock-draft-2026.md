@@ -1,5 +1,21 @@
 # 2026 Mock Draft — projected, pick 4 (draft order v1)
 
+> **FRESH-ADP UPDATE 2026-07-07 (newsletter Lane C).** The spine survives — elite WR at 4, pass
+> CMC, DeVonta at 24 — but four names moved and should be read as corrections to the tables below:
+> - **JSN has risen into the pick 3-4 conversation** (reigning OPOY, Seattle won SB60; some call
+>   him overall WR1). He is now Dylan's most-likely target at **pick 3**, so the elite WR left for
+>   Brendan at 4 is realistically **Chase or Puka**, not JSN.
+> - **CMC:** ranked ~#3 but real draft-room ADP slid to **~6-8** on an age-30 bust narrative —
+>   still there at 4 (pass him), likely gone to Connor at 5. NOT a clean post-injury flag for 2026
+>   (healthy 17-game 2025); the caution is actuarial. See `player-notes.md`.
+> - **Ashton Jeanty fell to ~RB5 / pick 12** (soft rookie 2025) — the R2 "Niko rookie at 15" line
+>   is stale; he's a 2nd-year bounce-back bet (Brendan's leak).
+> - **Malik Nabers tore ACL+meniscus** — the "Lucas takes Nabers at 21" line is dead (Lucas drafts
+>   0 rookies; an ACL WR slides further).
+> - **Saquon ADP ~13, not 17** — his Round-2-at-17 slot is now borderline-gone; line up RB
+>   fallbacks (Henry ~18, Jacobs [DV risk], Chase Brown, Kyren). **A.J. Brown traded to NE** (~ADP
+>   18). Full detail: `newsletters/2026-07-07.md` + `research/player-notes.md`.
+
 Status: projection generated 2026-07-02 (interactive). **Speculative by nature** — this is
 manager tendencies (Findings 1-6, `research/draft-tendencies.md`) applied to a July 2026
 consensus board (Field Yates ESPN PPR + SI/ESPN half-PPR, WebSearch 2026-07-02). Round 1 is

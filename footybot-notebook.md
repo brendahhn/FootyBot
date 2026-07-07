@@ -32,6 +32,22 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-07 — BRANCH RULE TRIGGERED AGAIN (#4). This scheduled run did NOT write to `main`.**
+  The harness hard-pinned the working branch to `claude/modest-gates-ypa0jb` and forbade pushing
+  `main`. Per BRANCH RULE I did NOT self-fork or improvise: reset the pinned branch to current
+  `origin/main` HEAD first (it was strictly behind — no unmerged commits to preserve, prior runs
+  had been merged), did all work on it, pushed there, verified with `git ls-remote`, and am
+  surfacing it loudly in the push notification. **Consequence: the next scheduled run reads `main`
+  and will NOT see the first newsletter / player-notes / retention analysis unless
+  `claude/modest-gates-ypa0jb` is merged into `main` first.** This is the 4th consecutive
+  force-pin — the merge-each-run workaround still holds but still needs a human (or a durable fix:
+  allow `main` pushes in routine settings, or repin the canonical branch). Commit hash + ls-remote
+  confirmation appended at run end / in the push notification.
+- **2026-07-07 — Gmail STILL label-only (3rd scheduled run in a row).** ToolSearch this run again
+  returned only `apply_sensitive_message_label`/`apply_sensitive_thread_label` (trash/spam); no
+  compose/draft/send. No email draft created; newsletter delivered via file + push notification.
+  Diagnosis unchanged — needs Brendan to reconnect Gmail with full permissions. Did not re-investigate.
+
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
@@ -96,6 +112,15 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     Kevin Patullo (fired Eagles OC) reportedly went to the Dolphins — confirm his role there vs.
     our Bobby-Slowik Miami entry.
   - `research/breakout-comps.md` — methodology + 3 worked examples, WebSearch-corroborated.
+  - `research/player-notes.md` — **NEW 2026-07-07.** Per-player status board (legal/injury/role):
+    Jacobs (live DV risk), Rice (cleared), Puka (lawsuit under review), Mahomes (ACL, ~QB11),
+    Tyreek (released/undraftable), Nabers (ACL), Pickens (→DAL WR2), A.J. Brown (→NE), JSN (OPOY),
+    CMC (age-30 caution, not post-injury), Jeanty (soft rookie), Daniels (post-injury QB). Re-verify
+    at camp. WebSearch-sourced, tiered.
+  - `research/predictive-stats.md` — extended 2026-07-07 with a **positional-retention** section
+    (`pipeline/positional_retention.py`): matched-depth elite RB vs WR retention ≈ equal (~49%);
+    IDP top-12 retention only 10.2% (stream the flex-IDP); IDP floor best selected by prior-yr
+    IDP PPG (23.1% into top-36 vs 5.5% random). All [S].
   - `research/idp-evaluation.md` — conceptual framework; core claim now backed by real numbers
     in `research/predictive-stats.md` (tackle rate r=0.506 vs. sack rate r=0.091).
   - `research/predictive-stats.md` — **done, pipeline-verified, includes full 2025 season**
@@ -124,14 +149,29 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   `newsletters/YYYY-MM-DD.md` (dated for the next morning) + a push notification with the
   headlines. Full architecture: `docs/daily-newsletter-spec.md` (4 lanes + reviewer, hybrid
   compete mode, "checking your takes"). Gmail is broken for routines (label-only connector,
-  2-for-2 runs) — diagnosis given to Brendan (reconnect Gmail in claude.ai connector settings
-  with full permissions); each run makes ONE quick ToolSearch check and adds a Gmail draft only
-  if compose ever appears. The old ~2026-08-14 "switch to daily" reminder is moot (already
+  **now 3-for-3 scheduled runs** — re-confirmed 2026-07-07) — diagnosis given to Brendan (reconnect
+  Gmail in claude.ai connector settings with full permissions); each run makes ONE quick ToolSearch
+  check and adds a Gmail draft only if compose ever appears. **Subagents CONFIRMED WORKING in the
+  scheduled env (2026-07-07)** — the v3 spec's open question is resolved; use the 4-lane parallel
+  path, not the sequential fallback. The old ~2026-08-14 "switch to daily" reminder is moot (already
   daily); if it fires, just confirm the cadence is still what Brendan wants and dismiss.
 
 ## AUDIT_QUEUE
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
+
+- **NEW 2026-07-07 (player-notes, re-verify at camp late July):** Josh Jacobs DV charging decision
+  (Brown County DA — the biggest live suspension variable); Mahomes camp clearance (confirms the
+  QB11 value); Malik Nabers ACL timeline (camp-ready vs Week 1); Puka Nacua lawsuit ruling (NFL
+  "under review"); Rashee Rice knee recovery. These move fast through August — refresh weekly.
+- **NEW 2026-07-07 (data):** `positional_retention.py` flagged a **2025 REG data anomaly** — the
+  fetch pulled ~3.5x the weekly rows for 2025 (18,539 vs ~5,300; far more fringe players). Does
+  NOT affect top-tier ranks (min-6-games elite unaffected) but slightly skews IDP random-baseline
+  denominators. Worth understanding why `fetch_data.py` over-pulls 2025 before trusting any
+  future full-pool (non-elite) analysis on that season.
+- **NEW 2026-07-07 (minor):** CMC 2025 finish reported as both "RB1 half-PPR" (compete agent) and
+  "RB2 behind Bijan" (referee) — resolve to the exact this-league-scoring finish from the pipeline
+  next time it's material (doesn't change the pass-CMC verdict).
 
 - `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
   Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
@@ -171,6 +211,41 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-07 (SCHEDULED RUN) — FIRST DAILY NEWSLETTER shipped (v3 architecture, live)
+First real edition under the daily-newsletter architecture. `newsletters/2026-07-07.md` written
+(52 days to draft). **Subagents WORK in the scheduled environment** — the open question from the
+v3 build is answered: ran all 4 lanes + 3 compete-mode agents + reviewer as parallel Task agents
+(not the sequential fallback).
+- **Lanes run (all 4, parallel):** A-Data, B-News, C-Market, D-Rabbit-hole. **Compete mode FIRED**
+  on "Pick 4 — Puka vs CMC" (3 angles). **Verdict: take the elite WR, pass CMC — unanimous.**
+  Winning angle = situation/referee (JSN is the cleanest elite-WR but likely gone at pick 3).
+- **Findings that survived → the edition's spine:** (1) Lane A NEW pipeline result —
+  `pipeline/positional_retention.py`: at matched depth elite-RB and elite-WR retention are equal
+  (~49% each, N=108) [S], so "elite RBs are landmines" is FALSE; the scarcity edge is real but
+  modest (RBs survive less, decline harder; WR pool deeper/more survivable). Added a big section
+  to `research/predictive-stats.md`. Also: elite IDP is the LEAST sticky tier (top-12 retention
+  10.2%) → treat flex-IDP as a weekly stream, anchor floor on prior-yr IDP PPG. (2) Lane B
+  resolved 3 parked questions (Rice cleared/stale scare; Jacobs = live DV suspension risk;
+  Pickens→Dallas confirmed WR2) + surfaced Mahomes ACL (~QB11 value) and Tyreek released
+  (undraftable). (3) Lane C fresh ADP: JSN risen to pick-3 conversation, Jeanty fell to ~RB5,
+  Nabers ACL, Saquon ADP ~13 (mock's "17" now optimistic), A.J. Brown→NE. (4) Lane D media-
+  narrative retrospective: reconstructed why Brendan believed on BTJ'25 / CMC'21 / Kupp'23
+  busts + Dylan's JSN'25 hit — sharp lesson: *Dylan buys production at a discount to ADP; Brendan
+  pays a premium for a projection.* Written into `research/draft-tendencies.md`.
+- **Reviewer KILLED/DOWNGRADED:** downgraded Lane C's "CMC = post-injury 0-for-6 trap" framing —
+  CMC-2026 is NOT a clean POST_INJURY flag (healthy 17-game 2025); corrected the take to the
+  honest actuarial/aging-RB caution (+ his aging-vet wins were all WRs). Killed the strong-form
+  scarcity claim using Lane A. Reconciled the CMC ADP contradiction (ranking #3 vs real ADP ~6-8).
+  Cut an unverified "Alec Pierce 4yr/$114M" item.
+- **Take checked (STEP 5):** Brendan's "CMC — don't know why he's fallen" take → half-right (2025
+  was real) but the fall is correctly-priced age/workload, not a discount; PATTERN ALARM fired,
+  honestly corrected (not literal 0-for-6, but aging-RB outside his WR-only aging eye). Reinforced
+  his winning wait-on-QB pattern.
+- **New file:** `research/player-notes.md` (per-player status board — the notebook's own "create
+  it if the pattern recurs" trigger fired; several statuses landed at once).
+- **Delivery:** newsletter file + push notification. Gmail STILL label-only (3rd scheduled run) —
+  no draft. **BRANCH: force-pinned to `claude/modest-gates-ypa0jb` again** (see VERIFICATION LOG).
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

@@ -22,7 +22,9 @@
   Brendan: "find narratives in the media regarding the players they drafted, not just stat
   based"). Slow-burn nightly backlog: reconstruct the draft-time media story for picks in
   `draft_history_enriched.csv`, starting with 2025, then 2024; prioritize Brendan's picks and
-  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. Status: queued.
+  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. **Status: IN
+  PROGRESS.** 2026-07-07 (Lane D) did 4 — Brendan's BTJ'25, CMC'21, Kupp'23 busts + Dylan's
+  JSN'25 hit → `research/draft-tendencies.md` (Finding 4/5 narrative notes). Continue: more 2025.
 - **[MOSTLY DONE 2026-07-02] Final standings per season.** Brendan sent 7 files; 6 parsed
   (2019-2023, 2025) → `inputs/league-history/league_finishes.csv` + Finding 6 in
   draft-tendencies.md (draft value → PF r≈+0.50 but → rank only +0.31; move count → rank
@@ -129,14 +131,20 @@ acting on any of it.
   takes over LT. **Flag: Jacobs had an offseason arrest** — practiced at minicamp, playable
   "until further notice" per reporting as of 2026-07-01 — a live situational risk, not just an
   offense-quality question. **[TOPIC] — add Packers/Jacobs risk note to a player-notes file next
-  pass** (no per-player notes file exists yet — consider creating `research/player-notes.md` if
-  this pattern recurs).
+  pass.** **STATUS: DONE 2026-07-07** — `research/player-notes.md` created (the "if this pattern
+  recurs" trigger fired); Jacobs is now the LIVE suspension risk (DV charges, DA decision pending,
+  still practicing). Watch Brown County news through August.
 
 Other loose threads worth the bot picking up later (not yet researched):
 - **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
+  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered). **STATUS:
+  partially DONE 2026-07-07** — trade CONFIRMED (franchise-tagged ~$27.3M, WR2 opposite Lamb, off
+  93/1,429/9); noted in `research/player-notes.md`. Still open: a full Cowboys coach-tendencies
+  entry.
 - **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+  normal WR2 evaluation. **STATUS: DONE 2026-07-07** — CLEARED (2025 suspension served; May 2026
+  jail stint done; NFL closed investigation, no further discipline). Real risk is knee + crowded
+  KC targets, not legal. In `research/player-notes.md`.
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).
