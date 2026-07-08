@@ -172,6 +172,40 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 ## CHANGELOG
 
+### 2026-07-06 (interactive session, follow-up) — v3.2 overhaul: fixed the stale/lazy newsletter
+Brendan came in hot: the nightly output was repetitive (debated CMC / CeeDee-vs-Pickens / Rice &
+Jacobs lawsuits every night), used self-fabricated ADP that capped at ~pick 100 (BTJ/Christian
+Watson), obsessed over a small-sample "aging vets" read, mis-applied a "second-year leak" to
+sophomores, and argued current-reality facts wrong (claimed Philly a good AJB environment "they won
+a SB" — the Eagles OFFENSE struggled last year and AJB was TRADED to New England; treated a
+Montgomery trade as "upside" when he was already dealt to Houston — WebSearch-confirmed this run).
+He revised the plan then said full send. Reviewed PATH-B prompt edit + two new research files:
+
+1. **Prompt → v3.2** (`## END` verified, rails untouched). Six changes: (a) COVERAGE LEDGER is law
+   (`research/player-board.md` with last_covered/times_covered/WATCHLIST/SETTLED — never re-lead a
+   covered player/news item unless something moved); (b) BOARD DISCIPLINE — advance DOWN the board
+   to his real pick slots (4,17,24,37,44,51,64,71,84,91…) and out to ~pick 180, stop parking on the
+   top 12; (c) Lane C = REAL multi-source half-PPR ADP anchored on Sleeper (+FantasyPros/Underdog/
+   RotoWire), never fabricated, mark stale/unknown if unsourced; (d) PATTERN ALARM recalibrated —
+   no leak/superpower without pick-list + sample size, re-age players to current season, stop the
+   obsessive repetition, anti-yes-man on data he sends; (e) KNOW CURRENT REALITY + don't manufacture
+   pushback (the Eagles/AJB + Montgomery lessons, in STEP 3C); (f) STEP 7 maintains the ledger.
+2. **`research/self-scouting.md`** (new, supersedes draft-tendencies Finding 5's framing) — receipts
+   from `draft_history_enriched.csv`: the "second-year leak" is a MYTH (his year-2 picks are ~a coin
+   flip and include A.J. Brown '20, Waddle '22, Achane '24, Olave '23 = some of his best ever); the
+   REAL narrower leak is expensive POST_INJURY (Kupp 1.05, CMC, Sutton, Freeman, Fuller); aging-vet
+   "4-for-4" and mid-QB "superpower" are late-pick n≈3-4 footnotes to stop obsessing over.
+3. **`research/player-board.md`** (new, the coverage ledger + v1 board) — all 25 of his mock players
+   rescored to 0.5 PPR (tier C, my arithmetic on his projections): reception-hogs crater (ARSB
+   ~320→~245, McBride ~250→~200, CeeDee, JSN, London, Chase), pure runners rise (Henry, Jonathan
+   Taylor, Jeanty, Saquon). WATCHLIST seeds the real gaps (builds-that-win study, picks 100-180,
+   QB-regression layer, CeeDee splits, real ADP); SETTLED seeds the anti-repeat list.
+
+CONCEDED to Brendan (logged so the bot learns): AJB/Eagles current-reality error; pushing back on
+CeeDee for no reason; treating his MOCK ORDER as his rankings (he asked me to HELP rank); dinging
+his back-and-forth notes as contradictions when they're just pros/cons to synthesize. Still on the
+side branch `claude/fantasy-football-discussion-nawczx` — needs merge to `main` before it helps a run.
+
 ### 2026-07-06 (interactive session) — Sparred Brendan's ChatGPT "2026 Draft Brain" doc
 Brendan pasted a long ChatGPT-authored draft-strategy summary and asked me to pressure-test it
 ("mental spar, pushback encouraged"), NOT to build anything. He explicitly declined the top-75
