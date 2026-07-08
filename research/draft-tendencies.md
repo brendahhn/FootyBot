@@ -231,6 +231,13 @@ closes it.
   mean those players are wrong; means the *price you'll happily pay* for them is historically
   ~46 points too high. Demand an extra round of discount on injury-story players.
 - 2024-25 recency view: 62% hit, -2.3 — trending better.
+- **Live post-injury watch, updated 2026-07-08:** the 2026 injury-discount names circling
+  Brendan's board are **Malik Nabers** (only 4 games in 2025; second knee cleanup, PUP risk),
+  **MHJ**, and **Worthy** — the exact 0-for-6 archetype. Demand the extra round of discount.
+  Two names that are NOT post-injury discounts for 2026 (don't misfile them): **CMC** (healthy
+  RB1 on a full 2025 — he's an aging-vet/workload call now, not injury) and **Rashee Rice**
+  (cleared legally + no suspension, knee cleanup on track for camp — a healthy WR2, per the
+  2026-07-08 newsletter Lane B).
 
 ## Finding 6 — Draft vs. in-season vs. luck: what actually decides finishes (added 2026-07-02)
 

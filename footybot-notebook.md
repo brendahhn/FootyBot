@@ -32,6 +32,17 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-08 — BRANCH RULE TRIGGERED AGAIN (#3), still recurring.** This scheduled run was
+  hard-pinned to `claude/modest-gates-sezye0` and forbidden from pushing `main` directly. Per the
+  BRANCH RULE I did NOT self-fork — pushed all this run's work (first newsletter + research updates
+  + notebook) to `claude/modest-gates-sezye0` and am surfacing it loudly in the push notification.
+  GOOD: at run start `origin/main` and `origin/claude/modest-gates-sezye0` were IDENTICAL (0/0
+  divergence via `git rev-list --left-right --count`), so memory was NOT stale this run. Push
+  verified via `git ls-remote origin claude/modest-gates-sezye0` after pushing (commit hash in the
+  run output). **ACTION NEEDED FROM BRENDAN: merge `claude/modest-gates-sezye0` into `main`** before
+  the next scheduled run, or the next run reads stale memory (won't see today's newsletter/corpus).
+  The durable fix is still one of: (a) allow the scheduled runtime to push `main`, or (b) accept
+  merge-each-run, or (c) repin the canonical branch. 3+ runs now on this pattern.
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
@@ -81,9 +92,11 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 ## STATUS
 
 - **Phase 1 (research repo):** in progress.
-  - `research/coach-tendencies.md` — 13 new-playcaller teams covered (Raiders, Cardinals,
-    Browns, Bills, Ravens, Steelers, Dolphins, Chargers, Titans, Falcons, Buccaneers, Eagles)
-    + 2 flagged non-changes (Jaguars, Chiefs). **Eagles entry substantially deepened 2026-07-01
+  - `research/coach-tendencies.md` — 14 new-playcaller/regime teams covered (Raiders, Cardinals,
+    Browns, Bills, Ravens, Steelers, Dolphins, Chargers, Titans, Falcons, Buccaneers, Eagles,
+    **Cowboys [2026-07-08]**) + 2 flagged non-changes (Jaguars, Chiefs). **Miami/Patullo AUDIT
+    item resolved 2026-07-08** (Patullo = Miami passing-game coordinator under Slowik, not OC —
+    Slowik entry stands). **Eagles entry substantially deepened 2026-07-01
     (interactive session, after Brendan flagged the scheduled run's first pass as too thin):**
     added the A.J. Brown trade to New England (the single biggest fact the first pass missed —
     a personnel trade, not a coaching change), the Wicks trade + Makai Lemon 1st-round pick, and
@@ -133,10 +146,15 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
-- `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
-  Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
-  Slowik as OC. Verify Patullo's actual Miami title (could be a lower role, OR the Slowik entry
-  may be wrong) with a targeted search next run before trusting the Miami entry.
+- ~~`research/coach-tendencies.md`: **Miami OC cross-check** (Patullo → Dolphins vs. our Slowik
+  entry).~~ **RESOLVED 2026-07-08:** Patullo joined Miami as passing-game coordinator UNDER OC
+  Bobby Slowik; the Slowik entry is correct, no change needed (A-tier: miamidolphins.com bio, CBS,
+  NBC Sports Philadelphia, Inquirer).
+- **NEW 2026-07-08: fold `research/league-scoring-leaders.md` into the pipeline.** The 2025
+  top-scorer tables (under our exact scoring) are currently hand-placed from a one-off Lane A query
+  script. Add a `pipeline/scoring_leaders.py` (or extend `predictive_stats.py`) so they regenerate
+  every run and don't go stale. Also: verify target-share/WOPR are being read from the right weekly
+  columns vs. recomputed — Lane A recomputed season-level from team totals; make that reproducible.
 - `research/coach-tendencies.md`: re-verify all entries against actual 2026 preseason/regular
   season tape once available — currently search-snippet-sourced only.
 - `research/coach-tendencies.md`: Cardinals OC — a broad-search summary said Nathaniel Hackett
@@ -171,6 +189,39 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-08 (SCHEDULED RUN) — FIRST DAILY NEWSLETTER shipped (v3 architecture, live)
+First real edition of the daily newsletter, and the first proof the 4-lane architecture runs in a
+scheduled environment. **Subagents WORK here** — spawned all 4 lanes in parallel (Task/general-
+purpose), no fallback needed. Lanes returned findings as text; the reviewer (main loop) applied all
+corpus writes AFTER a hostile pass (avoids parallel-write conflicts + enforces kill authority
+before anything enters the corpus). Newsletter: `newsletters/2026-07-08.md` (51 days to draft).
+- **Winning lane: A (Data).** Ran 2025 nflverse box scores through our exact scoring
+  (`league_scoring.py`) and it corrected our own corpus twice: (1) **CMC played a full 17 games as
+  the 2025 RB1 (21.51 PPG)** — so `mock-draft-2026.md`'s "PASS on CMC = post-injury 0-for-6
+  archetype" was STALE and got rewritten (pass-at-4 still holds, but on positional-value/age
+  grounds, not injury). (2) **Saquon regressed to RB14** — softened the "Saquon at 17" plan. Also
+  surfaced **Justin Jefferson as a TD-variance buy-low** (9.38 PPG on 2 TDs despite 30.1% tgt
+  share / 0.722 WOPR) and **Puka WR1 / JSN WR2 (best usage, 0.888 WOPR) > Chase** under our rules.
+  New persistent file `research/league-scoring-leaders.md` holds the 2025 tables (Tier S).
+- **Lane B (News):** quiet week, honestly reported. One clean resolution — **Rashee Rice CLEARED**
+  (no 2026 suspension, released from jail 6/16, knee cleanup on track for camp). Idea-queue item
+  closed. Malik Nabers = injury faller (4 games in 2025, 2nd knee scope). Mahomes ACL Week-1 risk.
+- **Lane C (Market):** JSN risen to top-4/5; **James Cook bid up to RB6 (validates Brendan's
+  "overvalued" take)**; Saquon ~pick 14 (may be gone before 17); QB round-5-6 window still open in
+  HIS league (national ADP crept up, but the room still waits). Updated `mock-draft-2026.md`.
+- **Lane D (Rabbit hole):** Cowboys entry written to `coach-tendencies.md` (checklist-complete),
+  chased from Brendan's "CeeDee without/with Pickens" question — reframed by the fact the trade was
+  **May 2025**, so Lamb+Pickens already coexisted as a real 1-2 in 2025 (pipeline confirms Pickens
+  WR6 + Lamb WR11 simultaneously). Verdict: both BUY, correlated Dak-health risk if you draft both.
+  **AUDIT_QUEUE Miami/Patullo item RESOLVED** — our Slowik entry was correct; Patullo is Miami's
+  passing-game coordinator, not OC.
+- **Checking your takes:** Cook-overvalued (AGREE), CMC-#1-overall (half-wrong, corrected),
+  PATTERN ALARM on his injury-discount lean (MHJ/Worthy/Egbuka + now Nabers — reinforced the 0-for-6
+  warning). **Compete mode did NOT fire** (pick-4 resolved cleanly).
+- **Gmail: still label-only (3-for-3 on scheduled runs)** — no compose tool; delivered via push
+  notification + this newsletter file. **BRANCH: force-pinned to `claude/modest-gates-sezye0`
+  again** (BRANCH RULE #3, now 3+ consecutive) — see VERIFICATION LOG. Needs merge to `main`.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

@@ -22,7 +22,9 @@
   Brendan: "find narratives in the media regarding the players they drafted, not just stat
   based"). Slow-burn nightly backlog: reconstruct the draft-time media story for picks in
   `draft_history_enriched.csv`, starting with 2025, then 2024; prioritize Brendan's picks and
-  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. Status: queued.
+  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. Status: queued
+  (deferred 2026-07-08 — Lane D spent the rabbit hole on the higher-value Cowboys/Pickens question
+  that answered a live Brendan take; pick this up on a quieter deep-dive night).
 - **[MOSTLY DONE 2026-07-02] Final standings per season.** Brendan sent 7 files; 6 parsed
   (2019-2023, 2025) → `inputs/league-history/league_finishes.csv` + Finding 6 in
   draft-tendencies.md (draft value → PF r≈+0.50 but → rank only +0.31; move count → rank
@@ -132,11 +134,14 @@ acting on any of it.
   pass** (no per-player notes file exists yet — consider creating `research/player-notes.md` if
   this pattern recurs).
 
-Other loose threads worth the bot picking up later (not yet researched):
-- **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+Other loose threads worth the bot picking up later:
+- **[TOPIC — DONE 2026-07-08]** George Pickens trade context (to Dallas) — full **Cowboys** entry
+  written to `research/coach-tendencies.md`; the trade was **May 2025**, so Lamb+Pickens already
+  coexisted as a real 1-2 in 2025 (pipeline: Pickens WR6 + Lamb WR11 simultaneously). Both BUY;
+  correlated Dak-health risk if drafting both. Answered in the 2026-07-08 newsletter deep dive.
+- **[TOPIC — DONE 2026-07-08]** Rashee Rice legal situation — **CLEARED**: no 2026 NFL suspension
+  (investigation closed Apr 2026), released from 30-day jail 6/16/2026, May knee cleanup on track
+  for camp. A healthy, draftable WR2 (WR5 in 2025 PPG over 8 games). "In jail" flag is stale.
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).

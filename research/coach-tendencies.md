@@ -86,6 +86,10 @@ data becomes available.
 - Tendencies: expect continuity with Shanahan-tree zone-run/motion principles given Slowik's
   background, but he's now the lead voice rather than executing someone else's system —
   worth re-confirming once 2026 play-calling patterns are visible.
+- **AUDIT_QUEUE RESOLVED (WebSearch 2026-07-08, A):** the Kevin Patullo lead is confirmed but does
+  NOT change this entry — Patullo (fired Eagles OC) joined Miami as **passing game coordinator**
+  under Slowik, not as OC. Slowik as OC/play-caller stands. (miamidolphins.com coach bio, CBS
+  Sports, NBC Sports Philadelphia, Philadelphia Inquirer.)
 
 ### Los Angeles Chargers — OC Mike McDaniel (calls plays), HC Jim Harbaugh
 - Background (A): McDaniel is the fired Dolphins HC (2022-2025), hired as Chargers OC/playcaller
@@ -232,6 +236,57 @@ data becomes available.
   transactions + CBS Sports transactions (A.J. Brown trade, Wicks trade, Lemon draft-day trade-up,
   Stoutland departure, Johnson/Dickerson return), Yahoo Sports + Inside The Birds (QB depth chart).
 
+### Dallas Cowboys — HC Brian Schottenheimer (calls plays, Year 2), OC Klayton Adams
+Added 2026-07-08 (newsletter Lane D rabbit hole — chased from Brendan's "CeeDee without/with
+Pickens" question). NOT a new-playcaller install: Schottenheimer was promoted from Cowboys OC to
+HC for 2025 after Mike McCarthy left (McCarthy → Steelers), so 2026 is **Year 2** of his offense.
+- Background (A): Schottenheimer calls the plays; Klayton Adams is OC (Adams' scheme lineage was
+  NOT independently verified this run — do not assert it). Sourced: nfl.com, dallascowboys.com,
+  Blogging The Boys, 2026.
+- Scheme/tendencies (A on the philosophy, B on 2026 magnitude): "old-school" balance — run,
+  control tempo, heavy **play-action shots** off the run, protect the ball. Schottenheimer's
+  12-year career play-calling split is ~46% run / 54% pass, a real departure from Dallas's recent
+  pass-lean (61% pass in 2024 under McCarthy). **CAVEAT that kills the "run-first" overread:** the
+  *actual* 2025 Dallas offense still threw **600 passes** (Dak led the NFL with 404 completions),
+  so the run-first label overstates current volume — watch whether Year 2 pushes run rate up and
+  trims the pass pie. Play-action + downfield shots is friendly to this league's 40+ yd bonus IF
+  Dak stays upright. (footballguys, dallascowboys.com, Yahoo Sports.)
+- Roster moves / the Pickens trade (A): traded for WR **George Pickens in May 2025** (sent a 2026
+  3rd + 2027 5th to Pittsburgh, got Pickens + a 2027 6th). Pickens broke out immediately —
+  93/1,429/9, Pro Bowl, 2nd-team All-Pro — and Dallas **franchise-tagged him for 2026 (1yr/$27.3M)**;
+  contract-year motivation. (ESPN, dallascowboys.com, Yahoo, Blogging The Boys.)
+- Pass-catching room — **CeeDee Lamb + Pickens are a DEMONSTRATED real 1-2, not a cannibalization
+  trap** (A on the 2025 data; B on the 2026 read). Because the trade was May 2025, they already
+  shared a full 2025 season: in 12 full games together both were startable at once (Lamb led
+  targets 116-99, PPR 16.6-16.1); Lamb posted a 28% target share + elite efficiency across 11
+  healthy games despite missing 3 (Wk-3 high-ankle sprain). Only cannibalization signal: Lamb's
+  targets fell from 10+/gm (2024) to 8.4/gm — Pickens caps Lamb's *ceiling*, not his value.
+  Pipeline cross-check (S, `league-scoring-leaders.md`): under our scoring, Pickens finished WR6
+  (14.44 PPG, 17 G) and Lamb WR11 (12.57 PPG, 13 G) *simultaneously* — proof of coexistence. Lamb
+  and Pickens are both TD-suppressed buy-lows for 2026 (Lamb just 3 TDs on 1077 yds). TE **Jake
+  Ferguson** is a real third mouth. Fantasy read: **Lamb = Round-1 WR (WR5-6 tier); Pickens = value
+  at a WR2 price (~WR12-20 ADP).** Drafting both is defensible but stacks a correlated Dak-health
+  bet. (SI/onsi, CBS, Blogging The Boys, fantasyfootballcalculator, FantasyPros ADP.)
+- Offensive line (A): projected 2026 starters Tyler Guyton (LT), All-Pro Tyler Smith (LG), Cooper
+  Beebe (C), Tyler Booker (RG), Terence Steele (RT); ~25.5 avg age, one of the league's youngest.
+  CONTINUITY RISK is the story: in 2025 the five presumptive starters played together on only 275
+  of 1,186 snaps. Guyton (missed 7, bone fracture + high-ankle) and Beebe (missed 6, high-ankle)
+  carry injury flags; Guyton's health at LT keeps Tyler Smith at his best spot (LG). Talented but
+  unproven-when-intact — a swing on both the run game and Dak's protection. (Blogging The Boys,
+  dallascowboys.com, SI.)
+- RB depth (A): **Javonte Williams re-signed (3yr/$24M, $16M gtd)** as clear lead back after a
+  strong 2025 (252 car / 1,201 / 11 TD + 35 rec / 2 TD). Fits the run-lean early-down scheme — a
+  legit RB2 with volume. RB2 is a live camp battle (Jaydon Blue, Phil Mafah, Malik Davis, Israel
+  Abanikanda) — no clear handcuff yet; monitor if drafting Williams. (nfl.com, Blogging The Boys,
+  ESPN, dallascowboys.com.)
+- QB room (A): **Dak Prescott** starts and is **healthy entering 2026** (recovered from the 2024
+  season-ending hamstring surgery; played all 17 in 2025, 600 att / NFL-high 404 comp; 22.0 PPG =
+  QB5 overall under our scoring, `league-scoring-leaders.md`). Turns 33 in 2026.
+  Backup is a real cliff: Joe Milton III vs. Sam Howell QB2 battle. The whole two-alpha-WR +
+  play-action ecosystem depends on Dak's health and ~600-attempt volume — if he misses time, Lamb,
+  Pickens, and Ferguson crater together (why a Lamb+Pickens double-draft is correlated, not
+  diversified). (nfl.com, ESPN, dallascowboys.com, si.com.)
+
 ## Notable non-change (don't over-read into "new regime" narratives)
 
 ### Jacksonville Jaguars — HC Liam Coen, OC Grant Udinski, DC Anthony Campanile all retained
@@ -253,11 +308,10 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 "not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
-Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
-correcting). Plus full
+plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered 2026-07-01,
+**Cowboys covered 2026-07-08**). ~~Lead to verify: Kevin Patullo → Dolphins role~~ **RESOLVED
+2026-07-08** — Patullo joined Miami as passing game coordinator under OC Bobby Slowik; the Miami
+entry stands (see the Miami bullet above). Plus full
 defensive-coordinator-level
 detail for IDP purposes (see `research/idp-evaluation.md` for the IDP-specific angle on
 defensive scheme/role). Expand this doc as draft season approaches and as preseason tape
