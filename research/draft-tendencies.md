@@ -139,6 +139,21 @@ drafted immediately after their first big year.
   primary race.
 - **Dylan — chases last year's breakout.** Highest breakout-chase (22%) + high rookie rate +
   never takes a QB early. The shiniest recent production owns his board.
+  - *Narrative retrospective — why his breakout-chases hit (added 2026-07-07, LANE D; tier B
+    narrative-at-the-time).* Dylan is the same archetype as Brendan's leaks (chase recent
+    production) but is the league's 2nd-best drafter and 75% hit 2024-25 — so the interesting
+    question is what a WINNING version of this instinct rode. His 2025 R3 pick **Jaxon
+    Smith-Njigba** (BREAKOUT_CHASE, off an 11.9-PPG sophomore year) is the clean example. The
+    summer-2025 narrative: JSN was the "clear-cut #1 target" in Seattle after a breakout
+    sophomore season, a top-12 PPR WR with 100-catch upside, and — critically — outlets flagged
+    him as a **value** going roughly half a round *behind* comparable WRs, framed as
+    "low-risk/high-reward" at his R3 price (sources: PFF 2025 JSN profile, Pro Football Network
+    "best value in 2025 drafts," SI "why JSN is a WR1 in PPR"). The distinction from Brendan's
+    losing breakout-chases: JSN's story was **volume/role-driven** (undisputed target hog on a
+    defined path) and Dylan bought it *at or below* market, not at a premium. The lesson isn't
+    "breakout-chasing works for Dylan and not Brendan" — it's that Dylan's hits pair a
+    role-based floor with a discount to ADP, whereas Brendan's misses (BTJ, post-injury stars)
+    pay a *premium* for a projection-based leap. Same archetype, opposite price discipline.
 - **lucas — will NEVER take your rookie.** Zero rookies in rounds 1-8 across seven drafts.
   Rookie values don't get eaten by him, ever.
 - **Jack — buys established only.** Rock-bottom rookie/2nd-year/breakout-chase (4/5/4%) — he
@@ -226,11 +241,90 @@ closes it.
 - Net: 52% hit rate (fine) but -7.0 avg delta — **you hit singles often and strike out
   catastrophically**; the misses cluster in exactly two archetypes: post-injury + second-year
   "upside."
-- **Live warning for Aug 28:** your 2025-07-01 mock memo circles Egbuka (injury-shortened),
-  MHJ (injury-shortened), Worthy (post-ACL) — that's the same pattern that's 0-for-6. Doesn't
-  mean those players are wrong; means the *price you'll happily pay* for them is historically
-  ~46 points too high. Demand an extra round of discount on injury-story players.
+- **Live warning for Aug 28:** your 2025-07-01 mock memo circles Egbuka, MHJ, Worthy — the
+  injury-story discount pattern that's 0-for-6. Demand an extra round of discount on
+  injury-story players. **But apply the flag correctly (reviewer note, 2026-07-05):**
+  POST_INJURY keys on the player coming off a *lost/injury year on draft day*. A player who
+  MISSED time then came back and played a full, productive season reclassifies to STEADY the
+  next draft — the leak is buying *off the lost year*, not owning the player forever. Worked
+  example: 2021 CMC (off a 3-game 2020) = POST_INJURY = your −98 bust; 2026 CMC (off a healthy
+  17-game RB1 2025) = STEADY/AGING_VET, NOT the same bet. (Also: Worthy's 2025 injury was a
+  **shoulder labrum, not an ACL** — WebSearch, 2026-07-05, Lane B; correct the memo's "post-ACL."
 - 2024-25 recency view: 62% hit, -2.3 — trending better.
+- **Live post-injury watch, updated 2026-07-08:** the 2026 injury-discount names circling
+  Brendan's board are **Malik Nabers** (only 4 games in 2025; second knee cleanup, PUP risk),
+  **MHJ**, and **Worthy** — the exact 0-for-6 archetype. Demand the extra round of discount.
+  Two names that are NOT post-injury discounts for 2026 (don't misfile them): **CMC** (healthy
+  RB1 on a full 2025 — he's an aging-vet/workload call now, not injury) and **Rashee Rice**
+  (cleared legally + no suspension, knee cleanup on track for camp — a healthy WR2, per the
+  2026-07-08 newsletter Lane B).
+
+**IMPORTANT ARCHETYPE-FLAG NUANCE (added 2026-07-03, from the compete-mode CMC analysis):** the
+POST_INJURY flag fires on *drafting a player COMING OFF a lost/injury season* (the bounce-back
+unproven — e.g. CMC 2021, drafted off the 2020 3-game year). It must NOT be lazily applied to a
+player who already banked a healthy season. **Worked example — 2026 Christian McCaffrey:** his
+injury year was 2024 (4 games); **2025 was a full, healthy, overall-RB1 campaign** (17 games, ~413
+touches, 102 rec). So 2026 CMC is NOT a clean POST_INJURY archetype match — the bounce-back already
+happened. The legitimate bear case on him is *age-30 + ~450-touch workload + efficiency erosion +
+opportunity cost*, which is different from the injury-discount leak. The behavioral tell still
+applies, though: Brendan's stated pull toward CMC ("don't know why he's fallen… injury concerns")
+is the same *decision-pattern* (drawn to a falling-ADP, injury-narrative name) that triggers the
+0-for-6 leak — so the PATTERN ALARM is about the psychology of the pick, not a literal archetype
+match. And note his 4-for-4 aging-vet successes were ALL WRs (Davante ×2, Hopkins); WR-aging ≠
+RB-aging, so that strength does not transfer to a 30-year-old RB.
+### Media-narrative retrospective — WHY he believed at the time (added 2026-07-07, LANE D)
+
+Reconstructing the fantasy/media narrative *as it stood on each draft day* — documenting the
+thought-process behind the archetype, NOT asserting the take was correct. All **tier B/C
+(narrative-at-the-time), distinguished from hindsight**; sources named.
+
+- **Brian Thomas Jr., 2025 (R2, pick 13 — SECOND_YEAR + BREAKOUT_CHASE; his single worst pick
+  ever, -142 vs round median).** The summer-2025 narrative was overwhelmingly bullish and BTJ
+  was a *consensus* breakout, not a Brendan reach. As a 2024 rookie he went 87/1,282/10 on 133
+  targets in 17 games (WR-top-10 finish), and the offseason take was that a "revamped Jaguars
+  offense" would make him an ascending alpha with **WR1-overall upside** — outlets literally ran
+  "set to make another huge leap" and "every chance to lead all receivers in fantasy points"
+  pieces, and he was drafted as a mid-first / early-second WR. (Tier B narrative; sources: Pro
+  Football Network "racing to trade for BTJ / another huge leap," FantasyLife "buy the dip on
+  BTJ," NBC Sports 2025 preview.) What actually happened: 90 targets / 707 / 2 TD in 14 games,
+  targets bled to Jakobi Meyers / Parker Washington / Brenton Strange, injuries interrupted him.
+  **Lesson for the SECOND_YEAR leak:** the pick was seductive *precisely because the whole
+  industry agreed* — a huge rookie year makes the year-2 leap feel like the safe assumption. But
+  the league data says SECOND_YEAR is a losing archetype here (42% hit, -5.5) and it's Brendan's
+  worst cluster (33% hit, -32.6 avg; CEH, Pitts, BTJ). The year-2 breakout price bakes in the
+  leap as if it's already happened; Brendan pays retail for projection. The tell to distrust:
+  "ascending alpha off one big year" is a narrative, not a floor.
+
+- **Christian McCaffrey, 2021 (R1, pick 1 overall — POST_INJURY, off a 3-game 2020; -98 vs
+  round median).** The draft-time narrative fully justified paying up, and CMC was the
+  *consensus RB1 and 1.01* in 2021 despite the lost 2020. The reasoning: his 2019 was
+  historically elite (one of the best PPR RB seasons ever, ~29-30 PPG), his *per-game* rate in
+  the tiny 2020 sample was actually still elite (~30 PPG over 3 games), and the 2020 absences
+  were read as bad-luck soft-tissue/contact injuries (ankle, shoulder, quad) rather than a
+  durability pattern — "the talent didn't leave, only the games did." So the board treated 2020
+  as a fluke discount on a generational talent. (Tier B narrative; sources: PFF "should CMC be
+  the consensus overall RB1," NFL Spin Zone "RB1 overall candidates 2021.") Outcome: he then
+  missed 10 more games in 2021 — the injuries *were* a pattern. **Lesson for the POST_INJURY
+  0-for-6 leak:** this is the exact seduction mechanism — a single lost season on a truly elite
+  talent lets you tell yourself you're buying dominance at a discount, because the *per-game*
+  numbers when healthy stay spectacular. But per-game production is not the outcome; games played
+  is. The archetype is the league's worst (33% hit, -7.4) and Brendan's is 0-for-6 at -46/pick.
+  The discount is real; the reason for the discount is also real.
+
+- **Cooper Kupp, 2023 (R1, pick 5 — POST_INJURY, off a 9-game 2022; a POST_INJURY bust).**
+  Same discount-rack story one position over. Kupp was the fantasy WR1-overall off the board in
+  2022 after his 2021 **triple crown** (led NFL in catches, yards, TDs). He then played only 9
+  games in 2022 (ankle), which slid his 2023 draft price from mid-first to the back of round 1 /
+  ~pick 10 — and *that slide itself* was the pitch: a recent-triple-crown alpha available a full
+  round below his peak cost. The narrative treated the 2022 ankle as a one-off. (Tier B
+  narrative; sources: Pro Football Network "Should I draft Cooper Kupp 2023," CBS Sports "where
+  to draft Kupp after injury setback," DraftKings Network Kupp 2023 profile.) Outcome: a
+  preseason hamstring landed him on IR before Week 1 — injury-prone read confirmed again.
+  **Lesson:** the "elite talent one round cheap because of last year's injury" framing is the
+  single most repeatable trap in Brendan's history — CMC '21 and Kupp '23 are the *same pick*
+  two years apart, both R1, both POST_INJURY, both busts. When a star falls a round for injury
+  reasons, the market is usually pricing risk correctly, not overreacting. Nate (0 post-injury
+  picks ever) is the discipline model here.
 
 ## Finding 6 — Draft vs. in-season vs. luck: what actually decides finishes (added 2026-07-02)
 

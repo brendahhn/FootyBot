@@ -153,6 +153,12 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
+- **Dedupe/verify the 07-08 salvaged research union.** `predictive-stats.md` has 1-2 duplicated
+  table rows from the `--union` merge (cosmetic); `coach-tendencies.md` (677 ln, 7 nights unioned)
+  should be skim-verified for any duplicated team entry where two nights edited the same section.
+  Lossless by design (union never drops), so worst case is a dup to trim, never a gap. A future
+  run can dedupe as light housekeeping.
+
 - `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
   Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
   Slowik as OC. Verify Patullo's actual Miami title (could be a lower role, OR the Slowik entry
@@ -191,6 +197,25 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-08 (interactive, follow-up 2) — Salvaged 7 stranded nightly runs (07-02→07-08) to main
+All seven nightly runs since main froze (07-02) had branched off the same frozen `main` in
+PARALLEL and stranded on `claude/modest-gates-*` branches — main had ZERO newsletters (only a
+README), so the bot never saw its own prior editions (a major repeat driver on top of the missing
+ledger). Recovered everything WITHOUT touching the v3.2 prompt / player-board / self-scouting /
+notebook:
+- **All 7 newsletters** (`newsletters/2026-07-02.md` … `07-08.md`) → main now has the record of
+  what's been covered, so "don't repeat yesterday" finally has a yesterday.
+- **4 new pipeline scripts** (positional_value, positional_stability, player_season_profile,
+  positional_retention) + **3 new research files** (positional-value.md, player-profiles-2025.md,
+  league-scoring-leaders.md) — pure additive, unique filenames.
+- **Unioned the shared research** each night had extended from the same base (`git merge-file
+  --union`, lossless): coach-tendencies.md (7 nights → 677 ln), draft-tendencies.md (4 → 403),
+  predictive-stats.md (2 → 101), player-notes.md (2 → 159). mock-draft-2026.md = took latest
+  (07-08). Verified: no conflict markers; only cosmetic dups are markdown table separators.
+- Two 07-08 runs existed (sezye0, f1u7kg); took sezye0's newsletter + unioned f1u7kg's coach
+  entries. Nothing from any night was dropped.
+The auto-merge Action prevents this recurring from tonight forward.
 
 ### 2026-07-08 (interactive session, follow-up) — v3.2 overhaul: fixed the stale/lazy newsletter
 Brendan came in hot: the nightly output was repetitive (debated CMC / CeeDee-vs-Pickens / Rice &

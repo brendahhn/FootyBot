@@ -41,9 +41,15 @@ Walker.
 ## Brendan's projected team through 3: Chase + Saquon + DeVonta Smith (WR/RB/WR)
 
 ### Strategic reads (the actual point)
-1. **Pick 4: take the elite WR, PASS on CMC.** He'll sit there as RB3 and tempt the
-   RB-scarce instinct — but he's the exact 0-for-6 post-injury archetype (Finding 5). Model
-   predicts Connor takes him at 5 anyway; let him.
+1. **Pick 4: take the elite WR, PASS on CMC — but the REASON is corrected (2026-07-08).** The
+   old rationale here said CMC is "the exact 0-for-6 post-injury archetype." **That is now stale:**
+   pipeline data (`league-scoring-leaders.md`) shows CMC played a **full 17 games in 2025 as the
+   RB1 (21.51 PPG)** — for a 2026 draft he flags aging-vet/workload, not post-injury, and he's not
+   an injury reclamation. The pass-at-4 call still holds, on better grounds: (a) positional value —
+   this room over-drafts RB (Finding 2), so an elite WR falls to 4 while pick 4 spent on RB buys
+   scarcity you don't need; (b) age-30 + a ~450-touch 2025 workload is real regression risk. Note
+   the flip side honestly: CMC as a healthy RB1 may be genuine *value* at 5-7 (where Connor takes
+   him) — the fade is a pick-4 allocation call, not "CMC is washed." Let Connor have him at 5.
 2. **Pick 17: Saquon is the RB value Brendan wanted** ("Saquon + Chase feels good"). RB12-ish,
    played all 2025 (not a post-injury discount). Flag: Eagles new-OC + age-29 regression
    questions (coach-tendencies.md) — fine pick, not a lock.
@@ -52,6 +58,21 @@ Walker.
 4. **QB: hold to rounds 5-6.** Only Aaron/Lucas threaten early and likely not before R3. The
    round 5-6 elite-QB window is Brendan's single best habit (Lamar/Mahomes/Herbert = 3 best
    picks ever). Don't spend 17/24 on a QB.
+
+### Market/data updates (2026-07-08 newsletter, Lanes A + C)
+- **JSN has risen to consensus top-4/5** (FantasyLife/FantasyPros, July 2026), sometimes ahead of
+  Puka — so the elite WR that falls to pick 4 is now more likely **Puka or Chase than JSN**, and
+  JSN may not reach Niko at 6. (Mock R1 above still has JSN at 6 — treat as soft.)
+- **Saquon at 17 is optimistic.** Market ADP now has him **~pick 14, round 2** (may be gone before
+  17), AND pipeline shows he regressed to **RB14 in 2025** (13.36 PPG). Fallbacks at the 17 RB
+  slot: Derrick Henry / Omarion Hampton / Kenneth Walker. The "Saquon + Chase" dream is not dead
+  but is doubly softened — he may not be there, and he wasn't the 2024 monster in 2025.
+- **James Cook bid up to RB6 / late round 1** (from ~RB13 last summer) — validates Brendan's "Cook
+  overvalued" read; the market price now exceeds our valuation. Reinforces PASS on any RB reach.
+- **QB window still open in HIS league.** National 1QB ADP has crept up (Allen ~R3, Daniels ~R3,
+  Lamar ~R4, Mahomes ~R5-6), but the room waits (Finding 1: only Aaron/Lucas move before ~R5), so
+  the Mahomes/Herbert/Burrow round-5-6 tier remains a live exploit. Mahomes carries Week-1 injury
+  risk (2025 ACL) — prefer a healthy arm in that tier.
 
 ### Caveats (per the critical-thinking principle)
 - Picks 2-3 swing the top: if Nate takes CMC or Dylan takes Puka, Brendan's exact WR shifts —
