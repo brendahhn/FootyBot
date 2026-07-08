@@ -1,7 +1,7 @@
 # SELF-SCOUTING — Brendan's real draft tendencies (receipts-based)
 
 > Supersedes the old `draft-tendencies.md` Finding 5 "superpower/leak" framing, which Brendan
-> flagged 2026-07-06 as obsessive and small-sample. RULE: never invoke a "leak" or "superpower"
+> flagged 2026-07-08 as obsessive and small-sample. RULE: never invoke a "leak" or "superpower"
 > in the newsletter without showing the actual pick list and the sample size, in that moment.
 > Every pattern here is DIRECTIONAL, not a law. Source: `inputs/league-history/draft_history_enriched.csv`
 > (his real 2019-2025 picks + archetype flags). Re-age every player to the CURRENT season before

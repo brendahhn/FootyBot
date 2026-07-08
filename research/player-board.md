@@ -7,7 +7,7 @@
 > (never rewrite), keep ADP real (Sleeper-anchored) and sourced.
 >
 > **TIERS:** S pipeline-computed · A well-sourced · B thin · C archetype/estimate · Spec = labeled bet.
-> **v1 seed (2026-07-06, interactive):** half-PPR points below are tier **C** — my arithmetic on
+> **v1 seed (2026-07-08, interactive):** half-PPR points below are tier **C** — my arithmetic on
 > Brendan's own PPR projections (subtract ~0.5 × projected receptions, add back for explosive
 > 40+ yd profiles), NOT independent projections. Lane A must replace these with pipeline-computed
 > his-scoring numbers. ADP column is TO BE SOURCED by Lane C (Sleeper half-PPR primary) — WebFetch
@@ -57,22 +57,45 @@ runners barely move — this reshuffles the board toward RB.
 - Reminder: these inherit Brendan's own (optimistic) projections. Lane A to compute independently.
 
 ## COVERAGE LEDGER (times_covered / last_covered)
-All 25 above: `times_covered: 1`, `last_covered: 2026-07-06` (this seed). Do NOT re-lead any of
+All 25 above: `times_covered: 1`, `last_covered: 2026-07-08` (this seed). Do NOT re-lead any of
 them without something new. Rank ordering above is a v1 value estimate — refine with real ADP.
 
-## WATCHLIST — must get worked in (Brendan-requested or under-covered)
-- **Rounds 2-6 / picks 17-71 depth** — Brendan: stop parking on the top 12, dive into these.
-- **Which BUILDS win in his league** (RB-RB-WR vs WR-WR-RB vs Zero-RB) — data exists
-  (`draft_history_enriched.csv` × `league_finishes.csv`); run the correlation. Deep-dive candidate.
-- **Pick-100-to-180 universe** — the board must extend past BTJ/Christian Watson (his complaint).
-- **QB-environment regression** — e.g. "Jacoby Brissett passed at an all-time-high rate in 2025,
-  will regress if/when he plays" — systematize QB up/downgrade → skill-player impact.
-- **CeeDee splits** — Dak-on/off and Pickens-on/off before re-projecting (the lazy version skipped this).
-- Real half-PPR ADP for every name above (Sleeper primary + FantasyPros/Underdog/RotoWire).
+## REAL 2025 PPG ANCHORS [S] — pipeline-computed, this league's scoring (from 2026-07-08 run)
+Do NOT re-run or re-explain these; build on them. CMC RB1 21.51 · Puka WR1 19.41 · JSN WR2 17.67
+(35.8% tgt share, 0.888 WOPR) · Chase 15.69 · Rashee Rice 15.45 (8 gms) · James Cook 16.81 ·
+Saquon RB14 13.36 · CeeDee WR11 12.57 · George Pickens WR6 14.44 · Justin Jefferson 9.38 (2 TDs,
+30.1% tgt share — TD-variance buy-low) · Tee Higgins WR12 12.14. Under 6pt-pass scoring the top 6
+overall 2025 scorers were all QBs.
 
-## SETTLED — do NOT re-litigate nightly (already covered; only revisit if NEW)
-- Rashee Rice legal situation — priced in, out of jail ~full health per his notes. Settled 2026-07-06.
-- Josh Jacobs / other lawsuit re-mentions — settled, stop repeating.
-- David Montgomery traded to Houston (Gibbs = bell cow) — known fact, not a debate.
-- A.J. Brown traded to New England — known fact.
-- "Is CMC worth the pick" / "CeeDee vs Pickens" as a nightly debate — settled framing; only new data moves it.
+## WATCHLIST — must get worked in NEXT (Brendan-requested / under-covered / NEW ground only)
+The next run must go HERE, not back to the top-12 names above (all covered 2026-07-08).
+- **Rounds 2-6 / picks 17-71 player dossiers NOT yet written** — build them out. Priority.
+- **Pick-100-to-180 universe** — extend the board past BTJ/Christian Watson (his direct complaint).
+- **Which BUILDS win in his league** (RB-RB-WR vs WR-WR-RB vs Zero-RB) — `draft_history_enriched.csv`
+  × `league_finishes.csv`; run the correlation. Top deep-dive candidate — NOT yet done.
+- **QB-environment regression layer** — e.g. "Jacoby Brissett passed at an all-time-high rate in
+  2025, regresses if/when he plays"; systematize QB up/downgrade → skill-player impact. NOT done.
+- **Real half-PPR ADP** for every name (Sleeper primary + FantasyPros/Underdog/RotoWire) — the
+  2026-07-08 run pulled top-6 shape only; extend it and attach a sourced number per player.
+
+## NEWS ALREADY REPORTED [do NOT re-lead unless it MOVES] — through 2026-07-08
+- Rashee Rice: cleared, no 2026 suspension, released Jun 16, knee scope ~6wk (TC-ready). Only NEW
+  monitor = the late-July knee checkpoint.
+- Malik Nabers: 2nd knee scope, Week-1/PUP risk, played 4 games in 2025. Injury-discount siren.
+- Patrick Mahomes: 2025 ACL, targeting Wk1 but likely opens PUP.
+- JSN: 4yr/$168.6M extension (March) — no holdout/drama.
+- David Montgomery → Houston (Gibbs = bell cow); A.J. Brown → New England (Maye, McDaniel spreads it).
+
+## TAKES ALREADY CHECKED [do NOT re-litigate without NEW evidence] — through 2026-07-08
+- "James Cook overvalued" → AGREE (bid up to ~RB6; 16.81 PPG = fine not elite). Don't chase at 17.
+- "CMC is a post-injury trap" → RETIRED. Healthy RB1 in 2025 (17 gms). Fade is age/workload only;
+  may be VALUE at 6-7. Pass at 4 on positional-value grounds, not injury.
+- "CeeDee vs Pickens / fade one" → RESOLVED by 2025 shared-field data: both startable (Lamb led
+  tgts 116-99), coexist; Pickens caps Lamb's ceiling not value; the REAL risk is Dak's health/
+  volume (correlated bet if you draft both). DO NOT re-deep-dive this.
+- "Tee Higgins — bank on him but he's not [good]" → WR2, fine (12.14). Marginal, don't re-litigate.
+- Injury-discount PATTERN ALARM → made repeatedly. Raise ONLY when he circles a NEW specific
+  injury name, with the extra-round-of-discount ask; do not re-run the generic warning.
+
+## SETTLED FACTS — known, not debates
+- Montgomery→HOU, AJB→NE (above). Rice legal closed. "Is CMC worth pick 4" = decided (pass, value reason).

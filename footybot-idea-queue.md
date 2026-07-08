@@ -38,13 +38,13 @@
 
 ## INBOX (unsorted)
 
-### 2026-07-06 — Sleeper mock (pick 4) player notes + hard newsletter-fix directives (interactive)
+### 2026-07-08 — Sleeper mock (pick 4) player notes + hard newsletter-fix directives (interactive)
 Brendan pasted his Sleeper mock in draft order (NOT his preference order) with per-player pro/con
 notes, flagged "all points in PPR, so fix" (league is 0.5 PPR — rescore every projection), plus a
 long list of sharp process complaints. Captured verbatim. The player notes are [TOPIC] fuel for
 the new player-board + "checking your takes"; the process complaints are [BEHAVIOR] and are being
 folded into `footybot-operating-prompt.md` via the reviewed interactive session that captured this
-(see 2026-07-06 notebook CHANGELOG). VERBATIM DUMP:
+(see 2026-07-08 notebook CHANGELOG). VERBATIM DUMP:
 
 > [player-by-player mock notes, pick order 1-25: Gibbs, Bijan, Ja'Marr, Puka, CMC, JT, JSN, Cook,
 > ARSB, Jeanty, Achane, CeeDee, London, JJettas, Saquon, O.Hampton, Chase Brown, AJ Brown,

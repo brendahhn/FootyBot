@@ -172,7 +172,7 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
 
 ## CHANGELOG
 
-### 2026-07-06 (interactive session, follow-up) — v3.2 overhaul: fixed the stale/lazy newsletter
+### 2026-07-08 (interactive session, follow-up) — v3.2 overhaul: fixed the stale/lazy newsletter
 Brendan came in hot: the nightly output was repetitive (debated CMC / CeeDee-vs-Pickens / Rice &
 Jacobs lawsuits every night), used self-fabricated ADP that capped at ~pick 100 (BTJ/Christian
 Watson), obsessed over a small-sample "aging vets" read, mis-applied a "second-year leak" to
@@ -206,7 +206,7 @@ CeeDee for no reason; treating his MOCK ORDER as his rankings (he asked me to HE
 his back-and-forth notes as contradictions when they're just pros/cons to synthesize. Still on the
 side branch `claude/fantasy-football-discussion-nawczx` — needs merge to `main` before it helps a run.
 
-### 2026-07-06 (interactive session) — Sparred Brendan's ChatGPT "2026 Draft Brain" doc
+### 2026-07-08 (interactive session) — Sparred Brendan's ChatGPT "2026 Draft Brain" doc
 Brendan pasted a long ChatGPT-authored draft-strategy summary and asked me to pressure-test it
 ("mental spar, pushback encouraged"), NOT to build anything. He explicitly declined the top-75
 table. Value to persist = the critical framings, which sharpen the newsletter reviewer /
