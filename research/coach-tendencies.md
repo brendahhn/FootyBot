@@ -232,6 +232,50 @@ data becomes available.
   transactions + CBS Sports transactions (A.J. Brown trade, Wicks trade, Lemon draft-day trade-up,
   Stoutland departure, Johnson/Dickerson return), Yahoo Sports + Inside The Birds (QB depth chart).
 
+## Playcaller retained, but a major personnel change (fantasy-relevant)
+
+### Dallas Cowboys
+
+*Added 2026-07-08 (Lane D rabbit hole). Not a new-playcaller team — Schottenheimer is entering
+Year 2 — but the George Pickens acquisition is a real fantasy-relevant change, and Dallas was on
+the "not yet covered" list.*
+
+**Coaching / scheme.** HC **Brian Schottenheimer** (promoted from OC before 2025; entering Year 2
+in 2026). He **calls the plays himself** and has publicly committed to keeping playcalling.
+Background: 12 years of NFL playcalling (Jets 2006-11, Rams 2012-14, Seahawks 2018-20) + two
+years as McCarthy's Cowboys OC. Scheme leans pass-heavy given personnel; watch for a possible
+modest run-rate uptick in Year 2. *[Tier A — NFL.com, ESPN, CBS Sports, Dallas Cowboys]*
+
+**Roster moves / trades.** Acquired **George Pickens** from Pittsburgh on **May 7, 2025**
+(Steelers sent Pickens + 2027 6th; Dallas sent 2026 3rd + 2027 5th). Pickens **franchise-tagged
+for 2026 (1yr, ~$27.3M)**. Re-signed RB **Javonte Williams** (3yr/$24M). *[Tier A — ESPN, NFL.com]*
+
+**QB room.** **Dak Prescott** (age-33 season in 2026). 2025: **17 starts, 600 attempts, 4,552
+yards, 30 TD / 10 INT, 67.3% comp, NFL-leading 404 completions, ~35+ att/game, fantasy QB6.**
+High-volume passing environment. Note the "even-year" injury-history flag (durability watch, not
+a projection). *[Tier A — SI, PFF, ESPN]*
+
+**WR room.** **CeeDee Lamb** (alpha; 28% target share in 11 healthy games 2025, 16.5 PPR PPG;
+established target hog, ~29-30% share since Amari Cooper left). **George Pickens** (2025:
+93/1,429/9, Pro Bowl, 2nd-team All-Pro — total partly inflated by Lamb's 6 missed/shortened
+games). Functional hierarchy: Lamb WR1-alpha, Pickens strong/volatile WR2; both startable in this
+volume. *[Tier A on Pickens line & Lamb history; Tier B on the 12-games-together split
+(116 vs 99 targets, 16.6 vs 16.1 PPR) — single-outlet (FantasyLife/SI), verify with a 2nd source]*
+
+**RB depth.** **Javonte Williams** the lead/workhorse (~1,200-yd 2025 rusher). RB2 competition:
+**Jaydon Blue** (preferred — explosive, pass-catching upside), **Phil Mafah**, **Malik Davis**.
+Passing-down role a soft spot. *[Tier A on Williams; Tier B on Blue projection — SI, Blogging The Boys]*
+
+**O-line.** Anchored by LG **Tyler Smith** (3x Pro Bowl before 26). Question marks: LT **Tyler
+Guyton** (raw) and RT **Terence Steele** (penalty/pass-pro issues). Trending toward continuity in
+2026. *[Tier B — SI, Inside The Star]*
+
+**Fantasy read.** Elite pass volume + pass-first playcaller supports a genuine (hierarchical) WR
+1-2. Lamb's floor is not meaningfully capped by Pickens; Pickens is the one whose ceiling
+compresses when Lamb is healthy. Correlation-vs-causation caution: Lamb's 2025 raw dip was
+injury-driven, not target cannibalization. See `newsletters/2026-07-08.md` for the full worked
+analysis. *[Tier C — reasoning]*
+
 ## Notable non-change (don't over-read into "new regime" narratives)
 
 ### Jacksonville Jaguars — HC Liam Coen, OC Grant Udinski, DC Anthony Campanile all retained
@@ -253,8 +297,8 @@ cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per leagu
 "not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
 run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
 Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
+plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered
+2026-07-01; Cowboys covered 2026-07-08 above). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
 with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
 Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
 correcting). Plus full

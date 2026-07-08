@@ -41,9 +41,15 @@ Walker.
 ## Brendan's projected team through 3: Chase + Saquon + DeVonta Smith (WR/RB/WR)
 
 ### Strategic reads (the actual point)
-1. **Pick 4: take the elite WR, PASS on CMC.** He'll sit there as RB3 and tempt the
-   RB-scarce instinct — but he's the exact 0-for-6 post-injury archetype (Finding 5). Model
-   predicts Connor takes him at 5 anyway; let him.
+1. **Pick 4: take the elite WR, PASS on CMC.** He'll sit there and tempt the RB-scarce
+   instinct. **CORRECTION (2026-07-08):** an earlier draft of this line called CMC "the exact
+   0-for-6 post-injury archetype (Finding 5)" — that's imprecise. CMC played **all 17 games in
+   2025 and finished RB1** (S-tier, pipeline: 21.5 PPG, lowest RB volatility). He is an
+   **age-30 / 413-touch workload discount, not a post-injury discount**, so Brendan's
+   post-injury leak doesn't cleanly apply. The real reason to pass at 4: his ADP is only ~8, so
+   taking him at 4 *reaches ahead of market* for a risk the market already priced, when an elite
+   WR (likely Chase) falls to 4 anyway and a bellcow RB (Saquon) is available at 17. See the
+   compete-mode verdict in `newsletters/2026-07-08.md`.
 2. **Pick 17: Saquon is the RB value Brendan wanted** ("Saquon + Chase feels good"). RB12-ish,
    played all 2025 (not a post-injury discount). Flag: Eagles new-OC + age-29 regression
    questions (coach-tendencies.md) — fine pick, not a lock.

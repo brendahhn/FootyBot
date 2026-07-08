@@ -133,10 +133,18 @@ acting on any of it.
   this pattern recurs).
 
 Other loose threads worth the bot picking up later (not yet researched):
-- **[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
-  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).
-- **[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
-  normal WR2 evaluation.
+- ~~**[TOPIC]** George Pickens trade context (to Dallas, per Brendan's CeeDee Lamb comment) —
+  verify and note in a Cowboys coach-tendencies entry (Cowboys not yet covered).~~ **DONE
+  2026-07-08** — Lane D rabbit hole: verified the May 7, 2025 trade, built the first **Dallas
+  Cowboys** entry in `research/coach-tendencies.md`, and answered Brendan's Lamb-vs-Pickens
+  cannibalization question (real *hierarchical* 1-2; Lamb not capped; Pickens's own ceiling
+  compresses when Lamb's healthy). Full write-up in `newsletters/2026-07-08.md` deep dive.
+- ~~**[TOPIC]** Rashee Rice legal situation — verify current status before treating him as a
+  normal WR2 evaluation.~~ **DONE 2026-07-08** — Lane B: Rice is OUT (not "in jail"), served the
+  6-game 2025 suspension, did 30 days in May 2026 for a probation violation + knee cleanup, now
+  released and expected at camp on time; separate NFL investigation closed no-discipline. Only
+  live risk = a possible short substance-policy suspension (beat consensus doubts it). Draftable,
+  discounted-for-noise (~WR22). Checked in the 2026-07-08 newsletter's "Checking your takes."
 - **[TOPIC]** Verify Kevin O'Connell/Vikings and Matt LaFleur/Packers systems if a cross-team
   scheme comparison ever becomes useful (came up as a reference point in the Eagles search, not
   directly requested).

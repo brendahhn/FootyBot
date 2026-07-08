@@ -32,6 +32,15 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-08 — BRANCH RULE TRIGGERED AGAIN (recurring). This run did NOT write to `main`.** The
+  scheduled harness hard-pinned the working branch to `claude/modest-gates-f1u7kg` and forbade
+  pushing to `main` without explicit human permission. Per BRANCH RULE I did NOT self-fork:
+  pushed this run's work (first newsletter + Cowboys entry + mock-draft correction + idea-queue +
+  this notebook) to the harness-assigned branch and verified with `git ls-remote`. GOOD: local
+  branch was cut cleanly from current `main` (32b83e6 = remote main), so memory was CURRENT this
+  run. **ACTION NEEDED: merge `claude/modest-gates-f1u7kg` into `main` before the next run**, or
+  it starts from stale memory (won't see the 2026-07-08 newsletter). Commit hash + ls-remote
+  confirmation in the run output. NOTE: local `main` ref (43a21e8) is a stale ancestor, ignore it.
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
@@ -80,9 +89,12 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## STATUS
 
+- **Phase 1.5 (DAILY NEWSLETTER):** LIVE as of 2026-07-08 — first edition shipped
+  (`newsletters/2026-07-08.md`). Subagent architecture confirmed working in the scheduled env.
 - **Phase 1 (research repo):** in progress.
-  - `research/coach-tendencies.md` — 13 new-playcaller teams covered (Raiders, Cardinals,
-    Browns, Bills, Ravens, Steelers, Dolphins, Chargers, Titans, Falcons, Buccaneers, Eagles)
+  - `research/coach-tendencies.md` — 13 new-playcaller teams (Raiders, Cardinals, Browns, Bills,
+    Ravens, Steelers, Dolphins, Chargers, Titans, Falcons, Buccaneers, Eagles) + **Dallas Cowboys**
+    (added 2026-07-08 — playcaller-retained but the Pickens trade is fantasy-relevant)
     + 2 flagged non-changes (Jaguars, Chiefs). **Eagles entry substantially deepened 2026-07-01
     (interactive session, after Brendan flagged the scheduled run's first pass as too thin):**
     added the A.J. Brown trade to New England (the single biggest fact the first pass missed —
@@ -171,6 +183,42 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-08 (SCHEDULED RUN) — FIRST REAL NEWSLETTER shipped
+The daily-newsletter architecture (built 2026-07-02) actually ran end-to-end for the first time —
+`newsletters/` previously held only a README. **Subagents WORK in the scheduled environment**
+(open risk #2 from the spec resolved): spawned all 4 lanes IN PARALLEL + a 2-agent compete panel,
+then did the reviewer pass myself. No sequential fallback needed.
+- **Newsletter:** `newsletters/2026-07-08.md` (51 days to draft). Full 6-section edition.
+- **Lane A (Data, S-tier, WON the day):** scored the 14-player pick-4 board in this league's exact
+  scoring on real 2025 data via `pipeline/league_scoring.py`. CMC RB1 (21.5 PPG, lowest RB
+  volatility); James Cook 8th of 14 / 6th of 9 RBs (16.8) — both confirm Brendan's takes.
+- **Lane B (News):** quiet mid-July day, handled honestly. Corrected two stale assumptions —
+  Rashee Rice is OUT (not "in jail"), and Xavier Worthy's 2025 injury was a labrum/ankle, NOT an
+  ACL. Only live 72h item: Josh Jacobs case still legally unresolved (DA "no update" Jul 6), he's
+  practicing. Nabers a real Week-1/PUP risk. Rejected 2 cross-contaminated false items (Evans→SF,
+  Pacheco→DET).
+- **Lane C (Market):** CMC ADP has fallen but only to ~8 (FFC 1.08) — lean market-is-right
+  (age-30/~450-touch regression flag). Flagged **Lamar Jackson at pick 24 as a 6pt-passing-TD
+  value** (ADP ~41) and Josh Allen at 17 near-value. Round-1 read: RB-heavy top → elite WR (likely
+  Chase) falls to Brendan at 4.
+- **Lane D (Rabbit hole):** George Pickens→Dallas — verified the trade, built the FIRST **Dallas
+  Cowboys** entry in `research/coach-tendencies.md`, answered Brendan's Lamb-vs-Pickens question:
+  a real *hierarchical* 1-2 (Lamb alpha, Pickens strong/volatile WR2), Lamb NOT capped (28% share
+  + ~1,500-yd pace WITH Pickens on field; his 2025 dip was injury-driven, not cannibalization),
+  Pickens's own ceiling compresses when Lamb's healthy.
+- **Compete mode FIRED** ("take/pass CMC at 4"): PASS won. Both agents agreed on facts (healthy
+  17-game RB1 2025, ADP ~8, age-30/413-touch risk). PASS wins on reach-ahead-of-ADP + you-don't-
+  need-to (WR falls to 4, RB at 17), NOT on "post-injury leak."
+- **Reviewer cross-file correction:** `research/mock-draft-2026.md` called CMC "the exact 0-for-6
+  post-injury archetype" — CORRECTED, since CMC played all 17 games in 2025. He's an age/workload
+  discount, not post-injury; Brendan's post-injury leak (Finding 5) doesn't cleanly apply to him.
+- **Takes checked:** CMC-#1 (right on fact, don't act at 4), James Cook overvalued (confirmed
+  S-tier), Rashee Rice "in jail" (outdated — he's out/draftable).
+- **Idea-queue:** marked Pickens/Cowboys and Rashee Rice threads DONE. Mock dump stays exploring.
+- **Gmail:** still label-only (3-for-3 on scheduled runs). One ToolSearch check, no draft made.
+- **BRANCH:** forced onto `claude/modest-gates-f1u7kg` by the harness again (see VERIFICATION LOG)
+  — NEEDS MERGE TO `main` before the next run or it reads stale memory.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send
