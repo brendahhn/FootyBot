@@ -38,6 +38,40 @@
 
 ## INBOX (unsorted)
 
+### 2026-07-06 — Sleeper mock (pick 4) player notes + hard newsletter-fix directives (interactive)
+Brendan pasted his Sleeper mock in draft order (NOT his preference order) with per-player pro/con
+notes, flagged "all points in PPR, so fix" (league is 0.5 PPR — rescore every projection), plus a
+long list of sharp process complaints. Captured verbatim. The player notes are [TOPIC] fuel for
+the new player-board + "checking your takes"; the process complaints are [BEHAVIOR] and are being
+folded into `footybot-operating-prompt.md` via the reviewed interactive session that captured this
+(see 2026-07-06 notebook CHANGELOG). VERBATIM DUMP:
+
+> [player-by-player mock notes, pick order 1-25: Gibbs, Bijan, Ja'Marr, Puka, CMC, JT, JSN, Cook,
+> ARSB, Jeanty, Achane, CeeDee, London, JJettas, Saquon, O.Hampton, Chase Brown, AJ Brown,
+> Jeremiah Love, Henry, K.Walker, Bowers, Nico, Rashee Rice, McBride — full text in the interactive
+> transcript / this session's spar reply; key recurring dated sub-notes are ADP-tracker style
+> (2/9, 3/10, 4/24, 5/19, 6/12, 7/7 update stamps per player).]
+
+BEHAVIOR directives from the same message (to fold into the prompt, reviewed):
+1. STOP repeating the same top-12 debates nightly (CMC-worth-it, CeeDee-vs-Pickens, Rice/Jacobs
+   lawsuits). "Learn what u already fucking told me." → coverage ledger.
+2. Dive into rounds 2-6 and overall build strategy (RB-RB-WR etc.) — which builds win in HIS league.
+3. "Aging veterans" is over-cited — it's Davante ×2 + DHop ×1 (n≈4, not a superpower). Recalibrate
+   Finding 5; stop parroting small-sample "laws."
+4. Player-by-player dossier treatment for the whole board (pros/cons, situation changes, past-player
+   comps, QB-environment effects e.g. "Jacoby Brissett passed at an all-time-high rate in 2025, will
+   regress"). He LOVES this format — make it the core deliverable.
+5. Biggest risers/fallers, top ~100, after each spar.
+6. Don't be a yes-man when he sends bullish data on one player — corroborate before moving a verdict.
+7. Nabers & Jeanty are NOT rookies (year-3 / sophomore) — stop applying the rookie-flop leak to them;
+   his real leak is Year-2 *narrative* leaps at full price, not all young players.
+8. Use REAL multi-source ADP + rankings (Sleeper, FantasyPros, Roto, Underdog); stop capping the
+   universe at ~pick 100 (BTJ/Christian Watson). Fold others' analysis into our own opinion.
+9. Produce actual ranked boards periodically and STRESS-TEST them.
+10. CeeDee analysis must split by Dak-on/off and Pickens-on/off — the lazy version ignored injuries.
+11. Rescore EVERYTHING to 0.5 PPR (+6pt pass TD, +40yd bonuses) — reception-hogs (ARSB, McBride,
+    CeeDee) take 40-88 pt haircuts; runners (Henry, JT, Jeanty, Saquon) rise relative.
+
 ### 2026-07-01 — Brendan's mock-draft walkthrough (voice transcript, verbatim)
 
 Pick slot #4. Raw, rapid-fire reactions to a live mock draft, round by round — his own words,
