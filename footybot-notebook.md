@@ -40,15 +40,18 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   Nabers/CeeDee-Pickens. Fix: fast-forwarded my v3.2 work onto `main` from this interactive
   session (interactive pushes to `main` DO work; only scheduled runs are pinned). Verified:
   `git ls-remote origin main` = 3208f57.
-- **DURABLE FIX STILL NEEDED (the real bug): scheduled runs cannot push `main`.** Repin to a
-  fixed branch is impossible (harness assigns a NEW random `claude/modest-gates-XXXXX` each run).
-  Options for Brendan: (a) reconfigure the ROUTINE so it commits to `main` directly (web app →
-  routine settings; the durable answer); or (b) an auto-merge GitHub Action that fast-forwards
-  pushed `claude/modest-gates-*` branches into `main`; or (c) keep merging each run by hand in an
-  interactive session (brittle). Until one lands, each scheduled run reads `main` (now good) but
-  can't write back — so the ledger only advances when an interactive session merges. Tonight's
-  stranded `modest-gates-sezye0` has a real Cowboys coach-tendencies entry + Miami/Patullo audit
-  resolution worth salvaging into `main` (offered to Brendan).
+- **DURABLE FIX INSTALLED 2026-07-08: auto-merge GitHub Action** (`.github/workflows/footybot-automerge.yml`).
+  Brendan chose the auto-merge option. On push to any `claude/**` branch that touched
+  `newsletters/**` (i.e. a completed scheduled run), it fast-forwards `main` to that branch —
+  SO SCHEDULED RUNS NOW PERSIST TO `main` and the memory loop self-sustains. Safety rails kept:
+  it NEVER auto-merges if `footybot-operating-prompt.md` changed (human must review prompt diffs),
+  and it is fast-forward-only (never force-pushes, never auto-resolves a conflict — it fails loudly
+  and the branch waits for a manual merge). NOTE: the Action only fires for branches cut from a
+  `main` that already contains it, so runs from tonight forward are covered; tonight's already-
+  stranded `claude/modest-gates-sezye0` predates it and won't auto-merge. That branch has a real
+  Cowboys coach-tendencies entry + Miami/Patullo audit resolution worth hand-salvaging into `main`
+  (offered to Brendan — it's a real 3-way merge now since main has moved, so notebook/idea-queue
+  conflicts are likely; do it deliberately).
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).

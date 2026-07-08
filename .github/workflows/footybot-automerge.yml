@@ -1,0 +1,60 @@
+name: FootyBot auto-merge scheduled runs to main
+
+# WHY THIS EXISTS (2026-07-08): scheduled FootyBot runs are force-pinned by the harness to
+# throwaway `claude/*` branches and cannot push `main` themselves, so the newsletter + notebook
+# + research never accumulated and every run read stale memory (see notebook VERIFICATION LOG).
+# This Action promotes a finished run's work to `main` automatically — the durable fix for the
+# broken memory loop — while preserving the one hard safety rail: a change to the operating
+# prompt is NEVER auto-merged; it waits for a human to read the diff.
+
+on:
+  push:
+    branches:
+      - 'claude/**'      # scheduled runs land on random claude/<name> branches
+    paths:
+      - 'newsletters/**' # only fire when a run actually produced a newsletter (a completed run)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: footybot-automerge
+  cancel-in-progress: false
+
+jobs:
+  promote-to-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main (full history)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fast-forward main to the run branch (guarding the prompt)
+        env:
+          RUN_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git config user.name "footybot-automerge[bot]"
+          git config user.email "footybot-automerge@users.noreply.github.com"
+          git fetch origin "$RUN_BRANCH"
+
+          # SAFETY RAIL — never auto-merge a change to the operating prompt.
+          # The bot is instructed never to edit its own prompt; if it somehow did, a human
+          # must review that diff. Skip the merge and leave the work on the branch.
+          if ! git diff --quiet main "origin/$RUN_BRANCH" -- footybot-operating-prompt.md; then
+            echo "::warning::footybot-operating-prompt.md differs on $RUN_BRANCH — NOT auto-merging. A human must review the prompt diff. Run work stays on the branch."
+            exit 0
+          fi
+
+          # Fast-forward only. Never force-push, never auto-resolve a conflict.
+          # If main has advanced (e.g. an interactive session committed), this fails loudly
+          # and the branch is merged by hand instead — safe by design.
+          if git merge --ff-only "origin/$RUN_BRANCH"; then
+            git push origin main
+            echo "✅ Fast-forwarded main to $RUN_BRANCH."
+          else
+            echo "::warning::main could not be fast-forwarded from $RUN_BRANCH (histories diverged). Leaving the branch for a manual merge."
+            exit 0
+          fi
