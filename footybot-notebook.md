@@ -32,6 +32,23 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-08 (interactive) — v3.2 + coverage ledger PROMOTED TO `main` (32b83e6→3208f57).**
+  Root-caused the "same newsletter every day": `main` had not moved since 07-02, so every
+  scheduled run read stale memory. Tonight's 11:04 run (the July 8 edition Brendan pasted) was
+  force-pinned to `claude/modest-gates-sezye0` (a THROWAWAY branch) and never reached `main` —
+  the documented recurring harness pin. So nothing accumulated and the bot repeated CMC/Rice/
+  Nabers/CeeDee-Pickens. Fix: fast-forwarded my v3.2 work onto `main` from this interactive
+  session (interactive pushes to `main` DO work; only scheduled runs are pinned). Verified:
+  `git ls-remote origin main` = 3208f57.
+- **DURABLE FIX STILL NEEDED (the real bug): scheduled runs cannot push `main`.** Repin to a
+  fixed branch is impossible (harness assigns a NEW random `claude/modest-gates-XXXXX` each run).
+  Options for Brendan: (a) reconfigure the ROUTINE so it commits to `main` directly (web app →
+  routine settings; the durable answer); or (b) an auto-merge GitHub Action that fast-forwards
+  pushed `claude/modest-gates-*` branches into `main`; or (c) keep merging each run by hand in an
+  interactive session (brittle). Until one lands, each scheduled run reads `main` (now good) but
+  can't write back — so the ledger only advances when an interactive session merges. Tonight's
+  stranded `modest-gates-sezye0` has a real Cowboys coach-tendencies entry + Miami/Patullo audit
+  resolution worth salvaging into `main` (offered to Brendan).
 - 2026-06-30: `main` confirmed as the canonical branch. `git ls-remote origin main` returned
   `c5210986f157d309082589aa10040408eff4da53`, matching local `HEAD` exactly. No 403s or
   redirects seen on any push this session (5 successful pushes to `main`).
