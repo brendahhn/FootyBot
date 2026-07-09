@@ -69,14 +69,20 @@ overall 2025 scorers were all QBs.
 
 ## WATCHLIST — must get worked in NEXT (Brendan-requested / under-covered / NEW ground only)
 The next run must go HERE, not back to the top-12 names above (all covered 2026-07-08).
-- **Rounds 2-6 / picks 17-71 player dossiers NOT yet written** — build them out. Priority.
-- **Pick-100-to-180 universe** — extend the board past BTJ/Christian Watson (his direct complaint).
-- **Which BUILDS win in his league** (RB-RB-WR vs WR-WR-RB vs Zero-RB) — `draft_history_enriched.csv`
-  × `league_finishes.csv`; run the correlation. Top deep-dive candidate — NOT yet done.
-- **QB-environment regression layer** — e.g. "Jacoby Brissett passed at an all-time-high rate in
-  2025, regresses if/when he plays"; systematize QB up/downgrade → skill-player impact. NOT done.
-- **Real half-PPR ADP** for every name (Sleeper primary + FantasyPros/Underdog/RotoWire) — the
-  2026-07-08 run pulled top-6 shape only; extend it and attach a sourced number per player.
+- **Rounds 2-6 / picks 17-71 player dossiers** — STARTED 2026-07-09 (ADP + situational notes for
+  ~24 names sourced, see below). Keep deepening pros/cons + comps per player.
+- **Pick-100-to-180 universe** — STARTED 2026-07-09 (BTJ ~64, Christian Watson ~73, Worthy ~101
+  now sourced). Push deeper to 120-180 next.
+- ~~**Which BUILDS win in his league**~~ — **DONE 2026-07-09**, Finding 7 in `draft-tendencies.md`
+  + `pipeline/draft_builds.py`. Verdict: mostly a wash; RB-heavy opens edged the field, Zero-RB/
+  WR-heavy never podiumed — but inside the noise band; pick quality >> build shape. Don't punt RB.
+- ~~**QB-environment regression layer**~~ — **DONE 2026-07-09**, `research/qb-environment.md`
+  (Brissett/ARI 649-att mirage → McBride/Wilson/MHJ fades; Chase anti-fade; DeVonta up). Extend
+  to more teams as QB situations settle.
+- **Real half-PPR ADP** — rounds 2-6 sourced 2026-07-09 (tier B, single ESPN mock + tier A Underdog
+  aggregate). **STILL OPEN: Sleeper** — its per-player numbers are JS-hidden and WebFetch is blocked,
+  so scheduled runs can't anchor on Sleeper. Needs a Brendan-pasted Sleeper export to upgrade B→A.
+  Also unresolved: Bucky Irving (25 vs 45) + Javonte Williams (26 vs 74) ADP conflicts.
 
 ## NEWS ALREADY REPORTED [do NOT re-lead unless it MOVES] — through 2026-07-08
 - Rashee Rice: cleared, no 2026 suspension, released Jun 16, knee scope ~6wk (TC-ready). Only NEW
@@ -99,3 +105,56 @@ The next run must go HERE, not back to the top-12 names above (all covered 2026-
 
 ## SETTLED FACTS — known, not debates
 - Montgomery→HOU, AJB→NE (above). Rice legal closed. "Is CMC worth pick 4" = decided (pass, value reason).
+- **Which build wins (2026-07-09):** decided — no build "wins"; pick quality dominates shape. Don't
+  punt RB (Zero-RB never podiumed). Take elite WR value at 4, secure a real RB by 17. Do not re-run.
+- **Bucky Irving "Coen merchant" (2026-07-09):** REFUTED — held 12.35 PPG in 2025 without Coen
+  (Grizzard OC) vs 12.99 with him. Not a scheme artifact. Real caution = shoulder procedure +
+  3rd playcaller in 3 yrs + snap-share, NOT the merchant angle. Do not re-litigate the merchant take.
+- **Chase "Bengals volume regression" fade (2026-07-09):** REFUTED — 185 tgt / 125-1,412-8 with
+  Burrow out 9 games = own-role, not environment. Do NOT fade Chase for volume regression.
+
+## ROUNDS 2-6 / DEEP BOARD — sourced half-PPR ADP (added 2026-07-09, Lane C)
+`times_covered: 1`, `last_covered: 2026-07-09` for all below unless already on the top board.
+Tier B = single dated ESPN 10-team ½-PPR mock (~Jul 2026); tier A = Sharp Football aggregated
+Underdog ½-PPR ADP (~Jul 2026). Sleeper NOT extractable this run (JS-hidden + WebFetch blocked) —
+do not treat any of these as Sleeper/consensus; they are one real datapoint each.
+
+| Player | Pos/Team 2026 | ½-PPR ADP | Tier | Note |
+|---|---|---|---|---|
+| Jonathan Taylor | RB IND | ~7 | B | |
+| Justin Jefferson | WR MIN | ~11 | B | buy-low (2-TD outage regresses); Murray→MIN rumor = QB tailwind if real |
+| Ashton Jeanty | RB LV | ~12 (Sleeper ~9) | B | |
+| De'Von Achane | RB MIA | ~13 | B | |
+| Drake London | WR ATL | ~16-20 | B | |
+| Nico Collins | WR HOU | ~17 | B | **VALUE at pick 17** — HOU WR1 target hog |
+| Derrick Henry | RB BAL | ~18 | B | NOT a trap in THIS scoring (40yd bonus + 6pt rush TD, ½-credit rec) — riser. Fine RB fallback at 17 |
+| Omarion Hampton | RB LAC | ~19 | B | |
+| Chase Brown | RB CIN | ~21 | B | |
+| Trey McBride | TE ARI | ~22 (TE1) | B | modest FADE off 2025 counting stats (169 tgt won't repeat, ARI volume regresses) — still TE1 |
+| Josh Jacobs | RB GB | ~23 | B | legal tail-risk unresolved (DA reviewing) |
+| Brock Bowers | TE LV | ~24 (TE2) | B | **VALUE at pick 24** — elite young TE |
+| Kenneth Walker III | RB SEA | ~19-26 (thin) | B | |
+| Breece Hall | RB NYJ | ~28 | B | |
+| Kyren Williams | RB LAR | ~29 | B | soft — TD-dependent, committee risk, weak ½-PPR floor |
+| Rashee Rice | WR KC | ~30, falling | B | if he keeps sliding = BUY (cleared, WR5-PPG over 8 gms) |
+| A.J. Brown | WR NE | ~32 | B | UP — alpha WR1 for ascending Maye; age-29 risk |
+| Tetairoa McMillan | WR CAR | ~34 | B | |
+| DeVonta Smith | WR PHI | ~36 | B | **VALUE at pick 37** — inherits AJB's ~121 tgt; capped by run-heavy PHI + rookie Makai Lemon |
+| Luther Burden III | WR CHI | ~55 (WR24) | A | |
+| Marvin Harrison Jr | WR ARI | ~56-64 (WR25) | A | QB-capped bounce-back (Brissett/Beck); don't pay ceiling |
+| Jaylen Waddle | WR MIA | ~62 | B | |
+| Brian Thomas Jr | WR JAX | ~64 (WR32) | A | biggest WR faller (WR8→WR32); TLaw-rebound value bet |
+| Christian Watson | WR GB | ~73 (WR33) | A | |
+| Xavier Worthy | WR KC | ~101 (WR46) | A | |
+| Michael Wilson | WR ARI | unsourced | — | AVOID at 2025 price — purest ARI environment-rider (126 tgt on injury luck + NFL-top volume) |
+
+**Unsourced / do not guess:** James Conner (RB ARI), Ladd McConkey (WR LAC), Rome Odunze (WR CHI),
+Jerry Jeudy (WR CLE). **Conflicting, uncommitted:** Bucky Irving (25 vs 45), Javonte Williams (26 vs 74).
+
+## NEWS added 2026-07-09 [do NOT re-lead unless it MOVES]
+- Kyler Murray RELEASED by ARI [A]; reported Vikings interest [B]. → Brissett = ARI's 2026 starter;
+  Murray→MIN would upgrade JJ's environment (watch, don't bank).
+- Bijan extension "expected soon" [A, a report not a signature] — removes hold-in noise; still gone before 4.
+- Jameson Williams "best offseason" per Lions WR coach [A/B camp narrative] — R3-4 WR, 40yd-bonus fit.
+- Chris Olave extension talks stalled, hold-in on the table [B, ongoing] — durability/volume flag.
+- Josh Jacobs legal: UNCHANGED [A] — DA "under review," no charge decision (WTMJ Jul 6).

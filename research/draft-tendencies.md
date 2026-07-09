@@ -401,3 +401,91 @@ in draft value too. Draft value ≈ floor; in-season play + luck decide the ceil
 - **[caveat]** All of this is descriptive of 2019-2025 behavior; people change. Re-weight toward
   recent years (2023-2025) if a manager's style has visibly shifted, and re-verify against 2026
   behavior once this year's draft happens.
+
+---
+
+### Finding 7 (2026-07-09): Which opening BUILD wins? (`pipeline/draft_builds.py`)
+
+**Question (Brendan's premise to test):** "RBs get overvalued here; you can scrounge a WR not
+an RB." Does the SHAPE of a manager's opening draft actually correlate with where they finish?
+
+**Method:** For each (year, manager) take the position of their first picks in draft order
+(`overall_pick` ascending), classify the opening build, and join to `league_finishes.csv`.
+Scored years = 2019-2023 + 2025 (no 2024 standings on file), so **60 manager-seasons** total.
+`rank` 1 = champion, 10 = last. League baseline: mean rank 5.50, mean PF 1599.6, 30% top-3,
+10% champ by construction. **All numbers pipeline-computed (tier S); the INTERPRETATION below
+is deliberately hedged — see caveats.**
+
+**First 3 picks, by RB count (primary lens):**
+
+| build | N | mean rank | med rank | mean PF | %top-3 | %champ |
+|---|---|---|---|---|---|---|
+| RB-heavy (2+ RB / first 3) | 29 | **5.24** | 5.0 | 1602.8 | 41% | 10% |
+| Hero-RB (exactly 1 RB / 3) | 26 | 5.65 | 6.0 | 1605.5 | 23% | 12% |
+| Zero-RB (0 RB / first 3) | 5 | 6.20 | 6.0 | 1549.9 | 0% | 0% |
+
+**First 2 picks, order-sensitive (biggest readable cells):**
+
+| build | N | mean rank | med rank | mean PF | %top-3 | %champ |
+|---|---|---|---|---|---|---|
+| RB-RB | 18 | **4.67** | 3.5 | 1612.0 | 50% | 17% |
+| WR-WR | 8 | 5.88 | 6.0 | 1558.9 | 12% | 0% |
+| RB-WR | 18 | 5.94 | 5.5 | 1595.3 | 17% | 6% |
+| WR-RB | 10 | 6.20 | 6.5 | 1578.6 | 20% | 20% |
+| (WR-TE, TE-RB, RB-TE) | 1/2/3 | — | — | — | — | — (all N<5, too thin) |
+
+**By WR count in first 3:** 0 WR (N=10) mean rank **3.60**, 70% top-3; 1 WR (N=31) 5.94;
+2 WR (N=17) 5.82; 3 WR (N=2, too thin). The "0 WR" cell is just the RB-heavy openers under a
+different name — same 10 managers-seasons drive both the low-WR and high-RB strong cells.
+
+**Opening flags (first 3 picks):** TE-early TRUE (N=13) mean 5.08 but 0% champ; QB-early TRUE
+(N=9) mean 5.56, 0% champ; every flag's mean rank sits within ~0.6 of the 5.5 baseline except
+Zero-RB (6.20, N=5) and RB-heavy (5.24).
+
+**Honest verdict — is any build actually winning? Mostly a wash, with one weak lean:**
+- The direction of the (weak) signal is **RB-first > balanced > Zero-RB**. RB-RB opens have the
+  best mean rank (4.67), highest champ rate (17%), and 50% top-3. Zero-RB has the worst mean
+  rank and 0 podiums — but **N=5, labeled too thin to read**.
+- **This leans AGAINST Brendan's premise, not for it.** If RBs were genuinely overvalued here,
+  the WR-first / Zero-RB builds should be beating the field on rank; they are not. The data is
+  more consistent with "you can't scrounge a startable RB late, so securing RB early has paid."
+- **But treat this as a lean, not a law.** The RB-RB edge (~0.8 rank below baseline) is inside
+  the noise band. Confounds we cannot remove: draft-value-at-pick, in-season management, and
+  schedule luck each move final rank independently of build shape. Prior findings: draft
+  value -> PF r~+0.50 but draft value -> final rank only r~+0.31; in-season moves -> rank ~0.00.
+  So even the RB-RB cell's success is plausibly "the managers who nailed picks happened to open
+  RB-RB," not "RB-RB causes wins." **The data cannot distinguish build shape from pick quality.**
+- Champ rate is the noisiest column of all (1-3 titles per cell); do not lean on it.
+
+**Brendan's own opening builds + finishes:**
+
+| year | first 3 | rank | PF | note |
+|---|---|---|---|---|
+| 2019 | WR-RB-RB | 9 | 1430.8 | his worst year |
+| 2020 | RB-WR-RB | 5 | 1554.1 | |
+| 2021 | RB-RB-TE | **3** | 1712.8 | his only podium — an RB-RB open |
+| 2022 | RB-WR-WR | 8 | 1582.0 | |
+| 2023 | WR-WR-WR | 7 | 1370.4 | his one Zero-RB year, lowest PF |
+| 2024 | WR-RB-WR | n/a | n/a | no standings on file |
+| 2025 | RB-WR-RB | 8 | 1492.8 | |
+
+Brendan's 6 scored seasons: mean rank 6.67, median 7.5, best 3, worst 9 (8th of 10 all-time,
+consistent with Findings 5-6). His single podium (2021) was his one true RB-RB open; his one
+Zero-RB year (2023) produced his lowest points-for. **N=1 each — anecdote, not evidence** — but
+it points the same weak direction as the league table and at minimum gives him no reason to go
+Zero-RB.
+
+**Actionable read for Brendan at pick 4:**
+- The league data gives **no support for a deliberate Zero-RB / WR-heavy open**, and a mild
+  (noise-band, confounded) lean toward securing RB early. At pick 4 in a snake he is in prime
+  position to take a top-tier RB and a second at the 2/3 turn if the board falls that way — the
+  RB-RB and "0-WR-early" cells are the strongest on record.
+- Practically: **don't force it.** The honest finding is that WHO you pick (realized value)
+  swamps the SHAPE of the open. Take the best value on the board at 4; if that's an elite RB,
+  the history says leaning into a second RB early has finished fine. Just don't punt RB entirely
+  hoping to scrounge one late — that's the one shape with zero podiums here (thin as it is), and
+  it produced his own worst points-for year.
+- Bottom line: **build shape is a weak tiebreaker, not a strategy.** Fix the pick-quality leak
+  (Finding 5/6), not the archetype.
+
+Reproduce: `python3 pipeline/draft_builds.py`.

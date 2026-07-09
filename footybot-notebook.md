@@ -153,6 +153,20 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
+- **`pipeline/predictive_stats.py` OVERWRITES `research/predictive-stats.md` (data-loss bug).**
+  Flagged 2026-07-09. STEP 0 says run the pipeline unconditionally, but `predictive_stats.py`
+  truncates the file to just its own base-correlation output, destroying the accumulated
+  positional-stability (07-03) and positional-retention (07-07) sections that Lane A/deep-dives
+  added below it. This run caught the 74-line deletion and restored via `git checkout` (base
+  correlations were byte-identical, so nothing from the regen was lost). REAL FIX: make the script
+  write its output between sentinel markers (e.g. `<!-- AUTOGEN:predictive-stats START/END -->`) and
+  preserve everything outside them, OR write to a separate `predictive-stats-base.md` the manual
+  analysis includes/links. Until fixed, every scheduled run must `git checkout research/predictive-stats.md`
+  after the pipeline step if it doesn't intend to shorten the file. Low-risk to fix; do it in a
+  reviewed session (touches a pipeline script).
+- **Bucky Irving & Javonte Williams ADP conflicts** (2026-07-09): sources disagree by a full round
+  (Bucky 25 vs 45; Javonte 26 vs 74). Resolve next run with a cleaner source. Also still unsourced:
+  James Conner, Ladd McConkey, Rome Odunze, Jerry Jeudy half-PPR ADP.
 - **Dedupe/verify the 07-08 salvaged research union.** `predictive-stats.md` has 1-2 duplicated
   table rows from the `--union` merge (cosmetic); `coach-tendencies.md` (677 ln, 7 nights unioned)
   should be skim-verified for any duplicated team entry where two nights edited the same section.
@@ -197,6 +211,44 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-09 (SCHEDULED RUN) — Newsletter 2026-07-09; builds-that-win + QB-environment; board pushed to picks 100+
+First scheduled run reading a fresh `main` (auto-merge Action worked: local branch == origin/main
+== 6d275c9 at start; the memory loop is finally self-sustaining). 50 days to draft. All 4 lanes ran
+as parallel subagents (NOT fallback) + reviewer. Compete mode did NOT fire. Newsletter:
+`newsletters/2026-07-09.md`.
+- **Headline / Lane A (winning lane): "which BUILD wins" — WATCHLIST #1, now DONE.** New
+  `pipeline/draft_builds.py` + Finding 7 in `draft-tendencies.md`. 60 manager-seasons (2019-23,25).
+  Verdict: mostly a wash; RB-heavy opens best (RB-RB N=18, mean rank 4.67, 50% top-3), Zero-RB worst
+  (N=5, 0% top-3, too thin) — but the edge is INSIDE the noise band and can't be separated from pick
+  quality (draft-value→rank only r≈+0.31, Finding 6). Reported as a weak tiebreaker that gently
+  REFUTES Brendan's "RBs overvalued, scrounge a WR" premise, NOT a law. His own history: best finish
+  (3rd '21) = only RB-RB open; worst PF ('23) = WR-WR-WR Zero-RB.
+- **Deep dive / Lane D: QB-environment regression — WATCHLIST item, DONE.** New
+  `research/qb-environment.md`. Brissett/ARI 2025 = computed NFL-top 649 att / 63.9% rate, ~10pt
+  franchise outlier (garbage-time: 1-11, def last, Conner 3 gms, MHJ hurt) → FADE the counting stats:
+  McBride (still TE1, but 169 tgt won't repeat — explains our board's TE crater), Michael Wilson
+  (AVOID, purest rider), MHJ (QB-capped bounce-back). ANTI-FADE flag: do NOT fade Chase for "Bengals
+  volume regression" — 185 tgt / 1,412 with Burrow out 9 games = own-role. Also DeVonta up / NE
+  incumbents down. Stale-premise fix: Murray released, Brissett IS the 2026 starter (regression from
+  run game + defense, not from Brissett sitting).
+- **Market / Lane C: real ½-PPR ADP, rounds 2-6 + into pick 100+** (BTJ ~64, C.Watson ~73, Worthy
+  ~101 — closes Brendan's "stop capping at BTJ/C.Watson" complaint). Written into `player-board.md`.
+  Honest limit: Sleeper per-player #s are JS-hidden + WebFetch blocked, so could NOT anchor on
+  Sleeper — most rows tier B (single ESPN mock), a few tier A (Underdog aggregate). Did NOT fabricate.
+- **News / Lane B: quiet camp-eve week.** Kyler Murray released (A) + Vikings interest (B, → JJ
+  tailwind if real); Bijan extension "expected" (report not signed); Jameson Williams camp buzz;
+  Olave hold-in friction; Jacobs legal unchanged.
+- **Checking your takes: "Bucky Irving = Liam Coen merchant" → REFUTED [S].** Coen left for JAX HC
+  after 2024; Grizzard ran 2025. Irving held 12.35 PPG w/o Coen vs 12.99 with (pipeline). Talent
+  traveled. Real caution = shoulder procedure + 3rd playcaller in 3 yrs + snap-share, not the scheme.
+- **Reviewer kills:** overruled Lane C's "Henry @18 trap" (contradicts our board — he's a ½-PPR
+  riser in THIS scoring); held Bucky/Javonte ADP unresolved (source conflicts, no number committed);
+  tiered board B (no Sleeper, didn't fabricate); refused to make builds a law; Murray→MIN kept as B.
+- **Pipeline note (see AUDIT_QUEUE):** `predictive_stats.py` OVERWRITES `predictive-stats.md`,
+  wiping the accumulated positional-stability (07-03) + positional-retention (07-07) sections. Caught
+  it (74-line deletion), restored via `git checkout` after confirming the base correlations were
+  byte-identical. Logged for a real fix.
 
 ### 2026-07-08 (interactive, follow-up 2) — Salvaged 7 stranded nightly runs (07-02→07-08) to main
 All seven nightly runs since main froze (07-02) had branched off the same frozen `main` in
