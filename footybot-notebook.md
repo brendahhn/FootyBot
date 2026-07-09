@@ -32,6 +32,20 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-09 (SCHEDULED RUN) — memory loop HELD; auto-merge Action expected to promote.** At run
+  start, local branch `claude/modest-gates-0apgi1` == `origin/main` == `6d275c9` — i.e. the 07-08
+  auto-merge Action DID persist prior work to `main`, so this run read FRESH memory (first scheduled
+  run to do so; the "stale every day" problem is fixed). Ran STEP 0 pipeline; caught that
+  `predictive_stats.py` overwrote `predictive-stats.md` (74-line loss of accumulated analysis) and
+  restored it via `git checkout` (base correlations byte-identical — see AUDIT_QUEUE). Pushed this
+  run to the harness-assigned branch **`claude/modest-gates-0apgi1`** (per BRANCH RULE — did not fork
+  or improvise). Verified with `git ls-remote origin claude/modest-gates-0apgi1` = branch HEAD. The
+  commit touches `newsletters/**` and does NOT touch `footybot-operating-prompt.md`, so the
+  auto-merge Action's guard passes and it should FF `main` to this commit — restoring the loop for
+  the next run. NOTE for verification: at push time `origin/main` was still `6d275c9` (Action runs
+  async / may be disabled in-sandbox); if `main` has NOT advanced by the next run, a manual
+  `git merge --ff-only origin/claude/modest-gates-0apgi1` into `main` is needed. Exact commit hash is
+  in this run's push notification + run output (STEP 9).
 - **2026-07-08 (interactive) — v3.2 + coverage ledger PROMOTED TO `main` (32b83e6→3208f57).**
   Root-caused the "same newsletter every day": `main` had not moved since 07-02, so every
   scheduled run read stale memory. Tonight's 11:04 run (the July 8 edition Brendan pasted) was
