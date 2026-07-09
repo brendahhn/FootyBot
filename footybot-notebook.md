@@ -222,6 +222,12 @@ before anything enters the corpus). Newsletter: `newsletters/2026-07-08.md` (51 
 - **Gmail: still label-only (3-for-3 on scheduled runs)** — no compose tool; delivered via push
   notification + this newsletter file. **BRANCH: force-pinned to `claude/modest-gates-sezye0`
   again** (BRANCH RULE #3, now 3+ consecutive) — see VERIFICATION LOG. Needs merge to `main`.
+- **Post-run addendum (same session, STANDING MEMORY RULE):** Brendan sent a large RB-tiers +
+  rankings research dump ("take into account next run"). Filed same session: raw →
+  `inputs/research-dumps/2026-07-08-rb-tiers-hribar-and-bdge.md`; distilled actionables → new
+  `research/player-notes.md` (Cook light-box nuance, Kyler Murray QB-finish history, Elijah
+  Sarratt sleeper, Jacobs legal cloud, Bucky Irving take); [TOPIC] threads → idea-queue INBOX
+  (Sarratt/Love comps, tier lists for Lane C, Cook/Irving take re-checks). Committed + pushed.
 
 ### 2026-07-02 (interactive session, follow-up 3) — Final standings + the decomposition
 Brendan sent 7 standings MHTMLs (6 usable; 2024 was accidentally a draft page — re-send

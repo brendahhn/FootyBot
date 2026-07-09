@@ -40,6 +40,22 @@
 
 ## INBOX (unsorted)
 
+### 2026-07-08 — Brendan's RB-tiers + rankings research dump ("take into account next run")
+Two long third-party RB-ranking pieces (Sharp Football / Rich Hribar tiers; BDGE YouTube
+rankings) + three loose data points. **Filed:** raw distilled to
+`inputs/research-dumps/2026-07-08-rb-tiers-hribar-and-bdge.md` (full tier orders + per-player
+facts); clean actionable items into new `research/player-notes.md` (James Cook light-box nuance,
+Kyler Murray QB-finish history, Elijah Sarratt sleeper, Jacobs legal cloud, Bucky Irving take).
+**STATUS: filed 2026-07-08; open [TOPIC] threads for lanes:**
+- **[TOPIC]** Work up **Elijah Sarratt** (elite-percentile WR) and **Jeremiyah Love** (ARI rookie,
+  2026 1st) into proper `breakout-comps.md` entries (named comp + mechanism + failure mode).
+- **[TOPIC]** Lane C: fold both tier lists into the pick-4 countdown as an ADP/consensus
+  cross-check for slots 17/24/37 (both sources corroborate our reads: RB-RB top tier, Cook risen,
+  Achane fade, Kyren capped by Corum, Jacobs discounted on the legal cloud).
+- **[TOPIC]** Pressure-test the **James Cook** ("overvalued" — now with a real efficiency-vs-
+  stacked-box counterpoint) and **Bucky Irving** ("Liam Coen merchant" — confounded by
+  injuries/OL in 2025) takes next run with this new data.
+
 ### 2026-07-01 — Brendan's mock-draft walkthrough (voice transcript, verbatim)
 
 Pick slot #4. Raw, rapid-fire reactions to a live mock draft, round by round — his own words,
