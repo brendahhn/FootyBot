@@ -32,7 +32,8 @@ observation into a diagnosis/fact.
 Map natural language to flags: "now"→`--urgency urgent`, "before tomorrow morning"→
 `--deadline <tomorrow> --publish newspaper`, "quick answer"→`--depth quick`, "deep report"→
 `--depth deep --effort until_strong`, "one research pass"→`--effort 1_pass`, "watch this"→
-`--recurrence watch`, word counts→`--word-budget N`. If output starts with `DUPLICATE`,
+`--recurrence watch`, word counts→`--word-budget N`, "don't put it in the paper / just file it"→`--publish file_only`
+(only `--publish newspaper` tasks are collected into editions). If output starts with `DUPLICATE`,
 tell Brendan it's already queued and note the +1 interest signal. Then ask any useful
 intake questions IMMEDIATELY (classify blocking/material/optional per task schema); record
 non-blocking assumptions in the task's `## Assumptions` and proceed.
