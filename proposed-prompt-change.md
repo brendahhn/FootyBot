@@ -1,4 +1,4 @@
-# Proposed prompt change — Brain integration (NOT applied)
+# Prompt change — Brain integration (APPLIED 2026-07-10, per Brendan's explicit rollout authorization in the activation session)
 
 Per safe-bot-edits, `footybot-operating-prompt.md` is only edited in a Brendan-reviewed session. Exact proposed
 diff — two additive lines, no existing behavior changed:
