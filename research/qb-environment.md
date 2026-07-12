@@ -77,3 +77,12 @@
 5. **Fade New England's secondary pass-catchers** (Doubs, Henry) — Brown concentrates the targets.
 
 **One-line rule of thumb:** *volume that came from a bad team trailing + injuries (Arizona's WRs) regresses; volume that came from a player's own role and survived a QB injury (Chase) does not.*
+
+## 2026-07-12 update — Minnesota QB resolved (Justin Jefferson environment)
+- **Kyler Murray signed with Minnesota [A, Vikings.com/NFL.com/ESPN]** — 1yr vet-min (done March, ARI
+  eating salary) and **reported projected Week-1 starter over J.J. McCarthy.** This closes the open
+  caveat on the **Justin Jefferson buy-low**: JJ's freak 9.38-PPG 2025 [S] (2-TD outage on a 30%+ target
+  share) had "who's the QB?" as its one risk. A real starting-caliber vet with rushing upside is an
+  environment UPGRADE → JJ moves from "watch" to **firmer buy-low.** NOT a lock (corroborate-before-
+  verdict): McCarthy could still win the job and Murray's durability isn't free. Addison/Hockenson now
+  tie to Murray. Re-check the depth chart when MIN reports to camp.

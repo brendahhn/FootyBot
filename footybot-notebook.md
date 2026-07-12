@@ -32,7 +32,18 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
-- **2026-07-09 (SCHEDULED RUN) — memory loop HELD; auto-merge Action expected to promote.** At run
+- **2026-07-12 (SCHEDULED RUN) — memory loop HELD (2nd fresh-read scheduled run); pushed to harness branch per BRANCH RULE.**
+  At run start local branch `claude/dreamy-hamilton-pqv8fm` == `origin/main` == `506eabc` — fresh read
+  (the auto-merge Action + the Brain-integration PR #1 kept `main` current; no stale-memory problem this
+  run). Harness assigned working branch **`claude/dreamy-hamilton-pqv8fm`** (per BRANCH RULE — did NOT
+  fork or improvise). This run touches `newsletters/**` + research/notebook and does NOT touch
+  `footybot-operating-prompt.md`, so the auto-merge Action's guard should pass and FF `main` to this
+  commit. Pushed with `git push -u origin claude/dreamy-hamilton-pqv8fm`, verified with
+  `git ls-remote origin claude/dreamy-hamilton-pqv8fm` = branch HEAD. Exact commit hash in this run's
+  push notification + STEP 9 run output. IF `main` has NOT advanced by the next run, a manual
+  `git merge --ff-only origin/claude/dreamy-hamilton-pqv8fm` into `main` is needed. Brain repo pushed
+  separately to its own `main` (verified independently — see CHANGELOG brain-sync line).
+ At run
   start, local branch `claude/modest-gates-0apgi1` == `origin/main` == `6d275c9` — i.e. the 07-08
   auto-merge Action DID persist prior work to `main`, so this run read FRESH memory (first scheduled
   run to do so; the "stale every day" problem is fixed). Ran STEP 0 pipeline; caught that
@@ -178,14 +189,16 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   analysis includes/links. Until fixed, every scheduled run must `git checkout research/predictive-stats.md`
   after the pipeline step if it doesn't intend to shorten the file. Low-risk to fix; do it in a
   reviewed session (touches a pipeline script).
-- **Bucky Irving & Javonte Williams ADP conflicts** (2026-07-09): sources disagree by a full round
-  (Bucky 25 vs 45; Javonte 26 vs 74). Resolve next run with a cleaner source. Also still unsourced:
-  James Conner, Ladd McConkey, Rome Odunze, Jerry Jeudy half-PPR ADP.
-- **Dedupe/verify the 07-08 salvaged research union.** `predictive-stats.md` has 1-2 duplicated
-  table rows from the `--union` merge (cosmetic); `coach-tendencies.md` (677 ln, 7 nights unioned)
-  should be skim-verified for any duplicated team entry where two nights edited the same section.
-  Lossless by design (union never drops), so worst case is a dup to trim, never a gap. A future
-  run can dedupe as light housekeeping.
+- ~~**Bucky Irving & Javonte Williams ADP conflicts**~~ **RESOLVED 2026-07-12:** Bucky ~50 (40-55, A;
+  old ~25 predated shoulder surgery), Javonte ~35 (30-42, A; DAL RB1). Formerly-unsourced also DONE
+  2026-07-12: James Conner ~177 (cratered, Love landing), Ladd McConkey ~48-56, Rome Odunze ~53-63,
+  Jerry Jeudy ~140-200 (ranking≠ADP trap). All on the board.
+- **Dedupe/verify the 07-08 salvaged research union.** IN PROGRESS: `coach-tendencies.md` **Miami
+  triplication CONSOLIDATED 2026-07-12** (3 stacked entries → 1 canonical, lossless; file 677→660 ln).
+  **STILL PENDING: Dallas Cowboys has 5 stacked entries** (headers at ~326/375/416/483/563) — do a
+  targeted lossless consolidation next run (Cowboys matter: CeeDee, Pickens, Javonte DAL RB1; I did
+  NOT do it this run because I had no fresh Dallas synthesis and blind-merging risks dropping a unique
+  fact). `predictive-stats.md` may still have 1-2 cosmetic duplicated table rows from the union.
 
 - `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
   Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
@@ -225,6 +238,48 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-12 (SCHEDULED RUN) — Newsletter 2026-07-12; board rebuilt on [S] his-scoring numbers; 2 ADP conflicts + Miami dedup resolved
+First run since 07-09 (07-10/07-11 did NOT run — 3-day gap; not stranded, just absent). At run start
+local branch `claude/dreamy-hamilton-pqv8fm` == `origin/main` == `506eabc` → read FRESH memory (the
+auto-merge Action + Brain-integration PR held the loop). 47 days to draft. **Lane A run by orchestrator
+directly against the pipeline; Lanes B/C/D as 3 parallel subagents + reviewer (all 4 lanes ran, none
+skipped).** Compete mode did NOT fire. Newsletter: `newsletters/2026-07-12.md`.
+- **Headline / Lane A [S]:** replaced the board's tier-C half-PPR estimates with pipeline-computed
+  **2025 regular-season PPG in his exact scoring** for ~40 players (0.5/rec, 6pt pass TD, −2 TO; 40yd
+  bonus still uncomputable). Validated against prior [S] anchors (CMC 21.51, Puka 19.41, JSN 17.67,
+  Saquon 13.36, CeeDee 12.57, JJ 9.38 — all byte-match). Findings: 2025 top-6 in his scoring = 5 RBs +
+  Puka; ½-haircut = exactly 0.5×rec/g (Henry −0.44 … Puka −4.03); deep-board WR darts (MHJ 8.94, BTJ
+  8.20, Worthy 6.35, McConkey 9.24, Jeudy 5.63) ALL <10 PPG in 2025 → price as 2026-leap bets. Written
+  into `player-board.md` as a new [S] section. Reviewer caveat: one-season snapshot, not a law.
+- **Lane C / Market:** RESOLVED both standing ADP conflicts — Bucky Irving ~50 (40-55, A; old ~25
+  predated shoulder surgery), Javonte Williams ~35 (30-42, A; DAL RB1, market calls him expensive).
+  Sourced ~11 new deep-board names (Kittle ~40, McConkey ~48-56, Odunze ~53-63, LaPorta ~59, Pollard
+  ~64, Pacheco ~69, Hockenson ~79, Njoku ~83, Charbonnet ~96). **James Conner CRATERED to ~177**
+  (ARI drafted Jeremiyah Love 3rd overall). **Jeudy ranking≠ADP trap flagged** (ESPN rank ~WR47 vs real
+  ADP ~140-200). No Sleeper (JS-hidden, honestly flagged — nothing fabricated).
+- **Lane B / News:** quiet camp-eve window (real camp news ~Jul 22-28). MOVER: **Kyler Murray signed
+  MIN + projected starter over McCarthy [A]** → firms the JJ buy-low (reviewer held it "firmer" not
+  "lock"). Fresh: Brandon Aiyuk headed for SF release (undraftable, ACL). Sharpened: Olave's real risk
+  is the Dec-2025 lung blood clot clearance, not the contract. IDP: James Pearce Jr 8+ game susp.
+- **Lane D / Rabbit hole:** Miami audit (already resolved 3× — I mis-scoped it) RE-CONFIRMED A-tier and
+  produced current Achane data: **4yr/$64M extension** (3rd-highest-paid RB) = high FLOOR, but Willis
+  QB + worst-WR-room + goal-line vulturing CAP the ceiling → refined board from "boom/bust" to
+  "high-floor/capped, value-only-if-slides, not a pick-4 target." Deep dive.
+- **Checking your takes:** "James Conner — cool opportunity vs Jeanty" → **REFUTED** (Love drafted 3rd
+  overall, Conner buried + cratered to ~177; Jeanty is the cleaner bet). Take went stale on draft capital.
+- **Housekeeping DONE:** consolidated the **triplicated Miami entry** in coach-tendencies.md → 1 canonical
+  entry, lossless (677→660 ln). **Board correction:** Jaylen Waddle was listed as a Dolphin — he's a
+  **Denver Bronco** (traded March 2026); fixed on the board, ADP to re-source.
+- **Reviewer kills:** held Murray→JJ as firmer-not-locked; tagged Conner ~177 B/directional; flagged
+  Jeudy ranking≠ADP; used Clay-rank names as ordering only; did NOT assert "Tua→Atlanta" (unverified);
+  caveated "5 of top 6 are RBs" as one-season snapshot.
+- **Pipeline note (AUDIT_QUEUE, unchanged bug):** `predictive_stats.py` again OVERWROTE
+  `predictive-stats.md` (−74 ln); caught it, restored via `git checkout` after confirming base
+  correlations byte-identical. Still needs the real sentinel-marker fix in a reviewed session.
+- **brain-sync:** READ done (version 1.0.0 match; CONFIRMED_RULES all consistent with prompt, no
+  conflicts; no fantasy_football queue tasks or answered questions to apply). WRITE done (block appended
+  to brendan_brain inbox, pushed separately — see VERIFICATION LOG).
 
 ### 2026-07-09 (SCHEDULED RUN) — Newsletter 2026-07-09; builds-that-win + QB-environment; board pushed to picks 100+
 First scheduled run reading a fresh `main` (auto-merge Action worked: local branch == origin/main

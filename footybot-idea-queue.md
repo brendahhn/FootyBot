@@ -142,6 +142,13 @@ acting on any of it.
 > healthy, bad when hurt. Next pick considering: Javonte Williams, Jaylen Waddle, or Ladd
 > McConkey.
 
+**TAKES-CHECKED TRACKER (from this mock dump):** ✔ James Cook overvalued (AGREE, 7/9) · ✔ CMC
+post-injury trap (RETIRED) · ✔ CeeDee vs Pickens (RESOLVED) · ✔ Tee Higgins "not good" (marginal) ·
+✔ Bucky Irving "Coen merchant" (REFUTED, 7/9) · ✔ James Conner "cool opportunity vs Jeanty" (REFUTED,
+7/12 — Love drafted 3rd overall, Conner cratered ~177). STILL UNCHECKED for future editions: Drake
+London "is this the year / real QB now" · Kenneth Walker "loves him, heavy usage" · Justin Jefferson
+"Kyler fan / bad QBs" (now partly answered by Murray→MIN) · MHJ / Xavier Worthy reads.
+
 **STATUS: exploring.** Two explicit research asks from this dump were answered same-session
 (2026-07-01) via WebSearch, not left for the bot's next run:
 - **Eagles OC/scheme for Hurts/Saquon:** new OC Sean Mannion (first-time playcaller, ex-Packers

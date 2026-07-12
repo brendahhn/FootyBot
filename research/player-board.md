@@ -142,14 +142,15 @@ do not treat any of these as Sleeper/consensus; they are one real datapoint each
 | DeVonta Smith | WR PHI | ~36 | B | **VALUE at pick 37** — inherits AJB's ~121 tgt; capped by run-heavy PHI + rookie Makai Lemon |
 | Luther Burden III | WR CHI | ~55 (WR24) | A | |
 | Marvin Harrison Jr | WR ARI | ~56-64 (WR25) | A | QB-capped bounce-back (Brissett/Beck); don't pay ceiling |
-| Jaylen Waddle | WR MIA | ~62 | B | |
+| Jaylen Waddle | WR DEN | re-source | B | **TEAM CORRECTED 2026-07-12: traded MIA→Denver (March 2026)** — now a Broncos WR1 on a strong offense (upgrade); old ~62 was on the wrong team, re-source his DEN ADP |
 | Brian Thomas Jr | WR JAX | ~64 (WR32) | A | biggest WR faller (WR8→WR32); TLaw-rebound value bet |
 | Christian Watson | WR GB | ~73 (WR33) | A | |
 | Xavier Worthy | WR KC | ~101 (WR46) | A | |
 | Michael Wilson | WR ARI | unsourced | — | AVOID at 2025 price — purest ARI environment-rider (126 tgt on injury luck + NFL-top volume) |
 
-**Unsourced / do not guess:** James Conner (RB ARI), Ladd McConkey (WR LAC), Rome Odunze (WR CHI),
-Jerry Jeudy (WR CLE). **Conflicting, uncommitted:** Bucky Irving (25 vs 45), Javonte Williams (26 vs 74).
+**Unsourced / do not guess:** ~~James Conner, Ladd McConkey, Rome Odunze, Jerry Jeudy~~ — **ALL
+SOURCED 2026-07-12, see section below.** **Conflicting, uncommitted:** ~~Bucky Irving (25 vs 45),
+Javonte Williams (26 vs 74)~~ — **BOTH RESOLVED 2026-07-12 (Bucky ~50, Javonte ~35; see below).**
 
 ## NEWS added 2026-07-09 [do NOT re-lead unless it MOVES]
 - Kyler Murray RELEASED by ARI [A]; reported Vikings interest [B]. → Brissett = ARI's 2026 starter;
@@ -158,3 +159,80 @@ Jerry Jeudy (WR CLE). **Conflicting, uncommitted:** Bucky Irving (25 vs 45), Jav
 - Jameson Williams "best offseason" per Lions WR coach [A/B camp narrative] — R3-4 WR, 40yd-bonus fit.
 - Chris Olave extension talks stalled, hold-in on the table [B, ongoing] — durability/volume flag.
 - Josh Jacobs legal: UNCHANGED [A] — DA "under review," no charge decision (WTMJ Jul 6).
+
+## 2026-07-12 UPDATE (SCHEDULED RUN) — [S] his-scoring PPG + resolved ADP + corrections
+
+### REAL 2025 PPG in his exact scoring [S] — pipeline-computed this run (replaces tier-C estimates)
+Regular season only, 0.5-PPR + 6pt pass TD − 2 TO (40+yd bonus still uncomputable → slight
+under-count). The "½-haircut" = pts/game lost vs full PPR = exactly 0.5 × rec/game.
+`times_covered +1`, `last_covered: 2026-07-12` for all listed.
+
+| Player | 2025 PPG [S] | ½-haircut | Player | 2025 PPG [S] | ½-haircut |
+|---|---|---|---|---|---|
+| CMC (RB) | 21.51 | −3.00 | Chase Brown (RB) | 14.59 | −2.03 |
+| J. Taylor (RB) | 19.96 | −1.35 | George Pickens (WR) | 14.44 | −2.74 |
+| Bijan (RB) | 19.49 | −2.32 | Kyren Williams (RB) | 14.43 | −1.06 |
+| Puka (WR) | 19.41 | −4.03 | Javonte Williams (RB) | 14.08 | −1.09 |
+| Gibbs (RB) | 19.32 | −2.26 | Drake London (WR) | 13.99 (12g) | −2.83 |
+| De'Von Achane (RB) | 18.08 | −2.09 | Saquon (RB) | 13.36 | −1.16 |
+| JSN (WR) | 17.67 | −3.50 | Nico Collins (WR) | 12.71 (15g) | −2.37 |
+| James Cook (RB) | 16.81 | −0.97 | CeeDee (WR) | 12.57 (13g) | −2.88 |
+| Derrick Henry (RB) | 16.00 | −0.44 | Bucky Irving (RB) | 12.35 (10g) | −1.50 |
+| Ja'Marr Chase (WR) | 15.69 | −3.91 | Tee Higgins (WR) | 12.14 (15g) | −1.97 |
+| ARSB (WR) | 15.62 | −3.44 | A.J. Brown (WR) | 12.09 (15g) | −2.60 |
+| Trey McBride (TE) | 14.88 | −3.71 | Brock Bowers (TE) | 12.02 (12g) | −2.67 |
+| Josh Jacobs (RB) | 14.61 (15g) | −1.20 | Breece Hall (RB) | 11.98 | −1.00 |
+
+**Deep-board upside darts all scored UNDER 10 PPG in his scoring in 2025 [S]** — their value is a
+projected 2026 leap, not seen production; price as bets not floors: Christian Watson 11.49 (10g),
+K. Walker 10.38, Rome Odunze 10.34 (12g), DeVonta Smith 9.61, Justin Jefferson **9.38** (2-TD
+outage → buy-low), Ladd McConkey 9.24 (16g), James Conner 9.77 (**3g only**), MHJ 8.94 (12g),
+BTJ 8.20 (14g), Luther Burden III 6.96 (rookie), Xavier Worthy 6.35, Jerry Jeudy 5.63.
+**Read:** in his scoring 2025's top 6 were 5 RBs + Puka; pure runners lose almost nothing to the
+½-haircut, reception WRs/TE lose 2.6–4.0/game. One-season [S] snapshot, not a law — but aligns with
+the 7/9 build study. Don't punt RB.
+
+### ADP conflicts RESOLVED [A]
+- **Bucky Irving (RB TB) → ~50 (40-55).** Underdog 47.3, DK 54.5, Drafters 50.0, RotoWire R5. Old ~25
+  predated offseason shoulder surgery. ~RB24; creeps to ~40 if 100% by camp.
+- **Javonte Williams (RB DAL) → ~35 (30-42).** FP 3.11/RB20, FFC 36.9. Clear DAL RB1 (2025: 1,201/11/
+  4.8). Old ~74 stale; market actually calls him *expensive* here, not cheap.
+
+### Newly-sourced deep board [B unless noted] — pushes toward pick 180 (WATCHLIST progress)
+George Kittle TE SF ~40 (TE1) · Ladd McConkey WR LAC ~48-56 · Rome Odunze WR CHI ~53-63 · Sam LaPorta
+TE DET ~59 · Tony Pollard RB TEN ~64 · Isiah Pacheco RB KC ~69 · T.J. Hockenson TE MIN ~79 (tied to
+Murray now) · David Njoku TE CLE ~83 · Zach Charbonnet RB SEA ~96.
+- **📉 James Conner RB ARI → ~177 CRATERED [B, 4for4].** ARI drafted **Jeremiyah Love 3rd overall**;
+  Conner's workhorse role gone (Love + Benson + Demercado). Dart only.
+- **⚠️ Jerry Jeudy WR CLE — ranking ≠ ADP TRAP.** ESPN *ranking* ~WR47 but real redraft ADP **~140-200**
+  (CLE drafted 2 WRs top-39). Round-13 flyer, NOT mid-round. Do not let the ranking mislead the board.
+- **Clay-rank ordering proxies only (NOT ADP numbers):** Aaron Jones, RJ Harvey (both ~RB29-32 rank),
+  Calvin Ridley, Jordan Addison, Khalil Shakir, Jayden Reed. Use as order, not point ADP.
+
+### Achane verdict REFINED (was "boom/bust" → now high-floor/capped)
+4yr/$64M ext (3rd-highest-paid RB) = locked workload → **high floor**, but Willis QB (scrambler, cuts
+checkdowns → dents his 0.5-PPR receiving edge) + worst-WR-room box-loading + goal-line vulturing
+**cap the ceiling**. High-floor volume RB1 with more downside variance than ADP-13; value only if he
+slides past pick 4, not a target at 4.
+
+### NEWS added 2026-07-12 [do NOT re-lead unless it MOVES]
+- **Kyler Murray SIGNED with Minnesota [A]** (1yr vet-min, done March; ARI eats salary) and **reported
+  projected Week-1 starter over J.J. McCarthy.** → firms the **Justin Jefferson buy-low** (from "watch"
+  to firmer; not a lock — McCarthy competition + Murray health). Addison/Hockenson tie to Murray now.
+- **Brandon Aiyuk (SF) headed for release [A/B]** — won't return to SF, release expected, rehabbing ACL.
+  UNDRAFTABLE until he lands somewhere healthy with a role. Watchlist only.
+- **Chris Olave [B]:** real risk is medical — **not fully cleared from Dec-2025 lung blood clot**, not
+  the contract (no actual hold-in). Monitor camp participation.
+- **James Pearce Jr (ATL edge) [B]:** reported 8+ game suspension — fade in IDP calc until length official.
+- Bijan unsigned but staying ATL (Falcons extended London 4yr/$141M + Pitts). RJ Harvey full-go post-labrum.
+
+### TAKES CHECKED 2026-07-12 [do NOT re-litigate without NEW evidence]
+- **"James Conner — Arizona's O-line better, cool opportunity vs Jeanty" → REFUTED [A+B].** ARI drafted
+  Jeremiyah Love 3rd overall; Conner cratered to ~177, buried in a committee; 31 y/o, 3 games in 2025
+  (9.77 PPG [S]). Opportunity gone. **Jeanty is the cleaner bet;** Love (not Conner) holds that
+  backfield's value. Take can go stale on draft capital — re-check depth charts before committing.
+
+### SETTLED FACTS added 2026-07-12
+- Bucky Irving ADP ~50 / Javonte Williams ADP ~35 (both resolved — do not re-run the conflict).
+- Jaylen Waddle is a **Denver Bronco** (traded March 2026), not a Dolphin. Tyreek Hill released (FA,
+  injured). Tua released; **Malik Willis** is Miami's QB. McDaniel fired → **Chargers OC**; Slowik = MIA OC.
