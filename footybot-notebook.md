@@ -41,8 +41,12 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   commit. Pushed with `git push -u origin claude/dreamy-hamilton-pqv8fm`, verified with
   `git ls-remote origin claude/dreamy-hamilton-pqv8fm` = branch HEAD. Exact commit hash in this run's
   push notification + STEP 9 run output. IF `main` has NOT advanced by the next run, a manual
-  `git merge --ff-only origin/claude/dreamy-hamilton-pqv8fm` into `main` is needed. Brain repo pushed
-  separately to its own `main` (verified independently — see CHANGELOG brain-sync line).
+  `git merge --ff-only origin/claude/dreamy-hamilton-pqv8fm` into `main` is needed. **Brain repo: the
+  brendan_brain clone was ALSO harness-pinned to a `claude/*` branch (`claude/charming-dijkstra-pqv8fm`),
+  not `main`** — same branch-pin issue as here. The 07-12 inbox block committed as `ae53c56` and pushed +
+  verified to `origin/claude/charming-dijkstra-pqv8fm` (NOT Brain `main`); it needs a merge into Brain
+  `main` before the Chief-of-Staff triage picks it up. Brain push failures never block this run; this one
+  succeeded to the assigned branch.
  At run
   start, local branch `claude/modest-gates-0apgi1` == `origin/main` == `6d275c9` — i.e. the 07-08
   auto-merge Action DID persist prior work to `main`, so this run read FRESH memory (first scheduled
@@ -279,7 +283,8 @@ skipped).** Compete mode did NOT fire. Newsletter: `newsletters/2026-07-12.md`.
   correlations byte-identical. Still needs the real sentinel-marker fix in a reviewed session.
 - **brain-sync:** READ done (version 1.0.0 match; CONFIRMED_RULES all consistent with prompt, no
   conflicts; no fantasy_football queue tasks or answered questions to apply). WRITE done (block appended
-  to brendan_brain inbox, pushed separately — see VERIFICATION LOG).
+  to brendan_brain inbox `queue/inbox/from-footybot.md`, pushed + verified to the harness-pinned Brain
+  branch `claude/charming-dijkstra-pqv8fm` — NOT Brain main; needs merge to Brain main — see VERIFICATION LOG).
 
 ### 2026-07-09 (SCHEDULED RUN) — Newsletter 2026-07-09; builds-that-win + QB-environment; board pushed to picks 100+
 First scheduled run reading a fresh `main` (auto-merge Action worked: local branch == origin/main
