@@ -186,8 +186,15 @@ data becomes available.
   to keep honest: Bijan was already a heavy-usage back, so the delta is scheme-efficiency and
   potential rushing-share consolidation, not "discovering" volume; and a run-heavier,
   12-personnel identity could *cap* team pass volume, a mild negative for the WR room's ceiling.
-  QB is a real swing (Penix vs. Cousins situation referenced in sources) — leave that thread
-  open until camp.
+  QB is a real swing — **RESOLVED to an open competition 2026-07-14 (Lane D, A on facts / B on
+  who starts):** incumbent **Michael Penix Jr.** (2024 1st-rd, No. 8) tore his ACL vs. Carolina in
+  Nov 2025 (surgery Nov 25) and is *aiming* for Week 1 2026 but is at the early edge of the 9-12mo
+  window — not guaranteed. Atlanta signed **Tua Tagovailoa** (1yr, ~$1.3M vet-min, after his Miami
+  release) as insurance/competition; Tua "could open as the starter while Penix works back." So the
+  old "Penix vs. Cousins" note is stale (Cousins gone); it's **Penix (ACL) vs. Tua**, decided in camp.
+  For the WR room that means QB is an *upside bet, not a settled fact*. (ESPN, NFL.com, AJC.)
+  **Drake London — PAID (A):** agreed to a **4yr/$141M extension** ($100M gtd, ~$35.25M AAV = 3rd
+  among WRs); unambiguous franchise WR1 (309/3,961/22 over 4 yrs). Plays 2026 on the $16.82M option.
 
 ### Tampa Bay Buccaneers — OC Zac Robinson (new playcaller), HC Todd Bowles
 - Background (A): Bucs fired 2025 first-year OC Josh Grizzard (offense fell from ~3rd in 2024 to
@@ -612,48 +619,32 @@ mock-draft questions.
 
 ## Not yet covered
 
-Remaining teams without a playcaller change (or lower fantasy-impact changes) — note the 2026
+Remaining teams without a playcaller change (or lower fantasy-impact changes). Note the 2026
 cycle was unusually heavy (~21 teams changed OCs, ~17 new play-callers per league trackers), so
-"not yet covered" here means *not-yet-written*, not *no change*. Specific threads to pick up next
-run: Giants (HC John Harbaugh from Baltimore + OC Frank Reich — needs verification), Cardinals OC
-Nathaniel Hackett (hired per a broad-search summary, but whether he or HC Mike LaFleur calls
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered 2026-07-01;
-**Cowboys now covered above, 2026-07-02** — full entry incl. the Pickens trade). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles now
-covered above 2026-07-01; Dallas now covered 2026-07-06 — no playcaller change, added for the
-Pickens/Lamb target-competition question). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered
-2026-07-01; Cowboys covered 2026-07-08 above). Lead to verify: Kevin Patullo (fired Eagles OC) reportedly landed
-with the **Dolphins** — this doc lists Miami's OC as Bobby Slowik, so confirm Patullo's actual
-Miami role before trusting the Slowik entry (could be a lower title, or the Slowik entry may need
-correcting). Plus full
-**Cowboys now covered above 2026-07-03** as a Schottenheimer-retained/Year-2 continuity entry).
-**RESOLVED 2026-07-03 — Patullo/Miami audit:** Kevin Patullo (fired Eagles OC, Jan 13 2026) was
-hired by the Dolphins on Feb 13 2026 as **passing game coordinator UNDER OC Bobby Slowik** — a lower
-title, NOT the OC job. This **confirms, not contradicts,** the Miami entry (Slowik remains OC);
-no correction to that entry needed. (A: CBS Sports, NBC Sports Philadelphia, Philadelphia Inquirer.)
-Plus full
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Cowboys/Broncos OC changes (Eagles now
-covered above, 2026-07-01). **Cowboys note (2026-07-04):** George Pickens stays in Dallas for 2026
-on the franchise tag (the trade from Pittsburgh was the 2025 offseason, not new); he and CeeDee Lamb
-are a real 1-2 (near-even targets in 2025), though Lamb slid out of the top-WR tier — worth a full
-Cowboys entry next pass. **New lead to verify (2026-07-04): Tua Tagovailoa reportedly signed with
-the Falcons** after his Miami release — if true it reshapes Atlanta's QB picture (our Falcons entry
-assumes a Penix/Cousins situation) and Drake London's outlook. Corroborated by two lanes (a Miami
-teardown search + an ATL "Tua praise" ADP-riser note) but NOT yet confirmed against a primary
-transaction — do that before writing it into the Falcons entry. The Patullo→Dolphins lead is
-RESOLVED (see Miami entry: Slowik is OC, Patullo is pass-game coordinator). Plus full
-"not yet covered" here means *not-yet-written*, not *no change*. **Three AUDIT items RESOLVED
-2026-07-05** and now written up above: Giants (Harbaugh confirmed; OC is **Matt Nagy**, not Frank
-Reich), Cardinals (Hackett is OC but **LaFleur calls plays**), Miami (**Slowik confirmed OC/play-
-caller**; Patullo is a subordinate pass-game coordinator; plus the Hill/Waddle/Tua teardown).
-Specific threads still to pick up next run: Commanders/Cowboys/Broncos OC changes (note the Broncos
-acquired **Jaylen Waddle** via trade — worth a Denver skill-player pass). Plus full
-plays is unconfirmed — see AUDIT_QUEUE), Commanders/Broncos OC changes (Eagles covered 2026-07-01,
-**Cowboys covered 2026-07-08**). ~~Lead to verify: Kevin Patullo → Dolphins role~~ **RESOLVED
-2026-07-08** — Patullo joined Miami as passing game coordinator under OC Bobby Slowik; the Miami
-entry stands (see the Miami bullet above). Plus full
-defensive-coordinator-level
-detail for IDP purposes (see `research/idp-evaluation.md` for the IDP-specific angle on
-defensive scheme/role). Expand this doc as draft season approaches and as preseason tape
-becomes available to verify/correct the above.
+"not yet covered" here means *not-yet-written*, not *no change*.
+
+*(Section de-duplicated 2026-07-14 — it had accumulated ~6 `git merge --union` copies of the same
+paragraph with stray repeated fragments. All unique RESOLVED notes and open leads preserved below.)*
+
+**RESOLVED audit items (now written into the entries above):**
+- **Giants (2026-07-05):** HC **John Harbaugh** (from Baltimore) confirmed; OC is **Matt Nagy**, not
+  Frank Reich (earlier lead was wrong).
+- **Cardinals (2026-07-05):** **Nathaniel Hackett** is OC, but **HC Mike LaFleur calls the plays** —
+  see the Cardinals entry; the LaFleur-scheme read held.
+- **Miami (2026-07-05):** **Bobby Slowik** confirmed as OC/play-caller; **Kevin Patullo** (fired
+  Eagles OC, Jan 13 2026) joined Miami on Feb 13 2026 as **passing-game coordinator UNDER Slowik** —
+  a subordinate title, which **confirms** the Slowik entry rather than contradicting it. Plus the
+  Hill(released)/Waddle(→Denver)/Tua(released) roster teardown. (A: CBS Sports, NBC Sports
+  Philadelphia, Philadelphia Inquirer.)
+- **Cowboys (covered above):** Schottenheimer retained (Year 2), no playcaller change; the George
+  Pickens trade (2025 offseason) is the fantasy-relevant story — Lamb + Pickens are a real 1-2. Five
+  duplicate Cowboys entries were consolidated into one canonical entry **2026-07-14**.
+- **Falcons / Tua lead (2026-07-14, RESOLVED):** the long-standing "Tua reportedly signed with
+  Atlanta" lead is now confirmed and written into the Falcons entry — Atlanta signed Tua (1yr vet-min,
+  insurance) into an **open QB competition with Michael Penix Jr.** (ACL, aiming Week 1 but not
+  guaranteed). Old "Penix vs. Cousins" framing is stale (Cousins gone). (A: ESPN, NFL.com, AJC.)
+
+**Still to pick up next run:** Commanders and Broncos OC changes. The Broncos acquired **Jaylen
+Waddle** via trade — worth a Denver skill-player pass (Waddle + Bo Nix + Sean Payton). Add
+defensive-coordinator-level detail for IDP purposes (see `research/idp-evaluation.md`). Expand this
+doc as draft season approaches and preseason tape becomes available to verify/correct the above.

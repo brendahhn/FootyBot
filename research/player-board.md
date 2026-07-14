@@ -236,3 +236,50 @@ slides past pick 4, not a target at 4.
 - Bucky Irving ADP ~50 / Javonte Williams ADP ~35 (both resolved — do not re-run the conflict).
 - Jaylen Waddle is a **Denver Bronco** (traded March 2026), not a Dolphin. Tyreek Hill released (FA,
   injured). Tua released; **Malik Willis** is Miami's QB. McDaniel fired → **Chargers OC**; Slowik = MIA OC.
+
+## 2026-07-14 UPDATE (WEEKLY RUN) — Waddle re-priced, deep board 100-180, London QB resolved
+`times_covered +1`, `last_covered: 2026-07-14` for every player named in this section.
+
+### Waddle ADP RESOLVED as a Bronco [A]
+- **Jaylen Waddle (WR DEN) → ~39-53 (WR19-21).** FantasyPros ~39/WR19; Yahoo ~53/WR21; secondhand
+  Sleeper ~46/WR23 (soft, unconfirmed). **Co-WR1 with Courtland Sutton, not a runaway alpha** (Bo Nix
+  spreads it — Mims/Franklin/Engram; neither DEN WR may clear 1,000). High-end WR3 / WR2 upside; don't
+  reach above ADP. Replaces the old MIA ~62. *(fantasypros, sharpfootball, CBS, fantasylife.)*
+
+### NEW deep-board ADP [B unless noted] — pick ~100-180 (WATCHLIST progress)
+Jaylen Warren RB PIT ~78 (RB28, standalone flex) · Rico Dowdle RB PIT ~90 (committee) · Caleb Williams
+QB CHI ~98 (streamer, rush ceiling) · Kenneth Gainwell RB TB ~100 (riser) · Bo Nix QB DEN ~107 (QB15,
+streamer) · Keon Coleman WR BUF ~120 · **Josh Downs WR IND ~123 (VALUE — 80% snaps late '25, Pittman
+gone)** · Jake Ferguson TE DAL ~127 (TE12) · Dallas Goedert TE PHI ~136 (TE15, 11 TD) · Tyjae Spears RB
+TEN ~142→155 (**IR-bound, fading**) · Alvin Kamara RB NO ~152 (aging/faller) · **Tank Bigsby RB PHI
+~166 (cheap Saquon handcuff — NOTE he's an Eagle now, not a Jaguar)**.
+- Buried past 180 (confirm, don't draft): Trey Benson ARI ~290, James Conner ARI ~177, Braelon Allen NYJ ~205.
+- **QB-STREAMER TIER forming ~pick 95-110** (Caleb Williams ~98, Bo Nix ~107, + late Lawrence/Mayfield):
+  the 6pt-pass-TD wait-on-QB edge. Do NOT spend 17/24 on a QB.
+
+### RISERS / FALLERS (this week)
+- 📈 A.J. Brown → No. 16 (NE alpha for Maye, top value-riser); JSN → ~32-37; Gainwell → top 100;
+  Tony Pollard rising (Spears IR).
+- 📉 Chuba Hubbard falling (NFLN: Panthers expect Jonathon Brooks lead back); Kamara −5 → ~152;
+  Conner −10 → ~177.
+
+### NEWS added 2026-07-14 [do NOT re-lead unless it MOVES]
+- **Malik Nabers (NYG) opening camp on PUP** after a 2nd knee procedure — October debut in play [A].
+  Injury discount siren; he's Year 3, so this is injury, not any age pattern.
+- Risk-discount trio firmed, none resolved [A on quotes]: Rice (Reid expects on-time report, "no
+  indication" of suspension — easing not gone), Jacobs (DA case still open, practicing), Mahomes ("way
+  ahead of schedule," Wk1 trend + PUP contingency). Draft all three at a discount, not clean price.
+- Vikings QB1: O'Connell noncommittal on Murray vs McCarthy [B, non-denial] — JJ stays *firmer buy-low*, not a lock.
+- **Drake London PAID [A]:** 4yr/$141M ext (~$35.25M AAV, 3rd among WRs). Role locked.
+
+### TAKE CHECKED 2026-07-14 [do NOT re-litigate without NEW evidence]
+- **"Drake London — real QB now, is this the year?" → HALF-RIGHT [A/B].** Role + coaching (Stefanski/
+  Rees) are real upgrades; "real QB" is the shaky leg — Atlanta is an **open Penix (ACL, aiming Wk1 not
+  guaranteed) vs. Tua (1yr vet-min insurance) competition**, not a settled QB. Draft London as a
+  secured-role WR1 with an *upside-bet* QB, not a settled breakout. ("McDaniel merchant" frame is wrong —
+  McDaniel's in LAC; the real variable is QB availability.) Corrects our stale "Penix vs. Cousins" note.
+
+### SETTLED FACTS added 2026-07-14
+- Atlanta QB 2026 = open Penix(ACL)/Tua competition (NOT Cousins — stale; NOT settled). London extended 4yr/$141M.
+- Waddle DEN ADP ~39-53 (resolved). Tank Bigsby is a Philadelphia Eagle (Saquon handcuff), not a Jaguar.
+- Rashid Shaheed is on Seattle (our JSN note already had this — confirmed correct).

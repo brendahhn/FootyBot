@@ -61,6 +61,45 @@ leak worth naming — not the second-year thing.
   the MARKET fact (his league under-drafts QB vs 6pt passing TDs — measured in draft-tendencies.md),
   not "Brendan is a QB genius."
 
+## THE UNIFYING LENS (added 2026-07-14) — he wins buying manufactured discounts, loses paying for hype
+
+This reframes the same data more usefully than the leak/superpower list. Pairing his real 2025
+pick-value deltas [S, `draft_outcomes.py`] with the draft-time media narrative on each pick [B,
+WebSearch] shows one clean pattern **at the extremes** of his 2025 draft:
+
+**His HITS were all "depressed price + identifiable catalyst" — discounts the media had manufactured:**
+- **Patrick Mahomes, R10 (value):** media literally ran *"Why you should fade Mahomes"* (QB11 two
+  years running, Wk15 '24 ACL/LCL). He bought the best QB alive in round 10.
+- **Davante Adams, R6 (+73.9):** priced WR16 on the age curve (32); he banked the Stafford reunion →
+  led the NFL in receiving TDs (14).
+- **Kenneth Walker III, R4 (+56.2):** discounted for a timeshare + 3.7 YPC; he bought the Kubiak/
+  Shanahan scheme upgrade.
+
+**His MISSES were the mirror image — paying up on consensus ceiling with NO discount:**
+- **Brian Thomas Jr., R2 (−142.0 = his worst pick ever [S]):** consensus ~WR8, Nabers-tier, a
+  *2,000-yd* ceiling floated; pure ascending-alpha hype at a round-2 price. Cratered to 707/2.
+- **Tank Bigsby, R7 (−77.6):** paid ~R7 for a back the market had ~R11 (overpaid vs ADP).
+
+**Verdict:** his edge is **price discipline as a buyer of manufactured discounts**, not any age/
+position "leak." Aggregate career data agrees: STEADY/value picks **+9.1/pick**; the one true leak is
+paying up (expensive POST_INJURY **0-for-6**, and BTJ = an expensive year-2 *narrative leap at full
+price*, the exact sub-pattern this file already flagged as the only one with signal). **Decision rule
+for the newsletter:** when a player has a real discount AND a concrete catalyst → his wheelhouse,
+press it. When he reaches above ADP because the ceiling story is fun → that's the −142 replaying.
+CAVEAT: 2025 is n=16, small-sample — directional, and it holds cleanest at the extremes (mid-picks
+like Jeanty/Hampton/Sutton are neutral). Not a law; a tendency that rhymes with the multi-year data.
+
+### 2025 draft-time media-narrative retrospective [B/C — the queued "media narratives" TOPIC, started 2026-07-14]
+Sourced this run (see `newsletters/2026-07-14.md` for the per-player receipts + outlets):
+- BTJ: WR8 consensus, WR2-from-Wk13-on rookie thesis, Coen-offense hype, 2,000-yd ceiling floated.
+- Jeanty: No.6 NFL pick, RB6 ADP, "set up to smash." **Re-age for 2026: sophomore with a proven
+  volume floor (321 touches/1,321/10 as a rookie behind a bad LV ecosystem) — a situation-improvement
+  bet, NOT a BTJ-style narrative leap. Do not conflate.**
+- Walker: value + Kubiak scheme catalyst. Davante: new-team/Stafford reboot. Mahomes: active fade
+  narrative. Bigsby: cheap telegraphed lottery ticket. Kraft: "next breakout TE" (was hitting, Wk9 ACL).
+  Sutton: safe WR3 floor capped by age/young WRs.
+- **Backlog (slow burn, a few picks/run):** next do his 2024 board, then the league's biggest hits/busts.
+
 ## How to use this
 
 Mention a pattern ONLY when (a) a live take/pick actually fits it AND (b) it's material to a real

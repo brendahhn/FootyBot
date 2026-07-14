@@ -32,6 +32,17 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-14 (WEEKLY SCHEDULED RUN) — memory loop HELD (3rd fresh-read run); pushed to harness branch per BRANCH RULE.**
+  At run start local branch `claude/busy-knuth-cqbu6n` == `origin/main` == `03c8dc3` (the 07-12 edition) —
+  FRESH read confirmed (auto-merge Action + Brain PR kept the loop). This is the weekly Monday run
+  (Jul 13 PT → 2026-07-14 edition; 07-13 had no separate run). Harness assigned working branch
+  **`claude/busy-knuth-cqbu6n`** (per BRANCH RULE — did NOT fork/improvise). Commit touches
+  `newsletters/**` + research/notebook/idea-queue and does NOT touch `footybot-operating-prompt.md`,
+  so the auto-merge Action's guard should pass and FF `main`. Pushed with
+  `git push -u origin claude/busy-knuth-cqbu6n`, verified with `git ls-remote origin claude/busy-knuth-cqbu6n`
+  = branch HEAD (exact hash in this run's push notification + STEP 9 output). IF `main` has NOT advanced
+  by next run, a manual `git merge --ff-only origin/claude/busy-knuth-cqbu6n` into `main` is needed.
+  Brain repo pushed separately (see CHANGELOG brain-sync line).
 - **2026-07-12 (SCHEDULED RUN) — memory loop HELD (2nd fresh-read scheduled run); pushed to harness branch per BRANCH RULE.**
   At run start local branch `claude/dreamy-hamilton-pqv8fm` == `origin/main` == `506eabc` — fresh read
   (the auto-merge Action + the Brain-integration PR #1 kept `main` current; no stale-memory problem this
@@ -194,11 +205,24 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   2026-07-12: James Conner ~177 (cratered, Love landing), Ladd McConkey ~48-56, Rome Odunze ~53-63,
   Jerry Jeudy ~140-200 (ranking≠ADP trap). All on the board.
 - **Dedupe/verify the 07-08 salvaged research union.** IN PROGRESS: `coach-tendencies.md` **Miami
-  triplication CONSOLIDATED 2026-07-12** (3 stacked entries → 1 canonical, lossless; file 677→660 ln).
-  **STILL PENDING: Dallas Cowboys has 5 stacked entries** (headers at ~326/375/416/483/563) — do a
-  targeted lossless consolidation next run (Cowboys matter: CeeDee, Pickens, Javonte DAL RB1; I did
-  NOT do it this run because I had no fresh Dallas synthesis and blind-merging risks dropping a unique
-  fact). `predictive-stats.md` may still have 1-2 cosmetic duplicated table rows from the union.
+  triplication CONSOLIDATED 2026-07-12** (3→1). **"Not yet covered" section DE-DUPLICATED 2026-07-14**
+  (it had ~6 `git merge --union` copies of one paragraph + stray repeated fragments; rewritten clean,
+  all RESOLVED notes + open leads preserved). **STILL PENDING: Dallas Cowboys 5-entry body-merge.**
+  The 5 stacked `### Dallas Cowboys` entries (now at roughly lines 308 / 357 / 398 / 465 / 545 after
+  tonight's edits — re-grep before editing) need a lossless 5→1 merge in a REVIEWED session. Did NOT
+  attempt tonight: an atomic multi-hundred-line Edit surgery on the 55KB canonical file is fragile to
+  run unattended (transcription-mismatch risk), and prior runs also deferred. **UNIQUE-FACT LIST to
+  preserve (compiled 2026-07-14 so the merge is fast + safe):** entry-5 (lines ~545-611, dated 07-03)
+  is the most complete → use as the base and fold in the few facts only the others have: (a) the 2025
+  shared-season stats TABLE (Pickens 137 tgt/23% share, ~34% RZ / 93/1,429/9, WR5 PPR; Lamb 117/75/
+  1,077/3, WR19 half-PPR / WR15 per-game); (b) the [S] pipeline cross-check (Pickens WR6 14.44 PPG /
+  Lamb WR11 12.57 PPG / Dak QB5 22.0 PPG, from league-scoring-leaders.md); (c) Jake Ferguson
+  front-loaded note (TE1 thru Wk7, TE22 after; 82 tgt); (d) Lamb 2023 sole-alpha baseline 135/1,749/12
+  + 19.7% deep-route rate + slot-vs-X role detail; (e) the ~46%/54% career run/pass split; (f) the
+  Chase-Higgins '25 and ARSB-Williams '25 coexistence comps; (g) the O-line "275 of 1,186 snaps
+  together" figure; (h) the confound flag (3 of Lamb's missed games fed Pickens' counting stats).
+  Everything else across the 5 is redundant. `predictive-stats.md` may still have 1-2 cosmetic
+  duplicated table rows from the union.
 
 - `research/coach-tendencies.md`: **Miami OC cross-check.** Search this run surfaced that Kevin
   Patullo (fired Eagles OC) reportedly landed with the Dolphins, but our Miami entry lists Bobby
@@ -238,6 +262,48 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-14 (WEEKLY RUN) — Newsletter 2026-07-14; self-scouting "discount vs hype" lens + 2025 media-narrative retrospective; Waddle re-priced; Falcons QB + coach-tendencies cleanup
+Weekly Monday run (first since 07-12). Fresh read (branch == origin/main == 03c8dc3). 45 days to draft.
+**Lane A run by orchestrator against the pipeline; Lanes B/C/D as 3 parallel subagents + reviewer (all
+4 lanes ran, none skipped).** Compete mode did NOT fire. Newsletter: `newsletters/2026-07-14.md`.
+- **Headline / Lanes A+D (winning lanes): decoded Brendan's OWN 2025 draft.** Pairing his real
+  pick-value deltas [S, `draft_outcomes.py`] with draft-time media narratives [B, WebSearch] → clean
+  pattern at the extremes: HITS = "manufactured discount + catalyst" (Mahomes R10 = active fade
+  narrative; Davante R6 +73.9 = age-discount + Stafford; Walker R4 +56.2 = timeshare-discount + Kubiak),
+  MISSES = "paid-up on consensus hype" (**BTJ R2 −142.0 = his worst pick ever**; Bigsby R7 −77.6
+  overpaid vs ADP). Reframes his edge as PRICE DISCIPLINE buying manufactured discounts, not any
+  age/position leak. Written into `self-scouting.md` (new "unifying lens" section + 2025 retrospective).
+  Delivers the queued [TOPIC] "media narratives on drafted players" (2025 started; 2024 next).
+- **Deep dive / Lane D:** per-player 2025 draft-time media narrative (BTJ WR8/2000-yd hype, Jeanty
+  RB6 "smash," Walker/Davante/Mahomes discount cases, Bigsby/Kraft/Sutton lighter) — receipts + outlets.
+- **Lane C / Market:** **Waddle re-sourced as a Bronco → ~39-53 (WR19-21), co-WR1 w/ Sutton under Bo
+  Nix** (not a runaway alpha). Pushed deep board to ~180: Warren ~78, Dowdle ~90, Caleb Williams ~98,
+  Gainwell ~100, Bo Nix ~107, Keon Coleman ~120, **Josh Downs ~123 (value)**, Ferguson ~127, Goedert
+  ~136, Spears ~142→155 (IR-bound), Kamara ~152, **Tank Bigsby ~166 (now a PHI Saquon handcuff)**.
+  QB-streamer tier ~95-110 forming (6pt-pass edge). Risers: AJB No.16, JSN, Gainwell, Pollard(Spears IR).
+  Fallers: Hubbard (Brooks lead back), Kamara, Conner. Still no direct Sleeper (JS-hidden).
+- **Lane B / News:** quiet camp-eve week. Mover: **Nabers opening camp on PUP** (2nd knee scope, Oct
+  debut in play — injury discount; he's Year 3). Risk trio firmed not resolved (Rice/Jacobs/Mahomes).
+  Vikings QB O'Connell noncommittal [B] → JJ stays firmer-not-lock. Killed: Olave (no July update),
+  Bijan ext (non-event), no new suspensions.
+- **Checking your takes:** **"Drake London — real QB now?" → HALF-RIGHT.** Role ($141M ext) + coaching
+  (Stefanski/Rees) real upgrades; "real QB" shaky — **open Penix(ACL)/Tua competition**, not settled.
+  Corrects our stale "Penix vs Cousins." ("McDaniel merchant" frame wrong — he's LAC OC now.)
+- **Housekeeping DONE:** corrected the **Falcons entry** (Penix-ACL vs Tua open battle + London $141M);
+  **de-duplicated the badly-unioned "Not yet covered" section** of coach-tendencies.md. **Dallas 5→1
+  body-merge STILL PENDING** — compiled the unique-fact list into AUDIT_QUEUE so a reviewed session can
+  do it fast/safely; did not risk a fragile unattended surgery on the canonical file.
+- **Reviewer:** capped the self-scouting headline at "directional, n=16"; kept BTJ as a *process*
+  lesson not a 2026 downgrade; re-aged Jeanty (sophomore volume bet ≠ BTJ narrative leap); held the
+  Vikings QB item as single-source; flagged Waddle's Sleeper number as secondhand. Did NOT lead with
+  aging-vet/mid-QB "superpowers" (Davante/Mahomes appear as discount EXAMPLES, not standalone claims).
+- **Pipeline note (AUDIT_QUEUE, unchanged bug):** `predictive_stats.py` again OVERWROTE
+  `predictive-stats.md` (−74 ln); caught it, restored via `git checkout` after confirming base
+  correlations byte-identical. Still needs the real sentinel-marker fix in a reviewed session.
+- **brain-sync:** READ done (only FF-relevant CONFIRMED_RULE = Gmail-drafts-only, already obeyed; no
+  open fantasy_football queue tasks or answered questions to apply). WRITE done (block appended to
+  brendan_brain inbox, pushed separately — see VERIFICATION LOG / brain-sync line below).
 
 ### 2026-07-12 (SCHEDULED RUN) — Newsletter 2026-07-12; board rebuilt on [S] his-scoring numbers; 2 ADP conflicts + Miami dedup resolved
 First run since 07-09 (07-10/07-11 did NOT run — 3-day gap; not stranded, just absent). At run start

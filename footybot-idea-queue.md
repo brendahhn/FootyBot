@@ -22,7 +22,11 @@
   Brendan: "find narratives in the media regarding the players they drafted, not just stat
   based"). Slow-burn nightly backlog: reconstruct the draft-time media story for picks in
   `draft_history_enriched.csv`, starting with 2025, then 2024; prioritize Brendan's picks and
-  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. Status: queued.
+  the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. **Status: exploring —
+  2025 STARTED 2026-07-14** (Brendan's own 8 most-instructive 2025 picks done: BTJ/Jeanty/Walker/
+  Davante/Mahomes/Bigsby/Kraft/Sutton → `self-scouting.md` retrospective + `newsletters/2026-07-14.md`,
+  and it produced the "manufactured-discount vs paid-up-hype" lens). NEXT: his 2024 board, then the
+  league's biggest hits/busts (other managers).
 - **[MOSTLY DONE 2026-07-02] Final standings per season.** Brendan sent 7 files; 6 parsed
   (2019-2023, 2025) → `inputs/league-history/league_finishes.csv` + Finding 6 in
   draft-tendencies.md (draft value → PF r≈+0.50 but → rank only +0.31; move count → rank
@@ -145,9 +149,11 @@ acting on any of it.
 **TAKES-CHECKED TRACKER (from this mock dump):** ✔ James Cook overvalued (AGREE, 7/9) · ✔ CMC
 post-injury trap (RETIRED) · ✔ CeeDee vs Pickens (RESOLVED) · ✔ Tee Higgins "not good" (marginal) ·
 ✔ Bucky Irving "Coen merchant" (REFUTED, 7/9) · ✔ James Conner "cool opportunity vs Jeanty" (REFUTED,
-7/12 — Love drafted 3rd overall, Conner cratered ~177). STILL UNCHECKED for future editions: Drake
-London "is this the year / real QB now" · Kenneth Walker "loves him, heavy usage" · Justin Jefferson
-"Kyler fan / bad QBs" (now partly answered by Murray→MIN) · MHJ / Xavier Worthy reads.
+7/12 — Love drafted 3rd overall, Conner cratered ~177) · ✔ Drake London "is this the year / real QB
+now" (HALF-RIGHT, 7/14 — role+coaching real upgrades, but QB is an open Penix-ACL/Tua competition,
+not settled; McDaniel-merchant frame wrong, he's in LAC). STILL UNCHECKED for future editions:
+Kenneth Walker "loves him, heavy usage" · Justin Jefferson "Kyler fan / bad QBs" (now partly answered
+by Murray→MIN) · MHJ / Xavier Worthy reads.
 
 **STATUS: exploring.** Two explicit research asks from this dump were answered same-session
 (2026-07-01) via WebSearch, not left for the bot's next run:
