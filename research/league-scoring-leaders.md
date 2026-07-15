@@ -21,6 +21,19 @@ Stafford 26.0 · Allen 25.9 · Maye 24.3 · Lawrence 23.3 · Prescott 22.0 · C.
 This is why waiting on QB is genuinely costlier here than in a standard 4-pt-pass league — but
 replacement level still governs *when* to draft one (see `draft-tendencies.md` Finding 1/5).
 
+### Full 2025 QB spread [S] — the "cost of waiting," quantified (added 2026-07-15, Lane A)
+Same scoring, reg season, games ≥ 8 (per-game; low-games QBs noisy):
+QB1 Stafford 26.0 · QB2 Allen 25.9 · QB3 Maye 24.3 · QB4 Purdy 24.2 (9g) · QB5 Mahomes 23.5 (14g) ·
+QB6 Lawrence 23.3 · QB7 Prescott 22.0 · QB8 Hurts 21.9 · QB9 Caleb Williams 21.8 · QB10 Goff 21.5 ·
+QB11 Herbert 21.2 · QB12 Burrow 21.1 (8g) · QB13 Bo Nix 20.9 · QB14 D.Jones 20.3 · QB15 Lamar 19.8 (13g) ·
+QB16 Brissett 19.5 · QB17 Dart 19.4 · QB18 Mayfield 19.1.
+**Nuance that refines the "waiting is costlier" line above:** the edge is concentrated in the **top ~3**
+(Stafford/Allen/Maye ~24-26; Allen *undercounted* — the +2/40-yd bonus we can't compute helps rushing QBs most).
+The gap from **QB6 (23.3) to QB18 (19.1) is only ~4.2 ppg across twelve QBs** — a shallow, streamable band.
+So: waiting IS costlier than a 4-pt league *only if you skip the elite tier*; the QB7-18 pack is tight enough that
+the ~pick-95-110 streamer names (Caleb Williams QB9, Bo Nix QB13) capture most of the value. Take a top-3 QB only if
+one falls to a slot you'd actually spend; otherwise wait and stream. Don't spend picks 17/24 on a passer.
+
 ## Top 15 RBs — 2025 PPG (our scoring)
 
 | Rk | RB | PPG | Total | G |

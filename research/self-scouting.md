@@ -98,7 +98,35 @@ Sourced this run (see `newsletters/2026-07-14.md` for the per-player receipts + 
 - Walker: value + Kubiak scheme catalyst. Davante: new-team/Stafford reboot. Mahomes: active fade
   narrative. Bigsby: cheap telegraphed lottery ticket. Kraft: "next breakout TE" (was hitting, Wk9 ACL).
   Sutton: safe WR3 floor capped by age/young WRs.
-- **Backlog (slow burn, a few picks/run):** next do his 2024 board, then the league's biggest hits/busts.
+- **Backlog (slow burn, a few picks/run):** ~~next do his 2024 board~~ **2024 DONE 2026-07-15 (below)**, then the league's biggest hits/busts (other managers).
+
+### LENS LANGUAGE REFINED 2026-07-15 — "manufactured discount" → "buys AGAINST the prevailing negative narrative"
+The 2024 reconstruction (below) showed the winning trait is NOT "buys cheap" — Achane (R2) and Nico (R3) were
+*expensive* picks. What unifies his hits (Achane, Nico, Mahomes, Davante-25, Walker-25) is that the market was
+actively **talking the player DOWN** (bust lists, "Case Against" segments, age/regression fear) and he bought
+*through the fear* off an identifiable catalyst. Reword the decision rule: **press when a player has a live negative
+narrative + a concrete catalyst; fade when he'd be paying the consensus ceiling with no such narrative to buy against
+(the BTJ-2025 −142 replaying).** Price can be high — it's the *narrative*, not the cost, that flags his wheelhouse.
+
+### 2024 draft-time media-narrative retrospective [B/C narrative · S/A outcome] — done 2026-07-15
+Reconstructed Aug-2024 narratives (per-pick sources in `newsletters/2026-07-15.md`). **The winning half of the lens
+replicates emphatically; 2024 contains NO "paid-for-hype" bust at all** — a cleaner, more discipline-consistent draft
+than 2025, which reframes BTJ-2025 as the *deviation* from an established instinct, not the baseline.
+- **Mahomes R5 (+109.9, his #2 pick ever [S]):** cleanest wheelhouse pick. Media literally ran "buying low on Mahomes"
+  off a down-2023 + QB6 tier; catalyst = Worthy/Marquise Brown. Textbook buy-against-the-narrative + catalyst.
+- **Achane R2 p18 → league-winner:** THE receipt against the "second-year bust" myth. He was polarizing — Fantasy
+  Footballers "Case AGAINST," Bleacher Report "bust candidate to avoid," efficiency-regression + frame fears. A
+  *narrative* discount (not a price one). Bought through the fear → league-winner. Cite this whenever the bot is
+  tempted to tag a young player as a bust by age.
+- **Nico Collins R3 → HIT:** drafted behind Olave/Adams/London on an ascending Stroud offense — same shape, one round later.
+- **Jonathon Brooks R10 → BUST but ON-PROCESS:** his profile was literally "Buy the Injury Discount on the Panthers RB"
+  — a discount+catalyst pick undone by a RE-TORN ACL (variance), the OPPOSITE failure mode from BTJ. Not a discipline lapse.
+- **Bucky Irving R14 → league-winner but a VARIANCE win:** no price to discount (6th RB off board, "won't challenge
+  Rachaad White"). Process-adjacent, not a lens confirmation — do NOT let the outcome halo it.
+- **Caveats:** the *losing* pattern is inferred by its ABSENCE in 2024 (no counterexample); n≈2 drafts, directional.
+- **2026-07-15 live validation:** his "Kenneth Walker → Chiefs, heavy usage" take checked out (Walker signed KC, is the
+  lead back) — another buy-the-situation read that landed. Caveat logged: the market already priced it (early-2nd ADP),
+  and *paying the ceiling on a validated read* is still his leak. Being right about a player ≠ a green light to overpay.
 
 ## How to use this
 

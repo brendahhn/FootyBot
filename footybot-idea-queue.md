@@ -23,7 +23,10 @@
   based"). Slow-burn nightly backlog: reconstruct the draft-time media story for picks in
   `draft_history_enriched.csv`, starting with 2025, then 2024; prioritize Brendan's picks and
   the biggest hits/busts from `pipeline/draft_outcomes.py`. A few per night. **Status: exploring —
-  2025 STARTED 2026-07-14** (Brendan's own 8 most-instructive 2025 picks done: BTJ/Jeanty/Walker/
+  2025 done 2026-07-14; 2024 DONE 2026-07-15** (2024: Mahomes/Achane/Nico/Brooks/Bucky → confirmed the
+  winning half of the lens, NO paid-for-hype bust in 2024, refined language to "buys against the prevailing
+  negative narrative" → self-scouting.md + newsletters/2026-07-15.md. **NEXT: the league's biggest hits/busts,
+  OTHER managers.**) (2025: BTJ/Jeanty/Walker/
   Davante/Mahomes/Bigsby/Kraft/Sutton → `self-scouting.md` retrospective + `newsletters/2026-07-14.md`,
   and it produced the "manufactured-discount vs paid-up-hype" lens). NEXT: his 2024 board, then the
   league's biggest hits/busts (other managers).
@@ -151,9 +154,10 @@ post-injury trap (RETIRED) · ✔ CeeDee vs Pickens (RESOLVED) · ✔ Tee Higgin
 ✔ Bucky Irving "Coen merchant" (REFUTED, 7/9) · ✔ James Conner "cool opportunity vs Jeanty" (REFUTED,
 7/12 — Love drafted 3rd overall, Conner cratered ~177) · ✔ Drake London "is this the year / real QB
 now" (HALF-RIGHT, 7/14 — role+coaching real upgrades, but QB is an open Penix-ACL/Tua competition,
-not settled; McDaniel-merchant frame wrong, he's in LAC). STILL UNCHECKED for future editions:
-Kenneth Walker "loves him, heavy usage" · Justin Jefferson "Kyler fan / bad QBs" (now partly answered
-by Murray→MIN) · MHJ / Xavier Worthy reads.
+not settled; McDaniel-merchant frame wrong, he's in LAC). · ✔ Kenneth Walker "loves him, Chiefs, heavy
+usage" (RIGHT & ahead of us, 7/15 — Walker signed KC as the lead back; only caveat is price/early-2nd ADP).
+STILL UNCHECKED for future editions: Justin Jefferson "Kyler fan / bad QBs" (partly answered by Murray→MIN) ·
+MHJ / Xavier Worthy reads.
 
 **STATUS: exploring.** Two explicit research asks from this dump were answered same-session
 (2026-07-01) via WebSearch, not left for the bot's next run:

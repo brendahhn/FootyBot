@@ -36,7 +36,7 @@ runners barely move — this reshuffles the board toward RB.
 | Omarion Hampton | RB | w/ Mike McDaniel scheme (per notes) | ~45 | 270 | ~250 | ▲ |
 | Amon-Ra St. Brown | WR | Lions, pure reception volume | 140-175 | 320 | **~235-250** | ▼▼ biggest faller |
 | CeeDee Lamb | WR | Cowboys, Dak health is the real risk (not Pickens) | ~95 | 280 | ~232 | ▼ |
-| Kenneth Walker | RB | Seahawks, explosive + Mahomes-return upside | ~35 | 240 | ~225 | ● |
+| Kenneth Walker | RB | **CHIEFS (signed 3yr/$43.05M FA — CORRECTED 2026-07-15, not Seahawks)**, lead back, Mahomes pass-funnel | ~40 | 240 | ~225 | ● (role up, price up) |
 | Justin Jefferson | WR | Vikings, Kyler? (per notes) + deep bonuses | ~95 | 290 | ~248 | ▼ |
 | Jeremiah Love | RB | rookie (Spec), Cardinals landing per notes | ~40 | 265 | ~245 | Spec |
 | Nico Collins | WR | Texans (+Montgomery now), deep bonuses, health flags | ~75 | 275 | ~245 | ▼ |
@@ -133,7 +133,7 @@ do not treat any of these as Sleeper/consensus; they are one real datapoint each
 | Trey McBride | TE ARI | ~22 (TE1) | B | modest FADE off 2025 counting stats (169 tgt won't repeat, ARI volume regresses) — still TE1 |
 | Josh Jacobs | RB GB | ~23 | B | legal tail-risk unresolved (DA reviewing) |
 | Brock Bowers | TE LV | ~24 (TE2) | B | **VALUE at pick 24** — elite young TE |
-| Kenneth Walker III | RB SEA | ~19-26 (thin) | B | |
+| Kenneth Walker III | RB **KC** | ~early-2nd, rising | B | **TEAM CORRECTED 2026-07-15: Chiefs, not Seahawks.** Clear lead back (Pacheco/Hunt gone); 15-18 carries + GL + pass role. Market bid up to early-2nd = analysts call it steep (efficiency-not-volume back in a Mahomes pass-funnel). High-end RB2. |
 | Breece Hall | RB NYJ | ~28 | B | |
 | Kyren Williams | RB LAR | ~29 | B | soft — TD-dependent, committee risk, weak ½-PPR floor |
 | Rashee Rice | WR KC | ~30, falling | B | if he keeps sliding = BUY (cleared, WR5-PPG over 8 gms) |
@@ -283,3 +283,70 @@ TEN ~142→155 (**IR-bound, fading**) · Alvin Kamara RB NO ~152 (aging/faller) 
 - Atlanta QB 2026 = open Penix(ACL)/Tua competition (NOT Cousins — stale; NOT settled). London extended 4yr/$141M.
 - Waddle DEN ADP ~39-53 (resolved). Tank Bigsby is a Philadelphia Eagle (Saquon handcuff), not a Jaguar.
 - Rashid Shaheed is on Seattle (our JSN note already had this — confirmed correct).
+
+## 2026-07-15 UPDATE (SCHEDULED RUN) — Walker→KC correction, QB-wait math [S], pick-4 tree, ADP reconciles
+`times_covered +1`, `last_covered: 2026-07-15` for every player named in this section.
+
+### ⚠️ BOARD CORRECTION — Kenneth Walker III is a KANSAS CITY CHIEF [A, 6 sources]
+Signed **3yr/$43.05M** with KC in March FA (Super Bowl LX MVP for SEA in 2025). Our board had him as a
+Seahawk in a committee — DEAD. In KC he is the **clear lead back**: Pacheco (FA) + Hunt gone; KC added
+only 3rd-down Demercado + 5th-rd rookie Emmett Johnson. Projected **15-18 carries + goal-line + expanded
+pass role** (his words: "used more in the pass game"). 2025 **10.38 PPG [S]** was Seattle-committee-capped;
+KC role removes the cap. **PRICE CAVEAT:** ADP bid up to **early-2nd** = PFN/SI call it steep — efficiency-
+not-volume back (career 4.6 YPC) in a Mahomes pass-funnel = **high-end RB2 / low-end RB1, not a workhorse.**
+Press only in the RB2 range (~pick 24); don't pay the early-2nd ceiling. *(ESPN, NFL.com, Yahoo, Spotrac, PFN, SI.)*
+- **Isiah Pacheco (KC ~69, from 07-12) is STALE** — he's a free agent now, undraftable until he lands a role.
+- **Zach Charbonnet (SEA):** torn ACL (Feb surgery), out into the 2nd half; SEA backfield now a rookie
+  (Jadarian Price)/Wilson/Holani committee. Charbonnet's ~96 is a deep dart at best.
+
+### QB-WAIT MATH [S] — full 2025 QB ranking in his exact scoring (Lane A, new)
+6pt pass TD, 25yd/pt, −2 INT, rush; reg season, g≥8. The spread, not the top, is the point:
+QB1 Stafford 26.0 · QB2 Allen 25.9 · QB3 Maye 24.3 · QB6 Lawrence 23.3 · QB8 Hurts 21.9 · **QB9 Caleb
+Williams 21.8** · QB10 Goff 21.5 · QB11 Herbert 21.2 · QB12 Burrow 21.1(8g) · **QB13 Bo Nix 20.9** · QB18
+Mayfield 19.1. **Gap QB6→QB18 = ~4.2 ppg across 12 QBs.** Edge is concentrated in the **top ~3** (Allen
+undercounted — 40yd bonus uncomputed helps rushing QBs). Our streamer names (Caleb ~98, Bo Nix ~107) already
+scored QB1-adjacent. **VERDICT: wait & stream the ~pick-95-110 QB tier unless a top-3 QB falls to a spot you'd
+spend. Don't burn 17/24 on a passer.** (2025 actuals ≠ 2026 projections; low-games QBs noisy.) Reconciles the
+`league-scoring-leaders.md` "waiting is costlier" note: true only for the elite top-3, not QB7-18.
+
+### PICK-4 DECISION TREE (countdown content, 44 days out) [A/reasoning]
+1-2 = Gibbs/Bijan coin flip (both RBs). Pick 3 is the swing: national ADP says **Chase WR1 goes ~3rd**, but our
+room's RB-lean + only-Jack-is-WR-first means **Chase slides to 4 more often than national ADP.**
+- **Chase gone → take Jonathan Taylor** (pure workhorse, zero rec-haircut, +2 breakaways, RB scarcity).
+- **Chase falls → take Chase** (top-3 talent at 4; the one WR that beats the haircut). The single spot to bend the RB tilt.
+- **Both gone (double-RB run + WR-first steal) → De'Von Achane (~13)** over volatile Jeanty.
+Preference order **JT ≥ Chase**; the room decides.
+
+### A.J. Brown ADP RECONCILED [A/B]
+Board carried both "No. 16" (07-14) and "~32" (table) — contradiction. Truth between: **~pick 22-28, WR8-13,
+rising** (Underdog WR8 ~22.5; FantasyPros WR13 ~R3). "No. 16" was WR-rank/overall ambiguity. **USE ~25 (range 22-32).**
+
+### RISERS / FALLERS + NEW deep names (Lane C, this run) [B unless noted]
+- 📈 **Quentin Johnston (LAC WR) → ~78 / WR37 [A]** (+36 DK since May, McDaniel YAC scheme) · Aaron Rodgers
+  (PIT QB) up ~2 rounds (fits QB-wait thesis) · Rachaad White (TB) up a round → ~109 (Bucky still TB lead) ·
+  Jonathon Brooks (CAR) = reported **lead back**, craters Hubbard.
+- 📉 Conner ~177 (−10, confirms) [A] · Kamara ~152 (−5) [A] · Aiyuk plummeting on ACL (relative only, no abs #) ·
+  **Jeanty volatile ~10 (ESPN)–22 (Yates)** off a 14.3-PPG rookie yr — a RANGE, not a point.
+- NEW toward ~180: **Adonai Mitchell (NYJ WR) ~176/WR71** (Jets buzz — cleanest new ~180 dart) · **Greg Dulcich
+  (MIA TE) ~185-194 [A consensus]** (best late-TE value, open MIA tree) · Tyler Shough (NO QB) ~QB19 (wait-QB fit) ·
+  Chig Okonkwo (TEN TE) ~146 · Ryan Flournoy (DAL WR3) ~168 · **Jordan James (SF RB) — premium CMC handcuff** (CMC 30, led NFL in carries).
+- KILLED: "Alec Downs" = garbled Josh Downs/Alec Pierce snippet — NOT a real name, disregard.
+
+### NEWS added 2026-07-15 [do NOT re-lead unless it MOVES]
+- **Malik Nabers (NYG, Yr3):** HC Harbaugh "on schedule… better every day," should practice as camp opens; still
+  opens PUP but beat floats **~Week 3 debut on a pitch count** (vs prior "Oct debut"). [A quote] — floor firms marginally; still a WR2-with-a-blank-start.
+- **Stefon Diggs (FA WR):** Fowler — "5+ teams checking in," unsigned 2 wks pre-camp [B]. Watch-the-signing trigger;
+  a WR-thin landing compresses an incumbent's targets. Not actionable at 4.
+- Montgomery (HOU) "three-down back" coach color [B, freshness unconfirmed] — props RB2 floor, directional only.
+- IDP: blank 24-48h window. Micah Parsons (GB edge) opens PUP, ~Wk5 (old news) — don't start him early; stream the slot.
+
+### TAKE CHECKED 2026-07-15 [do NOT re-litigate without NEW evidence]
+- **"Kenneth Walker — polarizing, loves him, Chiefs had zero run game, could see heavy usage" → RIGHT, and ahead
+  of us [A].** He IS a Chief (KC's 2025 run game WAS broken — Pacheco knee); he IS the clear lead back (15-18
+  carries + GL + pass role). Called the landing AND the why. **Only caveat = PRICE:** market bid him to early-2nd,
+  analysts call it steep (efficiency-not-volume in a Mahomes pass-funnel = high-end RB2). Right on thesis; watch the price.
+
+### SETTLED FACTS added 2026-07-15
+- Kenneth Walker III = **Kansas City Chief** (3yr/$43.05M FA), clear lead back. Pacheco = FA (gone from KC).
+  Charbonnet (SEA) torn ACL, out into 2nd half. Do not re-litigate the team.
+- A.J. Brown redraft ADP ~25 (22-32, WR8-13, rising) — the "16 vs 32" contradiction is resolved.

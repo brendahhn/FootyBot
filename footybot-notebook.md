@@ -32,6 +32,15 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 ## VERIFICATION LOG
 
+- **2026-07-15 (SCHEDULED RUN) — pushed to harness branch `claude/gracious-darwin-8ryyjz` per BRANCH RULE.**
+  At run start local branch `claude/gracious-darwin-8ryyjz` == `origin/main` == `2665625` → FRESH read confirmed.
+  Harness assigned working branch **`claude/gracious-darwin-8ryyjz`** (per BRANCH RULE — did NOT fork/improvise; note
+  the remote branch did not yet exist, so pushed with `-u` to create it). Commit touches `newsletters/**` + research/
+  notebook/idea-queue and does NOT touch `footybot-operating-prompt.md`, so the auto-merge Action's guard should pass
+  and FF `main`. Pushed with `git push -u origin claude/gracious-darwin-8ryyjz`, verified with
+  `git ls-remote origin claude/gracious-darwin-8ryyjz` = branch HEAD (exact hash in this run's push notification +
+  STEP 9 output). IF `main` has NOT advanced by next run, a manual `git merge --ff-only` into `main` is needed.
+  Brain repo pushed separately (see CHANGELOG brain-sync line).
 - **2026-07-14 (WEEKLY SCHEDULED RUN) — memory loop HELD (3rd fresh-read run); pushed to harness branch per BRANCH RULE.**
   At run start local branch `claude/busy-knuth-cqbu6n` == `origin/main` == `03c8dc3` (the 07-12 edition) —
   FRESH read confirmed (auto-merge Action + Brain PR kept the loop). This is the weekly Monday run
@@ -262,6 +271,45 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-07-15 (SCHEDULED RUN) — Newsletter 2026-07-15; Walker→KC board correction (caught via take-check) + QB-wait math [S] + pick-4 tree + 2024 media retro
+Fresh read (branch == origin/main == 2665625 at start). 44 days to draft. **Lane A run by orchestrator vs the
+pipeline; Lanes B/C/D as 3 parallel subagents + reviewer (all 4 lanes ran, none skipped).** Compete mode did NOT
+fire. Newsletter: `newsletters/2026-07-15.md`.
+- **Headline / Lane C (winning lane): the pick-4 decision tree.** JT ≥ Chase; national ADP says Chase goes ~3rd but
+  our RB-lean room slides him to 4 more often → if Chase gone take JT (zero rec-haircut workhorse), if Chase falls
+  take Chase (only WR that beats the haircut), wildcard Achane. The countdown deliverable, 44 days out.
+- **Biggest catch / reviewer verification: KENNETH WALKER IS A KANSAS CITY CHIEF, not a Seahawk [A, 6 sources].**
+  The run's own lane briefs AND `player-board.md` had him stale as a Seahawk; grounding the Walker take-check (KNOW-
+  CURRENT-REALITY discipline) surfaced the March FA signing (3yr/$43.05M). Corrected both board rows + Pacheco (now FA).
+  This ALSO validated Brendan's 2026-07-01 take ("Chiefs, heavy usage") — he was ahead of us. Caveat logged: market
+  already priced it to early-2nd (analysts call steep; Mahomes pass-funnel = high-end RB2, not workhorse).
+- **Lane A / Data [S]:** full 2025 QB spread in his exact scoring. QB6→QB18 = only ~4.2 ppg across 12 QBs; edge is in
+  the top ~3. Our streamer names (Caleb Williams QB9 21.8, Bo Nix QB13 20.9) already QB1-adjacent → wait & stream QB
+  unless a top-3 falls. Written into `league-scoring-leaders.md` (reconciles the old "waiting is costlier" line).
+- **Deep dive / Lane D:** queued media-narrative retro on Brendan's **2024 draft** (backlog: 2024 now DONE). Winning
+  half of the lens replicates emphatically (Mahomes R5 = cleanest wheelhouse; Achane R2 = the receipt vs the "2nd-year
+  bust" myth — polarizing/"Case Against"/BR "bust to avoid" → league-winner); NO paid-for-hype bust in 2024 (Brooks
+  R10 = on-process injury-discount pick killed by a re-torn ACL, opposite of BTJ). Reframes BTJ-2025 as the deviation.
+  **Refined the lens language: "manufactured discount" → "buys AGAINST the prevailing negative narrative"** (Achane/Nico
+  were expensive — it's the narrative, not the price). Written into `self-scouting.md`.
+- **Lane C / Market:** AJB ADP reconciled (board had both "16" and "32" → ~25, range 22-32, WR8-13, rising). Risers:
+  Q.Johnston ~78/WR37 [A], Rodgers up ~2 rds, R.White ~109, Brooks lead back (craters Hubbard). Fallers: Conner ~177,
+  Kamara ~152, Aiyuk (relative only). Jeanty volatile ~10-22. New ~180 darts: Adonai Mitchell ~176, Greg Dulcich
+  ~185-194 [A], Shough, Okonkwo ~146, Flournoy ~168, Jordan James (CMC handcuff). Killed garbled "Alec Downs."
+- **Lane B / News:** genuinely quiet pre-camp lull (first reports ~Jul 22). Nabers tone up (Harbaugh "on schedule,"
+  ~Wk3 debut floated — still PUP start); Diggs 5-team interest (watch); Montgomery "three-down" color (freshness
+  unconfirmed → held B); IDP blank (Parsons PUP, old). Killed: no fresh Rice/Jacobs/Mahomes movement.
+- **Checking your takes:** Kenneth Walker → **RIGHT, and ahead of us** (see catch above); only caveat is price.
+- **Reviewer:** caught the stale Walker board fact (the headline correction); reconciled the AJB "16 vs 32"
+  contradiction rather than leave both; held QB finding as 2025-actuals-not-projections + noisy low-games QBs; did NOT
+  overstate Nabers (still PUP) or Montgomery color (freshness). Killed garbled "Alec Downs."
+- **Pipeline note (AUDIT_QUEUE, unchanged bug):** `predictive_stats.py` again OVERWROTE `predictive-stats.md` (−74 ln);
+  caught it, restored via `git checkout` after confirming base correlations byte-identical (74 del / 0 add). Still needs
+  the sentinel-marker fix in a reviewed session.
+- **brain-sync:** READ done (only FF-relevant CONFIRMED_RULE = Gmail-drafts-only, obeyed; no open FF queue tasks/
+  answered questions). WRITE done (block appended to brendan_brain `queue/inbox/from-footybot.md`, pushed separately —
+  see VERIFICATION LOG / brain-sync line).
 
 ### 2026-07-14 (WEEKLY RUN) — Newsletter 2026-07-14; self-scouting "discount vs hype" lens + 2025 media-narrative retrospective; Waddle re-priced; Falcons QB + coach-tendencies cleanup
 Weekly Monday run (first since 07-12). Fresh read (branch == origin/main == 03c8dc3). 45 days to draft.
