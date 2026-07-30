@@ -484,7 +484,179 @@ soften the conclusion that the shipped headline was backwards.
 
 ---
 
-## 6. Fix list, in priority order
+## 6. Stress test of `Operating_System_V11_Corrected.xlsx` (2026-07-30)
+
+Diffed against the original V11. Three sheets changed — `PRINCIPLES` (rows 42-43),
+`NEW THREAD HANDOFF` (7 rows), `LEAGUE + ROOM` (10 seat rows rewritten, 4 validation rows
+appended). Thirteen sheets byte-identical.
+
+### Verification: every factual claim checks out
+
+I re-derived all 41 numeric claims in the rewritten sheets from
+`draft_history_master.csv` / `draft_history_enriched.csv`:
+
+| Claim class | Result |
+|---|---|
+| 10 seat rows × (RB R1-5, WR R1-5, own-first-QB mean, own-first-QB earliest) | **40/40 exact** |
+| "lucas: zero rookie picks in R1-8" | **Confirmed** (0; next-lowest manager is 2) |
+| P41: "median pick 29, 22-41 range" | Confirmed |
+| P41: "Jack and Nate each selected the room's first QB twice" | Confirmed |
+
+Not one number is wrong. That is a materially better standard of evidence than the document it
+replaces.
+
+**Four judgment calls I'd single out as correct:**
+
+1. **`TOP 150` was left untouched** — Josh Allen still sits at board rank 64 against market 29.
+   This is right. The error was never the rank; it was using the rank as a market price. Fixing
+   the symptom by promoting Allen would have destroyed Principle 1. Resisting that took
+   discipline.
+2. **Draft order was marginalized, not guessed.** The handoff now says Brendan is confirmed at
+   seat 4, two sources conflict on the other nine, treat seat-specific outputs as provisional.
+   Choosing "unresolved" over a plausible-looking fabrication is the correct call.
+3. **P42 confidence downgraded High → Medium.** Appropriate: its content now depends on 2026
+   market prices that will move before August 28.
+4. **A general rule was added, not just a patch:** *"Brendan's ranking governs Brendan's choices
+   only and never sets opponent prices or room availability."* That closes the class of error,
+   not just the instance.
+
+### N1 — The min-vs-mean lesson was applied to QB only. TE has the same error, and it is worse.
+
+No TE timing principle exists, before or after the correction. Same computation:
+
+| | Per-manager mean | Draft minimum | Gap |
+|---|---:|---:|---:|
+| First QB | 67.4 (Round 7) | median 29 | 38 picks — **fixed** |
+| **First TE** | **66.8 (Round 7)** | **median 14** (range 8-30) | **53 picks — not fixed** |
+
+Both positions average Round 7 per manager. The draft's first QB goes at 29; the draft's first TE
+goes at **14**. The TE gap is larger than the QB gap that caused this whole review, and the V1
+model's first-TE estimate (median 18 vs actual 14) was never corrected because no floor was
+involved — nothing flagged it.
+
+This is directly actionable: Bowers is a live 2.07 consideration and McBride a live 3.04
+consideration, and the model has been telling Brendan the elite TE window opens later than it
+does. **The fix was applied to the instance, not to the class.** Every principle stating a
+positional timing should be audited for the same conflation.
+
+### N2 — P42's waitability claims are too optimistic, and the fault is mine
+
+P42 cites my corrected model. Stress-testing my own numbers against the history shows the
+corrected model gets QB1 timing right and **understates QB volume below QB1**:
+
+| QBs gone by | My corrected model | Actual, all 7 yrs | Actual, last 3 yrs |
+|---|---:|---:|---:|
+| Pick 44 | 1.09 | 2.43 | **3.67** |
+| Pick 57 | 2.22 | 3.86 | **5.67** |
+
+And there is a strong trend the model has no way to see — the room takes QBs progressively
+earlier:
+
+| QBs gone by | 2019-22 | 2023-25 |
+|---|---:|---:|
+| Pick 37 | 1.25 | **2.67** |
+| Pick 44 | 1.50 | **3.67** |
+| Pick 57 | 2.50 | **5.67** |
+
+Mapping the recent-3-year run rate onto the 2026 market QB order (Allen 29, Lamar 53, Maye 61,
+Burrow 63, Daniels 65, Caleb 68, Hurts 72, Herbert 79):
+
+| Turn | My model said | Recent history implies |
+|---|---|---|
+| 3.04 (24) | Allen 74% | ~0.3 QBs gone → **Allen. Both agree.** |
+| 4.07 (37) | Lamar 99% | ~2.7 gone → best left ≈ **Burrow (QB4)** |
+| 5.04 (44) | Lamar 90% | ~3.7 gone → best left ≈ **Daniels (QB5)** |
+| 6.07 (57) | Maye/Burrow/Daniels 81-89% | ~5.7 gone → best left ≈ **Hurts (QB7)** |
+
+**Honest caveat in the other direction:** 2026's market has an unusual 24-pick gap between Allen
+(29) and Lamar (53). In years where QB1 and QB2 are priced close, runs propagate faster. That gap
+is a real reason to expect a slower run than 2023-25, so the history is not simply right and the
+model simply wrong — the truth is likely between them.
+
+What survives both estimators: **Allen is a pick-24 decision.** Everything below Allen is
+contested, and the disagreement points one way — **wait less than the model says.** P42's three
+cliff points should be stated as ranges spanning both estimators, not as point claims, and the
+principle should carry an explicit "re-run against fresh ADP before August 28" trigger.
+
+### N3 — Principle 53 now contradicts the rest of the workbook
+
+Unchanged, still at **High** confidence:
+
+> *P53 — Room-specific availability outranks generic mock assumptions: Direct statements by Jack
+> and Mattias materially alter the 1.04/2.07 return map.*
+
+But `NEW THREAD HANDOFF` now says that intel should "apply only when seat order is resolved or in
+sensitivity analysis," and `LEAGUE + ROOM` row 29 says seat-specific outputs are provisional.
+Jack's and Mattias's intel operates entirely through their seats — and their seats are exactly
+what is unresolved. Two sheets in one workbook now give opposite instructions about the same
+intel, and the stale one carries the higher confidence label.
+
+### N4 — The correction violated the workbook's own append-only rule
+
+`NEW THREAD HANDOFF` row 3: *"RULE: Never overwrite. Append evidence, old rank, new rank/range,
+reason and confidence."* Principle 4: *"Preserve contradiction instead of overwriting — record
+why the current conclusion changed."*
+
+Principle 41's old text was **overwritten in place**. `MOVEMENT LOG` holds 21 entries, all
+player-rank moves, and **zero** principle-level corrections. A reader of the corrected workbook
+cannot tell that P41 ever said "Round 7," or why it changed, or that it was wrong.
+
+This matters beyond bookkeeping. The claim originated somewhere in the 163 archived source files.
+If it resurfaces from that archive, nothing in the workbook records that it has already been
+refuted against seven years of data — and it will be re-adopted exactly as it was the first time.
+**The correction removed the error but not its ability to come back.** A MOVEMENT LOG entry —
+old text, new text, reason, evidence, date — is the fix, and the workbook's own rules already
+required it.
+
+### N5 — `LEAGUE + ROOM` still presents the disputed seat order as fact
+
+The Seat column still reads 1 Connor, 2 Dylan, 3 Lucas … 10 Nate, in a clean authoritative table.
+The caveat lives 16 rows below in a validation row. Anyone — human or model — scanning that table
+takes the seat assignment as given and never reaches row 29. Blank the seat numbers, or mark each
+`UNCONFIRMED`. A caveat that is not adjacent to the claim does not travel with it, which is
+precisely how "Round 7" propagated from a principle into a hard-coded model parameter.
+
+### N6 — The Allen tension is now stated but not resolved
+
+The workbook says Allen is "approximately a Pick 24 decision." `TOP 150` still ranks him **64th**
+on Brendan's board. Both are now correct and they point opposite ways: taking Allen at 24 is a
+40-slot reach *by Brendan's own board*.
+
+Leaving the rank alone was right. But the workbook now holds an availability fact and a value
+judgment in direct tension with nothing reconciling them, and **availability was never the
+interesting question** — Brendan can only "lose" Allen if Allen was worth taking. That analysis
+does not exist anywhere in the stack. The ingredients do:
+
+- P40 already says 6-point passing TDs boost pocket passers.
+- `research/positional-value.md` (pipeline-computed, this league's exact formula) puts **QB1 at
+  26.0 PPG vs RB1 21.5 and WR1 19.4**, with QB12 (21.1) ≈ RB1.
+- Raw PPG is not value-over-replacement — with ten starting QBs in a 10-team league, replacement
+  level is high and QB VOR is compressed. That cuts the other way.
+
+Nobody has done the VOR pass. Until someone does, "Allen is a pick-24 decision" tells Brendan
+when he must choose, not what to choose. **That is now the highest-value open analysis in the
+project**, and it is a half-day of work against data already committed.
+
+### N7 — P41 states a bare observed range at High confidence
+
+"Median pick 29, 22-41 range" carries no uncertainty qualifier. With n=7, the posterior
+predictive band for next season is **11-46** (§5, A2). The observed range is not the predictive
+range, and next season can land outside it. Since the author raised the small-sample concern
+itself, the principle should carry the predictive band. The High confidence label is defensible
+for the *direction* (first QB is a room minimum, lands round 3-5); it overstates precision on the
+*bounds*.
+
+### Verdict
+
+The corrections are substantively right, numerically clean, and the class-level rule they added
+is better than the patch I asked for. The remaining issues are one unfixed instance of the same
+error class (TE), one over-optimistic set of numbers inherited from me (QB volume below QB1), two
+internal inconsistencies (P53, seat table), one missing audit trail, and one open analysis that
+the correction newly exposes rather than creates. None of them re-break the QB fix.
+
+---
+
+## 7. Fix list, in priority order
 
 1. **Delete the QB floor.** Price QBs off the same market blend as every other position. This one
    change moves the first-QB median from 59 to 29 and brings the model into agreement with seven
@@ -511,14 +683,22 @@ soften the conclusion that the shipped headline was backwards.
    board to 220-250. Then re-derive late-round availability; pick 157 is already coverable.
 7. **Re-run sensitivity over the assumptions, not just the parameters.** Every hand-set rule
    should get the treatment volatility got — including any replacement for the QB rule.
-8. **Widen the volatility formula** or re-fit it so nominal 80% bands actually cover ~80% of
+8. **Audit every positional-timing claim for the same min-vs-mean conflation** — TE is the
+   live one (per-manager mean 66.8 vs draft minimum 14, a 53-pick gap, no principle covering it).
+9. **Restate P42's cliffs as ranges** spanning the market model and the recent-3-year run rate,
+   with a re-run-against-fresh-ADP trigger before Aug 28.
+10. **Log principle-level corrections in `MOVEMENT LOG`** (old text, new text, reason, evidence,
+   date) so a refuted claim cannot be silently re-adopted from the source archive.
+11. **Run the QB value-over-replacement pass** under this league's 6pt-passing-TD scoring. This
+   is now the highest-value open analysis: availability is solved, value is not.
+12. **Widen the volatility formula** or re-fit it so nominal 80% bands actually cover ~80% of
    observed seasons. Backtest against the 7 committed drafts: for each season, check whether the
    actual first-QB / first-TE / positional-run picks land inside the predicted band. That
    backtest is now cheap and is the validation this model never had.
 
 ---
 
-## 7. The transferable lesson
+## 8. The transferable lesson
 
 The failure mode here is not bad math — the math is clean and reproducible. It is that a
 **hand-set assumption was tuned to produce a target output, and then the output was cited as
