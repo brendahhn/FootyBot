@@ -115,21 +115,31 @@ blend everyone else uses. Nothing else changed. No fitting to league history.
 | First QB, **median** | **59** | **29** | **29** |
 | First QB, 90th pct | 64 | **38** | 41 |
 
-The corrected model lands on the league's seven-year median exactly, out of sample. That is the
-strongest evidence available that the market blend was right all along and the floor was the
-only thing breaking it.
+The corrected model is built from 2026 market prices and was never fitted to the league history,
+so its agreement with the seven-year median is **an independent external consistency check, not
+an out-of-sample validation** — the drafts span 2019-2025 and a different player pool, so this is
+two independent estimators landing on the same value, not a train/test split. That is strong
+evidence the market blend was sound and the floor was the only thing breaking it. It is *not*
+evidence that any individual player's availability number is calibrated. (See §5, amendment A1.)
 
 ### The decision this actually inverts
 
-P(the draft's first QB is still on the board at each of Brendan's turns):
+Three related but **distinct** quantities, separated (see §5, amendment A3):
 
-| Brendan's turn | Model as shipped (Josh Allen) | **Floor removed** | **League actual** |
-|---|---:|---:|---:|
-| 2.07 (pick 17) | 100.0% | 100.0% | 100% (7/7) |
-| 3.04 (pick 24) | 100.0% | **73.9%** | **71% (5/7)** |
-| 4.07 (pick 37) | 100.0% | **11.6%** | **14% (1/7)** |
-| 5.04 (pick 44) | 99.9% | **1.4%** | **0% (0/7)** |
-| 6.07 (pick 57) | 87.8% | **0.0%** | **0% (0/7)** |
+| Brendan's turn | Shipped: P(Allen avail) | **Corrected: P(no QB taken yet)** | **Corrected: P(Allen avail)** | **Actual: P(no QB taken yet)** |
+|---|---:|---:|---:|---:|
+| 2.07 (pick 17) | 100.0% | 94.9% | 94.9% | 100% (7/7) |
+| 3.04 (pick 24) | 100.0% | **73.9%** | **73.9%** | **71% (5/7)** |
+| 4.07 (pick 37) | 100.0% | **11.6%** | **11.6%** | **14% (1/7)** |
+| 5.04 (pick 44) | 99.9% | **1.4%** | **1.4%** | **0% (0/7)** |
+| 6.07 (pick 57) | 87.8% | **0.0%** | **0.0%** | **0% (0/7)** |
+
+The two corrected columns are identical this year because Josh Allen's market price (28.6) sits
+24 picks clear of the next QB (Lamar, 53.0), so the first QB taken is Allen in essentially every
+simulation. They are still different quantities and must be tracked as separate fields — in a
+year where QB1 and QB2 are close on price they will diverge sharply. Allen is also QB1 on *both*
+Brendan's board (rank 64) and the market (rank 29), so the third possible definition collapses
+into the same player as well. Convenient this year; not guaranteed.
 
 The corrected simulation and seven years of actual drafts agree at every turn. The shipped model
 disagrees with both.
@@ -265,8 +275,11 @@ so this may not be knowable yet — in which case V2 should marginalize over dra
 than assume one.
 
 **H4 — The 150-player board contains zero defensive players, in a league with a mandatory
-starting defensive slot.** Board composition is WR 61 / RB 51 / QB 20 / TE 18 = 150, no IDP, no
-DST, no K. But this league starts one defender every week, and `CONTEXT.md` records it as
+starting defensive slot.** *Scope note: this is a late-round and roster-legality defect. It does
+not contribute to the early-round QB failure — the history shows ~0 non-offensive picks before
+pick 104 (see M1), so picks 4-57 are unaffected. It is a V2 blocker for roster completion,
+replacement-level values and season simulation, not a cause of the headline error.* Board
+composition is WR 61 / RB 51 / QB 20 / TE 18 = 150, no IDP, no DST, no K. But this league starts one defender every week, and `CONTEXT.md` records it as
 confirmed from league screenshots to be a **real 1-IDP flex slot, not a team defense** — while
 Operating System V11's `LEAGUE + ROOM` sheet lists it as `DST`. Two consequences: (a) the model
 has no way to plan a mandatory roster slot, and this repo already holds the relevant research
@@ -319,10 +332,15 @@ tier-survival numbers inherit the omission.
 
 **M5 — "Returns next turn" conditions on a single static draw.** Each player gets one simulated
 draft position; `P(returns) = P(pos ≥ next pick | pos ≥ current pick)`. This treats a player
-surviving to 2.07 as carrying no information about the room's behaviour in *this* draft. In
-reality, a player still on the board 15 picks past his ADP is evidence the room is fading him
-this year, which raises his chance of surviving another turn. The model's return probabilities
-are therefore biased low, and the "now or never" labels fire more often than they should.
+surviving to 2.07 as carrying no information about the room's behaviour in *this* draft, when in
+reality an unexpected fall is informative. **The defect is the missing belief update; the
+direction of the resulting bias is not universal** — a fall can mean a room-wide fade (raises
+future survival), a transient positional run that is about to reverse (lowers it), or earlier
+roster construction shifting later demand (either way), or nothing at all. My earlier claim that
+return probabilities are "biased low" overstated this: the sign is player- and mechanism-specific
+and should be measured against the seven committed drafts, not asserted. What is safe to say is
+that the "now or never" labels are computed from a model that cannot condition on board state,
+so their error bars are wider than presented. (See §5, amendment A4.)
 
 **M6 — Principle 42 is the live strategic risk, and it is downstream of Principle 41.**
 *"Do not force an early QB — take an elite QB only after a material fall; otherwise exploit the
@@ -363,7 +381,110 @@ The problem is not the architecture. It is one parameter, and one upstream princ
 
 ---
 
-## 5. Fix list, in priority order
+## 5. Amendments after author response (2026-07-30)
+
+The V1 author accepted the core findings and raised five objections. **All five are legitimate.**
+Three are conceded outright, one corrects a real analytical sloppiness on my part, and one is
+conceded *and* tested. None change the headline conclusion — and rather than assert that, I
+tested the two objections that are testable.
+
+**A1 — "Out of sample" was too strong. Conceded.** Corrected in §2. The right description is an
+independent external consistency check: 2026 market prices and 2019-2025 draft history are two
+independent estimators that agree on ~29. It is not a train/test split and does not certify
+individual player calibration.
+
+**A2 — Seven seasons is a small sample; manager tendencies need shrinkage. Conceded, and
+tested.** The objection is correct and I under-weighted it. Two tests:
+
+*(i) What does n=7 actually support?* Fitting a posterior predictive to the seven observed
+first-QB picks (flat prior, full parameter uncertainty — not the naive normal):
+
+| | Next-season first QB |
+|---|---|
+| Median | 29 |
+| 80% band | 18-39 |
+| 95% band | **11-46** |
+| P(later than pick 50) | **1.2%** |
+| P(later than pick 53) | **0.7%** |
+
+So the honest small-sample answer is a *wide* band — but its 95% upper bound (pick 46) still
+sits below the shipped model's 10th percentile (53). The model asserted a median of 59, i.e. it
+put >50% on an event the history supports at ~1%. Proper humility about n=7 widens the interval
+substantially and does not rescue the model.
+
+*(ii) Does the min-vs-mean finding survive full shrinkage?* I re-ran it with **zero
+manager-specific information** — pooling all 70 manager-seasons and treating all ten managers as
+identical draws:
+
+| | Value |
+|---|---|
+| Pooled per-manager first-QB pick | mean **67.4**, median **62** |
+| Minimum of 10 identical managers | median **26**, 10-90 band **22-41** |
+| Actually observed first QB | median **29**, range **22-41** |
+
+The simulated band reproduces the observed range essentially exactly, using no per-manager
+estimates whatsoever. **The min-vs-mean conclusion requires no manager-level inference at all**,
+so it is immune to the shrinkage objection. It also shows the error's fingerprint directly: the
+per-manager mean is ~62-67 (Round 7 — precisely where Principle 41 came from, now confirmed
+numerically) while the draft minimum is ~26. **A 36-to-41-pick gap between the mean and the
+minimum.** The model's answer of 59 sits close to the per-manager mean, not the minimum, which is
+the signature of exactly this confusion.
+
+The author's constructive point stands for V2: agents should blend own-history, league-wide
+priors, current ADP, player-specific evidence and recency weighting — not memorise seven drafts.
+Jack's two first-QB grabs at pick 22 are real signal, but 2 of 7 carries a very wide interval and
+should be shrunk toward the league prior.
+
+**A3 — "First QB available" conflated distinct quantities. Conceded; this was a real error on my
+part.** My original table compared P(Josh Allen available) against P(no QB taken yet) as though
+they were one thing. They are three separate fields — P(no QB selected yet), P(market QB1
+available), P(board QB1 available) — and §2 now reports them separately. Computed properly, the
+first two are identical this year (94.9 / 73.9 / 11.6 / 1.4% at picks 17/24/37/44) because Allen
+is 24 picks clear of QB2 on market price, and the third collapses too because Allen is QB1 on
+both boards. So the conclusion is unaffected — but the objection is methodologically correct and
+the fields must stay separate, because in a year with a tight QB1/QB2 they will diverge.
+
+**A4 — M5's bias direction is not universally guaranteed. Conceded.** Corrected in M5. The
+missing belief update is a genuine defect; the sign of its effect is mechanism-dependent and
+should be measured, not declared.
+
+**A5 — IDP matters later, not for picks 4-57. Conceded.** Correct, and my own M1 data supports
+it (~0 non-offensive picks before pick 104). H4 is now explicitly scoped as a late-round and
+roster-legality blocker, not a contributor to the QB failure. My severity label was fine; the
+framing invited the wrong inference.
+
+### Sharpened practical QB guidance
+
+The author's summary — "QB1 gone by 3.04, QB2-QB6 waitable into 44-57" — is directionally right
+but needs splitting. Corrected-model availability at Brendan's turns:
+
+| QB | 2.07 (17) | 3.04 (24) | 4.07 (37) | 5.04 (44) | 6.07 (57) | 7.04 (64) |
+|---|---:|---:|---:|---:|---:|---:|
+| **Josh Allen** | 94.9% | **73.9%** | 11.6% | 1.4% | 0.0% | 0.0% |
+| **Lamar Jackson** | 100% | 100% | 98.9% | **90.1%** | **27.9%** | 5.5% |
+| Drake Maye | 100% | 100% | 100% | 99.7% | **80.6%** | 43.1% |
+| Joe Burrow | 100% | 100% | 100% | 99.8% | **85.2%** | 53.4% |
+| Jayden Daniels | 100% | 100% | 100% | 99.9% | **89.2%** | 59.7% |
+| Jalen Hurts | 100% | 100% | 100% | 100% | 98.7% | 89.2% |
+| Justin Herbert | 100% | 100% | 100% | 100% | 99.9% | 98.6% |
+
+Three distinct decision windows, not two:
+
+1. **Allen — 3.04 or never.** 74% at pick 24, 12% at 37. There is no second chance.
+2. **Lamar — 5.04 is the cliff, not 6.07.** 90% at pick 44 but **28%** at 57. Lumping him into a
+   "waitable to 57" tier is the same mistake one tier down.
+3. **Maye / Burrow / Daniels — genuinely available at 6.07** (81-89%), coin-flip at 7.04.
+   Hurts and Herbert are comfortable even at 7.04. This is where "exploit the late-QB pool" is
+   actually true.
+
+The author's final framing is right and worth preserving verbatim: Brendan's personal QB fade
+should govern *whether he wants Allen at pick 24* — it should never have governed *whether the
+other nine managers let Allen reach pick 57*. These caveats sharpen the numbers; they do not
+soften the conclusion that the shipped headline was backwards.
+
+---
+
+## 6. Fix list, in priority order
 
 1. **Delete the QB floor.** Price QBs off the same market blend as every other position. This one
    change moves the first-QB median from 59 to 29 and brings the model into agreement with seven
@@ -397,7 +518,7 @@ The problem is not the architecture. It is one parameter, and one upstream princ
 
 ---
 
-## 6. The transferable lesson
+## 7. The transferable lesson
 
 The failure mode here is not bad math — the math is clean and reproducible. It is that a
 **hand-set assumption was tuned to produce a target output, and then the output was cited as
