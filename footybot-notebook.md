@@ -169,6 +169,14 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
     Both pipeline scripts exit 0 against real data, 2016-2025. Raw CSVs and `data/raw/` output
     are gitignored (reproducible, not committed) — only the scripts and the final markdown
     are versioned.
+  - `research/rb-draft-timing.md` — **NEW 2026-08-26, pipeline-computed + permutation-tested.**
+    Answers Brendan's "RBs are incredibly valuable in my league" theory at his four cutoffs
+    (RB through rounds 2/4/6/8). Verdict: NOT supported — direction is consistently
+    RB-favorable in the standings but nothing survives multiplicity (best family-wise p=0.071),
+    and the higher-powered return test (N≈560 picks) finds no RB-vs-WR difference at equal
+    draft cost in any window. Only near-significant result runs against the theory: R7-8 RBs
+    bust 16% vs WR 5% (p=0.051). Rebuild: `python3 pipeline/rb_draft_timing.py`.
+    **Gated on 2024 standings for a sharper answer — see AUDIT_QUEUE.**
   - `research/draft-tendencies.md` — **NEW 2026-07-01, opponent modeling (Goal item 6).**
     Built from 7 years of the league's real draft boards (2019-2025), `inputs/league-history/`
     → `draft_history_master.csv` (1,120 picks, validated join to 10 stable managers, positions
@@ -195,6 +203,13 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
   daily); if it fires, just confirm the cadence is still what Brendan wants and dismiss.
 
 ## AUDIT_QUEUE
+
+- **[2026-08-26, OPEN] Missing 2024 final standings.** `inputs/league-history/league_finishes.csv`
+  covers 2019-2023 + 2025 only, so every draft-vs-outcome analysis silently drops 10 of 70
+  manager-seasons (`draft_builds.py`, `rb_draft_timing.py`). Ask Brendan for the 2024 Yahoo
+  standings page the same way he supplied the others; then re-run `pipeline/build_league_finishes.py`
+  and `pipeline/rb_draft_timing.py`. This is the cheapest available power increase for the
+  whole draft-strategy line of research.
 
 Items to re-verify or upgrade once conditions change (network policy widens, real data arrives).
 
@@ -271,6 +286,31 @@ Items to re-verify or upgrade once conditions change (network policy widens, rea
   `build_draft_history.py` would fix it if it ever matters.
 
 ## CHANGELOG
+
+### 2026-08-26 (INTERACTIVE, Brendan-directed) — RB-early-draft theory TESTED against 7 years of our own boards: NOT supported
+Brendan asked directly: *"I have a theory RBs are incredibly valuable in my league — does drafting more RBs early
+translate to success?"*, at four cutoffs (RB count through rounds 2/4/6/8). New: `pipeline/rb_draft_timing.py`
+(stdlib, permutation-tested) + `research/rb-draft-timing.md`.
+- **Verdict: undetectable, not disproven — and definitely not "incredibly valuable."** Two tests. (1) ALLOCATION
+  (N=60 scored manager-seasons): all four RB cutoffs have the theory-friendly sign, WR mirrors all point the other
+  way — but the best of them (RB@6 vs points-for, r=+0.298) has family-wise p=0.071 once you account for having
+  tried four cutoffs. Nothing clears 0.05. (2) RETURN (N≈560 rounds-1-8 skill picks, our scoring on real nflverse
+  weeks): **at equal draft cost, RB and WR have returned the same in every window** — R1-2 gap +9.5 VOR p=0.50,
+  R3-4 +4.7 p=0.70, R5-6 -6.2 p=0.60, R7-8 -14.1 p=0.22.
+- **Only near-significant finding is the OPPOSITE of the theory: R7-8 RBs bust (<50 pts all season) 16% vs WR 5%,
+  p=0.051** (R5-8: 14% vs 6%, p=0.063). Same mean return late, much fatter left tail.
+- Suggestive but unbankable: 5 of 6 champions had exactly 3 RBs through round 6; the RB@8 pattern *reverses* above
+  3 (3 RBs by R8 = best cell, 4 = worse), so the shape is a hump, not "more is better."
+- **Counter-story worth remembering before we lean RB on Aug 28:** Jack is the league's ONLY WR-first drafter
+  (lowest RB@2, 0.83) and has the best mean finish (3.50). Across the 10 managers, career early-RB lean correlates
+  *positively* with mean rank (r=+0.40 at RB@2 — RB-heavy crowd finishes slightly worse). N=10, so noise, but it
+  kills "the RB-first drafters are the winners here" as a clean story.
+- **Draft-day posture written into the research doc:** at #4 take the best player (if that's the RB, fine — but
+  because he's the best player, not for a positional premium that isn't measurable); R3-4 position-agnostic; stop
+  force-feeding RB from round 5.
+- **BLOCKER on sharpening any of this: no 2024 standings on file.** 2024's drafts exist but are dropped from every
+  join (60 of 70 manager-seasons scored). Getting the 2024 Yahoo standings page is the single cheapest way to
+  improve every number here. → AUDIT_QUEUE.
 
 ### 2026-07-15 (SCHEDULED RUN) — Newsletter 2026-07-15; Walker→KC board correction (caught via take-check) + QB-wait math [S] + pick-4 tree + 2024 media retro
 Fresh read (branch == origin/main == 2665625 at start). 44 days to draft. **Lane A run by orchestrator vs the
