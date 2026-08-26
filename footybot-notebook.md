@@ -206,8 +206,9 @@ remains the channel for anything the pipeline can't compute (coaching, trades, d
 
 - **[2026-08-26, OPEN] Missing 2024 final standings.** `inputs/league-history/league_finishes.csv`
   covers 2019-2023 + 2025 only, so every draft-vs-outcome analysis silently drops 10 of 70
-  manager-seasons (`draft_builds.py`, `rb_draft_timing.py`). Ask Brendan for the 2024 Yahoo
-  standings page the same way he supplied the others; then re-run `pipeline/build_league_finishes.py`
+  manager-seasons (`draft_builds.py`, `rb_draft_timing.py`). This is **standing ask #2 in the
+  Brain inbox, now raised a third time** — the last 2024 upload was a draft page, not the
+  standings page. Get the real 2024 Yahoo standings page, then re-run `pipeline/build_league_finishes.py`
   and `pipeline/rb_draft_timing.py`. This is the cheapest available power increase for the
   whole draft-strategy line of research.
 
